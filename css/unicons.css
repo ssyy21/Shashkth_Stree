@@ -1056,3 +1056,38 @@
 .uil-yen:before { content: '\ebe6'; } /* '' */
 .uil-youtube-alt:before { content: '\ebe7'; } /* '' */
 .uil-youtube:before { content: '\ebe8'; } /* '' */
+
+.quiz-button {
+  display: inline-block !important;
+  padding: 20px 40px !important; /* Bigger button with ample padding */
+  background-color: #c88fdb !important; /* Soft vibrant violet */
+  color: white !important;
+  font-size: 22px !important; /* Larger font for the button text */
+  font-weight: bold !important;
+  text-transform: uppercase !important;
+  text-decoration: none !important;
+  border-radius: 50px !important; /* Rounded button */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2) !important; /* Soft shadow */
+  transition: all 0.3s ease !important; /* Smooth transition for interactions */
+  letter-spacing: 1.2px !important; /* Spacing between letters */
+  cursor: pointer !important; /* Pointer cursor on hover */
+ 
+
+}
+
+/* Hover and Active State */
+.quiz-button:hover {
+  background-color: #5b3f9d !important; /* Darker purple on hover */
+  transform: translateY(-4px) !important; /* Slight lift effect on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3) !important; /* Stronger shadow on hover */
+  
+}
+
+.quiz-button:active {
+  background-color: #4a2a74 !important; /* Darker purple when clicked */
+  transform: translateY(0) !important; /* No lift on active state */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2) !important; /* Keep original shadow */
+ 
+}
+
+
