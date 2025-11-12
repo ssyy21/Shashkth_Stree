@@ -1,0 +1,25 @@
+/* Back to top button style */
+#backToTop {
+  position: fixed;
+  bottom: 40px;
+  left: 50%;
+  display: none;
+  background-color: #a711d9;
+  color: white;
+  border: none;
+  outline: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: opacity 0.3s ease;
+  z-index: 1000;
+}
+
+#backToTop:hover {
+  background-color: #C147E9;
+}
+
+#backToTop:active {
+    scale: 95%;
+}
