@@ -12,14 +12,6 @@ emotional well-being through detailed psychology-based and case study questions.
 legal contacts and NGO support. 
 Additionally, we facilitate fundraising for women and children-centric NGOs and offer a "Contact Us" feature where women can share their experiences, ensuring that no one feels unheard.
 
-Demo Video:
-https://youtu.be/lZr9pcSzMlA
-
-
-![image](https://github.com/user-attachments/assets/c6627e55-33dd-462f-b0fc-08258cf9f712)
-![image](https://github.com/user-attachments/assets/2c7ef224-1fa3-4868-9e9a-bfee9beb1ed7)
-![image](https://github.com/user-attachments/assets/740d3649-7d05-4ff7-81af-9841af37c043)
-![image](https://github.com/user-attachments/assets/907f8629-1114-4917-add4-1a2513782bb2)
 
 
 
