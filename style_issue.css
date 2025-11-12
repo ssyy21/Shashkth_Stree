@@ -562,7 +562,7 @@ iconify-icon.hamburger-menu {
 .navbar-nav .nav-link.active,
 .navbar-nav .nav-link:hover,
 .navbar-nav .nav-link.show {
-    color: var(--bs-primary);
+    color: #C147E9;
 }
 
 iconify-icon.social-icon {

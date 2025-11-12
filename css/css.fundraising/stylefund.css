@@ -10210,3 +10210,107 @@ textarea.form-control {
     stroke-dasharray: 89, 200;
     stroke-dashoffset: -136px; } }
     
+
+    /* ================================
+   NAVBAR BASE
+================================ */
+#navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px 0;
+  background: transparent;
+  z-index: 1000;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Background when scrolled */
+#navbar.scrolled {
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(6px);
+  padding: 10px 0;
+}
+
+/* Remove bootstrap container padding */
+#navbar .container-fluid {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* ================================
+   LOGO
+================================ */
+.logo-img {
+  width: 130px;
+}
+
+#navbar .navbar-brand {
+  margin-left: 20px !important; /* small margin from left */
+}
+
+/* ================================
+   NAV LINKS
+================================ */
+.navbar-nav .nav-link {
+  color: #ffffff !important;
+  font-weight: 500;
+  padding: 8px 15px !important;
+  text-transform: uppercase;
+  transition: 0.3s ease;
+  padding: var(--bs-nav-link-padding-y) var(--bs-nav-link-padding-x);
+    font-size: 0.9375rem;
+    font-weight: 600;
+    letter-spacing: 0.075rem;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: #C147E9 !important;
+}
+
+/* Gap between links */
+.navbar-nav {
+  gap: 25px !important;
+}
+
+/* ================================
+   DONATE BUTTON
+================================ */
+.btn-donate {
+  background: #C147E9;
+  color: white !important;
+  border-radius: 20px;
+  padding: 8px 20px;
+  font-weight: 600;
+  margin-right: 20px !important; /* push to extreme right */
+  transition: 0.3s ease;
+}
+
+.btn-donate:hover {
+  background: #a12cc6;
+}
+
+/* ================================
+   MOBILE MENU (optional)
+================================ */
+
+/* Hide normal nav & show offcanvas */
+@media (max-width: 992px) {
+  #navbar .navbar-nav {
+    display: none !important;
+  }
+
+  .btn-donate {
+    display: none !important;
+  }
+
+  .hamburger-menu {
+    display: block !important;
+  }
+}
+
+.navbar-brand img {
+    height: 50px; /* adjust as needed */
+    width: 80px;
+}

@@ -16,6 +16,7 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
 
     <link rel="stylesheet" type="text/css" href="style.css">
+
     <link rel="stylesheet" href="back_top_button.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -96,7 +97,13 @@ input:checked + .lang-slider:before {
 
 <body>
 
-    <nav   id="navbar"   class="navbar fixed-top navbar-expand-lg container-fluid py-1 " >
+
+    
+
+
+
+    <!-- <nav   id="navbar"  class="navbar fixed-top navbar-expand-lg container-fluid py-1 " >
+
         <div class="container-fluid">
             <a  class="navbar-brand" href="index.html"><img class="logo-img" src="images/main-logo-light.png" alt="logo"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
@@ -152,7 +159,10 @@ input:checked + .lang-slider:before {
                 </div>
             </div>
         </div>
-    </nav>
+    </nav> -->
+
+
+    <div id="navbar-container"></div>
 
     <section id="hero" class="d-flex align-items-center" style="background-image:url(images/banner1-img.jpg); background-repeat: no-repeat; background-size: cover; background-position: center; height: 100vh;">
         <div class="container">
@@ -520,114 +530,108 @@ input:checked + .lang-slider:before {
     <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"></script>
 
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-  const toggle = document.getElementById('lang-toggle-checkbox');
-  const elements = document.querySelectorAll('.lang-toggle');
-  
-  const titles = {
-    en: "Shashkth Stree",
-    hi: "सशक्त स्त्री"
-  };
-  
-  function updateLanguage() {
-    const targetLang = toggle.checked ? 'hi' : 'en';
-    
-    document.title = titles[targetLang];
-    
-    elements.forEach(el => {
-      const text = el.getAttribute('data-' + targetLang);
-      if (text) {
-        if (targetLang === 'hi' && text.startsWith('[') && text.endsWith(']')) {
-          el.innerHTML = text.substring(1, text.length - 1);
-        } else {
-          el.innerHTML = text;
+document.addEventListener('DOMContentLoaded', () => {
+  const navbarContainer = document.getElementById('navbar-container');
+
+  // 1️⃣ Load navbar dynamically
+  fetch('navbar.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('navbar-container').innerHTML = data;
+
+      // 2️⃣ Highlight active nav link
+      const currentPage = window.location.pathname.split('/').pop();
+      const links = document.querySelectorAll('#navbar-container .nav-link');
+      links.forEach(link => {
+        if (link.getAttribute('href') === currentPage) {
+          link.classList.add('active');
         }
+      });
+
+      // 3️⃣ Language toggle setup
+      const toggle = document.getElementById('lang-toggle-checkbox');
+      const elements = navbarContainer.querySelectorAll('.lang-toggle');
+
+      const titles = { en: "Shashkth Stree", hi: "सशक्त स्त्री" };
+
+      function updateLanguage() {
+        const targetLang = toggle.checked ? 'hi' : 'en';
+        document.title = titles[targetLang];
+
+        elements.forEach(el => {
+          const text = el.getAttribute('data-' + targetLang);
+          if (text) {
+            // Remove optional brackets if present
+            if (targetLang === 'hi' && text.startsWith('[') && text.endsWith(']')) {
+              el.innerHTML = text.substring(1, text.length - 1);
+            } else {
+              el.innerHTML = text;
+            }
+          }
+        });
       }
+
+      toggle.addEventListener('change', updateLanguage);
+      updateLanguage(); // Initial update
+
+      // 4️⃣ Navbar scroll effect
+      const navbar = document.getElementById("navbar");
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 50) {
+          navbar.classList.add("scrolled");
+        } else {
+          navbar.classList.remove("scrolled");
+        }
+      });
+    });
+
+  // 5️⃣ Testimonial slider (separate, can stay as-is)
+  const sliderContainer = document.querySelector('.testimonials-track');
+  if (sliderContainer) {
+    const slides = Array.from(sliderContainer.children);
+    const nextButton = document.querySelector('.testimonial-nav.next');
+    const prevButton = document.querySelector('.testimonial-nav.prev');
+    const dotsNav = document.querySelector('.testimonial-dots');
+    const dots = Array.from(dotsNav.children);
+    let slideWidth = slides[0].getBoundingClientRect().width;
+    let currentSlide = 0;
+
+    const moveToSlide = (targetSlide) => {
+      sliderContainer.style.transform = 'translateX(-' + slideWidth * targetSlide + 'px)';
+      dots[currentSlide].classList.remove('active');
+      dots[targetSlide].classList.add('active');
+      currentSlide = targetSlide;
+    }
+
+    nextButton.addEventListener('click', () => {
+      let nextSlide = currentSlide + 1;
+      if (nextSlide >= slides.length) nextSlide = 0;
+      moveToSlide(nextSlide);
+    });
+
+    prevButton.addEventListener('click', () => {
+      let prevSlide = currentSlide - 1;
+      if (prevSlide < 0) prevSlide = slides.length - 1;
+      moveToSlide(prevSlide);
+    });
+
+    dotsNav.addEventListener('click', (e) => {
+      const targetDot = e.target.closest('span.dot');
+      if (!targetDot) return;
+      const targetIndex = dots.findIndex(dot => dot === targetDot);
+      moveToSlide(targetIndex);
+    });
+
+    window.addEventListener('resize', () => {
+      slideWidth = slides[0].getBoundingClientRect().width;
+      moveToSlide(currentSlide);
     });
   }
-  
-  toggle.addEventListener('change', updateLanguage);
-  
-  // Set initial state
-  updateLanguage();
-});
-
-
-// --- Testimonial Slider Logic ---
-
-// We wrap everything in DOMContentLoaded to make sure the HTML is loaded
-document.addEventListener('DOMContentLoaded', () => {
-
-    // Find the track element
-    const track = document.querySelector('.testimonials-track');
-    
-    // Only run if the track exists on this page
-    if (track) {
-        const slides = Array.from(track.children);
-        const nextButton = document.querySelector('.testimonial-nav.next');
-        const prevButton = document.querySelector('.testimonial-nav.prev');
-        const dotsNav = document.querySelector('.testimonial-dots');
-        const dots = Array.from(dotsNav.children);
-
-        // Get the width of a single slide
-        let slideWidth = slides[0].getBoundingClientRect().width;
-
-        let currentSlide = 0;
-
-        // --- Helper Function to Move Slider ---
-        const moveToSlide = (targetSlide) => {
-            track.style.transform = 'translateX(-' + slideWidth * targetSlide + 'px)';
-            
-            // Update active dot
-            const currentDot = dots[currentSlide];
-            const targetDot = dots[targetSlide];
-            currentDot.classList.remove('active');
-            targetDot.classList.add('active');
-
-            currentSlide = targetSlide;
-        }
-
-        // --- Event Listeners ---
-
-        // 1. Right Arrow Click
-        nextButton.addEventListener('click', e => {
-            let nextSlide = currentSlide + 1;
-            if (nextSlide >= slides.length) {
-                nextSlide = 0; // Loop back to the start
-            }
-            moveToSlide(nextSlide);
-        });
-
-        // 2. Left Arrow Click
-        prevButton.addEventListener('click', e => {
-            let prevSlide = currentSlide - 1;
-            if (prevSlide < 0) {
-                prevSlide = slides.length - 1; // Loop to the end
-            }
-            moveToSlide(prevSlide);
-        });
-
-        // 3. Dots Click
-        dotsNav.addEventListener('click', e => {
-            // Find the dot that was clicked
-            const targetDot = e.target.closest('span.dot');
-            if (!targetDot) return; // User clicked outside a dot
-
-            const targetIndex = dots.findIndex(dot => dot === targetDot);
-            moveToSlide(targetIndex);
-        });
-
-        // 4. Handle Window Resize
-        // This is important for responsiveness
-        window.addEventListener('resize', () => {
-            slideWidth = slides[0].getBoundingClientRect().width;
-            moveToSlide(currentSlide); // Snap back to the correct slide
-        });
-    }
 });
 </script>
 
-<script src="js/embed_footer.js" defer></script>
+
+
 
 </body>
 
