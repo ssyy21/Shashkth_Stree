@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>StressQuiz</title>
+    <title>Consent and Boundaries</title>
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/unicons.css">
@@ -16,6 +16,32 @@
     <!-- MAIN STYLE -->
     <link rel="stylesheet" href="css/tooplate-style.css">
     
+    <!-- Breadcrumb Custom Style -->
+    <style>
+      .breadcrumb-container {
+        padding-top: 20px; /* Add space above the breadcrumbs */
+        padding-bottom: 0;
+      }
+      .breadcrumb {
+        background-color: transparent; /* Make background transparent */
+        padding: 0;
+        margin-bottom: 0; /* No bottom margin */
+      }
+      .breadcrumb-item a {
+        color: #E5B8F4; /* Light purple color for links */
+        text-decoration: none;
+      }
+      .breadcrumb-item a:hover {
+        color: #fff; /* White on hover */
+      }
+      .breadcrumb-item.active {
+        color: #fff; /* White color for active page */
+      }
+      .breadcrumb-item + .breadcrumb-item::before {
+        color: #E5B8F4; /* Light purple for the separator */
+        content: "›"; /* Use '›' as separator */
+      }
+    </style>
 
 
 
@@ -55,8 +81,17 @@
         </div>
     </nav>
 
+    <!-- BREADCRUMB -->
+    <nav aria-label="breadcrumb" class="breadcrumb-container container">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+        <li class="breadcrumb-item"><a href="issues.html">Issues</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Consent and Boundaries</li>
+      </ol>
+    </nav>
+
     <!-- ABOUT -->
-    <section class="about full-screen d-lg-flex justify-content-center align-items-center" id="about">
+    <section class="about full-screen d-lg-flex justify-content-center align-items-center" id="about" style="padding-top: 4rem; padding-bottom: 4rem;"> <!-- Reduced padding -->
         <div class="container">
             <div class="row">
                 
