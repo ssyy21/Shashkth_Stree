@@ -17,6 +17,32 @@
     <link rel="stylesheet" href="Issuesstyle.css">
     <link rel="stylesheet" href="css/tooplate-style.css">
     
+    <!-- Breadcrumb Custom Style -->
+    <style>
+      .breadcrumb-container {
+        padding-top: 20px; /* Add space above the breadcrumbs */
+        padding-bottom: 0;
+      }
+      .breadcrumb {
+        background-color: transparent; /* Make background transparent */
+        padding: 0;
+        margin-bottom: 0; /* No bottom margin */
+      }
+      .breadcrumb-item a {
+        color: #E5B8F4; /* Light purple color for links */
+        text-decoration: none;
+      }
+      .breadcrumb-item a:hover {
+        color: #fff; /* White on hover */
+      }
+      .breadcrumb-item.active {
+        color: #fff; /* White color for active page */
+      }
+      .breadcrumb-item + .breadcrumb-item::before {
+        color: #E5B8F4; /* Light purple for the separator */
+        content: "›"; /* Use '›' as separator */
+      }
+    </style>
 <!--
 
 Tooplate 2115 Marvel
@@ -62,8 +88,17 @@ https://www.tooplate.com/view/2115-marvel
         </div>
     </nav>
 
+    <!-- BREADCRUMB -->
+    <nav aria-label="breadcrumb" class="breadcrumb-container container">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+        <li class="breadcrumb-item"><a href="issues.html">Issues</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Mental Abuse</li>
+      </ol>
+    </nav>
+
     <!-- ABOUT -->
-    <section class="about full-screen d-lg-flex justify-content-center align-items-center" id="about">
+    <section class="about full-screen d-lg-flex justify-content-center align-items-center" id="about" style="padding-top: 4rem; padding-bottom: 4rem;"> <!-- Reduced padding -->
         <div class="container">
             <div class="row">
                 
@@ -298,7 +333,7 @@ https://www.tooplate.com/view/2115-marvel
                             </div>
                             <div class="timeline-info">
                                 <h3><span style="color: white;">Rohan Gupta
-                                  <small style="color: white;">Phone Number: +91-98765-42987
+                                  <small style="color: white;">Phone Number: +91-98765-42987
                                 </small></h3>
                                 <p style="color: white;">24/7 Helpline Coordinator trained in crisis intervention and connecting individuals with emergency support services.
                                 </p>
@@ -343,7 +378,7 @@ https://www.tooplate.com/view/2115-marvel
                             </div>
                             <div class="timeline-info">
                                 <h3><span style="color: white; font-weight: lighter;">Nayi Disha Welfare Society
-                                </span><small style="color: white;">Helpline Number: +91-98333-67890 </small></h3>
+                                </span><small style="color: white;">Helpline Number: +91-98333-67890 </small></h3>
                                 <p style="color: #E5B8F4;"> Provides immediate assistance, emergency shelter, and awareness campaigns to prevent domestic violence and promote safe living environments.
                                 </p>
                             </div>

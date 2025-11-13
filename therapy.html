@@ -5,6 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Therapy Articles</title>
     <link rel="stylesheet" href="styles.css">
+    
+    <style>
+      .breadcrumb-container {
+        padding-top: 20px; 
+        padding-bottom: 0;
+        background-color: #fff; /* Match page background */
+      }
+      .breadcrumb {
+        background-color: transparent;
+        padding: 0;
+        margin-bottom: 0;
+      }
+      .breadcrumb-item a {
+        color: #810CA8; /* Main purple color */
+        text-decoration: none;
+      }
+      .breadcrumb-item a:hover {
+        color: #C147E9; /* Lighter purple */
+      }
+      .breadcrumb-item.active {
+        color: #6c757d; /* Standard bootstrap active color */
+      }
+      .breadcrumb-item + .breadcrumb-item::before {
+        color: #810CA8; /* Main purple */
+        content: "›"; 
+      }
+      /* Ensure container class from bootstrap is available if not already linked */
+      .container {
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+      }
+      @media (min-width: 576px) {
+        .container {
+          max-width: 540px;
+        }
+      }
+      @media (min-width: 768px) {
+        .container {
+          max-width: 720px;
+        }
+      }
+      @media (min-width: 992px) {
+        .container {
+          max-width: 960px;
+        }
+      }
+      @media (min-width: 1200px) {
+        .container {
+          max-width: 1140px;
+        }
+      }
+    </style>
 </head>
 <body>
     <nav class="navbar">
@@ -21,6 +76,13 @@
         </div>
     </nav>
     
+    <nav aria-label="breadcrumb" class="breadcrumb-container container">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Therapy</li>
+      </ol>
+    </nav>
+
     <section class="articles">
         <h1 class="heading">Therapy Articles</h1>
         <div class="article-container">
@@ -89,8 +151,7 @@
                 </div>
             </div>
     
-            <!-- Repeat the same structure for other articles -->
-        </div>
+            </div>
     </section>
     
 </body>
