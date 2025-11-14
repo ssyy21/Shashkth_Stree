@@ -1,429 +1,363 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-    <title>Workplace Harassment</title>
+    <title>Workplace Harassment</title>
 
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/unicons.css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/unicons.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
 
-    <link rel="stylesheet" href="Issuesstyle.css">
-    <link rel="stylesheet" href="css/tooplate-style.css">
-    <link rel="stylesheet" href="back_top_button.css">
-    
-    <style>
-      .breadcrumb-container {
-        padding-top: 20px; 
-        padding-bottom: 0;
-      }
-      .breadcrumb {
-        background-color: transparent; 
-        padding: 0;
-        margin-bottom: 0; 
-      }
-      .breadcrumb-item a {
-        color: #E5B8F4;s
-        text-decoration: none;
-      }
-      .breadcrumb-item a:hover {
-        color: #fff; 
-      }
-      .breadcrumb-item.active {
-        color: #fff; 
-      }
-      .breadcrumb-item + .breadcrumb-item::before {
-        color: #E5B8F4; 
-        content: "›"; 
-      }
-    </style>
+    <link rel="stylesheet" href="Issuesstyle.css">
+    <link rel="stylesheet" href="css/tooplate-style.css">
+    <link rel="stylesheet" href="back_top_button.css">
 
-<style>
-/* Language Toggle Switch */
-.lang-toggle-nav {
-  display: flex;
-  align-items: center;
-  margin-left: 15px; /* Add some space from other nav items */
-}
-.lang-toggle-label {
-  margin: 0 5px;
-  font-size: 14px;
-  font-weight: bold;
-  color: #E5B8F4; /* Light purple to match theme */
-  cursor: pointer;
-  user-select: none;
-}
-.lang-toggle-label:hover {
-  color: #fff;
-}
-.lang-toggle-switch {
-  position: relative;
-  display: inline-block;
-  width: 50px;
-  height: 24px;
-}
-.lang-toggle-switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-.lang-slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  transition: .4s;
-  border-radius: 34px;
-}
-.lang-slider:before {
-  position: absolute;
-  content: "";
-  height: 16px;
-  width: 16px;
-  left: 4px;
-  bottom: 4px;
-  background-color: white;
-  transition: .4s;
-  border-radius: 50%;
-}
-input:checked + .lang-slider {
-  background-color: #C147E9;
-}
-input:checked + .lang-slider:before {
-  transform: translateX(26px);
-}
+    <style>
+      .breadcrumb-container {
+        padding-top: 20px;
+        padding-bottom: 0;
+      }
+      .breadcrumb {
+        background-color: transparent;
+        padding: 0;
+        margin-bottom: 0;
+      }
+      .breadcrumb-item a {
+        color: #E5B8F4;
+        text-decoration: none;
+      }
+      .breadcrumb-item a:hover {
+        color: #fff;
+      }
+      .breadcrumb-item.active {
+        color: #fff;
+      }
+      .breadcrumb-item + .breadcrumb-item::before {
+        color: #E5B8F4;
+        content: "›";
+      }
 
-.navbar-toggler {
-    border-color: rgba(255,255,255,0.1);
-}
-.navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
-}
+      /* Language Toggle Switch */
+      .lang-toggle-nav {
+        display: flex;
+        align-items: center;
+        margin-left: 15px;
+      }
+      .lang-toggle-label {
+        margin: 0 8px;
+        font-size: 14px;
+        font-weight: bold;
+        color: #E5B8F4;
+        cursor: pointer;
+        user-select: none;
+      }
+      .lang-toggle-label:hover { color: #fff; }
+      .lang-toggle-switch { position: relative; display: inline-block; width: 50px; height: 24px; }
+      .lang-toggle-switch input { opacity: 0; width: 0; height: 0; }
+      .lang-slider { position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: #ccc; transition: .4s; border-radius: 34px; }
+      .lang-slider:before { position: absolute; content: ""; height: 16px; width: 16px; left: 4px; bottom: 4px; background-color: white; transition: .4s; border-radius: 50%; }
+      .lang-toggle-switch input:checked + .lang-slider { background-color: #C147E9; }
+      .lang-toggle-switch input:checked + .lang-slider:before { transform: translateX(26px); }
 
-/* Responsive adjustment for mobile */
-@media (max-width: 575.98px) {
-  .lang-toggle-nav {
-    margin-left: 0;
-    margin-top: 10px; /* Add space in collapsed menu */
-    justify-content: center; /* Center it in collapsed menu */
-  }
-}
-</style>
-  </head>
-  <body>
+      .navbar-toggler { border-color: rgba(255,255,255,0.1); }
+      .navbar-toggler-icon { background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"); }
 
-    <button id="backToTop">↑ Back to Top</button>
+      /* Responsive adjustment for mobile */
+      @media (max-width: 575.98px) {
+        .lang-toggle-nav { margin-left: 0; margin-top: 10px; justify-content: center; }
+      }
+    </style>
+  </head>
+  <body>
 
-        <nav class="navbar navbar-expand-sm navbar-light">
-        <div class="container">
-            <a style="color: #C147E9;" class="navbar-brand" href="index.html"><span class="lang-toggle" data-en="Shashkth Stree" data-hi="सशक्त स्त्री">Shashkth Stree</span></a>
+    <button id="backToTop">↑ Back to Top</button>
 
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div style="background-color: #2D033B;" class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav mx-auto">
-                    <li class="nav-item">
-                        <a style= "color: white;" href="index.html" class="nav-link"><span data-hover="About"><span class="lang-toggle" data-en="Home" data-hi="मुखपृष्ठ">Home</span></span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a style= "color: white;" href="issues.html" class="nav-link"><span data-hover="Explore"><span class="lang-toggle" data-en="Explore" data-hi="अन्वेषण करें">Explore</span></span></a>
-section class="about full-screen d-lg-flex justify-content-center align-items-center" id="about" style="padding-top: 4rem; padding-bottom: 4rem;"> <div class="container">
-            <div class="row">
-                
-                <div class="col-lg-7 col-md-12 col-12 d-flex align-items-center">
-                    <div class="about-text">
-                        
-                        <h1 class="animated animated-text">
-                            <span style="color: white;" class="mr-2"><span class="lang-toggle" data-en="Recognizing the Signs of Workplace Harassment" data-hi="कार्यस्थल उत्पीड़न के संकेतों को पहचानना">Recognizing the Signs of Workplace Harassment</span></span>
-                                <div class="animated-info">
-                                    
-                                </div>
-                        </h1>
+    <nav class="navbar navbar-expand-sm navbar-light">
+      <div class="container">
+        <a style="color: #C147E9;" class="navbar-brand" href="index.html"><span class="lang-toggle" data-en="Shashkth Stree" data-hi="सशक्त स्त्री">Shashkth Stree</span></a>
 
-                        <p style="color: #E5B8F4;"><span class="lang-toggle" data-en="Workplace harassment can take many forms, from verbal abuse to discrimination, impacting mental well-being and productivity. Identifying the signs is the first step toward a safer work environment." data-hi="कार्यस्थल उत्पीड़न कई रूप ले सकता है, मौखिक दुर्व्यवहार से लेकर भेदभाव तक, जो मानसिक कल्याण और उत्पादकता को प्रभावित करता है। संकेतों को पहचानना एक सुरक्षित कार्य वातावरण की ओर पहला कदम है।">Workplace harassment can take many forms, from verbal abuse to discrimination, impacting mental well-being and productivity. Identifying the signs is the first step toward a safer work environment.</span></p>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-                        <p style="color: #E5B8F4;"><span class="lang-toggle" data-en="Take our quiz to assess your workplace interactions and learn how to respond effectively. Your well-being matters!" data-hi="अपने कार्यस्थल की बातचीत का आकलन करने के लिए हमारी प्रश्नोत्तरी लें और जानें कि प्रभावी ढंग से कैसे प्रतिक्रिया दें। आपका कल्याण मायने रखता है!">Take our quiz to assess your workplace interactions and learn how to respond effectively. Your well-being matters!</span></p>
-                        
-                        <div class="custom-btn-group mt-4">
-                          
-                          <a href="#contact" class="btn custom-btn custom-btn-bg custom-btn-link"><span class="lang-toggle" data-en="We stand together &hearts;" data-hi="हम एक साथ खड़े हैं &hearts;">We stand together &hearts;</span></a>
-                        </div>
-                    </div>
-                </div>
+        <div style="background-color: #2D033B;" class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a style="color: white;" href="index.html" class="nav-link"><span data-hover="About"><span class="lang-toggle" data-en="Home" data-hi="मुखपृष्ठ">Home</span></span></a>
+            </li>
+            <li class="nav-item">
+              <a style="color: white;" href="issues.html" class="nav-link"><span data-hover="Explore"><span class="lang-toggle" data-en="Explore" data-hi="अन्वेषण करें">Explore</span></span></a>
+            </li>
+          </ul>
 
-                <div class="col-lg-5 col-md-12 col-12">
-                    <div class="about-image svg">
-                        <img src="images/workplace-harassment.png" class="img-fluid" alt="svg image">
-                    </div>
-                </div>
+          <!-- Language toggle on the right -->
+          <div class="lang-toggle-nav ml-auto">
+            <label class="lang-toggle-label" for="lang-toggle-checkbox">EN</label>
+            <label class="lang-toggle-switch" title="Toggle language">
+              <input id="lang-toggle-checkbox" type="checkbox" aria-label="Toggle language">
+              <span class="lang-slider"></span>
+            </label>
+            <label class="lang-toggle-label">HI</label>
+          </div>
+        </div>
+      </div>
+    </nav>
 
-            </div>
-        </div>
-    </section>
+    <section class="about full-screen d-lg-flex justify-content-center align-items-center" id="about" style="padding-top: 4rem; padding-bottom: 4rem;">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-7 col-md-12 col-12 d-flex align-items-center">
+            <div class="about-text">
+
+              <h1 class="animated animated-text">
+                <span style="color: white;" class="mr-2"><span class="lang-toggle" data-en="Recognizing the Signs of Workplace Harassment" data-hi="कार्यस्थल उत्पीड़न के संकेतों को पहचानना">Recognizing the Signs of Workplace Harassment</span></span>
+              </h1>
+
+              <p style="color: #E5B8F4;"><span class="lang-toggle" data-en="Workplace harassment can take many forms, from verbal abuse to discrimination, impacting mental well-being and productivity. Identifying the signs is the first step toward a safer work environment." data-hi="कार्यस्थल उत्पीड़न कई रूप ले सकता है, मौखिक दुर्व्यवहार से लेकर भेदभाव तक, जो मानसिक कल्याण और उत्पादकता को प्रभावित करता है। संकेतों को पहचानना एक सुरक्षित कार्य वातावरण की ओर पहला कदम है।">Workplace harassment can take many forms, from verbal abuse to discrimination, impacting mental well-being and productivity. Identifying the signs is the first step toward a safer work environment.</span></p>
+
+              <p style="color: #E5B8F4;"><span class="lang-toggle" data-en="Take our quiz to assess your workplace interactions and learn how to respond effectively. Your well-being matters!" data-hi="अपने कार्यस्थल की बातचीत का आकलन करने के लिए हमारी प्रश्नोत्तरी लें और जानें कि प्रभावी ढंग से कैसे प्रतिक्रिया दें। आपका कल्याण मायने रखता है!">Take our quiz to assess your workplace interactions and learn how to respond effectively. Your well-being matters!</span></p>
+
+              <div class="custom-btn-group mt-4">
+                <a href="#contact" class="btn custom-btn custom-btn-bg custom-btn-link"><span class="lang-toggle" data-en="We stand together ♥" data-hi="हम एक साथ खड़े हैं ♥">We stand together ♥</span></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-5 col-md-12 col-12">
+            <div class="about-image svg">
+              <img src="images/workplace-harassment.png" class="img-fluid" alt="workplace harassment illustration">
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
 
 
-    <section class="grading-scale">
+    <section class="grading-scale py-4">
+      <div class="my_quiz text-center mb-3">
+        <a href="https://www.testportal.net/test.html?t=KLGR84FutMd2">
+          <button class="my_quiz_button"><span class="lang-toggle" data-en="Take Test!" data-hi="परीक्षा दें!">Take Test!</span></button>
+        </a>
+      </div>
 
-      <div class="my_quiz">
-        <a href="https://www.testportal.net/test.html?t=KLGR84FutMd2">
-          <button class="my_quiz_button"><span class="lang-toggle" data-en="Take Test!" data-hi="परीक्षा दें!">Take Test!</span></button>
-        </a>
-      </div>
+      <h2 style="color: #C147E9 !important; text-align:center;"><span class="lang-toggle" data-en="Understand Your Results" data-hi="अपने परिणाम समझें">Understand Your Results</span></h2>
+
+      <div class="table-responsive mt-3">
+        <table class="grading-table table table-bordered text-white">
+          <thead>
+            <tr>
+              <th><span class="lang-toggle" data-en="Mental Abuse Level" data-hi="मानसिक शोषण स्तर">Mental Abuse Level</span></th>
+              <th><span class="lang-toggle" data-en="Points Range" data-hi="अंक सीमा">Points Range</span></th>
+              <th><span class="lang-toggle" data-en="Grade" data-hi="ग्रेड">Grade</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="severe bg-danger text-white">
+              <td><span class="lang-toggle" data-en="High Risk" data-hi="उच्च जोखिम">High Risk</span></td>
+              <td><span class="lang-toggle" data-en="23 – 28 Points" data-hi="23 – 28 अंक">23 – 28 Points</span></td>
+              <td><span class="lang-toggle" data-en="🔴 Critical" data-hi="🔴 गंभीर">🔴 Critical</span></td>
+            </tr>
+            <tr class="high bg-warning text-dark">
+              <td><span class="lang-toggle" data-en="Warning Signs" data-hi="चेतावनी के संकेत">Warning Signs</span></td>
+              <td><span class="lang-toggle" data-en="17 – 22 Points" data-hi="17 – 22 अंक">17 – 22 Points</span></td>
+              <td><span class="lang-toggle" data-en="🟠 High" data-hi="🟠 उच्च">🟠 High</span></td>
+            </tr>
+            <tr class="moderate bg-secondary text-white">
+              <td><span class="lang-toggle" data-en="Moderate" data-hi="मध्यम">Moderate</span></td>
+              <td><span class="lang-toggle" data-en="11 – 16 Points" data-hi="11 – 16 अंक">11 – 16 Points</span></td>
+              <td><span class="lang-toggle" data-en="🟡 Moderate" data-hi="🟡 मध्यम">🟡 Moderate</span></td>
+            </tr>
+            <tr class="low bg-success text-white">
+              <td><span class="lang-toggle" data-en="Low Risk" data-hi="कम जोखिम">Low Risk</span></td>
+              <td><span class="lang-toggle" data-en="0 – 10 Points" data-hi="0 – 10 अंक">0 – 10 Points</span></td>
+              <td><span class="lang-toggle" data-en="🟢 Low" data-hi="🟢 कम">🟢 Low</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="big-section py-4">
+
+      <section class="stress-level severe mb-4">
+        <h2 style="color: #810CA8;"><span class="lang-toggle" data-en="Urgent Action Needed: Workplace Harassment Detected 🔴" data-hi="तत्काल कार्रवाई की आवश्यकता: कार्यस्थल उत्पीड़न का पता चला 🔴">Urgent Action Needed: Workplace Harassment Detected 🔴</span></h2>
+        <p style="color: white;"><span class="lang-toggle" data-en="You are experiencing severe workplace harassment, which can negatively impact your mental health and professional growth. Immediate action is necessary." data-hi="आप गंभीर कार्यस्थल उत्पीड़न का सामना कर रहे हैं, जो आपके मानसिक स्वास्थ्य और पेशेवर विकास पर नकारात्मक प्रभाव डाल सकता है। तत्काल कार्रवाई आवश्यक है।">You are experiencing severe workplace harassment, which can negatively impact your mental health and professional growth. Immediate action is necessary.</span></p>
+        <h3 style="color: white;"><span class="lang-toggle" data-en="What You Can Do Right Now:" data-hi="आप अभी क्या कर सकते हैं:">What You Can Do Right Now:</span></h3>
+        <ul>
+          <li>🚨 <span class="lang-toggle" data-en="Report the Issue – Contact HR or a legal advisor to document and report the harassment." data-hi="मुद्दे की रिपोर्ट करें - उत्पीड़न का दस्तावेजीकरण और रिपोर्ट करने के लिए मानव संसाधन या कानूनी सलाहकार से संपर्क करें।">Report the Issue – Contact HR or a legal advisor to document and report the harassment.</span></li>
+          <li>🛑 <span class="lang-toggle" data-en="Set Boundaries – Clearly communicate that certain behaviors are unacceptable." data-hi="सीमाएं निर्धारित करें - स्पष्ट रूप से बताएं कि कुछ व्यवहार अस्वीकार्य हैं।">Set Boundaries – Clearly communicate that certain behaviors are unacceptable.</span></li>
+          <li>📞 <span class="lang-toggle" data-en="Seek Legal Help – Know your rights and consult a lawyer if needed." data-hi="कानूनी सहायता लें - अपने अधिकारों को जानें और यदि आवश्यक हो तो वकील से परामर्श करें।">Seek Legal Help – Know your rights and consult a lawyer if needed.</span></li>
+          <li>📖 <span class="lang-toggle" data-en="Keep Records – Maintain a log of incidents, emails, or messages as evidence." data-hi="रिकॉर्ड रखें - सबूत के तौर पर घटनाओं, ईमेल या संदेशों का लॉग बनाए रखें।">Keep Records – Maintain a log of incidents, emails, or messages as evidence.</span></li>
+          <li>🏞 <span class="lang-toggle" data-en="Prioritize Self-Care – Engage in stress-relieving activities to protect your mental well-being." data-hi="आत्म-देखभाल को प्राथमिकता दें - अपने मानसिक कल्याण की रक्षा के लिए तनाव-मुक्ति गतिविधियों में संलग्न हों।">Prioritize Self-Care – Engage in stress-relieving activities to protect your mental well-being.</span></li>
+        </ul>
+      </section>
+
+      <section class="stress-level high mb-4">
+        <h2 style="color: #810CA8;"><span class="lang-toggle" data-en="Workplace Harassment Warning Signs 🟠" data-hi="कार्यस्थल उत्पीड़न चेतावनी संकेत 🟠">Workplace Harassment Warning Signs 🟠</span></h2>
+        <p style="color: white;"><span class="lang-toggle" data-en="You are facing concerning behaviors at work that could indicate harassment. Addressing these early is crucial to ensuring a safe and respectful workplace." data-hi="आप काम पर चिंताजनक व्यवहारों का सामना कर रहे हैं जो उत्पीड़न का संकेत हो सकते हैं। एक सुरक्षित और सम्मानजनक कार्यस्थल सुनिश्चित करने के लिए इन्हें जल्दी संबोधित करना महत्वपूर्ण है।">You are facing concerning behaviors at work that could indicate harassment. Addressing these early is crucial to ensuring a safe and respectful workplace.</span></p>
+        <h3 style="color: white;"><span class="lang-toggle" data-en="What You Can Do Right Now:" data-hi="आप अभी क्या कर सकते हैं:">What You Can Do Right Now:</span></h3>
+        <ul>
+          <li>🔄 <span class="lang-toggle" data-en="Document Incidents – Keep a record of any inappropriate actions or comments." data-hi="घटनाओं का दस्तावेजीकरण करें - किसी भी अनुचित कार्रवाई या टिप्पणी का रिकॉर्ड रखें।">Document Incidents – Keep a record of any inappropriate actions or comments.</span></li>
+          <li>📢 <span class="lang-toggle" data-en="Speak Up – If safe, address the behavior with the individual involved." data-hi="बोलें - यदि सुरक्षित हो, तो संबंधित व्यक्ति के साथ व्यवहार को संबोधित करें।">Speak Up – If safe, address the behavior with the individual involved.</span></li>
+        </ul>
+      </section>
+
+      <section class="stress-level moderate mb-4">
+        <h2 style="color: #810CA8;"><span class="lang-toggle" data-en="Be Aware: Potential Workplace Issues 🟡" data-hi="जागरूक रहें: संभावित कार्यस्थल मुद्दे 🟡">Be Aware: Potential Workplace Issues 🟡</span></h2>
+        <p style="color: white;"><span class="lang-toggle" data-en="Some behaviors at work may be uncomfortable but do not necessarily qualify as harassment. However, staying informed and setting clear boundaries is essential." data-hi="काम पर कुछ व्यवहार असहज हो सकते हैं लेकिन जरूरी नहीं कि वे उत्पीड़न की श्रेणी में आएं। हालांकि, सूचित रहना और स्पष्ट सीमाएं निर्धारित करना आवश्यक है।">Some behaviors at work may be uncomfortable but do not necessarily qualify as harassment. However, staying informed and setting clear boundaries is essential.</span></p>
+        <h3 style="color: white;"><span class="lang-toggle" data-en="What You Can Do Right Now:" data-hi="आप अभी क्या कर सकते हैं:">What You Can Do Right Now:</span></h3>
+        <ul>
+          <li>☀ <span class="lang-toggle" data-en="Set Clear Boundaries – Politely but firmly communicate personal limits." data-hi="स्पष्ट सीमाएं निर्धारित करें - विनम्रता से लेकिन दृढ़ता से व्यक्तिगत सीमाओं को संप्रेषित करें।">Set Clear Boundaries – Politely but firmly communicate personal limits.</span></li>
+          <li>📝 <span class="lang-toggle" data-en="Monitor the Situation – Keep an eye on recurring behavior and how it affects you." data-hi="स्थिति की निगरानी करें - आवर्ती व्यवहार और यह आपको कैसे प्रभावित करता है, इस पर नज़र रखें।">Monitor the Situation – Keep an eye on recurring behavior and how it affects you.</span></li>
+          <li>🗣 <span class="lang-toggle" data-en="Address Issues Early – Speak up if something makes you uncomfortable." data-hi="मुद्दों को जल्दी संबोधित करें - यदि कुछ आपको असहज करता है तो बोलें।">Address Issues Early – Speak up if something makes you uncomfortable.</span></li>
+          <li>📖 <span class="lang-toggle" data-en="Know Company Policies – Understand what protections exist in your workplace." data-hi="कंपनी की नीतियों को जानें - समझें कि आपके कार्यस्थल में क्या सुरक्षा मौजूद है।">Know Company Policies – Understand what protections exist in your workplace.</span></li>
+          <li>😌 <span class="lang-toggle" data-en="Maintain Professionalism – Focus on your work while safeguarding your well-being." data-hi="व्यावसायिकता बनाए रखें - अपने कल्याण की रक्षा करते हुए अपने काम पर ध्यान केंद्रित करें।">Maintain Professionalism – Focus on your work while safeguarding your well-being.</span></li>
+        </ul>
+      </section>
+
+      <section class="stress-level low mb-4">
+        <h2 style="color: #810CA8;"><span class="lang-toggle" data-en="Healthy Workplace Environment 🟢" data-hi="स्वस्थ कार्यस्थल वातावरण 🟢">Healthy Workplace Environment 🟢</span></h2>
+        <p style="color: white;"><span class="lang-toggle" data-en="You are in a positive and respectful workplace where harassment is not a concern. Continue fostering a supportive work culture." data-hi="आप एक सकारात्मक और सम्मानजनक कार्यस्थल पर हैं जहाँ उत्पीड़न कोई चिंता का विषय नहीं है। एक सहायक कार्य संस्कृति को बढ़ावा देना जारी रखें।">You are in a positive and respectful workplace where harassment is not a concern. Continue fostering a supportive work culture.</span></p>
+        <h3 style="color: white;"><span class="lang-toggle" data-en="What You Can Do Right Now:" data-hi="आप अभी क्या कर सकते हैं:">What You Can Do Right Now:</span></h3>
+        <ul>
+          <li>🧘‍♂️ <span class="lang-toggle" data-en="Promote Respect – Encourage a culture of professionalism and mutual respect." data-hi="सम्मान को बढ़ावा दें - व्यावसायिकता और आपसी सम्मान की संस्कृति को प्रोत्साहित करें।">Promote Respect – Encourage a culture of professionalism and mutual respect.</span></li>
+          <li>💡 <span class="lang-toggle" data-en="Stay Informed – Keep up with workplace policies and ethical guidelines." data-hi="सूचित रहें - कार्यस्थल की नीतियों और नैतिक दिशानिर्देशों के साथ बने रहें।">Stay Informed – Keep up with workplace policies and ethical guidelines.</span></li>
+          <li>📍 <span class="lang-toggle" data-en="Support Colleagues – Help others feel safe and respected in the workplace." data-hi="सहकर्मियों का समर्थन करें - कार्यस्थल में दूसरों को सुरक्षित और सम्मानित महसूस करने में मदद करें।">Support Colleagues – Help others feel safe and respected in the workplace.</span></li>
+          <li>📢 <span class="lang-toggle" data-en="Be an Advocate – Speak out against any inappropriate workplace behaviors." data-hi="एक पैरोकार बनें - किसी भी अनुचित कार्यस्थल व्यवहार के खिलाफ बोलें।">Be an Advocate – Speak out against any inappropriate workplace behaviors.</span></li>
+          <li>🌍 <span class="lang-toggle" data-en="Foster Inclusivity – Encourage diversity and fairness within your team." data-hi="समावेशिता को बढ़ावा दें - अपनी टीम के भीतर विविधता और निष्पक्षता को प्रोत्साहित करें।">Foster Inclusivity – Encourage diversity and fairness within your team.</span></li>
+        </ul>
+      </section>
+
+    </section>
+
+    <section class="resume py-5 d-lg-flex justify-content-center align-items-center" id="resume">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 col-12">
+            <h2 style="color: white;" class="mb-4"><span class="lang-toggle" data-en="Legal Contacts" data-hi="कानूनी संपर्क">Legal Contacts</span></h2>
+
+            <div class="timeline">
+              <div class="timeline-wrapper">
+                <div class="timeline-yr"><span style="font-size: 30px;">1</span></div>
+                <div class="timeline-info">
+                  <h3 style="color: white;"><span class="lang-toggle" data-en="Priya Sharma" data-hi="प्रिया शर्मा">Priya Sharma</span> <small style="color: white;"> <span class="lang-toggle" data-en="Phone Number: +91-98765-43210" data-hi="फ़ोन नंबर: +91-98765-43210">Phone Number: +91-98765-43210</span></small></h3>
+                  <p style="color: white;"><span class="lang-toggle" data-en="Licensed Counselor specializing in domestic violence trauma, offering confidential one-on-one and group therapy sessions." data-hi="घरेलू हिंसा के आघात में विशेषज्ञता रखने वाली लाइसेंस प्राप्त परामर्शदाता, गोपनीय एक-पर-एक और समूह चिकित्सा सत्रों की पेशकश करती हैं।">Licensed Counselor specializing in domestic violence trauma, offering confidential one-on-one and group therapy sessions.</span></p>
+                </div>
+              </div>
+
+              <div class="timeline-wrapper">
+                <div class="timeline-yr"><span style="font-size: 30px;">2</span></div>
+                <div class="timeline-info">
+                  <h3 style="color: white;"><span class="lang-toggle" data-en="Arjun Verma" data-hi="अर्जुन वर्मा">Arjun Verma</span> <small style="color: white;"><span class="lang-toggle" data-en="Phone Number: +91-98765-43109" data-hi="फ़ोन नंबर: +91-98765-43109">Phone Number: +91-98765-43109</span></small></h3>
+                  <p style="color: white;"><span class="lang-toggle" data-en="Legal Advisor providing free consultations on filing complaints, obtaining restraining orders, and navigating legal processes" data-hi="शिकायतें दर्ज करने, निरोधक आदेश प्राप्त करने और कानूनी प्रक्रियाओं को नेविगेट करने पर मुफ्त परामर्श प्रदान करने वाले कानूनी सलाहकार">Legal Advisor providing free consultations on filing complaints, obtaining restraining orders, and navigating legal processes</span></p>
+                </div>
+              </div>
+
+              <div class="timeline-wrapper">
+                <div class="timeline-yr"><span style="font-size: 30px;">3</span></div>
+                <div class="timeline-info">
+                  <h3 style="color: white;"><span class="lang-toggle" data-en="Kavita Nair" data-hi="कविता नायर">Kavita Nair</span> <small style="color: white;"><span class="lang-toggle" data-en="Phone Number: +91-98765-43098" data-hi="फ़ोन नंबर: +91-98765-43098">Phone Number: +91-98765-43098</span></small></h3>
+                  <p style="color: white;"><span class="lang-toggle" data-en="Case Manager assisting survivors with housing, financial support, and rehabilitation programs." data-hi="आवास, वित्तीय सहायता और पुनर्वास कार्यक्रमों के साथ उत्तरजीवियों की सहायता करने वाली केस मैनेजर।">Case Manager assisting survivors with housing, financial support, and rehabilitation programs.</span></p>
+                </div>
+              </div>
+
+              <div class="timeline-wrapper">
+                <div class="timeline-yr"><span style="font-size: 30px;">4</span></div>
+                <div class="timeline-info">
+                  <h3 style="color: white;"><span class="lang-toggle" data-en="Rohan Gupta" data-hi="रोहन गुप्ता">Rohan Gupta</span> <small style="color: white;"><span class="lang-toggle" data-en="Phone Number: +91-98765-42987" data-hi="फ़ोन नंबर: +91-98765-42987">Phone Number: +91-98765-42987</span></small></h3>
+                  <p style="color: white;"><span class="lang-toggle" data-en="24/7 Helpline Coordinator trained in crisis intervention and connecting individuals with emergency support services." data-hi="संकट हस्तक्षेप में प्रशिक्षित 24/7 हेल्पलाइन समन्वयक और व्यक्तियों को आपातकालीन सहायता सेवाओं से जोड़ना।">24/7 Helpline Coordinator trained in crisis intervention and connecting individuals with emergency support services.</span></p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-12">
+            <h2 style="color: white;" class="mb-4 mobile-mt-2"><span class="lang-toggle" data-en="Associated NGOs" data-hi="संबद्ध गैर सरकारी संगठन">Associated NGOs</span></h2>
+
+            <div class="timeline">
+              <div class="timeline-wrapper">
+                <div class="timeline-yr"><span style="font-size: 30px;">1</span></div>
+                <div class="timeline-info">
+                  <h3 style="color: white;"><span class="lang-toggle" data-en="Sahaayata Foundation" data-hi="सहायता फाउंडेशन">Sahaayata Foundation</span> <small style="color: white; font-weight: lighter;"><span class="lang-toggle" data-en="Helpline Number: +91-98111-12345" data-hi="हेल्पलाइन नंबर: +91-98111-12345">Helpline Number: +91-98111-12345</span></small></h3>
+                  <p style="color: #E5B8F4;"><span class="lang-toggle" data-en="A non-profit organization dedicated to supporting survivors of domestic violence through counseling, legal aid, and shelter services." data-hi="परामर्श, कानूनी सहायता और आश्रय सेवाओं के माध्यम से घरेलू हिंसा से बचे लोगों का समर्थन करने के लिए समर्पित एक गैर-लाभकारी संगठन।">A non-profit organization dedicated to supporting survivors of domestic violence through counseling, legal aid, and shelter services.</span></p>
+                </div>
+              </div>
+
+              <div class="timeline-wrapper">
+                <div class="timeline-yr"><span style="font-size: 30px;">2</span></div>
+                <div class="timeline-info">
+                  <h3 style="color: white;"><span class="lang-toggle" data-en="Ujjivan Foundation" data-hi="उज्जीवन फाउंडेशन">Ujjivan Foundation</span> <small style="color: white; font-weight: lighter;"><span class="lang-toggle" data-en="Helpline Number: +91-98222-54321" data-hi="हेल्पलाइन नंबर: +91-98222-54321">Helpline Number: +91-98222-54321</span></small></h3>
+                  <p style="color: #E5B8F4;"><span class="lang-toggle" data-en="Focused on empowering individuals affected by domestic violence, offering vocational training, therapy, and community-based support programs." data-hi="घरेलू हिंसा से प्रभावित व्यक्तियों को सशक्त बनाने पर केंद्रित, व्यावसायिक प्रशिक्षण, चिकित्सा और समुदाय-आधारित सहायता कार्यक्रमों की पेशकश।">Focused on empowering individuals affected by domestic violence, offering vocational training, therapy, and community-based support programs.</span></p>
+                </div>
+              </div>
+
+              <div class="timeline-wrapper">
+                <div class="timeline-yr"><span style="font-size: 30px;">3</span></div>
+                <div class="timeline-info">
+                  <h3 style="color: white; font-weight: lighter;"><span class="lang-toggle" data-en="Nayi Disha Welfare Society" data-hi="नई दिशा वेलफेयर सोसाइटी">Nayi Disha Welfare Society</span> <small style="color: white;"><span class="lang-toggle" data-en="Helpline Number: +91-98333-67890" data-hi="हेल्पलाइन नंबर: +91-98333-67890">Helpline Number: +91-98333-67890</span></small></h3>
+                  <p style="color: #E5B8F4;"><span class="lang-toggle" data-en="Provides immediate assistance, emergency shelter, and awareness campaigns to prevent domestic violence and promote safe living environments." data-hi="घरेलू हिंसा को रोकने और सुरक्षित रहने के वातावरण को बढ़ावा देने के लिए तत्काल सहायता, आपातकालीन आश्रय और जागरूकता अभियान प्रदान करता है।">Provides immediate assistance, emergency shelter, and awareness campaigns to prevent domestic violence and promote safe living environments.</span></p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
 
 
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jQuery.headroom.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/smoothscroll.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="js/back_to_top.js"></script>
 
-      <h2 style="color: #C147E9 !important;"><span class="lang-toggle" data-en="Understand Your Results" data-hi="अपने परिणाम समझें">Understand Your Results</span></h2>
-      
-      <div class="table-responsive">
-        <table class="grading-table">
-            <thead>
-                <tr>
-                    <th><span class="lang-toggle" data-en="Mental Abuse Level" data-hi="मानसिक शोषण स्तर">Mental Abuse Level</span></th>
-                    <th><span class="lang-toggle" data-en="Points Range" data-hi="अंक सीमा">Points Range</span></th>
-                    <th><span class="lang-toggle" data-en="Grade" data-hi="ग्रेड">Grade</span></th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr class="severe">
-                    <td><span class="lang-toggle" data-en="High Risk" data-hi="उच्च जोखिम">High Risk</span></td>
-                    <td><span class="lang-toggle" data-en="23 – 28 Points" data-hi="23 – 28 अंक">23 – 28 Points</span></td>
-                    <td><span class="lang-toggle" data-en="🔴 Critical" data-hi="🔴 गंभीर">🔴 Critical</span></td>
-                </tr>
-                <tr class="high">
-                    <td><span class="lang-toggle" data-en="Warning Signs" data-hi="चेतावनी के संकेत">Warning Signs</span></td>
-                    <td><span class="lang-toggle" data-en="17 – 22 Points" data-hi="17 – 22 अंक">17 – 22 Points</span></td>
-                    <td><span class="lang-toggle" data-en="🟠 High" data-hi="🟠 उच्च">🟠 High</span></td>
-section class="big-section">
+    <script>
+      // Language toggle script: switches all elements with .lang-toggle between english (en) and hindi (hi)
+      document.addEventListener('DOMContentLoaded', function() {
+        const toggle = document.getElementById('lang-toggle-checkbox');
+        const elements = document.querySelectorAll('.lang-toggle');
 
-    <section class="stress-level severe">
-      <h2 style="color: #810CA8;"><span class="lang-toggle" data-en="Urgent Action Needed: Workplace Harassment Detected 🔴" data-hi="तत्काल कार्रवाई की आवश्यकता: कार्यस्थल उत्पीड़न का पता चला 🔴">Urgent Action Needed: Workplace Harassment Detected 🔴</span></h2>
-      <p style="color: white;">
-        <span class="lang-toggle" data-en="You are experiencing severe workplace harassment, which can negatively impact your mental health and professional growth. Immediate action is necessary." data-hi="आप गंभीर कार्यस्थल उत्पीड़न का सामना कर रहे हैं, जो आपके मानसिक स्वास्थ्य और पेशेवर विकास पर नकारात्मक प्रभाव डाल सकता है। तत्काल कार्रवाई आवश्यक है।">You are experiencing severe workplace harassment, which can negatively impact your mental health and professional growth. Immediate action is necessary.</span>
-      </p>
-      <h3 style="color: white;"><span class="lang-toggle" data-en="What You Can Do Right Now:" data-hi="आप अभी क्या कर सकते हैं:">What You Can Do Right Now:</span></h3>
-      <ul>
-          <li><span class="emoji">🚨</span> <span class="lang-toggle" data-en="Report the Issue – Contact HR or a legal advisor to document and report the harassment." data-hi="मुद्दे की रिपोर्ट करें - उत्पीड़न का दस्तावेजीकरण और रिपोर्ट करने के लिए मानव संसाधन या कानूनी सलाहकार से संपर्क करें।">Report the Issue – Contact HR or a legal advisor to document and report the harassment.</span></li>
-          <li><span class="emoji">🛑</span> <span class="lang-toggle" data-en="Set Boundaries – Clearly communicate that certain behaviors are unacceptable." data-hi="सीमाएं निर्धारित करें - स्पष्ट रूप से बताएं कि कुछ व्यवहार अस्वीकार्य हैं।">Set Boundaries – Clearly communicate that certain behaviors are unacceptable.</span></li>
-          <li><span class="emoji">📞</span> <span class="lang-toggle" data-en="Seek Legal Help – Know your rights and consult a lawyer if needed." data-hi="कानूनी सहायता लें - अपने अधिकारों को जानें और यदि आवश्यक हो तो वकील से परामर्श करें।">Seek Legal Help – Know your rights and consult a lawyer if needed.</span></li>
-          <li><span class="emoji">📖</span> <span class="lang-toggle" data-en="Keep Records – Maintain a log of incidents, emails, or messages as evidence." data-hi="रिकॉर्ड रखें - सबूत के तौर पर घटनाओं, ईमेल या संदेशों का लॉग बनाए रखें।">Keep Records – Maintain a log of incidents, emails, or messages as evidence.</span></li>
-          <li><span class="emoji">🏞</span> <span class="lang-toggle" data-en="Prioritize Self-Care – Engage in stress-relieving activities to protect your mental well-being." data-hi="आत्म-देखभाल को प्राथमिकता दें - अपने मानसिक कल्याण की रक्षा के लिए तनाव-मुक्ति गतिविधियों में संलग्न हों।">Prioritize Self-Care – Engage in stress-relieving activities to protect your mental well-being.</span></li>
-      </ul>
-    </section>
-  
-    <section class="stress-level high">
-      <h2 style="color: #810CA8;"><span class="lang-toggle" data-en="Workplace Harassment Warning Signs 🟠" data-hi="कार्यस्थल उत्पीड़न चेतावनी संकेत 🟠">Workplace Harassment Warning Signs 🟠</span></h2>
-      <p style="color: white;">
-        <span class="lang-toggle" data-en="You are facing concerning behaviors at work that could indicate harassment. Addressing these early is crucial to ensuring a safe and respectful workplace." data-hi="आप काम पर चिंताजनक व्यवहारों का सामना कर रहे हैं जो उत्पीड़न का संकेत हो सकते हैं। एक सुरक्षित और सम्मानजनक कार्यस्थल सुनिश्चित करने के लिए इन्हें जल्दी संबोधित करना महत्वपूर्ण है।">You are facing concerning behaviors at work that could indicate harassment. Addressing these early is crucial to ensuring a safe and respectful workplace.</span>
-      </p>
-      <h3 style="color: white;"><span class="lang-toggle" data-en="What You Can Do Right Now:" data-hi="आप अभी क्या कर सकते हैं:">What You Can Do Right Now:</span></h3>
-      <ul>
-          <li><span class="emoji">🔄</span> <span class="lang-toggle" data-en="Document Incidents – Keep a record of any inappropriate actions or comments." data-hi="घटनाओं का दस्तावेजीकरण करें - किसी भी अनुचित कार्रवाई या टिप्पणी का रिकॉर्ड रखें।">Document Incidents – Keep a record of any inappropriate actions or comments.</span></li>
-          <li><span class="emoji">📢</span> <span class="lang-toggle" data-en="Speak Up – If safe, address the behavior with the individual involved." data-hi="बोलें - यदि सुरक्षित हो, तो संबंधित व्यक्ति के साथ व्यवहार को संबोधित करें।">Speak Up – If safe, address the behavior with the individual involved.</span></li>
-section class="stress-level moderate">
-      <h2 style="color: #810CA8;"><span class="lang-toggle" data-en="Be Aware: Potential Workplace Issues 🟡" data-hi="जागरूक रहें: संभावित कार्यस्थल मुद्दे 🟡">Be Aware: Potential Workplace Issues 🟡</span></h2>
-      <p style="color: white;">
-        <span class="lang-toggle" data-en="Some behaviors at work may be uncomfortable but do not necessarily qualify as harassment. However, staying informed and settext-align: center;ting clear boundaries is essential." data-hi="काम पर कुछ व्यवहार असहज हो सकते हैं लेकिन जरूरी नहीं कि वे उत्पीड़न की श्रेणी में आएं। हालांकि, सूचित रहना और स्पष्ट सीमाएं निर्धारित करना आवश्यक है।">Some behaviors at work may be uncomfortable but do not necessarily qualify as harassment. However, staying informed and settext-align: center;ting clear boundaries is essential.</span>
-      </p>
-      <h3 style="color: white;"><span class="lang-toggle" data-en="What You Can Do Right Now:" data-hi="आप अभी क्या कर सकते हैं:">What You Can Do Right Now:</span></h3>
-      <ul>
-          <li><span class="emoji">☀</span> <span class="lang-toggle" data-en="Set Clear Boundaries – Politely but firmly communicate personal limits." data-hi="स्पष्ट सीमाएं निर्धारित करें - विनम्रता से लेकिन दृढ़ता से व्यक्तिगत सीमाओं को संप्रेषित करें।">Set Clear Boundaries – Politely but firmly communicate personal limits.</span></li>
-          <li><span class="emoji">📝</span> <span class="lang-toggle" data-en="Monitor the Situation – Keep an eye on recurring behavior and how it affects you." data-hi="स्थिति की निगरानी करें - आवर्ती व्यवहार और यह आपको कैसे प्रभावित करता है, इस पर नज़र रखें।">Monitor the Situation – Keep an eye on recurring behavior and how it affects you.</span></li>
-          <li><span class="emoji">🗣</span> <span class="lang-toggle" data-en="Address Issues Early – Speak up if something makes you uncomfortable." data-hi="मुद्दों को जल्दी संबोधित करें - यदि कुछ आपको असहज करता है तो बोलें।">Address Issues Early – Speak up if something makes you uncomfortable.</span></li>
-          <li><span class="emoji">📖</span> <span class="lang-toggle" data-en="Know Company Policies – Understand what protections exist in your workplace." data-hi="कंपनी की नीतियों को जानें - समझें कि आपके कार्यस्थल में क्या सुरक्षा मौजूद है।">Know Company Policies – Understand what protections exist in your workplace.</span></li>
-          <li><span class="emoji">😌</span> <span class="lang-toggle" data-en="Maintain Professionalism – Focus on your work while safeguarding your well-being." data-hi="व्यावसायिकता बनाए रखें - अपने कल्याण की रक्षा करते हुए अपने काम पर ध्यान केंद्रित करें।">Maintain Professionalism – Focus on your work while safeguarding your well-being.</span></li>
-      </ul>
-    </section>
-  
-    <section class="stress-level low">
-      <h2 style="color: #810CA8;"><span class="lang-toggle" data-en="Healthy Workplace Environment 🟢" data-hi="स्वस्थ कार्यस्थल वातावरण 🟢">Healthy Workplace Environment 🟢</span></h2>
-      <p style="color: white;">
-        <span class="lang-toggle" data-en="You are in a positive and respectful workplace where harassment is not a concern. Continue fostering a supportive work culture." data-hi="आप एक सकारात्मक और सम्मानजनक कार्यस्थल पर हैं जहाँ उत्पीड़न कोई चिंता का विषय नहीं है। एक सहायक कार्य संस्कृति को बढ़ावा देना जारी रखें।">You are in a positive and respectful workplace where harassment is not a concern. Continue fostering a supportive work culture.</span>
-      </p>
-      <h3 style="color: white;"><span class="lang-toggle" data-en="What You Can Do Right Now:" data-hi="आप अभी क्या कर सकते हैं:">What You Can Do Right Now:</span></h3>
-      <ul>
-          <li><span class="emoji">🧘‍♂</span> <span class="lang-toggle" data-en="Promote Respect – Encourage a culture of professionalism and mutual respect." data-hi="सम्मान को बढ़ावा दें - व्यावसायिकता और आपसी सम्मान की संस्कृति को प्रोत्साहित करें।">Promote Respect – Encourage a culture of professionalism and mutual respect.</span></li>
-          <li><span class="emoji">💡</span> <span class="lang-toggle" data-en="Stay Informed – Keep up with workplace policies and ethical guidelines." data-hi="सूचित रहें - कार्यस्थल की नीतियों और नैतिक दिशानिर्देशों के साथ बने रहें।">Stay Informed – Keep up with workplace policies and ethical guidelines.</span></li>
-          <li><span class="emoji">📍</span> <span class="lang-toggle" data-en="Support Colleagues – Help others feel safe and respected in the workplace." data-hi="सहकर्मियों का समर्थन करें - कार्यस्थल में दूसरों को सुरक्षित और सम्मानित महसूस करने में मदद करें।">Support Colleagues – Help others feel safe and respected in the workplace.</span></li>
-          <li><span class="emoji">📢</span> <span class="lang-toggle" data-en="Be an Advocate – Speak out against any inappropriate workplace behaviors." data-hi="एक पैरोकार बनें - किसी भी अनुचित कार्यस्थल व्यवहार के खिलाफ बोलें triads_x_out_against_any_inappropriate_workplace_behaviors.">Be an Advocate – Speak out against any inappropriate workplace behaviors.</span></li>
-          <li><span class="emoji">🌍</span> <span class="lang-toggle" data-en="Foster Inclusivity – Encourage diversity and fairness within your team." data-hi="समावेशिता को बढ़ावा दें - अपनी टीम के भीतर विविधता और निष्पक्षता को प्रोत्साहित करें।">Foster Inclusivity – Encourage diversity and fairness within your team.</span></li>
-      </ul>
-    </section>
-  
-  </section>
-  
+        // default language
+        let targetLang = 'en';
 
-    
-    
+        function updateLanguage() {
+          if (toggle && toggle.checked) targetLang = 'hi'; else targetLang = 'en';
 
-    <section class="resume py-5 d-lg-flex justify-content-center align-items-center" id="resume">
-        <div class="container">
-            <div class="row">
+          // update document title if any element contains title text
+          const titleEl = document.querySelector('title');
+          if (titleEl) {
+            if (targetLang === 'hi') titleEl.textContent = 'कार्यस्थल उत्पीड़न';
+            else titleEl.textContent = 'Workplace Harassment';
+          }
 
-                <div class="col-lg-6 col-12">
-                  <h2 style="color: white;" class="mb-4"><span class="lang-toggle" data-en="Legal Contacts" data-hi="कानूनी संपर्क">Legal Contacts</span></h2>
+          elements.forEach(el => {
+            const text = el.getAttribute('data-' + targetLang);
+            if (text) el.innerHTML = text;
+          });
+        }
 
-                    <div class="timeline">
-                        <div class="timeline-wrapper">
-                             <div class="timeline-yr">
-                                  <span style="font-size: 30px;">1</span>
-                             </div>
-                             <div class="timeline-info">
-                                  <h3 style="color: white;"><span style="color: white;"><span class="lang-toggle" data-en="Priya Sharma" data-hi="प्रिया शर्मा">Priya Sharma</span></span><small style="color: white;"><span class="lang-toggle" data-en="Phone Number: +91-98765-43210" data-hi="फ़ोन नंबर: +91-98765-43210">Phone Number: +91-98765-43210</span>
-                                  </small></h3>
-                                  <p style="color: white;"><span class="lang-toggle" data-en="Licensed Counselor specializing in domestic violence trauma, offering confidential one-on-one and group therapy sessions." data-hi="घरेलू हिंसा के आघात में विशेषज्ञता रखने वाली लाइसेंस प्राप्त परामर्शदाता, गोपनीय एक-पर-एक और समूह चिकित्सा सत्रों की पेशकश करती हैं।">Licensed Counselor specializing in domestic violence trauma, offering confidential one-on-one and group therapy sessions.</span>
-                                    .</p>
-                             </div>
-                        </div>
-                        <div class="timeline-wrapper">
-                            <div class="timeline-yr">
-                              <span style="font-size: 30px;">2</span>
-                            </div>
-                            <div class="timeline-info">
-                                <h3><span style="color: white;"><span class="lang-toggle" data-en="Arjun Verma" data-hi="अर्जुन वर्मा">Arjun Verma</span></span><small style="color: white;"><span class="lang-toggle" data-en="Phone Number: +91-98765-43109" data-hi="फ़ोन नंबर: +91-98765-43109">Phone Number: +91-98765-43109</span>
+        if (toggle) toggle.addEventListener('change', updateLanguage);
 
-                                </small></h3>
-                                <p style="color: white;"><span class="lang-toggle" data-en="Legal Advisor providing free consultations on filing complaints, obtaining restraining orders, and navigating legal processes" data-hi="शिकायतें दर्ज करने, निरोधक आदेश प्राप्त करने और कानूनी प्रक्रियाओं को नेविगेट करने पर मुफ्त परामर्श प्रदान करने वाले कानूनी सलाहकार">Legal Advisor providing free consultations on filing complaints, obtaining restraining orders, and navigating legal processes</span>
-                                  .</p>
-                            </div>
-                        </div>
+        // initialize
+        updateLanguage();
+      });
+    </script>
 
-                        <div class="timeline-wrapper">
-                            <div class="timeline-yr">
-                      _source_code" id="cb3" data-start-line="834" data-end-line="957"><pre class="language-html"><code class="language-html">                              <span style="font-size: 30px;">3</span>
-    _source_code" id="cb3" data-start-line="834" data-end-line="957"><pre class="language-html"><code class="language-html">                            </div>
-                            <div class="timeline-info">
-                                <h3><span style="color: white;"><span class="lang-toggle" data-en="Kavita Nair" data-hi="कविता नायर">Kavita Nair</span><small style="color: white;"><span class="lang-toggle" data-en="Phone Number: +91-98765-43098" data-hi="फ़ोन नंबर: +91-98765-43098">Phone Number: +91-98765-43098</span>
+    <div id="footer-placeholder"></div>
+    <script src="js/embed_footer.js" defer></script>
 
-                                </small>
-                                </h3>
-                                <p style="color: white;"><span class="lang-toggle" data-en="Case Manager assisting survivors with housing, financial support, and rehabilitation programs." data-hi="आवास, वित्तीय सहायता और पुनर्वास कार्यक्रमों के साथ उत्तरजीवियों की सहायता करने वाली केस मैनेजर।">Case Manager assisting survivors with housing, financial support, and rehabilitation programs.</span>
-                                </p>
-                            </div>
-                        </div>
-                        
-                        <div class="timeline-wrapper">
-                            <div class="timeline-yr">
-                              <span style="font-size: 30px;">4</span>
-                            </div>
-                            <div class="timeline-info">
-                                <h3><span style="color: white;"><span class="lang-toggle" data-en="Rohan Gupta" data-hi="रोहन गुप्ता">Rohan Gupta</span>
-                                  <small style="color: white;"><span class="lang-toggle" data-en="Phone Number: +91-98765-42987" data-hi="फ़ोन नंबर: +91-98765-42987">Phone Number: +91-98765-42987</span>
-                                </small></h3>
-                                <p style="color: white;"><span class="lang-toggle" data-en="24/7 Helpline Coordinator trained in crisis intervention and connecting individuals with emergency support services." data-hi="संकट हस्तक्षेप में प्रशिक्षित 24/7 हेल्पलाइन समन्वयक और व्यक्तियों को आपातकालीन सहायता सेवाओं से जोड़ना।">24/7 Helpline Coordinator trained in crisis intervention and connecting individuals with emergency support services.</span>
-                                </p>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-                <div class="col-lg-6 col-12">
-                  <h2 style="color: white;" class="mb-4 mobile-mt-2"><span class="lang-toggle" data-en="Associated NGOs" data-hi="संबद्ध गैर सरकारी संगठन">Associated NGOs</span></h2>
-
-                    <div class="timeline">
-                        <div class="timeline-wrapper">
-                             <div class="timeline-yr">
-                              <span style="font-size: 30px;">1</span>
-                             </div>
-                             <div class="timeline-info">
-                          _source_code" id="cb3" data-start-line="834" data-end-line="957"><pre class="language-html"><code class="language-html">                                <h3 style="color: white;"><span><span class="lang-toggle" data-en="Sahaayata Foundation" data-hi="सहायता फाउंडेशन">Sahaayata Foundation</span>
-                                  </span><small style="color: white; font-weight: lighter;"><span class="lang-toggle" data-en="Helpline Number: +91-98111-12345" data-hi="हेल्पलाइन नंबर: +91-98111-12345">Helpline Number: +91-98111-12345</span>
-                                  </small></h3>
-                                  <p style="color: #E5B8F4;"><span class="lang-toggle" data-en="A non-profit organization dedicated to supporting survivors of domestic violence through counseling, legal aid, and shelter services." data-hi="परामर्श, कानूनी सहायता और आश्रय सेवाओं के माध्यम से घरेलू हिंसा से बचे लोगों का समर्थन करने के लिए समर्पित एक गैर-लाभकारी संगठन।">A non-profit organization dedicated to supporting survivors of domestic violence through counseling, legal aid, and shelter services.</span></p>
-                             </div>
-                        </div>
-
-                        <div class="timeline-wrapper">
-                            <div class="timeline-yr">
-                              <span style="font-size: 30px;">2</span>
-                            </div>
-                            <div class="timeline-info">
-                                <h3><span style="color: white;"><span class="lang-toggle" data-en="Ujjivan Foundation" data-hi="उज्जीवन फाउंडेशन">Ujjivan Foundation</span>
-                                </span><small style="color: white ;font-weight: lighter;"><span class="lang-toggle" data-en="Helpline Number: +91-98222-54321" data-hi="हेल्पलाइन नंबर: +91-98222-54321">Helpline Number: +91-98222-54321</span>
-                                </small></h3>
-                                <p style="color: #E5B8F4;"><span class="lang-toggle" data-en="Focused on empowering individuals affected by domestic violence, offering vocational training, therapy, and community-based support programs." data-hi="घरेलू हिंसा से प्रभावित व्यक्तियों को सशक्त बनाने पर केंद्रित, व्यावसायिक प्रशिक्षण, चिकित्सा और समुदाय-आधारित सहायता कार्यक्रमों की पेशकश।">Focused on empowering individuals affected by domestic violence, offering vocational training, therapy, and community-based support programs.</span>
-                                  .</p>
-                            </div>
-                        </div>
-                        
-                        <div class="timeline-wrapper">
-                            <div class="timeline-yr">
-            _source_code" id="cb3" data-start-line="834" data-end-line="957"><pre class="language-html"><code class="language-html">                            <span style="font-size: 30px;">3</span>
-                            </div>
-                            <div class="timeline-info">
-                                <h3><span style="color: white; font-weight: lighter;"><span class="lang-toggle" data-en="Nayi Disha Welfare Society" data-hi="नई दिशा वेलफेयर सोसाइटी">Nayi Disha Welfare Society</span>
-                                </span><small style="color: white;"><span class="lang-toggle" data-en="Helpline Number: +91-98333-67890" data-hi="हेल्पलाइन नंबर: +91-98333-67890">Helpline Number: +91-98333-67890</span> </small></h3>
-                                <p style="color: #E5B8F4;"><span class="lang-toggle" data-en="Provides immediate assistance, emergency shelter, and awareness campaigns to prevent domestic violence and promote safe living environments." data-hi="घरेलू हिंसा को रोकने और सुरक्षित रहने के वातावरण को बढ़ावा देने के लिए तत्काल सहायता, आपातकालीन आश्रय और जागरूकता अभियान प्रदान करता है।">Provides immediate assistance, emergency shelter, and awareness campaigns to prevent domestic violence and promote safe living environments.</span>
-                                </p>
-                            </div>
-                        </div>
-
-                    </div>
-            _source_code" id="cb3" data-start-line="834" data-end-line="957"><pre class="language-html"><code class="language-html">            </div>
-                
-            </div>
-        </div>
-    </section>
-
-    
-    <footer class="footer py-5">
-          <div class="container">
-               <div class="row">
-
-                    <div class="col-lg-12 col-12">                                
-                        <p class="copyright-text text-center"><span class="lang-toggle" data-en="Copyright &copy; 2025 Shashkth Stree . All rights reserved" data-hi="कॉपीराइट &copy; 2025 सशक्त स्त्री। सर्वाधिकार सुरक्षित">Copyright &copy; 2025 Shashkth Stree . All rights reserved</span></p>
-                        <p class="copyright-text text-center"><span class="lang-toggle" data-en="Designed by Sneha & Riya" data-hi="स्नेहा और रिया द्वारा डिजाइन किया गया">Designed by Sneha & Riya</span></p>
-                    </div>
-                    
-               </div>
-          </div>
-     </footer>
-
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-s
-    <script src="js/jQuery.headroom.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/smoothscroll.js"></script>
-    <script src="js/custom.js"></script>
-    <script src="js/back_to_top.js"></script>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  const toggle = document.getElementById('lang-toggle-checkbox');
-  const elements = document.querySelectorAll('.lang-toggle');
-  
-  const titles = {
-    en: "Workplace Harassment",
-    hi: "कार्यस्थल उत्पीड़न"
-  };
- s
-    
-    document.title = titles[targetLang];
-    
-    elements.forEach(el => {
-      const text = el.getAttribute('data-' + targetLang);
-      if (text) {
-        el.innerHTML = text;
-      }
-    });
-  }
-  
-  toggle.addEventListener('change', updateLanguage);
- e
-  // Set initial state
-  updateLanguage();
-});
-</script>
-  </body>
+  </body>
 </html>
