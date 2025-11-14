@@ -44,12 +44,25 @@
         }
        .grid-items:hover {
             transition: 50ms;
-            transform: translate(-10px) ; /* Moves the div 10px upwards */
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Larger shadow for "lift" effect */
+            transform: translate(-10px) ; 
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
             background-color:rgb(194, 170, 198);
-  
-        }
+            
         
+       }
+       .grid-items .hover-text {
+  display: none; 
+
+.grid-items:hover .original-text {
+  display: none; 
+}
+
+.grid-items:hover .hover-text {
+  display: inline; 
+}
+        
+        
+                            
     </style>
     
    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -121,48 +134,55 @@
     <h3>(Complaints)</h3>
     <div id="grid">
         <div class="grid-items">
-            For Life threatning situations<br> Call 988 <br><pre>    or</pre><br><a href="https://helpnow.talkspace.com/">Use these resources</a>
+            <span class="original-text">For Life threatning situations/Helpline<br> </span><span class="hover-text">Call 988 <br><pre>    or</pre><br><a href="https://helpnow.talkspace.com/">Use these resources</a></span>
         </div>
     </div>
     <br>
     <h2>Legal Contacts</h2>
     <h3>(If you are seeking some advice/help)</h3>
     <div id="grid">
-        <div class="grid-items">Licensed Counselor<br>
-            Priya Sharma<br>Phone Number: +91-98765-43210<br>Licensed Counselor specializing in domestic violence trauma, offering confidential one-on-one and group therapy sessions.
+        <div class="grid-items"><span class="original-text">Licensed Counselor<br></span>
+  <span class="hover-text">Priya Sharma<br>Phone Number: +91-98765-43210<br>Licensed Counselor specializing in domestic violence trauma, offering confidential one-on-one and group therapy sessions. </span>
+            
         </div>
         <br>
-        <div class="grid-items">Legal Advise Counselor<br>
-            Arjun Verma<br>Phone Number: +91-98765-43109<br>
+        <div class="grid-items"><span class="original-text">Legal Advise Counselor<br></span>
+  <span class="hover-text">Arjun Verma<br>Phone Number: +91-98765-43109<br>
             Legal Advisor providing free consultations on filing complaints, obtaining restraining orders, and navigating legal processes .
+      </span>
+              </div>
+        <br>
+        <div class="grid-items"><span class="original-text">Case Manager<br></span>
+  <span class="hover-text">Kavita Nair<br>Phone Number: +91-98765-43098<br>
+            Case Manager assisting survivors with housing, financial support, and rehabilitation programs.</span> 
+            
         </div>
         <br>
-        <div class="grid-items"> Case Manager<br>
-            Kavita Nair<br>Phone Number: +91-98765-43098<br>
-            Case Manager assisting survivors with housing, financial support, and rehabilitation programs.
-        </div>
-        <br>
-        <div class="grid-items">Helpline Coordinator<br>
-            Rohan Gupta <br>Phone Number: +91-98765-42987<br>
+        <div class="grid-items"><span class="original-text">Helpline Coordinator<br></span>
+  <span class="hover-text">Rohan Gupta <br>Phone Number: +91-98765-42987<br>
             24/7 Helpline Coordinator trained in crisis intervention and connecting individuals with emergency support services.
-        </div>
+</span>
+                    </div>
     </div>
         <br>
     <h2>Associated NGOs</h2>
     <h3>(Healing) </h3>
     <br>
     <div id="grid">
-        <div class="grid-items">Sahaayata Foundation <br>Helpline Number: +91-98111-12345<br>
-            A non-profit organization dedicated to supporting survivors of domestic violence through counseling, legal aid, and shelter services.
+        <div class="grid-items"><span class="original-text">Sahaayata Foundation <br></span>
+  <span class="hover-text">Helpline Number: +91-98111-12345<br>
+            A non-profit organization dedicated to supporting survivors of domestic violence through counseling, legal aid, and shelter services.</span>
         </div>
 
         <br>
-        <div class="grid-items">Ujjivan Foundation <br>Helpline Number: +91-98222-54321<br>
-            Focused on empowering individuals affected by domestic violence, offering vocational training, therapy, and community-based support programs. .
+        <div class="grid-items"><span class="original-text">Ujjivan Foundation <br></span>
+  <span class="hover-text">Helpline Number: +91-98222-54321<br>
+            Focused on empowering individuals affected by domestic violence, offering vocational training, therapy, and community-based support programs. .</span>
         </div>
         <br>
-        <div class="grid-items">Nayi Disha Welfare Society <br>Helpline Number: +91-98333-67890<br>
-            Provides immediate assistance, emergency shelter, and awareness campaigns to prevent domestic violence and promote safe living environments.
+        <div class="grid-items"><span class="original-text">Nayi Disha Welfare Society <br></span>
+  <span class="hover-text">Helpline Number: +91-98333-67890<br>
+            Provides immediate assistance, emergency shelter, and awareness campaigns to prevent domestic violence and promote safe living environments.</span>
         </div>
     </div>
 </body>
