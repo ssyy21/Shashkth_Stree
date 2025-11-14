@@ -21,6 +21,75 @@
 
 	<link rel="stylesheet" href="css/flaticon.css">
 	<link rel="stylesheet" href="css/css.fundraising/stylefund.css">
+
+<style>
+/* Language Toggle Switch */
+.lang-toggle-nav {
+  display: flex;
+  align-items: center;
+  padding-left: 15px; /* Add some space from other nav items */
+}
+.lang-toggle-label {
+  margin: 0 5px;
+  font-size: 14px;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.7); /* Match navbar link color */
+  cursor: pointer;
+  user-select: none;
+}
+.lang-toggle-label:hover {
+  color: #fff;
+}
+.lang-toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+.lang-toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.lang-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 34px;
+}
+.lang-slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+input:checked + .lang-slider {
+  background-color: rgb(253, 33, 165);
+}
+input:checked + .lang-slider:before {
+  transform: translateX(26px);
+}
+
+/* Responsive adjustment for mobile */
+@media (max-width: 991.98px) {
+  .lang-toggle-nav {
+    padding-left: 20px; /* Align with other nav items in mobile */
+    margin-top: 10px;
+    margin-bottom: 10px;
+    justify-content: flex-start; /* Align left */
+  }
+}
+</style>
 </head>
 <body>
 
@@ -33,25 +102,31 @@
 	</div>
 	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 		<div class="container">
-			<a class="navbar-brand" href="index.html">Shashkth Stree</a>
+			<a class="navbar-brand" href="index.html"><span class="lang-toggle" data-en="Shashkth Stree" data-hi="सशक्त स्त्री">Shashkth Stree</span></a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="oi oi-menu"></span> Menu
+				<span class="oi oi-menu"></span> <span class="lang-toggle" data-en="Menu" data-hi="मेन्यू">Menu</span>
 			</button>
 
 			<div class="collapse navbar-collapse" id="ftco-nav">
 				<ul class="navbar-nav ml-auto">
-					<li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
-					<li class="nav-item"><a href="issues.html" class="nav-link">Issues</a></li>
-					<li class="nav-item"><a href="therapy.html" class="nav-link">Therapy</a></li>
+					<li class="nav-item active"><a href="index.html" class="nav-link"><span class="lang-toggle" data-en="Home" data-hi="मुखपृष्ठ">Home</span></a></li>
+					<li class="nav-item"><a href="issues.html" class="nav-link"><span class="lang-toggle" data-en="Issues" data-hi="मुद्दे">Issues</span></a></li>
+					<li class="nav-item"><a href="therapy.html" class="nav-link"><span class="lang-toggle" data-en="Therapy" data-hi="थेरेपी">Therapy</span></a></li>
 					
-					<li class="nav-item"><a href="https://contact-page-shashkth-stree.vercel.app/" class="nav-link">Contact</a></li>
-					<li class="nav-item cta"><a href="https://contact-page-shashkth-stree.vercel.app/" class="nav-link">Donate</a></li>
+					<li class="nav-item"><a href="https://contact-page-shashkth-stree.vercel.app/" class="nav-link"><span class="lang-toggle" data-en="Contact" data-hi="संपर्क">Contact</span></a></li>
+					<li class="nav-item cta"><a href="https://contact-page-shashkth-stree.vercel.app/" class="nav-link"><span class="lang-toggle" data-en="Donate" data-hi="दान करें">Donate</span></a></li>
+                    <li class="nav-item lang-toggle-nav">
+                      <label for="lang-toggle-checkbox" class="lang-toggle-label">EN</label>
+                      <label class="lang-toggle-switch">
+                        <input type="checkbox" id="lang-toggle-checkbox">
+                        <span class="lang-slider"></span>
+                      </label>
+                      <label for="lang-toggle-checkbox" class="lang-toggle-label">HI</label>
+                    </li>
 				</ul>
 			</div>
 		</div>
 	</nav>
-	<!-- END nav -->
-	
 	<section class="hero-wrap js-fullheight">
 		
 			<div class="slider-item js-fullheight" style="background-image:url(images/bg_3.jpg);">
@@ -60,11 +135,11 @@
 					<div class="row no-gutters slider-text js-fullheight align-items-center">
 						<div class="col-md-10 col-lg-7 ftco-animate">
 							<div class="text w-100">
-								<h2>Raising Hope</h2>
-								<h1 class="mb-3" style="color: rgb(253, 33, 165);">No limits, no fear—she’ll go far,
-									Be part of her journey to reach the stars.</h1>
+								<h2><span class="lang-toggle" data-en="Raising Hope" data-hi="आशा जगाना">Raising Hope</span></h2>
+								<h1 class="mb-3" style="color: rgb(253, 33, 165);"><span class="lang-toggle" data-en="No limits, no fear—she’ll go far, Be part of her journey to reach the stars." data-hi="कोई सीमा नहीं, कोई डर नहीं—वह बहुत दूर जाएगी, सितारों तक पहुँचने के उसके सफ़र का हिस्सा बनें।">No limits, no fear—she’ll go far,
+									Be part of her journey to reach the stars.</span></h1>
 								<div class="d-flex meta">
-									<div class=""><p class="mb-0"><a href="#volunteer" class="btn btn-secondary py-3 px-2 px-md-4">Become A Volunteer</a></p></div>
+									<div class=""><p class="mb-0"><a href="#volunteer" class="btn btn-secondary py-3 px-2 px-md-4"><span class="lang-toggle" data-en="Become A Volunteer" data-hi="स्वयंसेवक बनें">Become A Volunteer</span></a></p></div>
 									
 								</div>
 							</div>
@@ -103,9 +178,9 @@
 				</div>
 				<div class="col-md-7 wrap-about py-5">
 					<div class="heading-section pr-md-5 pt-md-5" class="mb-4 text-center">
-						<span class="subheading">Welcome to Shashkth Stree</span>
-						<h2 class="mb-4">We are here to help everyone in need</h2>
-						<p>We are dedicated to empowering women and children, giving them the tools, support, and opportunities to rebuild their lives and create brighter futures. Our mission is to provide safe spaces, access to education, skill-building programs, and essential resources to help women regain their independence and confidence while ensuring children receive the care, nourishment, and guidance they need to thrive. By addressing their immediate needs and fostering long-term growth, we aim to break cycles of hardship and inspire lasting change. Together, we can transform lives and build a world where every woman and child has the chance to rise and succeed.</p>
+						<span class="subheading"><span class="lang-toggle" data-en="Welcome to Shashkth Stree" data-hi="सशक्त स्त्री में आपका स्वागत है">Welcome to Shashkth Stree</span></span>
+						<h2 class="mb-4"><span class="lang-toggle" data-en="We are here to help everyone in need" data-hi="हम हर जरूरतमंद की मदद के लिए यहां हैं">We are here to help everyone in need</span></h2>
+						<p><span class="lang-toggle" data-en="We are dedicated to empowering women and children, giving them the tools, support, and opportunities to rebuild their lives and create brighter futures. Our mission is to provide safe spaces, access to education, skill-building programs, and essential resources to help women regain their independence and confidence while ensuring children receive the care, nourishment, and guidance they need to thrive. By addressing their immediate needs and fostering long-term growth, we aim to break cycles of hardship and inspire lasting change. Together, we can transform lives and build a world where every woman and child has the chance to rise and succeed." data-hi="हम महिलाओं और बच्चों को सशक्त बनाने, उन्हें अपने जीवन का पुनर्निर्माण करने और उज्ज्वल भविष्य बनाने के लिए उपकरण, समर्थन और अवसर देने के लिए समर्पित हैं। हमारा मिशन महिलाओं को उनकी स्वतंत्रता और आत्मविश्वास हासिल करने में मदद करने के लिए सुरक्षित स्थान, शिक्षा तक पहुंच, कौशल-निर्माण कार्यक्रम और आवश्यक संसाधन प्रदान करना है, साथ ही यह सुनिश्चित करना है कि बच्चों को फलने-फूलने के लिए आवश्यक देखभाल, पोषण और मार्गदर्शन मिले। उनकी तत्काल जरूरतों को पूरा करके और दीर्घकालिक विकास को बढ़ावा देकर, हमारा लक्ष्य कठिनाई के चक्रों को तोड़ना और स्थायी परिवर्तन को प्रेरित करना है। साथ मिलकर, हम जीवन बदल सकते हैं और एक ऐसी दुनिया बना सकते हैं जहाँ हर महिला और बच्चे को उठने और सफल होने का मौका मिले।">We are dedicated to empowering women and children, giving them the tools, support, and opportunities to rebuild their lives and create brighter futures. Our mission is to provide safe spaces, access to education, skill-building programs, and essential resources to help women regain their independence and confidence while ensuring children receive the care, nourishment, and guidance they need to thrive. By addressing their immediate needs and fostering long-term growth, we aim to break cycles of hardship and inspire lasting change. Together, we can transform lives and build a world where every woman and child has the chance to rise and succeed.</span></p>
 					</div>
 					<div class="row my-md-5">
 						<div class="col-md-6 d-flex counter-wrap">
@@ -127,36 +202,36 @@
 	
 	<section class="volunteer-form" style="background-color: #2D033B;" id="volunteer">
         <div class="container">
-            <h2 style="color: white !important;">Join Us as a Volunteer</h2>
+            <h2 style="color: white !important;"><span class="lang-toggle" data-en="Join Us as a Volunteer" data-hi="एक स्वयंसेवक के रूप में हमसे जुड़ें">Join Us as a Volunteer</span></h2>
             <form action="#" class="appointment">
                 <div class="form-group">
-                    <label for="name">Full Name</label>
+                    <label for="name"><span class="lang-toggle" data-en="Full Name" data-hi="पूरा नाम">Full Name</span></label>
                     <div class="input-wrap">
                         <span class="icon"><i class="fas fa-user"></i></span>
-                        <input type="text" class="form-control" placeholder="Enter your name">
+                        <input type="text" class="form-control lang-toggle-placeholder" placeholder="Enter your name" data-en="Enter your name" data-hi="अपना नाम दर्ज करें">
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="email">Email Address</label>
+                    <label for="email"><span class="lang-toggle" data-en="Email Address" data-hi="ईमेल पता">Email Address</span></label>
                     <div class="input-wrap">
                         <span class="icon"><i class="fas fa-envelope"></i></span>
-                        <input type="email" class="form-control" placeholder="Enter your email">
+                        <input type="email" class="form-control lang-toggle-placeholder" placeholder="Enter your email" data-en="Enter your email" data-hi="अपना ईमेल दर्ज करें">
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="cause">Select Cause</label>
+                    <label for="cause"><span class="lang-toggle" data-en="Select Cause" data-hi="कारण चुनें">Select Cause</span></label>
                     <div class="input-wrap">
                         <span class="icon"><i class="fas fa-hands-helping"></i></span>
                         <select class="form-control">
-                            <option disabled selected>Select a cause</option>
-                            <option>Women Empowerment</option>
-                            <option>Child Education</option>
-                            <option>Community Development</option>
+                            <option disabled selected><span class="lang-toggle" data-en="Select a cause" data-hi="एक कारण चुनें">Select a cause</span></option>
+                            <option><span class="lang-toggle" data-en="Women Empowerment" data-hi="महिला सशक्तिकरण">Women Empowerment</span></option>
+                            <option><span class="lang-toggle" data-en="Child Education" data-hi="बाल शिक्षा">Child Education</span></option>
+                            <option><span class="lang-toggle" data-en="Community Development" data-hi="सामुदायिक विकास">Community Development</span></option>
                         </select>
                     </div>
                 </div>
                 <div class="form-group">
-                    <input type="submit" value="Volunteer" class="btn-submit">
+                    <input type="submit" value="Volunteer" class="btn-submit lang-toggle-value" data-en="Volunteer" data-hi="स्वयंसेवक">
                 </div>
             </form>
         </div>
@@ -166,8 +241,8 @@
 		<div class="container">
 			<div class="row justify-content-center pb-5 mb-3">
 				<div class="col-md-7 heading-section text-center ftco-animate">
-					<span class="subheading">Our Causes</span>
-					<h2>Donate to charity causes around the world</h2>
+					<span class="subheading"><span class="lang-toggle" data-en="Our Causes" data-hi="हमारे उद्देश्य">Our Causes</span></span>
+					<h2><span class="lang-toggle" data-en="Donate to charity causes around the world" data-hi="दुनिया भर में धर्मार्थ कार्यों के लिए दान करें">Donate to charity causes around the world</span></h2>
 				</div>
 			</div>
 			<div class="row" style="color: white !important;">
@@ -175,13 +250,13 @@
 					<div class="causes causes-2 text-center ftco-animate">
 						<a href="#" class="img w-100" style="background-image: url(images/causes-1.jpg);"></a>
 						<div class="text p-3" >
-							<h2><a href="#">Pad Distribution for Women</a></h2>
-							<p>Providing free sanitary pads to ensure menstrual hygiene and dignity.</p>
+							<h2><a href="#"><span class="lang-toggle" data-en="Pad Distribution for Women" data-hi="महिलाओं के लिए पैड वितरण">Pad Distribution for Women</span></a></h2>
+							<p><span class="lang-toggle" data-en="Providing free sanitary pads to ensure menstrual hygiene and dignity." data-hi="मासिक धर्म स्वच्छता और सम्मान सुनिश्चित करने के लिए मुफ्त सैनिटरी पैड प्रदान करना।">Providing free sanitary pads to ensure menstrual hygiene and dignity.</span></p>
 							<div class="goal mb-4">
-								<p><span>Rs.3,800</span> to go</p>
+								<p><span class="lang-toggle" data-en="<span>Rs.3,800</span> to go" data-hi="<span>रु. 3,800</span> शेष"><span>Rs.3,800</span> to go</span></p>
 								
 							</div>
-							<p><a href="#" class="btn btn-light w-100">Donate Now</a></p>
+							<p><a href="#" class="btn btn-light w-100"><span class="lang-toggle" data-en="Donate Now" data-hi="अभी दान करें">Donate Now</span></a></p>
 						</div>
 					</div>
 				</div>
@@ -189,13 +264,13 @@
 					<div class="causes causes-2 text-center ftco-animate">
 						<a href="#" class="img w-100" style="background-image: url(images/causes-2.jpg);"></a>
 						<div class="text p-3">
-							<h2><a href="#">Education for Underprivileged Girls</a></h2>
-							<p>Supporting girls with access to schools, books, and scholarships.</p>
+							<h2><a href="#"><span class="lang-toggle" data-en="Education for Underprivileged Girls" data-hi="वंचित लड़कियों के लिए शिक्षा">Education for Underprivileged Girls</span></a></h2>
+							<p><span class="lang-toggle" data-en="Supporting girls with access to schools, books, and scholarships." data-hi="लड़कियों को स्कूल, किताबें और छात्रवृत्ति तक पहुंच प्रदान करना।">Supporting girls with access to schools, books, and scholarships.</span></p>
 							<div class="goal mb-4">
-								<p><span>Rs.3,800</span> to go</p>
+								<p><span class="lang-toggle" data-en="<span>Rs.3,800</span> to go" data-hi="<span>रु. 3,800</span> शेष"><span>Rs.3,800</span> to go</span></p>
 								
 							</div>
-							<p><a href="#" class="btn btn-light w-100">Donate Now</a></p>
+							<p><a href="#" class="btn btn-light w-100"><span class="lang-toggle" data-en="Donate Now" data-hi="अभी दान करें">Donate Now</span></a></p>
 						</div>
 					</div>
 				</div>
@@ -203,13 +278,13 @@
 					<div class="causes causes-2 text-center ftco-animate">
 						<a href="#" class="img w-100" style="background-image: url(images/causes-3.jpg);"></a>
 						<div class="text p-3">
-							<h2><a href="#">Safe Shelter for Women & Kids</a></h2>
-							<p>Offering protection and housing for survivors of abuse and homelessness</p>
+							<h2><a href="#"><span class="lang-toggle" data-en="Safe Shelter for Women & Kids" data-hi="महिलाओं और बच्चों के लिए सुरक्षित आश्रय">Safe Shelter for Women & Kids</span></a></h2>
+							<p><span class="lang-toggle" data-en="Offering protection and housing for survivors of abuse and homelessness" data-hi="दुर्व्यवहार और बेघरता से बचे लोगों के लिए सुरक्षा और आवास की पेशकश।">Offering protection and housing for survivors of abuse and homelessness</span></p>
 							<div class="goal mb-4">
-								<p><span>RS.3,800</span> to go</p>
+								<p><span class="lang-toggle" data-en="<span>RS.3,800</span> to go" data-hi="<span>रु. 3,800</span> शेष"><span>RS.3,800</span> to go</span></p>
 							
 							</div>
-							<p><a href="#" class="btn btn-light w-100">Donate Now</a></p>
+							<p><a href="#" class="btn btn-light w-100"><span class="lang-toggle" data-en="Donate Now" data-hi="अभी दान करें">Donate Now</span></a></p>
 						</div>
 					</div>
 				</div>
@@ -217,13 +292,13 @@
 					<div class="causes causes-2 text-center ftco-animate">
 						<a href="#" class="img w-100" style="background-image: url(images/causes-4.jpg);"></a>
 						<div class="text p-3">
-							<h2><a href="#">Meals & Nutrition for Children</a></h2>
-							<p> Ensuring vulnerable children receive healthy meals and essential nutrients.</p>
+							<h2><a href="#"><span class="lang-toggle" data-en="Meals & Nutrition for Children" data-hi="बच्चों के लिए भोजन और पोषण">Meals & Nutrition for Children</span></a></h2>
+							<p><span class="lang-toggle" data-en="Ensuring vulnerable children receive healthy meals and essential nutrients." data-hi="यह सुनिश्चित करना कि कमजोर बच्चों को स्वस्थ भोजन और आवश्यक पोषक तत्व मिलें।"> Ensuring vulnerable children receive healthy meals and essential nutrients.</span></p>
 							<div class="goal mb-4">
-								<p><span>Rs.3,800</span> to go</p>
+								<p><span class="lang-toggle" data-en="<span>Rs.3,800</span> to go" data-hi="<span>रु. 3,800</span> शेष"><span>Rs.3,800</span> to go</span></p>
 								
 							</div>
-							<p><a href="#" class="btn btn-light w-100">Donate Now</a></p>
+							<p><a href="#" class="btn btn-light w-100"><span class="lang-toggle" data-en="Donate Now" data-hi="अभी दान करें">Donate Now</span></a></p>
 						</div>
 					</div>
 				</div>
@@ -239,7 +314,7 @@
 			<div class="row justify-content-center pb-5">
 				<div class="col-md-7 heading-section heading-section-white text-center ftco-animate">
 					
-					<h2>Voices of Change</h2>
+					<h2><span class="lang-toggle" data-en="Voices of Change" data-hi="बदलाव की आवाजें">Voices of Change</span></h2>
 				</div>
 			</div>
 			<div class="row ftco-animate">
@@ -260,8 +335,8 @@
 										<span class="fa fa-star"></span>
 										<span class="fa fa-star"></span>
 									</p>
-									<p>After facing years of hardship, I found this organization, and they gave me the support I needed to start fresh. Today, I have a stable job and a safe place for my children. I can finally dream again.</p>
-									<p class="name">Ayesha, 28</p>
+									<p><span class="lang-toggle" data-en="After facing years of hardship, I found this organization, and they gave me the support I needed to start fresh. Today, I have a stable job and a safe place for my children. I can finally dream again." data-hi="वर्षों की कठिनाई का सामना करने के बाद, मुझे यह संगठन मिला, और उन्होंने मुझे नई शुरुआत करने के लिए आवश्यक समर्थन दिया। आज, मेरे पास एक स्थिर नौकरी और मेरे बच्चों के लिए एक सुरक्षित जगह है। मैं आखिरकार फिर से सपने देख सकती हूं।">After facing years of hardship, I found this organization, and they gave me the support I needed to start fresh. Today, I have a stable job and a safe place for my children. I can finally dream again.</span></p>
+									<p class="name"><span class="lang-toggle" data-en="Ayesha, 28" data-hi="आयशा, 28">Ayesha, 28</span></p>
 								
 								</div>
 							</div>
@@ -280,8 +355,8 @@
 									<span class="fa fa-star"></span>
 									<span class="fa fa-star"></span>
 								</p>
-								<p>After facing years of hardship, I found this organization, and they gave me the support I needed to start fresh. Today, I have a stable job and a safe place for my children. I can finally dream again.</p>
-								<p class="name">Ayesha, 28</p>
+								<p><span class="lang-toggle" data-en="After facing years of hardship, I found this organization, and they gave me the support I needed to start fresh. Today, I have a stable job and a safe place for my children. I can finally dream again." data-hi="वर्षों की कठिनाई का सामना करने के बाद, मुझे यह संगठन मिला, और उन्होंने मुझे नई शुरुआत करने के लिए आवश्यक समर्थन दिया। आज, मेरे पास एक स्थिर नौकरी और मेरे बच्चों के लिए एक सुरक्षित जगह है। मैं आखिरकार फिर से सपने देख सकती हूं।">After facing years of hardship, I found this organization, and they gave me the support I needed to start fresh. Today, I have a stable job and a safe place for my children. I can finally dream again.</span></p>
+								<p class="name"><span class="lang-toggle" data-en="Ayesha, 28" data-hi="आयशा, 28">Ayesha, 28</span></p>
 								
 							</div>
 						</div>
@@ -299,8 +374,8 @@
 									<span class="fa fa-star"></span>
 									<span class="fa fa-star"></span>
 								</p>
-								<p>After facing years of hardship, I found this organization, and they gave me the support I needed to start fresh. Today, I have a stable job and a safe place for my children. I can finally dream again.</p>
-								<p class="name">Ayesha, 28</p>
+								<p><span class="lang-toggle" data-en="After facing years of hardship, I found this organization, and they gave me the support I needed to start fresh. Today, I have a stable job and a safe place for my children. I can finally dream again." data-hi="वर्षों की कठिनाई का सामना करने के बाद, मुझे यह संगठन मिला, और उन्होंने मुझे नई शुरुआत करने के लिए आवश्यक समर्थन दिया। आज, मेरे पास एक स्थिर नौकरी और मेरे बच्चों के लिए एक सुरक्षित जगह है। मैं आखिरकार फिर से सपने देख सकती हूं।">After facing years of hardship, I found this organization, and they gave me the support I needed to start fresh. Today, I have a stable job and a safe place for my children. I can finally dream again.</span></p>
+								<p class="name"><span class="lang-toggle" data-en="Ayesha, 28" data-hi="आयशा, 28">Ayesha, 28</span></p>
 								
 							</div>
 						</div>
@@ -331,5 +406,50 @@
 	
 		<script src="js/js.fund/main.js"></script>
 		
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const toggle = document.getElementById('lang-toggle-checkbox');
+  const elements = document.querySelectorAll('.lang-toggle');
+  const placeholders = document.querySelectorAll('.lang-toggle-placeholder');
+  const values = document.querySelectorAll('.lang-toggle-value');
+  
+  const titles = {
+    en: "Fundraising",
+    hi: "धन उगाही"
+  };
+  
+  function updateLanguage() {
+    const targetLang = toggle.checked ? 'hi' : 'en';
+    
+    document.title = titles[targetLang];
+    
+    elements.forEach(el => {
+      const text = el.getAttribute('data-' + targetLang);
+      if (text) {
+        el.innerHTML = text;
+      }
+    });
+    
+    placeholders.forEach(el => {
+      const text = el.getAttribute('data-' + targetLang);
+      if (text) {
+        el.setAttribute('placeholder', text);
+      }
+    });
+
+    values.forEach(el => {
+      const text = el.getAttribute('data-' + targetLang);
+      if (text) {
+        el.setAttribute('value', text);
+      }
+    });
+  }
+  
+  toggle.addEventListener('change', updateLanguage);
+  
+  // Set initial state
+  updateLanguage();
+});
+</script>
 	</body>
 	</html>
