@@ -10,7 +10,7 @@
       .breadcrumb-container {
         padding-top: 20px; 
         padding-bottom: 0;
-        background-color: #fff; /* Match page background */
+        background-color: #fff; 
       }
       .breadcrumb {
         background-color: transparent;
@@ -18,20 +18,20 @@
         margin-bottom: 0;
       }
       .breadcrumb-item a {
-        color: #810CA8; /* Main purple color */
+        color: #810CA8; 
         text-decoration: none;
       }
       .breadcrumb-item a:hover {
-        color: #C147E9; /* Lighter purple */
+        color: #C147E9; 
       }
       .breadcrumb-item.active {
-        color: #6c757d; /* Standard bootstrap active color */
+        color: #6c757d; 
       }
       .breadcrumb-item + .breadcrumb-item::before {
-        color: #810CA8; /* Main purple */
+        color: #810CA8; 
         content: "›"; 
       }
-      /* Ensure container class from bootstrap is available if not already linked */
+      
       .container {
         width: 100%;
         padding-right: 15px;
@@ -60,17 +60,88 @@
         }
       }
     </style>
+<style>
+
+.lang-toggle-container {
+  position: fixed;
+  top: 20px;
+  right: 20px; 
+  z-index: 1001;
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 25px;
+  padding: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+.lang-toggle-label {
+  margin: 0 5px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  user-select: none;
+}
+.lang-toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+.lang-toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.lang-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 34px;
+}
+.lang-slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+input:checked + .lang-slider {
+  background-color: #810CA8;
+}
+input:checked + .lang-slider:before {
+  transform: translateX(26px);
+}
+</style>
 </head>
 <body>
+<div class="lang-toggle-container">
+  <label for="lang-toggle-checkbox" class="lang-toggle-label">EN</label>
+  <label class="lang-toggle-switch">
+    <input type="checkbox" id="lang-toggle-checkbox">
+    <span class="lang-slider"></span>
+  </label>
+  <label for="lang-toggle-checkbox" class="lang-toggle-label">HI</label>
+</div>
+
     <nav class="navbar">
         <div class="container">
             
             <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="fundraising.html">Fundraising</a></li>
-                <li><a href="issues.html">Explore
+                <li><a href="index.html"><span class="lang-toggle" data-en="Home" data-hi="[मुखपृष्ठ]">Home</span></a></li>
+                <li><a href="fundraising.html"><span class="lang-toggle" data-en="Fundraising" data-hi="[धन उगाही]">Fundraising</span></a></li>
+                <li><a href="issues.html"><span class="lang-toggle" data-en="Explore" data-hi="[अन्वेषण करें]">Explore</span>
                 </a></li>
-                <li><a href="https://contact-page-shashkth-stree.vercel.app/">Contact Us</a></li>
+                <li><a href="https://contact-page-shashkth-stree.vercel.app/"><span class="lang-toggle" data-en="Contact Us" data-hi="[संपर्क करें]">Contact Us</span></a></li>
                 
             </ul>
         </div>
@@ -78,20 +149,20 @@
     
     <nav aria-label="breadcrumb" class="breadcrumb-container container">
       <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Therapy</li>
+        <li class="breadcrumb-item"><a href="index.html"><span class="lang-toggle" data-en="Home" data-hi="[मुखपृष्ठ]">Home</span></a></li>
+        <li class="breadcrumb-item active" aria-current="page"><span class="lang-toggle" data-en="Therapy" data-hi="[थेरेपी]">Therapy</span></li>
       </ol>
     </nav>
 
     <section class="articles">
-        <h1 class="heading">Therapy Articles</h1>
+        <h1 class="heading"><span class="lang-toggle" data-en="Therapy Articles" data-hi="[थेरेपी लेख]">Therapy Articles</span></h1>
         
         <div class="search-container" style="text-align: center; margin: 20px 0;">
-            <input type="text" id="articleSearch" placeholder="Search articles by keyword..." style="width: 80%; max-width: 500px; padding: 10px; font-size: 16px; border: 1px solid #ccc; border-radius: 5px;">
+            <input type="text" id="articleSearch" placeholder="Search articles by keyword..." style="width: 80%; max-width: 500px; padding: 10px; font-size: 16px; border: 1px solid #ccc; border-radius: 5px;" class="lang-toggle-placeholder" data-en="Search articles by keyword..." data-hi="[कीवर्ड द्वारा लेख खोजें...]">
         </div>
 
         <div id="noResults" class="container" style="text-align: center; display: none; margin: 20px 0;">
-            <p style="font-size: 18px; color: #555;">No results found.</p>
+            <p style="font-size: 18px; color: #555;"><span class="lang-toggle" data-en="No results found." data-hi="[कोई परिणाम नहीं मिला।]">No results found.</span></p>
         </div>
 
         <div class="article-container">
@@ -100,9 +171,9 @@
                     <img class="img-div" src="images/img1.jpg" alt="Loneliness">
                 </div>
                 <div class="article-content">
-                    <h3>Healing-after-emotional-abuse</h3>
-                    <p>Emotional abuse is when someone uses words or actions to control, manipulate, or hurt you. It can leave you feeling powerless and unworthy. Recognizing it early is key to healing....</p>
-                    <a href="https://www.talkspace.com/blog/healing-after-emotional-abuse/" class="read-more">Read More</a>
+                    <h3><span class="lang-toggle" data-en="Healing-after-emotional-abuse" data-hi="[भावनात्मक-दुर्व्यवहार-के-बाद-उपचार]">Healing-after-emotional-abuse</span></h3>
+                    <p><span class="lang-toggle" data-en="Emotional abuse is when someone uses words or actions to control, manipulate, or hurt you. It can leave you feeling powerless and unworthy. Recognizing it early is key to healing...." data-hi="[भावनात्मक दुर्व्यवहार तब होता है जब कोई आपको नियंत्रित करने, हेरफेर करने या चोट पहुँचाने के लिए शब्दों या कार्यों का उपयोग करता है। यह आपको शक्तिहीन और अयोग्य महसूस करा सकता है। इसे जल्दी पहचानना उपचार की कुंजी है....]">Emotional abuse is when someone uses words or actions to control, manipulate, or hurt you. It can leave you feeling powerless and unworthy. Recognizing it early is key to healing....</span></p>
+                    <a href="https://www.talkspace.com/blog/healing-after-emotional-abuse/" class="read-more"><span class="lang-toggle" data-en="Read More" data-hi="[और पढ़ें]">Read More</span></a>
                 </div>
             </div>
     
@@ -111,9 +182,9 @@
                     <img src="images/img2.png" alt="Resilience">
                 </div>
                 <div class="article-content">
-                    <h3>Healing from Cyberbullying</h3>
-                    <p>Cyberbullying involves using technology to harass, threaten, or manipulate someone. It can affect self-esteem and emotional well-being. Taking action and seeking help is crucial to stopping it....</p>
-                    <a href="https://www.verywellhealth.com/cyberbullying-effects-and-what-to-do-5220584" class="read-more">Read More</a>
+                    <h3><span class="lang-toggle" data-en="Healing from Cyberbullying" data-hi="[साइबरबुलिंग से उबरना]">Healing from Cyberbullying</span></h3>
+                    <p><span class="lang-toggle" data-en="Cyberbullying involves using technology to harass, threaten, or manipulate someone. It can affect self-esteem and emotional well-being. Taking action and seeking help is crucial to stopping it...." data-hi="[साइबरबुलिंग में किसी को परेशान करने, धमकाने या हेरफेर करने के लिए तकनीक का उपयोग करना शामिल है। यह आत्म-सम्मान और भावनात्मक कल्याण को प्रभावित कर सकता है। इसे रोकने के लिए कार्रवाई करना और मदद मांगना महत्वपूर्ण है....]">Cyberbullying involves using technology to harass, threaten, or manipulate someone. It can affect self-esteem and emotional well-being. Taking action and seeking help is crucial to stopping it....</span></p>
+                    <a href="https://www.verywellhealth.com/cyberbullying-effects-and-what-to-do-5220584" class="read-more"><span class="lang-toggle" data-en="Read More" data-hi="[और पढ़ें]">Read More</span></a>
                 </div>
             </div>
 
@@ -122,9 +193,9 @@
                     <img src="images/img3.jpeg" alt="Resilience">
                 </div>
                 <div class="article-content">
-                    <h3>Understanding Consent and Boundaries</h3>
-                    <p>Consent is about giving permission freely and clearly. Boundaries ensure respect in relationships, helping people feel safe and valued. Healthy communication is key to maintaining them....</p>
-                    <a href="https://www.euroschoolindia.com/blogs/respect-and-consent-understanding-personal-boundaries/" class="read-more">Read More</a>
+                    <h3><span class="lang-toggle" data-en="Understanding Consent and Boundaries" data-hi="[सहमति और सीमाओं को समझना]">Understanding Consent and Boundaries</span></h3>
+                    <p><span class="lang-toggle" data-en="Consent is about giving permission freely and clearly. Boundaries ensure respect in relationships, helping people feel safe and valued. Healthy communication is key to maintaining them...." data-hi="[सहमति स्वतंत्र रूप से और स्पष्ट रूप से अनुमति देने के बारे में है। सीमाएं रिश्तों में सम्मान सुनिश्चित करती हैं, जिससे लोगों को सुरक्षित और मूल्यवान महसूस करने में मदद मिलती है। स्वस्थ संचार उन्हें बनाए रखने की कुंजी है....]">Consent is about giving permission freely and clearly. Boundaries ensure respect in relationships, helping people feel safe and valued. Healthy communication is key to maintaining them....</span></p>
+                    <a href="https://www.euroschoolindia.com/blogs/respect-and-consent-understanding-personal-boundaries/" class="read-more"><span class="lang-toggle" data-en="Read More" data-hi="[और पढ़ें]">Read More</span></a>
                 </div>
             </div>
             <div class="article-card">
@@ -132,9 +203,9 @@
                     <img src="images/img4.jpg" alt="Resilience">
                 </div>
                 <div class="article-content">
-                    <h3>Getting Over Workplace Harassment</h3>
-                    <p>Workplace harassment includes unwelcome behavior that creates a hostile or intimidating environment. Recognizing it and reporting it are important steps in ensuring a respectful workplace....</p>
-                    <a href="https://www.tammydunnett.com/conquerconflict/recovering-from-workplace-bullying--ee00a" class="read-more">Read More</a>
+                    <h3><span class="lang-toggle" data-en="Getting Over Workplace Harassment" data-hi="[कार्यस्थल उत्पीड़न से उबरना]">Getting Over Workplace Harassment</span></h3>
+                    <p><span class="lang-toggle" data-en="Workplace harassment includes unwelcome behavior that creates a hostile or intimidating environment. Recognizing it and reporting it are important steps in ensuring a respectful workplace...." data-hi="[कार्यस्थल उत्पीड़न में अवांछित व्यवहार शामिल है जो एक शत्रुपूर्ण या डराने वाला वातावरण बनाता है। इसे पहचानना और इसकी रिपोर्ट करना एक सम्मानजनक कार्यस्थल सुनिश्चित करने में महत्वपूर्ण कदम हैं....]">Workplace harassment includes unwelcome behavior that creates a hostile or intimidating environment. Recognizing it and reporting it are important steps in ensuring a respectful workplace....</span></p>
+                    <a href="https://www.tammydunnett.com/conquerconflict/recovering-from-workplace-bullying--ee00a" class="read-more"><span class="lang-toggle" data-en="Read More" data-hi="[और पढ़ें]">Read More</span></a>
                 </div>
             </div>
             <div class="article-card">
@@ -142,10 +213,10 @@
                     <img src="images/img5.jpg" alt="Resilience">
                 </div>
                 <div class="article-content">
-                    <h3>Managing Stress for Better Health
+                    <h3><span class="lang-toggle" data-en="Managing Stress for Better Health" data-hi="[बेहतर स्वास्थ्य के लिए तनाव का प्रबंधन]">Managing Stress for Better Health</span>
                     </h3>
-                    <p>Chronic stress can take a toll on both your mind and body, leading to health issues like anxiety, fatigue, or heart disease. Managing stress through relaxation and support is vital for overall well-being....</p>
-                    <a href="https://www.psychologytoday.com/us/blog/click-here-happiness/202105/stress-relief-101-science-based-guide?msockid=2ad9108bdb8867970b9105d2da7a665d" class="read-more">Read More</a>
+                    <p><span class="lang-toggle" data-en="Chronic stress can take a toll on both your mind and body, leading to health issues like anxiety, fatigue, or heart disease. Managing stress through relaxation and support is vital for overall well-being...." data-hi="[पुराना तनाव आपके दिमाग और शरीर दोनों पर भारी पड़ सकता है, जिससे चिंता, थकान या हृदय रोग जैसी स्वास्थ्य समस्याएं हो सकती हैं। विश्राम और समर्थन के माध्यम से तनाव का प्रबंधन समग्र कल्याण के लिए महत्वपूर्ण है....]">Chronic stress can take a toll on both your mind and body, leading to health issues like anxiety, fatigue, or heart disease. Managing stress through relaxation and support is vital for overall well-being....</span></p>
+                    <a href="https://www.psychologytoday.com/us/blog/click-here-happiness/202105/stress-relief-101-science-based-guide?msockid=2ad9108bdb8867970b9105d2da7a665d" class="read-more"><span class="lang-toggle" data-en="Read More" data-hi="[और पढ़ें]">Read More</span></a>
                 </div>
             </div>
             <div class="article-card">
@@ -153,10 +224,10 @@
                     <img src="images/img6.png" alt="Resilience">
                 </div>
                 <div class="article-content">
-                    <h3>Healing Through Couples Therapy
+                    <h3><span class="lang-toggle" data-en="Healing Through Couples Therapy" data-hi="[कपल्स थेरेपी के माध्यम से उपचार]">Healing Through Couples Therapy</span>
                     </h3>
-                    <p>Couples therapy helps partners navigate conflicts and improve communication. It provides a safe space for both individuals to express concerns and work together toward a healthier relationship...</p>
-                    <a href="https://www.everydayhealth.com/emotional-health/couples-therapy/guide/" class="read-more">Read More</a>
+                    <p><span class="lang-toggle" data-en="Couples therapy helps partners navigate conflicts and improve communication. It provides a safe space for both individuals to express concerns and work together toward a healthier relationship..." data-hi="[कपल्स थेरेपी भागीदारों को संघर्षों को नेविगेट करने और संचार में सुधार करने में मदद करती है। यह दोनों व्यक्तियों को चिंताओं को व्यक्त करने और एक स्वस्थ रिश्ते की दिशा में एक साथ काम करने के लिए एक सुरक्षित स्थान प्रदान करता है...]" >Couples therapy helps partners navigate conflicts and improve communication. It provides a safe space for both individuals to express concerns and work together toward a healthier relationship...</span></p>
+                    <a href="https://www.everydayhealth.com/emotional-health/couples-therapy/guide/" class="read-more"><span class="lang-toggle" data-en="Read More" data-hi="[और पढ़ें]">Read More</span></a>
                 </div>
             </div>
     
@@ -165,38 +236,38 @@
     
     <script>
     document.addEventListener('DOMContentLoaded', function() {
-        // Get references to the elements
+        
         const searchInput = document.getElementById('articleSearch');
         const articleContainer = document.querySelector('.article-container');
         const articles = articleContainer.querySelectorAll('.article-card');
         const noResultsMessage = document.getElementById('noResults');
 
-        // Add an event listener for the 'keyup' event on the search input
+        
         searchInput.addEventListener('keyup', function() {
-            // Get the search term, convert to lowercase, and trim whitespace
+            
             const searchTerm = searchInput.value.toLowerCase().trim();
             
             let visibleCount = 0;
 
-            // Loop through each article card
+            
             articles.forEach(function(card) {
-                // Get the text content from the h3 title and p description
+                
                 const title = card.querySelector('h3').textContent.toLowerCase();
                 const paragraph = card.querySelector('p').textContent.toLowerCase();
                 const cardText = title + ' ' + paragraph;
 
-                // Check if the card's text includes the search term
+                
                 if (cardText.includes(searchTerm)) {
-                    // If it matches, show the card (by resetting display style)
+                    
                     card.style.display = ''; 
                     visibleCount++;
                 } else {
-                    // If it doesn't match, hide the card
+                    
                     card.style.display = 'none';
                 }
             });
 
-            // Show or hide the "No results found" message
+            
             if (visibleCount > 0) {
                 noResultsMessage.style.display = 'none';
             } else {
@@ -206,5 +277,52 @@
     });
     </script>
     
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const toggle = document.getElementById('lang-toggle-checkbox');
+  const elements = document.querySelectorAll('.lang-toggle');
+  const placeholders = document.querySelectorAll('.lang-toggle-placeholder');
+  
+  const titles = {
+    en: "Therapy Articles",
+    hi: "थेरेपी लेख"
+  };
+  
+  function updateLanguage() {
+    const targetLang = toggle.checked ? 'hi' : 'en';
+    
+    document.title = titles[targetLang];
+    
+    elements.forEach(el => {
+      const text = el.getAttribute('data-' + targetLang);
+      if (text) {
+        
+        if (targetLang === 'hi' && text.startsWith('[') && text.endsWith(']')) {
+          el.innerHTML = text.substring(1, text.length - 1);
+        } else {
+          el.innerHTML = text;
+        }
+      }
+    });
+    
+    placeholders.forEach(el => {
+      const text = el.getAttribute('data-' + targetLang);
+      if (text) {
+        
+        let newText = text;
+        if (targetLang === 'hi' && text.startsWith('[') && text.endsWith(']')) {
+          newText = text.substring(1, text.length - 1);
+        }
+        el.setAttribute('placeholder', newText);
+      }
+    });
+  }
+  
+  toggle.addEventListener('change', updateLanguage);
+  
+  
+  updateLanguage();
+});
+</script>
 </body>
 </html>

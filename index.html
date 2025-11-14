@@ -6,31 +6,84 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shashkth Stree</title>
 
-    <!-- Vendor CSS ================================================== -->
     <link rel="stylesheet" type="text/css" href="css/vendor.css">
 
-    <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 
-    <!--Bootstrap ================================================== -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
 
-    <!-- Style Sheet ================================================== -->
     <link rel="stylesheet" type="text/css" href="style.css">
 
-    <!-- Google Fonts ================================================== -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
+<style>
+/* Language Toggle Switch */
+.lang-toggle-container {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 25px;
+  padding: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  margin-left: 15px; /* Added margin for spacing in navbar */
+}
+.lang-toggle-label {
+  margin: 0 5px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  user-select: none;
+}
+.lang-toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+.lang-toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.lang-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 34px;
+}
+.lang-slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+input:checked + .lang-slider {
+  background-color: #CA7EB7;
+}
+input:checked + .lang-slider:before {
+  transform: translateX(26px);
+}
+</style>
+
 </head>
 
 <body>
-
-
 
     <nav   id="navbar"  class="navbar fixed-top navbar-expand-lg container-fluid py-1 " >
         <div class="container-fluid">
@@ -42,7 +95,7 @@
             <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
                 aria-labelledby="offcanvasNavbarLabel">
                 <div class="offcanvas-header">
-                    <h5 class="offcanvas-title text-white" id="offcanvasNavbarLabel">Menu</h5>
+                    <h5 class="offcanvas-title text-white" id="offcanvasNavbarLabel"><span class="lang-toggle" data-en="Menu" data-hi="[मेन्यू]">Menu</span></h5>
                     <button type="button" class="btn-close btn-close-white text-reset" data-bs-dismiss="offcanvas"
                         aria-label="Close"></button>
                 </div>
@@ -51,27 +104,36 @@
                         class="navbar-nav align-items-center justify-content-end justify-content-xxl-center flex-grow-1 pe-3">
                         <li class="nav-item">
                             <a class="nav-link text-uppercase active mx-2 px-3 mb-2 mb-lg-0"
-                                aria-current="page" href="index.html">Home</a>
+                                aria-current="page" href="index.html"><span class="lang-toggle" data-en="Home" data-hi="[मुखपृष्ठ]">Home</span></a>
                         </li>
                         
                         <li class="nav-item">
                             <a class="nav-link text-uppercase  mx-2 px-3 mb-2 mb-lg-0"
-                                href="fundraising.html">Fund Raising</a>
+                                href="fundraising.html"><span class="lang-toggle" data-en="Fund Raising" data-hi="[धन उगाही]">Fund Raising</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-uppercase  mx-2 px-3 mb-2 mb-lg-0" href="therapy.html">Therapy</a>
+                            <a class="nav-link text-uppercase  mx-2 px-3 mb-2 mb-lg-0" href="therapy.html"><span class="lang-toggle" data-en="Therapy" data-hi="[थेरेपी]">Therapy</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-uppercase  mx-2 px-3 mb-2 mb-lg-0" href="https://contact-page-shashkth-stree.vercel.app/">Contact Us</a>
+                            <a class="nav-link text-uppercase  mx-2 px-3 mb-2 mb-lg-0" href="https://contact-page-shashkth-stree.vercel.app/"><span class="lang-toggle" data-en="Contact Us" data-hi="[संपर्क करें]">Contact Us</span></a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-uppercase  mx-2 px-3 mb-2 mb-lg-0"
-                                href="issues.html">Issues</a>
+                                href="issues.html"><span class="lang-toggle" data-en="Issues" data-hi="[मुद्दे]">Issues</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-uppercase  mx-2 px-3 mb-2 mb-lg-0" href="#">Login/SignUp</a>
+                            <a class="nav-link text-uppercase  mx-2 px-3 mb-2 mb-lg-0" href="#"><span class="lang-toggle" data-en="Login/SignUp" data-hi="[लॉगिन/साइनअप]">Login/SignUp</span></a>
                         </li>
-                       
+                        <li class="nav-item">
+                          <div class="lang-toggle-container">
+                            <label for="lang-toggle-checkbox" class="lang-toggle-label">EN</label>
+                            <label class="lang-toggle-switch">
+                              <input type="checkbox" id="lang-toggle-checkbox">
+                              <span class="lang-slider"></span>
+                            </label>
+                            <label for="lang-toggle-checkbox" class="lang-toggle-label">HI</label>
+                          </div>
+                        </li>
 
                     </ul>
 
@@ -86,15 +148,15 @@
             <div class="row">
                 <div class="col-md-10 offset-md-1">
                     <div class="text-center pt-5">
-                        <p class="header-top text-white mb-4">With knowledge in sight, we claim our right.</p>
-                        <h5 class="display-1 text-white mb-5">STRONG AND FREE, AS WE’RE MEANT TO BE</h5>
+                        <p class="header-top text-white mb-4"><span class="lang-toggle" data-en="With knowledge in sight, we claim our right." data-hi="[ज्ञान की दृष्टि से, हम अपने अधिकार का दावा करते हैं।]">With knowledge in sight, we claim our right.</span></p>
+                        <h5 class="display-1 text-white mb-5"><span class="lang-toggle" data-en="STRONG AND FREE, AS WE’RE MEANT TO BE" data-hi="[मजबूत और स्वतंत्र, जैसा हमें होना चाहिए]">STRONG AND FREE, AS WE’RE MEANT TO BE</span></h5>
                         <br>
                         <br>
                         <button style="background-color: #CA7EB7; color: white; font-family: cursive; 
     border-radius: 10px; height: 50px; width: 170px; font-weight: bold; 
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2); border: none; cursor: pointer;"
     onclick="window.location.href='issues.html'">
-    Explore
+    <span class="lang-toggle" data-en="Explore" data-hi="[अन्वेषण करें]">Explore</span>
 </button>
 
                     </div>
@@ -111,15 +173,22 @@
                     <img class= "about-img"src="images/about-img.jpg" class="about-img img-fluid" alt="about">
                 </div>
                 <div class="about_us_class">
-                    <h2 style=" text-align: center ;color: white; "class=" display-2 text-capitalize mb-4">About Us</h2>
+                    <h2 style=" text-align: center ;color: white; "class=" display-2 text-capitalize mb-4"><span class="lang-toggle" data-en="About Us" data-hi="[हमारे बारे में]">About Us</span></h2>
                     <div class="glow">
                         <p class="glow-text">
+                            <span class="lang-toggle" data-en="We aim to empower women by spreading awareness about their legal rights and providing them with the necessary resources to
+                            understand and claim those rights. We serve as a point of contact for relevant authorities and collaborate closely with
+                            NGOs that support women and children. Our website is built on a strong foundation of community, with numerous women leaders
+                            working together to educate and inspire change. In addition to raising awareness, we also support NGOs by raising funds for
+                            their initiatives, especially those focused on women and children. Furthermore, we plan to organize events to foster women's
+                            empowerment and encourage active participation in creating a more inclusive society." data-hi="[हमारा उद्देश्य महिलाओं को उनके कानूनी अधिकारों के बारे में जागरूकता फैलाकर और उन्हें उन अधिकारों को समझने और दावा करने के लिए आवश्यक संसाधन प्रदान करके सशक्त बनाना है। हम संबंधित अधिकारियों के लिए संपर्क बिंदु के रूप में काम करते हैं और महिलाओं और बच्चों का समर्थन करने वाले गैर-सरकारी संगठनों के साथ मिलकर सहयोग करते हैं। हमारी वेबसाइट समुदाय की एक मजबूत नींव पर बनी है, जिसमें कई महिला नेता शिक्षित करने और बदलाव को प्रेरित करने के लिए मिलकर काम कर रही हैं। जागरूकता बढ़ाने के अलावा, हम गैर-सरकारी संगठनों को उनकी पहलों के लिए धन जुटाकर, विशेष रूप से महिलाओं और बच्चों पर केंद्रित पहलों के लिए भी समर्थन करते हैं। इसके अलावा, हम महिलाओं के सशक्तिकरण को बढ़ावा देने और अधिक समावेशी समाज बनाने में सक्रिय भागीदारी को प्रोत्साहित करने के लिए कार्यक्रम आयोजित करने की योजना बनाते हैं।]">
                             We aim to empower women by spreading awareness about their legal rights and providing them with the necessary resources to
                             understand and claim those rights. We serve as a point of contact for relevant authorities and collaborate closely with
                             NGOs that support women and children. Our website is built on a strong foundation of community, with numerous women leaders
                             working together to educate and inspire change. In addition to raising awareness, we also support NGOs by raising funds for
                             their initiatives, especially those focused on women and children. Furthermore, we plan to organize events to foster women's
                             empowerment and encourage active participation in creating a more inclusive society.
+                            </span>
                         </p>
                     </div>
                 </div>
@@ -133,65 +202,69 @@
     <section id="posts" class="padding-medium ">
         <div style="border: black;"class= "our-mission">
             <div class="our-aim">
-                <h2 style="color: white; " class=" mb-4 text-center">Our Aim & Mission</h2>
+                <h2 style="color: white; " class=" mb-4 text-center"><span class="lang-toggle" data-en="Our Aim & Mission" data-hi="[हमारा लक्ष्य और मिशन]">Our Aim & Mission</span></h2>
                 <div class="row">
-                    <!-- First two cards (top row) -->
                     <div class="col">
                         <div class="card">
-                            <!-- <img src="images/posts01.jpg" class="card-img" alt="posts"> -->
                             <div class="card-body">
-                                <h4 class="card-text">Who are we?</h4>
+                                <h4 class="card-text"><span class="lang-toggle" data-en="Who are we?" data-hi="[हम कौन हैं?]">Who are we?</span></h4>
                                 <div class="para-body">
-                                <p class="card-title">We are a collective of passionate women leaders, advocates, and volunteers committed to 
+                                <p class="card-title"><span class="lang-toggle" data-en="We are a collective of passionate women leaders, advocates, and volunteers committed to 
                                     spreading awareness about women's legal rights. Our team consists of dedicated individuals who come together
                                      to provide vital information, resources, and support for women everywhere. By collaborating with NGOs and 
-                                     legal authorities, we are creating a strong network of assistance and empowerment.</p>
+                                     legal authorities, we are creating a strong network of assistance and empowerment." data-hi="[हम भावुक महिला नेताओं, अधिवक्ताओं और स्वयंसेवकों का एक समूह हैं जो महिलाओं के कानूनी अधिकारों के बारे में जागरूकता फैलाने के लिए प्रतिबद्ध हैं। हमारी टीम में समर्पित व्यक्ति शामिल हैं जो हर जगह महिलाओं के लिए महत्वपूर्ण जानकारी, संसाधन और समर्थन प्रदान करने के लिए एक साथ आते हैं। गैर-सरकारी संगठनों और कानूनी अधिकारियों के साथ सहयोग करके, हम सहायता और सशक्तिकरण का एक मजबूत नेटवर्क बना रहे हैं।]">We are a collective of passionate women leaders, advocates, and volunteers committed to 
+                                    spreading awareness about women's legal rights. Our team consists of dedicated individuals who come together
+                                     to provide vital information, resources, and support for women everywhere. By collaborating with NGOs and 
+                                     legal authorities, we are creating a strong network of assistance and empowerment.</span></p>
                                     </div>
                             </div>
                         </div>
                     </div>
                     <div class="col">
                         <div class="card">
-                            <!-- <img src="images/posts02.jpg" class="card-img" alt="posts"> -->
                             <div class="card-body">
-                                <h4 class="card-text">What motivates us?</h4>
+                                <h4 class="card-text"><span class="lang-toggle" data-en="What motivates us?" data-hi="[हमें क्या प्रेरित करता है?]">What motivates us?</span></h4>
                                 <div class="para-body">
-                                <p class="card-title">We are motivated by the belief that every woman deserves to be aware of her rights and have 
+                                <p class="card-title"><span class="lang-toggle" data-en="We are motivated by the belief that every woman deserves to be aware of her rights and have 
                                     access to the legal tools she needs for protection. Our mission is to dismantle the barriers of ignorance and
                                      inequality, empowering women with the knowledge and resources to navigate life’s challenges confidently and 
-                                     safely.</p>
+                                     safely." data-hi="[हम इस विश्वास से प्रेरित हैं कि हर महिला अपने अधिकारों के प्रति जागरूक होने और सुरक्षा के लिए आवश्यक कानूनी उपकरणों तक पहुंच पाने की हकदार है। हमारा मिशन अज्ञानता और असमानता की बाधाओं को खत्म करना है, महिलाओं को जीवन की चुनौतियों का आत्मविश्वास और सुरक्षित रूप से सामना करने के लिए ज्ञान और संसाधनों के साथ सशक्त बनाना है।]">We are motivated by the belief that every woman deserves to be aware of her rights and have 
+                                    access to the legal tools she needs for protection. Our mission is to dismantle the barriers of ignorance and
+                                     inequality, empowering women with the knowledge and resources to navigate life’s challenges confidently and 
+                                     safely.</span></p>
                                     </div>
                             </div>
                         </div>
                     </div>
                 </div>
         
-                <!-- Force new row -->
                 <div class="row">
-                    <!-- New divs added below (bottom row) -->
                     <div class="col">
                         <div class="card">
-                            <!-- <img src="images/posts05.jpg" class="card-img" alt="posts"> -->
                             <div class="card-body">
-                                <h4 class="card-text">Why is this important?</h4>
+                                <h4 class="card-text"><span class="lang-toggle" data-en="Why is this important?" data-hi="[यह महत्वपूर्ण क्यों है?]">Why is this important?</span></h4>
                                 <div class="para-body">
-                                <p class="card-title">This initiative matters because too many women are unaware of their legal rights or face
+                                <p class="card-title"><span class="lang-toggle" data-en="This initiative matters because too many women are unaware of their legal rights or face
                                      challenges in accessing justice. By providing education, resources, and support, we aim to empower women to 
                                      stand up for themselves and take control of their lives. It’s about ensuring that every woman is equipped 
-                                     with the knowledge and confidence to protect her rights.</p>
+                                     with the knowledge and confidence to protect her rights." data-hi="[यह पहल मायने रखती है क्योंकि बहुत सी महिलाएं अपने कानूनी अधिकारों से अनजान हैं या न्याय तक पहुंचने में चुनौतियों का सामना करती हैं। शिक्षा, संसाधन और समर्थन प्रदान करके, हमारा उद्देश्य महिलाओं को अपने लिए खड़े होने और अपने जीवन पर नियंत्रण रखने के लिए सशक्त बनाना है। यह सुनिश्चित करने के बारे में है कि हर महिला अपने अधिकारों की रक्षा के लिए ज्ञान और आत्मविश्वास से लैस है।]">This initiative matters because too many women are unaware of their legal rights or face
+                                     challenges in accessing justice. By providing education, resources, and support, we aim to empower women to 
+                                     stand up for themselves and take control of their lives. It’s about ensuring that every woman is equipped 
+                                     with the knowledge and confidence to protect her rights.</span></p>
                                     </div>
                             </div>
                         </div>
                     </div>
                     <div class="col">
                         <div class="card">
-                            <!-- <img src="images/posts06.jpg" class="card-img" alt="posts"> -->
                             <div class="card-body">
-                                <h4 class="card-text">Our story.</h4>
+                                <h4 class="card-text"><span class="lang-toggle" data-en="Our story." data-hi="[हमारी कहानी।]">Our story.</span></h4>
                                 <div class="para-body">
-                                <p class="card-title">We started with a vision to empower women through legal education and support. Over time, 
+                                <p class="card-title"><span class="lang-toggle" data-en="We started with a vision to empower women through legal education and support. Over time, 
                                     we've connected women with resources, collaborated with NGOs, and raised awareness through campaigns. Our 
-                                    mission remains to equip every woman with the knowledge to protect her rights.</p>
+                                    mission remains to equip every woman with the knowledge to protect her rights." data-hi="[हमने कानूनी शिक्षा और समर्थन के माध्यम से महिलाओं को सशक्त बनाने की दृष्टि से शुरुआत की। समय के साथ, हमने महिलाओं को संसाधनों से जोड़ा है, गैर-सरकारी संगठनों के साथ सहयोग किया है, और अभियानों के माध्यम से जागरूकता बढ़ाई है। हमारा मिशन हर महिला को अपने अधिकारों की रक्षा के लिए ज्ञान से लैस करना है।]">We started with a vision to empower women through legal education and support. Over time, 
+                                    we've connected women with resources, collaborated with NGOs, and raised awareness through campaigns. Our 
+                                    mission remains to equip every woman with the knowledge to protect her rights.</span></p>
                                 </div>
                             </div>
                         </div>
@@ -203,15 +276,15 @@
         
 
             <div class="latest-posts mt-5">
-                <h2 style="color: white;" class=" mb-4 text-center">Our Past Events</h2>
+                <h2 style="color: white;" class=" mb-4 text-center"><span class="lang-toggle" data-en="Our Past Events" data-hi="[हमारे पिछले कार्यक्रम]">Our Past Events</span></h2>
                 <div class="row g-4">
                     <div class="col-md-3">
                         <div class="card rounded-5 border-0">
                             <img src="images/posts05.jpg" class="past-event-img" alt="posts">
                             <div class="card-body">
-                              <a style=" color: white; font-weight: bolder;" href="#" class="fw-light">Breaking Barriers: Women in Leadership</a>
+                              <a style=" color: white; font-weight: bolder;" href="#" class="fw-light"><span class="lang-toggle" data-en="Breaking Barriers: Women in Leadership" data-hi="[बाधाओं को तोड़ना: नेतृत्व में महिलाएं]">Breaking Barriers: Women in Leadership</span></a>
                               
-                              <h5 class="past-event-content"><a style="color: #E5B8F4; text-align: right;"  href="#">Attendees connected with leaders and learned to overcome challenges.</a></h5>
+                              <h5 class="past-event-content"><a style="color: #E5B8F4; text-align: right;"  href="#"><span class="lang-toggle" data-en="Attendees connected with leaders and learned to overcome challenges." data-hi="[उपस्थित लोगों ने नेताओं से जुड़कर चुनौतियों से पार पाना सीखा।]">Attendees connected with leaders and learned to overcome challenges.</span></a></h5>
                             </div>
                         </div>
                     </div>
@@ -219,8 +292,8 @@
                         <div class="card rounded-5 border-0">
                             <img src="images/posts06.jpg" class="past-event-img" alt="posts">
                             <div class="card-body">
-                              <a style=" color: white; font-weight: bolder;" href="#" class=" fw-light">EmpowerHer:Financial Independence</a>
-                              <h5 class="past-event-content"><a style="color: #E5B8F4; text-align: right;" href="#">Members gained insights into budgeting, saving, and investing.</a></h5>
+                              <a style=" color: white; font-weight: bolder;" href="#" class=" fw-light"><span class="lang-toggle" data-en="EmpowerHer:Financial Independence" data-hi="[एम्पावरहर: वित्तीय स्वतंत्रता]">EmpowerHer:Financial Independence</span></a>
+                              <h5 class="past-event-content"><a style="color: #E5B8F4; text-align: right;" href="#"><span class="lang-toggle" data-en="Members gained insights into budgeting, saving, and investing." data-hi="[सदस्यों ने बजट, बचत और निवेश के बारे में जानकारी प्राप्त की।]">Members gained insights into budgeting, saving, and investing.</span></a></h5>
                             </div>
                         </div>
                     </div>
@@ -228,8 +301,8 @@
                         <div class="card rounded-5 border-0">
                             <img src="images/posts07.jpg" class="past-event-img" alt="posts">
                             <div class="card-body">
-                              <a style=" color: white; font-weight: bolder;" href="#" class="  fw-light">HerMoneyMatters: Financial Literacy</a>
-                              <h5 class="past-event-content"><a style="color: #E5B8F4; text-align: right;" href="#">Participants explored financial planning and wealth management.</a></h5>
+                              <a style=" color: white; font-weight: bolder;" href="#" class="  fw-light"><span class="lang-toggle" data-en="HerMoneyMatters: Financial Literacy" data-hi="[हरमनीमैटर्स: वित्तीय साक्षरता]">HerMoneyMatters: Financial Literacy</span></a>
+                              <h5 class="past-event-content"><a style="color: #E5B8F4; text-align: right;" href="#"><span class="lang-toggle" data-en="Participants explored financial planning and wealth management." data-hi="[प्रतिभागियों ने वित्तीय योजना और धन प्रबंधन के बारे में जाना।]">Participants explored financial planning and wealth management.</span></a></h5>
                             </div>
                         </div>
                     </div>
@@ -237,8 +310,8 @@
                         <div class="card rounded-5 border-0">
                             <img src="images/posts08.jpg" class="past-event-img" alt="posts">
                             <div class="card-body">
-                              <a style=" color: white; font-weight: bolder;" href="#" class=" fw-light">Women Empowerment Summit</a>
-                              <h5 class="past-event-content"><a style="color: #E5B8F4; text-align: right;" href="#">Members engaged in talks and activities to boost confidence.</a></h5>
+                              <a style=" color: white; font-weight: bolder;" href="#" class=" fw-light"><span class="lang-toggle" data-en="Women Empowerment Summit" data-hi="[महिला अधिकारिता शिखर सम्मेलन]">Women Empowerment Summit</span></a>
+                              <h5 class="past-event-content"><a style="color: #E5B8F4; text-align: right;" href="#"><span class="lang-toggle" data-en="Members engaged in talks and activities to boost confidence." data-hi="[सदस्यों ने आत्मविश्वास बढ़ाने के लिए बातचीत और गतिविधियों में भाग लिया।]">Members engaged in talks and activities to boost confidence.</span></a></h5>
                             </div>
                         </div>
                     </div>
@@ -252,22 +325,22 @@
         <div class="container">
             <div class="row g-2 g-sm-5">
                 <div class="col-md-6">
-                    <h2 style="color: white;" class=" text-capitalize mb-4">Trailblazers Who Redefined India’s Legacy</h2>
+                    <h2 style="color: white;" class=" text-capitalize mb-4"><span class="lang-toggle" data-en="Trailblazers Who Redefined India’s Legacy" data-hi="[भारत की विरासत को पुनर्परिभाषित करने वाले पथप्रदर्शक]">Trailblazers Who Redefined India’s Legacy</span></h2>
                     <div class="post">
                         <img src="images/posts09.jpg" class="img-fluid rounded-4" alt="posts">
                         
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <h2 style="color: white;" class=" text-capitalize mb-4">Our Success Stories</h2>
+                    <h2 style="color: white;" class=" text-capitalize mb-4"><span class="lang-toggle" data-en="Our Success Stories" data-hi="[हमारी सफलता की कहानियां]">Our Success Stories</span></h2>
                     <div class="post mb-3">
                         <div class="row">
                             <div class="col-md-3">
                                 <img src="images/posts10.jpg" class="stories-img" alt="posts">
                             </div>
                             <div class="col-md-9">
-                                <span style="color: #E5B8F4; font-weight: bold;" href="#" class="text-grey">Priya Sharma</span>
-                                <p ><a style="font-size: smaller; color: white;" href="#">She overcame domestic violence with the support of Shashkth Stree and is now a successful entrepreneur running her own handmade jewelry brand.</a></p>
+                                <span style="color: #E5B8F4; font-weight: bold;" href="#" class="text-grey"><span class="lang-toggle" data-en="Priya Sharma" data-hi="[प्रिया शर्मा]">Priya Sharma</span></span>
+                                <p ><a style="font-size: smaller; color: white;" href="#"><span class="lang-toggle" data-en="She overcame domestic violence with the support of Shashkth Stree and is now a successful entrepreneur running her own handmade jewelry brand." data-hi="[उन्होंने सशक्त स्त्री के समर्थन से घरेलू हिंसा पर काबू पाया और अब वह अपना खुद का हस्तनिर्मित आभूषण ब्रांड चलाने वाली एक सफल उद्यमी हैं।]">She overcame domestic violence with the support of Shashkth Stree and is now a successful entrepreneur running her own handmade jewelry brand.</span></a></p>
                             </div>
                         </div>
                     </div>
@@ -277,8 +350,8 @@
                                 <img src="images/posts11.jpg" class="stories-img" alt="posts">
                             </div>
                             <div class="col-md-9">
-                                <span style="color: #E5B8F4; font-weight: bold;" href="#" class="text-grey">Aditi Verma</span>
-                                <p ><a style="font-size: smaller; color: white;" href="#">Battling workplace harassment, Shashkth Stree empowered her to reclaim her confidence, and today she is a thriving tech consultant.</a></p>
+                                <span style="color: #E5B8F4; font-weight: bold;" href="#" class="text-grey"><span class="lang-toggle" data-en="Aditi Verma" data-hi="[अदिति वर्मा]">Aditi Verma</span></span>
+                                <p ><a style="font-size: smaller; color: white;" href="#"><span class="lang-toggle" data-en="Battling workplace harassment, Shashkth Stree empowered her to reclaim her confidence, and today she is a thriving tech consultant." data-hi="[कार्यस्थल उत्पीड़न से लड़ते हुए, सशक्त स्त्री ने उन्हें अपना आत्मविश्वास वापस पाने के लिए सशक्त बनाया, और आज वह एक संपन्न तकनीकी सलाहकार हैं।]">Battling workplace harassment, Shashkth Stree empowered her to reclaim her confidence, and today she is a thriving tech consultant.</span></a></p>
                             </div>
                         </div>
                     </div>
@@ -288,8 +361,8 @@
                                 <img src="images/posts12.jpg" class="stories-img" alt="posts">
                             </div>
                             <div class="col-md-9">
-                                <span style="color: #E5B8F4; font-weight: bold;" href="#" class="text-grey">Neha Gupta</span>
-                                <p ><a style="font-size: smaller; color: white;" href="#">Once a victim of dowry abuse, she rebuilt her life with Shashkth Stree's guidance and is now a celebrated chef with her own restaurant.</a></p>
+                                <span style="color: #E5B8F4; font-weight: bold;" href="#" class="text-grey"><span class="lang-toggle" data-en="Neha Gupta" data-hi="[नेहा गुप्ता]">Neha Gupta</span></span>
+                                <p ><a style="font-size: smaller; color: white;" href="#"><span class="lang-toggle" data-en="Once a victim of dowry abuse, she rebuilt her life with Shashkth Stree's guidance and is now a celebrated chef with her own restaurant." data-hi="[कभी दहेज प्रताड़ना की शिकार, उन्होंने सशक्त स्त्री के मार्गदर्शन से अपना जीवन फिर से बनाया और अब वह अपने रेस्तरां के साथ एक प्रसिद्ध शेफ हैं।]">Once a victim of dowry abuse, she rebuilt her life with Shashkth Stree's guidance and is now a celebrated chef with her own restaurant.</span></a></p>
                             </div>
                         </div>
                     </div>
@@ -299,8 +372,8 @@
                                 <img src="images/posts13.jpg" class="stories-img" alt="posts">
                             </div>
                             <div class="col-md-9">
-                                <span style="color: #E5B8F4; font-weight: bold;" href="#" class="text-grey">Riya Singh</span>
-                                <p ><a style="font-size: smaller; color: white;" href="#">Overcoming financial exploitation with help from Shashkth Stree, she now leads a flourishing sustainable fashion startup.</a></p>
+                                <span style="color: #E5B8F4; font-weight: bold;" href="#" class="text-grey"><span class="lang-toggle" data-en="Riya Singh" data-hi="[रिया सिंह]">Riya Singh</span></span>
+                                <p ><a style="font-size: smaller; color: white;" href="#"><span class="lang-toggle" data-en="Overcoming financial exploitation with help from Shashkth Stree, she now leads a flourishing sustainable fashion startup." data-hi="[सशक्त स्त्री की मदद से वित्तीय शोषण पर काबू पाने के बाद, वह अब एक संपन्न टिकाऊ फैशन स्टार्टअप का नेतृत्व करती हैं।]">Overcoming financial exploitation with help from Shashkth Stree, she now leads a flourishing sustainable fashion startup.</span></a></p>
                             </div>
                         </div>
                     </div>
@@ -320,7 +393,7 @@
 
                 <div class="col-md-3 my-5 mt-md-0">
                     <img src="images/main-logo-light.png" alt="logo" class="img-fluid">
-                    <p class="my-4">Together, we can create a world where every woman feels empowered, heard, and supported. Join us in making a difference—one step at a time.</p>
+                    <p class="my-4"><span class="lang-toggle" data-en="Together, we can create a world where every woman feels empowered, heard, and supported. Join us in making a difference—one step at a time." data-hi="[एक साथ, हम एक ऐसी दुनिया बना सकते हैं जहाँ हर महिला सशक्त, सुनी और समर्थित महसूस करे। एक समय में एक कदम उठाकर बदलाव लाने में हमारा साथ दें।]">Together, we can create a world where every woman feels empowered, heard, and supported. Join us in making a difference—one step at a time.</span></p>
                     <div class="d-flex align-items-center ">
                         <a href="#" target="_blank"><iconify-icon class="social-icon-footer pe-4"
                                 icon="mdi:facebook"></iconify-icon></a>
@@ -337,58 +410,57 @@
                 </div>
 
                 <div class="col-md-2 offset-md-1">
-                    <h5 class="text-white text-capitalize fs-5 mt-3 mt-md-0 mb-3">About us</h5>
+                    <h5 class="text-white text-capitalize fs-5 mt-3 mt-md-0 mb-3"><span class="lang-toggle" data-en="About us" data-hi="[हमारे बारे में]">About us</span></h5>
                     <ul class="navbar-nav flex-column">
-                        <li class="nav-item footer-list mb-3"><a href="#" class="nav-link text-uppercase p-0 ">About us</a>
+                        <li class="nav-item footer-list mb-3"><a href="#" class="nav-link text-uppercase p-0 "><span class="lang-toggle" data-en="About us" data-hi="[हमारे बारे में]">About us</span></a>
                         </li>
-                        <li class="nav-item footer-list mb-3"><a href="#" class="nav-link text-uppercase p-0 ">WHo are we</a>
+                        <li class="nav-item footer-list mb-3"><a href="#" class="nav-link text-uppercase p-0 "><span class="lang-toggle" data-en="WHo are we" data-hi="[हम कौन हैं]">WHo are we</span></a>
                         </li>
-                        <li class="nav-item footer-list mb-3"><a href="#" class="nav-link text-uppercase p-0 ">Why choose us</a>
+                        <li class="nav-item footer-list mb-3"><a href="#" class="nav-link text-uppercase p-0 "><span class="lang-toggle" data-en="Why choose us" data-hi="[हमें क्यों चुनें]">Why choose us</span></a>
                         </li>
-                        <li class="nav-item footer-list mb-3"><a href="#" class="nav-link text-uppercase p-0 ">Our history</a>
+                        <li class="nav-item footer-list mb-3"><a href="#" class="nav-link text-uppercase p-0 "><span class="lang-toggle" data-en="Our history" data-hi="[हमारा इतिहास]">Our history</span></a>
                         </li>
                     </ul>
                 </div>
                 <div class="col-md-2">
-                    <h5 class="text-white text-capitalize fs-5 mt-3 mt-md-0 mb-3">Quick Links</h5>
+                    <h5 class="text-white text-capitalize fs-5 mt-3 mt-md-0 mb-3"><span class="lang-toggle" data-en="Quick Links" data-hi="[त्वरित लिंक]">Quick Links</span></h5>
                     <ul class="navbar-nav flex-column">
-                        <li class="nav-item footer-list mb-3"><a href="#" class="nav-link text-uppercase p-0 ">Home</a>
+                        <li class="nav-item footer-list mb-3"><a href="#" class="nav-link text-uppercase p-0 "><span class="lang-toggle" data-en="Home" data-hi="[मुखपृष्ठ]">Home</span></a>
                         </li>
-                        <li class="nav-item footer-list mb-3"><a href="#" class="nav-link text-uppercase p-0 ">About</a>
+                        <li class="nav-item footer-list mb-3"><a href="#" class="nav-link text-uppercase p-0 "><span class="lang-toggle" data-en="About" data-hi="[बारे में]">About</span></a>
                         </li>
-                        <li class="nav-item footer-list mb-3"><a href="#" class="nav-link text-uppercase p-0 ">Blogs</a>
+                        <li class="nav-item footer-list mb-3"><a href="#" class="nav-link text-uppercase p-0 "><span class="lang-toggle" data-en="Blogs" data-hi="[ब्लॉग]">Blogs</span></a>
                         </li>
-                        <li class="nav-item footer-list mb-3"><a href="#" class="nav-link text-uppercase p-0 ">News</a>
+                        <li class="nav-item footer-list mb-3"><a href="#" class="nav-link text-uppercase p-0 "><span class="lang-toggle" data-en="News" data-hi="[समाचार]">News</span></a>
                         </li>
                     </ul>
                 </div>
                 <div class="col-md-2 ">
-                    <h5 class="text-white text-capitalize fs-5 mt-3 mt-md-0 mb-3">Contact us</h5>
+                    <h5 class="text-white text-capitalize fs-5 mt-3 mt-md-0 mb-3"><span class="lang-toggle" data-en="Contact us" data-hi="[संपर्क करें]">Contact us</span></h5>
                     <ul class="navbar-nav flex-column">
-                        <li class="nav-item footer-list mb-3"><a href="#" class="nav-link text-uppercase p-0 ">Our
-                                location</a>
+                        <li class="nav-item footer-list mb-3"><a href="#" class="nav-link text-uppercase p-0 "><span class="lang-toggle" data-en="Our location" data-hi="[हमारा स्थान]">Our location</span></a>
                         </li>
                         <li class="nav-item footer-list mb-3"><a href="#"
-                                class="nav-link text-uppercase p-0 ">Contact</a>
+                                class="nav-link text-uppercase p-0 "><span class="lang-toggle" data-en="Contact" data-hi="[संपर्क]">Contact</span></a>
                         </li>
                         <li class="nav-item footer-list mb-3"><a href="#"
-                                class="nav-link text-uppercase p-0 ">Address</a>
+                                class="nav-link text-uppercase p-0 "><span class="lang-toggle" data-en="Address" data-hi="[पता]">Address</span></a>
                         </li>
                         <li class="nav-item footer-list mb-3"><a href="#"
-                                class="nav-link text-uppercase p-0 ">Facebook</a>
+                                class="nav-link text-uppercase p-0 "><span class="lang-toggle" data-en="Facebook" data-hi="[फेसबुक]">Facebook</span></a>
                         </li>
                     </ul>
                 </div>
                 <div class="col-md-2 ">
-                    <h5 class="text-white text-capitalize fs-5 mt-3 mt-md-0 mb-3">More info</h5>
+                    <h5 class="text-white text-capitalize fs-5 mt-3 mt-md-0 mb-3"><span class="lang-toggle" data-en="More info" data-hi="[और जानकारी]">More info</span></h5>
                     <ul class="navbar-nav flex-column">
                         <li class="nav-item footer-list mb-3"><a href="#"
-                                class="nav-link text-uppercase p-0 ">Policy</a>
+                                class="nav-link text-uppercase p-0 "><span class="lang-toggle" data-en="Policy" data-hi="[नीति]">Policy</span></a>
                         </li>
-                        <li class="nav-item footer-list mb-3"><a href="#" class="nav-link text-uppercase p-0 ">Terms</a>
-                        </li>
+                        <li class="nav-item footer-list mb-3"><a href="#" class="nav-link text-uppercase p-0 "><span class="lang-toggle" data-en="Terms" data-hi="[शर्तें]">Terms</span></a>
+</li>
                         <li class="nav-item footer-list mb-3"><a href="#"
-                                class="nav-link text-uppercase p-0 ">Contact</a>
+                                class="nav-link text-uppercase p-0 "><span class="lang-toggle" data-en="Contact" data-hi="[संपर्क]">Contact</span></a>
                         </li>
                     </ul>
                 </div>
@@ -396,7 +468,7 @@
             </div>
 
             <div class="bottom-footer text-center">
-                <p>© 2025 Shashkth Stree | Founders : Sneha Yadav and Riya</p>
+                <p><span class="lang-toggle" data-en="© 2025 Shashkth Stree | Founders : Sneha Yadav and Riya" data-hi="[© 2025 सशक्त स्त्री | संस्थापक: स्नेहा यादव और रिया]">© 2025 Shashkth Stree | Founders : Sneha Yadav and Riya</span></p>
             </div>
 
         </div>
@@ -404,7 +476,6 @@
 
    
 
-    <!-- script ================================================== -->
     <script src="js/jquery-1.11.0.min.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/script.js"></script>
@@ -414,7 +485,39 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"></script>
 
-
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const toggle = document.getElementById('lang-toggle-checkbox');
+  const elements = document.querySelectorAll('.lang-toggle');
+  
+  const titles = {
+    en: "Shashkth Stree",
+    hi: "सशक्त स्त्री"
+  };
+  
+  function updateLanguage() {
+    const targetLang = toggle.checked ? 'hi' : 'en';
+    
+    document.title = titles[targetLang];
+    
+    elements.forEach(el => {
+      const text = el.getAttribute('data-' + targetLang);
+      if (text) {
+        if (targetLang === 'hi' && text.startsWith('[') && text.endsWith(']')) {
+          el.innerHTML = text.substring(1, text.length - 1);
+        } else {
+          el.innerHTML = text;
+        }
+      }
+    });
+  }
+  
+  toggle.addEventListener('change', updateLanguage);
+  
+  // Set initial state
+  updateLanguage();
+});
+</script>
 </body>
 
 </html>

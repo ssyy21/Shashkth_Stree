@@ -13,10 +13,8 @@
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
     
-    <!-- MAIN STYLE -->
     <link rel="stylesheet" href="css/tooplate-style.css">
     
-    <!-- Breadcrumb Custom Style -->
     <style>
       .breadcrumb-container {
         padding-top: 20px; /* Add space above the breadcrumbs */
@@ -43,15 +41,79 @@
       }
     </style>
 
-
+<style>
+/* Language Toggle Switch */
+.lang-toggle-nav {
+  display: flex;
+  align-items: center;
+  margin-left: 15px; /* Add some space from other nav items */
+}
+.lang-toggle-label {
+  margin: 0 5px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #E5B8F4; /* Light purple to match theme */
+  cursor: pointer;
+  user-select: none;
+}
+.lang-toggle-label:hover {
+  color: #fff;
+}
+.lang-toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+.lang-toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.lang-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 34px;
+}
+.lang-slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+input:checked + .lang-slider {
+  background-color: #810CA8;
+}
+input:checked + .lang-slider:before {
+  transform: translateX(26px);
+}
+/* Responsive adjustment for mobile */
+@media (max-width: 575.98px) {
+  .lang-toggle-nav {
+    margin-left: 0;
+    margin-top: 10px; /* Add space in collapsed menu */
+    justify-content: center; /* Center it in collapsed menu */
+  }
+}
+</style>
 
   </head>
   <body>
 
-    <!-- MENU -->
     <nav class="navbar navbar-expand-sm navbar-light">
         <div class="container" >
-            <a class="navbar-brand" href="index.html"style="color: #810CA8 !important;"><i class='uil uil-user'></i> Shashkth Stree</a>
+            <a class="navbar-brand" href="index.html"style="color: #810CA8 !important;"><i class='uil uil-user'></i> <span class="lang-toggle" data-en="Shashkth Stree" data-hi="सशक्त स्त्री">Shashkth Stree</span></a>
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -63,52 +125,59 @@
             <div class="collapse navbar-collapse" id="navbarNav" >
                 <ul class="navbar-nav mx-auto" >
                     <li class="nav-item" >
-                        <a href="index.html" class="nav-link" style="color: white !important;"><span data-hover="About">Home</span></a>
+                        <a href="index.html" class="nav-link" style="color: white !important;"><span data-hover="About"><span class="lang-toggle" data-en="Home" data-hi="मुखपृष्ठ">Home</span></span></a>
                     </li>
                     <li class="nav-item">
-                        <a href="issues.html" class="nav-link" style="color: white !important;"><span data-hover="Projects">Explore</span></a>
+                        <a href="issues.html" class="nav-link" style="color: white !important;"><span data-hover="Projects"><span class="lang-toggle" data-en="Explore" data-hi="अन्वेषण करें">Explore</span></span></a>
                     </li>
                     <li class="nav-item">
-                        <a href="#resume" class="nav-link" style="color: white !important;"><span data-hover="Resume">Contact</span></a>
+                        <a href="#resume" class="nav-link" style="color: white !important;"><span data-hover="Resume"><span class="lang-toggle" data-en="Contact" data-hi="संपर्क">Contact</span></span></a>
                     </li>
                     <li class="nav-item">
-                        <a href="therapy.html" class="nav-link" style="color: white !important;"><span data-hover="Contact">Therapy</span></a>
+                        <a href="therapy.html" class="nav-link" style="color: white !important;"><span data-hover="Contact"><span class="lang-toggle" data-en="Therapy" data-hi="थेरेपी">Therapy</span></span></a>
                     </li>
                 </ul>
 
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item lang-toggle-nav">
+                      <label for="lang-toggle-checkbox" class="lang-toggle-label">EN</label>
+                      <label class="lang-toggle-switch">
+                        <input type="checkbox" id="lang-toggle-checkbox">
+                        <span class="lang-slider"></span>
+                      </label>
+                      <label for="lang-toggle-checkbox" class="lang-toggle-label">HI</label>
+                    </li>
+                </ul>
                
             </div>
         </div>
     </nav>
 
-    <!-- BREADCRUMB -->
     <nav aria-label="breadcrumb" class="breadcrumb-container container">
       <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-        <li class="breadcrumb-item"><a href="issues.html">Issues</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Couple Therapy</li>
+        <li class="breadcrumb-item"><a href="index.html"><span class="lang-toggle" data-en="Home" data-hi="मुखपृष्ठ">Home</span></a></li>
+        <li class="breadcrumb-item"><a href="issues.html"><span class="lang-toggle" data-en="Issues" data-hi="मुद्दे">Issues</span></a></li>
+        <li class="breadcrumb-item active" aria-current="page"><span class="lang-toggle" data-en="Couple Therapy" data-hi="युगल चिकित्सा">Couple Therapy</span></li>
       </ol>
     </nav>
 
-    <!-- ABOUT -->
-    <section class="about full-screen d-lg-flex justify-content-center align-items-center" id="about" style="padding-top: 4rem; padding-bottom: 4rem;"> <!-- Reduced padding -->
-        <div class="container">
+    <section class="about full-screen d-lg-flex justify-content-center align-items-center" id="about" style="padding-top: 4rem; padding-bottom: 4rem;"> <div class="container">
             <div class="row">
                 
                 <div class="col-lg-7 col-md-12 col-12 d-flex align-items-center">
                     <div class="about-text">
                         
                         <h1 class="animated animated-text" style="color: white !important;">
-                            <span class="mr-2">Building Stronger Connections, Together</span>
+                            <span class="mr-2"><span class="lang-toggle" data-en="Building Stronger Connections, Together" data-hi="मजबूत संबंध बनाना, एक साथ">Building Stronger Connections, Together</span></span>
                                 <div class="animated-info">
                                   
                                 </div>
                         </h1>
 
-                        <p style="color: white !important;">Discover resources and strategies designed to help you and your partner navigate challenges, improve communication, and deepen your bond. Our mission is to provide you with the tools to foster understanding, rebuild trust, and prioritize the well-being of your relationship. Begin your journey to a healthier, more fulfilling partnership today.</p>
+                        <p style="color: white !important;"><span class="lang-toggle" data-en="Discover resources and strategies designed to help you and your partner navigate challenges, improve communication, and deepen your bond. Our mission is to provide you with the tools to foster understanding, rebuild trust, and prioritize the well-being of your relationship. Begin your journey to a healthier, more fulfilling partnership today." data-hi="आपको और आपके साथी को चुनौतियों से निपटने, संचार में सुधार करने और अपने बंधन को गहरा करने में मदद करने के लिए डिज़ाइन किए गए संसाधनों और रणनीतियों की खोज करें। हमारा मिशन आपको समझ को बढ़ावा देने, विश्वास का पुनर्निर्माण करने और अपने रिश्ते की भलाई को प्राथमिकता देने के लिए उपकरण प्रदान करना है। आज ही एक स्वस्थ, अधिक संपूर्ण साझेदारी की ओर अपनी यात्रा शुरू करें।">Discover resources and strategies designed to help you and your partner navigate challenges, improve communication, and deepen your bond. Our mission is to provide you with the tools to foster understanding, rebuild trust, and prioritize the well-being of your relationship. Begin your journey to a healthier, more fulfilling partnership today.</span></p>
                         
                         <div class="custom-btn-group mt-4">
-                          <a href="#" class="btn mr-lg-2 custom-btn" style="color: white !important;"><i class='uil uil-file-alt'></i> We Stand Together ❤️ </a>
+                          <a href="#" class="btn mr-lg-2 custom-btn" style="color: white !important;"><i class='uil uil-file-alt'></i> <span class="lang-toggle" data-en="We Stand Together ❤️" data-hi="हम एक साथ खड़े हैं ❤️">We Stand Together ❤️</span> </a>
                           
                         </div>
                     </div>
@@ -127,121 +196,105 @@
 
 
 
-    <!-- <div class="quiz-container">
-        <div class="quiz-box">
-            <a href="#quiz-section" class="quiz-button">Take the Quiz</a>
-        </div>
-    </div> -->
-    
-    
-
-
-
-
     <div class="container" style="color: white !important;">
-        <!-- Stress Level Grading Scale -->
-        
         <div class="quiz-box">
-            <a href="https://www.testportal.net/test.html?t=XnX3nHJFbETb" class="quiz-button">Take the Quiz</a>
+            <a href="https://www.testportal.net/test.html?t=XnX3nHJFbETb" class="quiz-button"><span class="lang-toggle" data-en="Take the Quiz" data-hi="प्रश्नोत्तरी लें">Take the Quiz</span></a>
         </div>
         
         <section class="grading-scale">
-            <h2 style="color: #C147E9 !important;">Understand Your Results</h2>
+            <h2 style="color: #C147E9 !important;"><span class="lang-toggle" data-en="Understand Your Results" data-hi="अपने परिणाम समझें">Understand Your Results</span></h2>
             <table class="grading-table">
                 <thead>
                     <tr>
-                        <th>Relationship Health Level</th>
-                        <th>Points Range</th>
-                        <th>Grade</th>
+                        <th><span class="lang-toggle" data-en="Relationship Health Level" data-hi="संबंध स्वास्थ्य स्तर">Relationship Health Level</span></th>
+                        <th><span class="lang-toggle" data-en="Points Range" data-hi="अंक सीमा">Points Range</span></th>
+                        <th><span class="lang-toggle" data-en="Grade" data-hi="ग्रेड">Grade</span></th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr class="severe">
-                        <td>Critical Concerns</td>
-                        <td>23 – 28 Points</td>
-                        <td>🔴 Critical</td>
+                        <td><span class="lang-toggle" data-en="Critical Concerns" data-hi="गंभीर चिंताएं">Critical Concerns</span></td>
+                        <td><span class="lang-toggle" data-en="23 – 28 Points" data-hi="23 – 28 अंक">23 – 28 Points</span></td>
+                        <td><span class="lang-toggle" data-en="🔴 Critical" data-hi="🔴 गंभीर">🔴 Critical</span></td>
                     </tr>
                     <tr class="high">
-                        <td>High Tension</td>
-                        <td>17 – 22 Points</td>
-                        <td>🟠 High</td>
+                        <td><span class="lang-toggle" data-en="High Tension" data-hi="उच्च तनाव">High Tension</span></td>
+                        <td><span class="lang-toggle" data-en="17 – 22 Points" data-hi="17 – 22 अंक">17 – 22 Points</span></td>
+                        <td><span class="lang-toggle" data-en="🟠 High" data-hi="🟠 उच्च">🟠 High</span></td>
                     </tr>
                     <tr class="moderate">
-                        <td>Moderate Concerns</td>
-                        <td>11 – 16 Points</td>
-                        <td>🟡 Manageable</td>
+                        <td><span class="lang-toggle" data-en="Moderate Concerns" data-hi="मध्यम चिंताएं">Moderate Concerns</span></td>
+                        <td><span class="lang-toggle" data-en="11 – 16 Points" data-hi="11 – 16 अंक">11 – 16 Points</span></td>
+                        <td><span class="lang-toggle" data-en="🟡 Manageable" data-hi="🟡 प्रबंधनीय">🟡 Manageable</span></td>
                     </tr>
                     <tr class="low">
-                        <td>Strong Foundation</td>
-                        <td>7 – 10 Points</td>
-                        <td>🟢 Thriving</td>
+                        <td><span class="lang-toggle" data-en="Strong Foundation" data-hi="मजबूत नींव">Strong Foundation</span></td>
+                        <td><span class="lang-toggle" data-en="7 – 10 Points" data-hi="7 – 10 अंक">7 – 10 Points</span></td>
+                        <td><span class="lang-toggle" data-en="🟢 Thriving" data-hi="🟢 संपन्न">🟢 Thriving</span></td>
                     </tr>
                 </tbody>
             </table>
         </section>
         
-        <!-- Stress Level Sections -->
         <section class="stress-level severe">
-            <h2 style="color: #C147E9 !important;">Your Relationship Needs Immediate Attention 🔴</h2>
-            <p style="color: #fff !important;">Your relationship is experiencing serious challenges that are affecting both partners' emotional well-being. If not addressed, these issues could lead to further disconnection or emotional distress. It's vital to take immediate action.</p>
-            <h3 style="color: #C147E9 !important;">What You Can Do Right Now:</h3>
+            <h2 style="color: #C147E9 !important;"><span class="lang-toggle" data-en="Your Relationship Needs Immediate Attention 🔴" data-hi="आपके रिश्ते को तत्काल ध्यान देने की आवश्यकता है 🔴">Your Relationship Needs Immediate Attention 🔴</span></h2>
+            <p style="color: #fff !important;"><span class="lang-toggle" data-en="Your relationship is experiencing serious challenges that are affecting both partners' emotional well-being. If not addressed, these issues could lead to further disconnection or emotional distress. It's vital to take immediate action." data-hi="आपका रिश्ता गंभीर चुनौतियों का सामना कर रहा है जो दोनों भागीदारों की भावनात्मक भलाई को प्रभावित कर रहे हैं। यदि संबोधित नहीं किया गया, तो ये मुद्दे आगे अलगाव या भावनात्मक संकट का कारण बन सकते हैं। तत्काल कार्रवाई करना महत्वपूर्ण है।">Your relationship is experiencing serious challenges that are affecting both partners' emotional well-being. If not addressed, these issues could lead to further disconnection or emotional distress. It's vital to take immediate action.</span></p>
+            <h3 style="color: #C147E9 !important;"><span class="lang-toggle" data-en="What You Can Do Right Now:" data-hi="आप अभी क्या कर सकते हैं:">What You Can Do Right Now:</span></h3>
             <ul>
-                <li><span class="emoji">🚨</span> Seek Couples Therapy – Professional counseling can help you navigate deep-rooted issues and rebuild trust.</li>
-                <li><span class="emoji">🛑</span> Pause & Reconnect – Take a step back, give each other space, and talk about your concerns openly.</li>
-                <li><span class="emoji">📖</span> Communicate Honestly – Express your feelings in a safe and non-judgmental way to ensure mutual understanding.</li>
-                <li><span class="emoji">🏞</span> Take Time Apart – Sometimes space is needed to reflect on the relationship and come back stronger.</li>
-                <li><span class="emoji">📅</span> Set Relationship Goals – Work together to create small, achievable goals for your relationship to rebuild trust.</li>
+                <li><span class="emoji">🚨</span> <span class="lang-toggle" data-en="Seek Couples Therapy – Professional counseling can help you navigate deep-rooted issues and rebuild trust." data-hi="युगल चिकित्सा लें - पेशेवर परामर्श आपको गहरे बैठे मुद्दों को नेविगेट करने और विश्वास का पुनर्निर्माण करने में मदद कर सकता है।">Seek Couples Therapy – Professional counseling can help you navigate deep-rooted issues and rebuild trust.</span></li>
+                <li><span class="emoji">🛑</span> <span class="lang-toggle" data-en="Pause & Reconnect – Take a step back, give each other space, and talk about your concerns openly." data-hi="रुकें और फिर से जुड़ें - एक कदम पीछे हटें, एक-दूसरे को जगह दें, और अपनी चिंताओं के बारे में खुलकर बात करें।">Pause & Reconnect – Take a step back, give each other space, and talk about your concerns openly.</span></li>
+                <li><span class="emoji">📖</span> <span class="lang-toggle" data-en="Communicate Honestly – Express your feelings in a safe and non-judgmental way to ensure mutual understanding." data-hi="ईमानदारी से संवाद करें - आपसी समझ सुनिश्चित करने के लिए अपनी भावनाओं को सुरक्षित और गैर-निर्णयात्मक तरीके से व्यक्त करें।">Communicate Honestly – Express your feelings in a safe and non-judgmental way to ensure mutual understanding.</span></li>
+                <li><span class="emoji">🏞</span> <span class="lang-toggle" data-en="Take Time Apart – Sometimes space is needed to reflect on the relationship and come back stronger." data-hi="अलग समय लें - कभी-कभी रिश्ते पर विचार करने और मजबूत होकर वापस आने के लिए जगह की आवश्यकता होती है।">Take Time Apart – Sometimes space is needed to reflect on the relationship and come back stronger.</span></li>
+                <li><span class="emoji">📅</span> <span class="lang-toggle" data-en="Set Relationship Goals – Work together to create small, achievable goals for your relationship to rebuild trust." data-hi="रिश्ते के लक्ष्य निर्धारित करें - विश्वास का पुनर्निर्माण करने के लिए अपने रिश्ते के लिए छोटे, प्राप्त करने योग्य लक्ष्य बनाने के लिए मिलकर काम करें।">Set Relationship Goals – Work together to create small, achievable goals for your relationship to rebuild trust.</span></li>
             </ul>
         </section>
         
         <section class="stress-level high">
-            <h2 style="color: #C147E9 !important;">Your Relationship is Under Stress 🟠</h2>
-            <p style="color: #fff !important;">You're facing some significant challenges, but it’s important to address these issues before they escalate further.</p>
-            <h3 style="color: #C147E9 !important;">What You Can Do Right Now:</h3>
+            <h2 style="color: #C147E9 !important;"><span class="lang-toggle" data-en="Your Relationship is Under Stress 🟠" data-hi="आपका रिश्ता तनाव में है 🟠">Your Relationship is Under Stress 🟠</span></h2>
+            <p style="color: #fff !important;"><span class="lang-toggle" data-en="You're facing some significant challenges, but it’s important to address these issues before they escalate further." data-hi="आप कुछ महत्वपूर्ण चुनौतियों का सामना कर रहे हैं, लेकिन इन मुद्दों को आगे बढ़ने से पहले संबोधित करना महत्वपूर्ण है।">You're facing some significant challenges, but it’s important to address these issues before they escalate further.</span></p>
+            <h3 style="color: #C147E9 !important;"><span class="lang-toggle" data-en="What You Can Do Right Now:" data-hi="आप अभी क्या कर सकते हैं:">What You Can Do Right Now:</span></h3>
             <ul>
-                <li><span class="emoji">🔄</span> Improve Communication – Create regular opportunities for open, non-defensive discussions.</li>
-                <li><span class="emoji">📱</span> Reduce Digital Overload – Spend quality time with each other, away from screens and distractions.</li>
-                <li><span class="emoji">🏃‍♂</span> Reignite the Spark – Engage in a light activity together, such as a walk, date night, or shared hobby.</li>
-                <li><span class="emoji">🌙</span> Establish Healthy Boundaries – Respect each other's need for personal space and time.</li>
-                <li><span class="emoji">💬</span> Reach Out for Support – Talk to a trusted friend, family member, or therapist for guidance.</li>
+                <li><span class="emoji">🔄</span> <span class="lang-toggle" data-en="Improve Communication – Create regular opportunities for open, non-defensive discussions." data-hi="संचार में सुधार करें - खुली, गैर-रक्षात्मक चर्चाओं के लिए नियमित अवसर बनाएं।">Improve Communication – Create regular opportunities for open, non-defensive discussions.</span></li>
+                <li><span class="emoji">📱</span> <span class="lang-toggle" data-en="Reduce Digital Overload – Spend quality time with each other, away from screens and distractions." data-hi="डिजिटल ओवरलोड कम करें - स्क्रीन और विकर्षणों से दूर, एक-दूसरे के साथ गुणवत्ता समय बिताएं।">Reduce Digital Overload – Spend quality time with each other, away from screens and distractions.</span></li>
+                <li><span class="emoji">🏃‍♂</span> <span class="lang-toggle" data-en="Reignite the Spark – Engage in a light activity together, such as a walk, date night, or shared hobby." data-hi="चिंगारी को फिर से जलाएं - एक साथ एक हल्की गतिविधि में संलग्न हों, जैसे कि सैर, डेट नाइट, या साझा शौक।">Reignite the Spark – Engage in a light activity together, such as a walk, date night, or shared hobby.</span></li>
+                <li><span class="emoji">🌙</span> <span class="lang-toggle" data-en="Establish Healthy Boundaries – Respect each other's need for personal space and time." data-hi="स्वस्थ सीमाएं स्थापित करें - व्यक्तिगत स्थान और समय के लिए एक-दूसरे की आवश्यकता का सम्मान करें।">Establish Healthy Boundaries – Respect each other's need for personal space and time.</span></li>
+                <li><span class="emoji">💬</span> <span class="lang-toggle" data-en="Reach Out for Support – Talk to a trusted friend, family member, or therapist for guidance." data-hi="समर्थन के लिए पहुंचें - मार्गदर्शन के लिए किसी विश्वसनीय मित्र, परिवार के सदस्य या चिकित्सक से बात करें।">Reach Out for Support – Talk to a trusted friend, family member, or therapist for guidance.</span></li>
             </ul>
         </section>
         
         <section class="stress-level moderate">
-            <h2 style="color: #C147E9 !important;">Your Relationship is Manageable 🟡</h2>
-            <p style="color: #fff !important;">There are a few areas that need improvement, but overall your relationship is functioning well. Small adjustments can help deepen your connection.</p>
-            <h3 style="color: #C147E9 !important;">What You Can Do Right Now:</h3>
+            <h2 style="color: #C147E9 !important;"><span class="lang-toggle" data-en="Your Relationship is Manageable 🟡" data-hi="आपका रिश्ता प्रबंधनीय है 🟡">Your Relationship is Manageable 🟡</span></h2>
+            <p style="color: #fff !important;"><span class="lang-toggle" data-en="There are a few areas that need improvement, but overall your relationship is functioning well. Small adjustments can help deepen your connection." data-hi="कुछ क्षेत्रों में सुधार की आवश्यकता है, लेकिन कुल मिलाकर आपका रिश्ता अच्छी तरह से काम कर रहा है। छोटे समायोजन आपके संबंध को गहरा करने में मदद कर सकते हैं।">There are a few areas that need improvement, but overall your relationship is functioning well. Small adjustments can help deepen your connection.</span></p>
+            <h3 style="color: #C147E9 !important;"><span class="lang-toggle" data-en="What You Can Do Right Now:" data-hi="आप अभी क्या कर सकते हैं:">What You Can Do Right Now:</span></h3>
             <ul>
-                <li><span class="emoji">☀</span> Create a Weekly Routine Together – Spend intentional time together, like cooking meals or watching a show.</li>
-                <li><span class="emoji">🍵</span> Nurture Your Physical Connection – Prioritize physical touch like holding hands, hugging, or cuddling.</li>
-                <li><span class="emoji">📅</span> Schedule Regular Check-Ins – Take time to reflect on your relationship regularly to identify any brewing issues.</li>
-                <li><span class="emoji">😌</span> Practice Appreciation – Express gratitude for the positive qualities in each other, big or small.</li>
-                <li><span class="emoji">📖</span> Set Personal and Shared Goals – Work together toward shared dreams while respecting each other's individual aspirations.</li>
+                <li><span class="emoji">☀</span> <span class="lang-toggle" data-en="Create a Weekly Routine Together – Spend intentional time together, like cooking meals or watching a show." data-hi="एक साथ एक साप्ताहिक दिनचर्या बनाएं - एक साथ जानबूझकर समय बिताएं, जैसे भोजन बनाना या एक शो देखना।">Create a Weekly Routine Together – Spend intentional time together, like cooking meals or watching a show.</span></li>
+                <li><span class="emoji">🍵</span> <span class="lang-toggle" data-en="Nurture Your Physical Connection – Prioritize physical touch like holding hands, hugging, or cuddling." data-hi="अपने शारीरिक संबंध को पोषित करें - हाथ पकड़ना, गले लगाना, या गले लगाना जैसे शारीरिक स्पर्श को प्राथमिकता दें।">Nurture Your Physical Connection – Prioritize physical touch like holding hands, hugging, or cuddling.</span></li>
+                <li><span class="emoji">📅</span> <span class="lang-toggle" data-en="Schedule Regular Check-Ins – Take time to reflect on your relationship regularly to identify any brewing issues." data-hi="नियमित चेक-इन शेड्यूल करें - किसी भी उभरते मुद्दे की पहचान करने के लिए नियमित रूप से अपने रिश्ते पर विचार करने के लिए समय निकालें।">Schedule Regular Check-Ins – Take time to reflect on your relationship regularly to identify any brewing issues.</span></li>
+                <li><span class="emoji">😌</span> <span class="lang-toggle" data-en="Practice Appreciation – Express gratitude for the positive qualities in each other, big or small." data-hi="प्रशंसा का अभ्यास करें - एक-दूसरे में सकारात्मक गुणों के लिए आभार व्यक्त करें, चाहे वह बड़ा हो या छोटा।">Practice Appreciation – Express gratitude for the positive qualities in each other, big or small.</span></li>
+                <li><span class="emoji">📖</span> <span class="lang-toggle" data-en="Set Personal and Shared Goals – Work together toward shared dreams while respecting each other's individual aspirations." data-hi="व्यक्तिगत और साझा लक्ष्य निर्धारित करें - एक-दूसरे की व्यक्तिगत आकांक्षाओं का सम्मान करते हुए साझा सपनों की दिशा में मिलकर काम करें।">Set Personal and Shared Goals – Work together toward shared dreams while respecting each other's individual aspirations.</span></li>
             </ul>
         </section>
         
         <section class="stress-level low">
-            <h2 style="color: #C147E9 !important;">Your Relationship is Thriving 🟢</h2>
-            <p style="color: #fff !important;">Your relationship is in a good place. You're actively maintaining healthy habits that keep your bond strong.</p>
-            <h3 style="color: #C147E9 !important;">What You Can Do Right Now:</h3>
+            <h2 style="color: #C147E9 !important;"><span class="lang-toggle" data-en="Your Relationship is Thriving 🟢" data-hi="आपका रिश्ता फल-फूल रहा है 🟢">Your Relationship is Thriving 🟢</span></h2>
+            <p style="color: #fff !important;"><span class="lang-toggle" data-en="Your relationship is in a good place. You're actively maintaining healthy habits that keep your bond strong." data-hi="आपका रिश्ता एक अच्छी जगह पर है। आप सक्रिय रूप से स्वस्थ आदतों को बनाए रख रहे हैं जो आपके बंधन को मजबूत रखती हैं।">Your relationship is in a good place. You're actively maintaining healthy habits that keep your bond strong.</span></p>
+            <h3 style="color: #C147E9 !important;"><span class="lang-toggle" data-en="What You Can Do Right Now:" data-hi="आप अभी क्या कर सकते हैं:">What You Can Do Right Now:</span></h3>
             <ul>
-                <li><span class="emoji">🧘‍♂</span> Continue to Nurture the Relationship – Keep investing in your emotional connection and supporting each other.</li>
-                <li><span class="emoji">💡</span> Challenge Yourselves Together – Take up a new activity or challenge as a couple, whether it’s learning something new or volunteering.</li>
-                <li><span class="emoji">📍</span> Prioritize Quality Time – Continue spending meaningful time with each other, even amidst busy schedules.</li>
-                <li><span class="emoji">📊</span> Track Your Relationship Growth – Regularly reflect on your connection and celebrate milestones.</li>
-                <li><span class="emoji">🌍</span> Give Back as a Couple – Volunteering or helping others can strengthen your bond and bring purpose to your relationship.</li>
+                <li><span class="emoji">🧘‍♂</span> <span class="lang-toggle" data-en="Continue to Nurture the Relationship – Keep investing in your emotional connection and supporting each other." data-hi="रिश्ते को पोषित करना जारी रखें - अपने भावनात्मक संबंध में निवेश करना और एक-दूसरे का समर्थन करना जारी रखें।">Continue to Nurture the Relationship – Keep investing in your emotional connection and supporting each other.</span></li>
+                <li><span class="emoji">💡</span> <span class="lang-toggle" data-en="Challenge Yourselves Together – Take up a new activity or challenge as a couple, whether it’s learning something new or volunteering." data-hi="एक साथ खुद को चुनौती दें - एक जोड़े के रूप में एक नई गतिविधि या चुनौती लें, चाहे वह कुछ नया सीखना हो या स्वेच्छा से काम करना हो।">Challenge Yourselves Together – Take up a new activity or challenge as a couple, whether it’s learning something new or volunteering.</span></li>
+                <li><span class="emoji">📍</span> <span class="lang-toggle" data-en="Prioritize Quality Time – Continue spending meaningful time with each other, even amidst busy schedules." data-hi="गुणवत्ता समय को प्राथमिकता दें - व्यस्त कार्यक्रम के बीच भी एक-दूसरे के साथ सार्थक समय बिताना जारी रखें।">Prioritize Quality Time – Continue spending meaningful time with each other, even amidst busy schedules.</span></li>
+                <li><span class="emoji">📊</span> <span class="lang-toggle" data-en="Track Your Relationship Growth – Regularly reflect on your connection and celebrate milestones." data-hi="अपने रिश्ते के विकास को ट्रैक करें - नियमित रूप से अपने संबंध पर विचार करें और मील के पत्थर का जश्न मनाएं।">Track Your Relationship Growth – Regularly reflect on your connection and celebrate milestones.</span></li>
+                <li><span class="emoji">🌍</span> <span class="lang-toggle" data-en="Give Back as a Couple – Volunteering or helping others can strengthen your bond and bring purpose to your relationship." data-hi="एक जोड़े के रूप में वापस दें - स्वेच्छा से या दूसरों की मदद करने से आपका बंधन मजबूत हो सकता है और आपके रिश्ते को उद्देश्य मिल सकता है।">Give Back as a Couple – Volunteering or helping others can strengthen your bond and bring purpose to your relationship.</span></li>
             </ul>
         </section>
         
     </div>
-    <!-- FEATURES -->
-    <!-- FEATURES -->
     <section class="resume py-5 d-lg-flex justify-content-center align-items-center" id="resume">
       <div class="container">
           <div class="row">
 
               <div class="col-lg-6 col-12">
-                <h2 style="color: white;" class="mb-4">Legal Contacts</h2>
+                <h2 style="color: white;" class="mb-4"><span class="lang-toggle" data-en="Legal Contacts" data-hi="कानूनी संपर्क">Legal Contacts</span></h2>
 
                   <div class="timeline">
                       <div class="timeline-wrapper">
@@ -249,9 +302,9 @@
                                 <span style="font-size: 30px;">1</span>
                            </div>
                            <div class="timeline-info">
-                                <h3 style="color: white;"><span style="color: white;">Priya Sharma</span><small style="color: white;">Phone Number: +91-98765-43210
+                                <h3 style="color: white;"><span style="color: white;"><span class="lang-toggle" data-en="Priya Sharma" data-hi="प्रिया शर्मा">Priya Sharma</span></span><small style="color: white;"><span class="lang-toggle" data-en="Phone Number: +91-98765-43210" data-hi="फ़ोन नंबर: +91-98765-43210">Phone Number: +91-98765-43210</span>
                                 </small></h3>
-                                <p style="color: white;"> Licensed Counselor specializing in domestic violence trauma, offering confidential one-on-one and group therapy sessions.
+                                <p style="color: white;"> <span class="lang-toggle" data-en="Licensed Counselor specializing in domestic violence trauma, offering confidential one-on-one and group therapy sessions." data-hi="घरेलू हिंसा के आघात में विशेषज्ञता रखने वाली लाइसेंस प्राप्त परामर्शदाता, गोपनीय एक-पर-एक और समूह चिकित्सा सत्रों की पेशकश करती हैं।">Licensed Counselor specializing in domestic violence trauma, offering confidential one-on-one and group therapy sessions.</span>
                                   .</p>
                            </div>
                       </div>
@@ -261,10 +314,10 @@
                             <span style="font-size: 30px;">2</span>
                           </div>
                           <div class="timeline-info">
-                              <h3><span style="color: white;">Arjun Verma</span><small style="color: white;">Phone Number: +91-98765-43109
+                              <h3><span style="color: white;"><span class="lang-toggle" data-en="Arjun Verma" data-hi="अर्जुन वर्मा">Arjun Verma</span></span><small style="color: white;"><span class="lang-toggle" data-en="Phone Number: +91-98765-43109" data-hi="फ़ोन नंबर: +91-98765-43109">Phone Number: +91-98765-43109</span>
 
                               </small></h3>
-                              <p style="color: white;">Legal Advisor providing free consultations on filing complaints, obtaining restraining orders, and navigating legal processes
+                              <p style="color: white;"><span class="lang-toggle" data-en="Legal Advisor providing free consultations on filing complaints, obtaining restraining orders, and navigating legal processes" data-hi="शिकायतें दर्ज करने, निरोधक आदेश प्राप्त करने और कानूनी प्रक्रियाओं को नेविगेट करने पर मुफ्त परामर्श प्रदान करने वाले कानूनी सलाहकार">Legal Advisor providing free consultations on filing complaints, obtaining restraining orders, and navigating legal processes</span>
                                 .</p>
                           </div>
                       </div>
@@ -274,11 +327,11 @@
                             <span style="font-size: 30px;">3</span>
                           </div>
                           <div class="timeline-info">
-                              <h3><span style="color: white;">Kavita Nair<small style="color: white;">Phone Number: +91-98765-43098
+                              <h3><span style="color: white;"><span class="lang-toggle" data-en="Kavita Nair" data-hi="कविता नायर">Kavita Nair</span><small style="color: white;"><span class="lang-toggle" data-en="Phone Number: +91-98765-43098" data-hi="फ़ोन नंबर: +91-98765-43098">Phone Number: +91-98765-43098</span>
 
                               </small>
                               </h3>
-                              <p style="color: white;">Case Manager assisting survivors with housing, financial support, and rehabilitation programs.
+                              <p style="color: white;"><span class="lang-toggle" data-en="Case Manager assisting survivors with housing, financial support, and rehabilitation programs." data-hi="आवास, वित्तीय सहायता और पुनर्वास कार्यक्रमों के साथ उत्तरजीवियों की सहायता करने वाली केस मैनेजर।">Case Manager assisting survivors with housing, financial support, and rehabilitation programs.</span>
                               </p>
                           </div>
                       </div>
@@ -288,10 +341,10 @@
                             <span style="font-size: 30px;">4</span>
                           </div>
                           <div class="timeline-info">
-                              <h3><span style="color: white;">Rohan Gupta
-                                <small style="color: white;">Phone Number: +91-98765-42987
+                              <h3><span style="color: white;"><span class="lang-toggle" data-en="Rohan Gupta" data-hi="रोहन गुप्ता">Rohan Gupta</span>
+                                <small style="color: white;"><span class="lang-toggle" data-en="Phone Number: +91-98765-42987" data-hi="फ़ोन नंबर: +91-98765-42987">Phone Number: +91-98765-42987</span>
                               </small></h3>
-                              <p style="color: white;">24/7 Helpline Coordinator trained in crisis intervention and connecting individuals with emergency support services.
+                              <p style="color: white;"><span class="lang-toggle" data-en="24/7 Helpline Coordinator trained in crisis intervention and connecting individuals with emergency support services." data-hi="संकट हस्तक्षेप में प्रशिक्षित 24/7 हेल्पलाइन समन्वयक और व्यक्तियों को आपातकालीन सहायता सेवाओं से जोड़ना।">24/7 Helpline Coordinator trained in crisis intervention and connecting individuals with emergency support services.</span>
                               </p>
                           </div>
                       </div>
@@ -300,7 +353,7 @@
               </div>
 
               <div class="col-lg-6 col-12">
-                <h2 style="color: white;" class="mb-4 mobile-mt-2">Associated NGOs</h2>
+                <h2 style="color: white;" class="mb-4 mobile-mt-2"><span class="lang-toggle" data-en="Associated NGOs" data-hi="संबद्ध गैर सरकारी संगठन">Associated NGOs</span></h2>
 
                   <div class="timeline">
                       <div class="timeline-wrapper">
@@ -308,10 +361,10 @@
                             <span style="font-size: 30px;">1</span>
                            </div>
                            <div class="timeline-info">
-                                <h3 style="color: white;"><span>Sahaayata Foundation
-                                </span><small style="color: white; font-weight: lighter;">Helpline Number: +91-98111-12345
+                                <h3 style="color: white;"><span><span class="lang-toggle" data-en="Sahaayata Foundation" data-hi="सहायता फाउंडेशन">Sahaayata Foundation</span>
+                                </span><small style="color: white; font-weight: lighter;"><span class="lang-toggle" data-en="Helpline Number: +91-98111-12345" data-hi="हेल्पलाइन नंबर: +91-98111-12345">Helpline Number: +91-98111-12345</span>
                                 </small></h3>
-                                <p style="color: #E5B8F4;">A non-profit organization dedicated to supporting survivors of domestic violence through counseling, legal aid, and shelter services.</p>
+                                <p style="color: #E5B8F4;"><span class="lang-toggle" data-en="A non-profit organization dedicated to supporting survivors of domestic violence through counseling, legal aid, and shelter services." data-hi="परामर्श, कानूनी सहायता और आश्रय सेवाओं के माध्यम से घरेलू हिंसा से बचे लोगों का समर्थन करने के लिए समर्पित एक गैर-लाभकारी संगठन।">A non-profit organization dedicated to supporting survivors of domestic violence through counseling, legal aid, and shelter services.</span></p>
                            </div>
                       </div>
 
@@ -320,10 +373,10 @@
                             <span style="font-size: 30px;">2</span>
                           </div>
                           <div class="timeline-info">
-                              <h3><span style="color: white;">Ujjivan Foundation
-                              </span><small style="color: white ;font-weight: lighter;">Helpline Number: +91-98222-54321
+                              <h3><span style="color: white;"><span class="lang-toggle" data-en="Ujjivan Foundation" data-hi="उज्जीवन फाउंडेशन">Ujjivan Foundation</span>
+                              </span><small style="color: white ;font-weight: lighter;"><span class="lang-toggle" data-en="Helpline Number: +91-98222-54321" data-hi="हेल्पलाइन नंबर: +91-98222-54321">Helpline Number: +91-98222-54321</span>
                               </small></h3>
-                              <p style="color: #E5B8F4;"> Focused on empowering individuals affected by domestic violence, offering vocational training, therapy, and community-based support programs.
+                              <p style="color: #E5B8F4;"> <span class="lang-toggle" data-en="Focused on empowering individuals affected by domestic violence, offering vocational training, therapy, and community-based support programs." data-hi="घरेलू हिंसा से प्रभावित व्यक्तियों को सशक्त बनाने पर केंद्रित, व्यावसायिक प्रशिक्षण, चिकित्सा और समुदाय-आधारित सहायता कार्यक्रमों की पेशकश।">Focused on empowering individuals affected by domestic violence, offering vocational training, therapy, and community-based support programs.</span>
                                 .</p>
                           </div>
                       </div>
@@ -333,9 +386,9 @@
                             <span style="font-size: 30px;">3</span>
                           </div>
                           <div class="timeline-info">
-                              <h3><span style="color: white; font-weight: lighter;">Nayi Disha Welfare Society
-                              </span><small style="color: white;">Helpline Number: +91-98333-67890 </small></h3>
-                              <p style="color: #E5B8F4;"> Provides immediate assistance, emergency shelter, and awareness campaigns to prevent domestic violence and promote safe living environments.
+                              <h3><span style="color: white; font-weight: lighter;"><span class="lang-toggle" data-en="Nayi Disha Welfare Society" data-hi="नई दिशा वेलफेयर सोसाइटी">Nayi Disha Welfare Society</span>
+                              </span><small style="color: white;"><span class="lang-toggle" data-en="Helpline Number: +91-98333-67890" data-hi="हेल्पलाइन नंबर: +91-98333-67890">Helpline Number: +91-98333-67890</span> </small></h3>
+                              <p style="color: #E5B8F4;"> <span class="lang-toggle" data-en="Provides immediate assistance, emergency shelter, and awareness campaigns to prevent domestic violence and promote safe living environments." data-hi="घरेलू हिंसा को रोकने और सुरक्षित रहने के वातावरण को बढ़ावा देने के लिए तत्काल सहायता, आपातकालीन आश्रय और जागरूकता अभियान प्रदान करता है।">Provides immediate assistance, emergency shelter, and awareness campaigns to prevent domestic violence and promote safe living environments.</span>
                               </p>
                           </div>
                       </div>
@@ -349,6 +402,34 @@
 
 
    
-
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const toggle = document.getElementById('lang-toggle-checkbox');
+  const elements = document.querySelectorAll('.lang-toggle');
+  
+  const titles = {
+    en: "Couple Therapy",
+    hi: "युगल चिकित्सा"
+  };
+  
+  function updateLanguage() {
+    const targetLang = toggle.checked ? 'hi' : 'en';
+    
+    document.title = titles[targetLang];
+    
+    elements.forEach(el => {
+      const text = el.getAttribute('data-' + targetLang);
+      if (text) {
+        el.innerHTML = text;
+      }
+    });
+  }
+  
+  toggle.addEventListener('change', updateLanguage);
+  
+  // Set initial state
+  updateLanguage();
+});
+</script>
   </body>
 </html>
