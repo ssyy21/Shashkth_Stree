@@ -1,0 +1,217 @@
+<style>
+    /* This is the further-compacted CSS.
+      Changes are noted in comments.
+    */
+    #footer {
+        color: #E5B8F4;
+        font-family: 'Montserrat', sans-serif;
+        /* Reduced bottom padding from 2rem to 1rem */
+        padding: 2rem 0 1rem; 
+    }
+
+    #footer p,
+    #footer .footer-list a,
+    #footer .bottom-footer p {
+        color: #E5B8F4;
+        text-decoration: none;
+        font-size: 0.8rem;
+    }
+
+    #footer .my-4 {
+        color: #E5B8F4;
+        margin-top: 1rem !important;
+        margin-bottom: 1rem !important;
+    }
+
+    #footer h5 {
+        color: #fff;
+        text-transform: capitalize;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        margin-top: 0.8rem;
+    }
+
+    #footer .navbar-nav {
+        flex-direction: column;
+    }
+
+    #footer .footer-list {
+        margin-bottom: 0.5rem;
+    }
+
+    #footer .footer-list a {
+        text-transform: uppercase;
+        padding: 0;
+    }
+    
+    #footer .footer-list a:hover {
+        color: #fff;
+    }
+
+    #footer .social-icon-footer {
+        color: #E5B8F4;
+        padding-right: 1rem;
+        font-size: 20px;
+        transition: color 0.3s;
+    }
+
+    #footer .social-icon-footer:hover {
+        color: #fff;
+    }
+
+    #footer .bottom-footer {
+        text-align: center;
+        /* Reduced top padding and margin */
+        padding-top: 1rem; 
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        margin-top: 1rem;
+    }
+    
+    #footer .row.my-5.py-5 {
+        margin-top: 2rem !important;
+        margin-bottom: 0 !important; /* Removed margin-bottom */
+        padding-top: 2rem !important;
+        /* Reduced bottom padding from 2rem to 1rem */
+        padding-bottom: 1rem !important; 
+    }
+
+    #footer .col-md-3.my-5.mt-md-0 {
+        margin-top: 0 !important; 
+        margin-bottom: 2rem !important;
+    }
+
+    /* Ensuring Bootstrap grid classes apply */
+    .container, .row, .col-md-2, .col-md-3, .offset-md-1, .my-5, .py-5, .mt-md-0, .d-flex, .align-items-center, .text-center, .text-light, .img-fluid {
+        /* These classes are provided by the main page's Bootstrap CSS */
+    }
+</style>
+
+<footer id="footer" class="text-light padding-medium" style="background-image:url(images/footer-bg.jpg); background-repeat: no-repeat; background-size: cover; background-position: center;">
+    <div class="container">
+
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-5 my-5 py-5 ">
+
+            <div class="col-md-3 my-5 mt-md-0">
+                <img src="images/main-logo-light.png" alt="logo" class="img-fluid">
+                <p class="my-4"><span class="lang-toggle" data-en="Together, we can create a world where every woman feels empowered, heard, and supported. Join us in making a difference—one step at a time." data-hi="[एक साथ, हम एक ऐसी दुनिया बना सकते हैं जहाँ हर महिला सशक्त, सुनी और समर्थित महसूस करे। एक समय में एक कदम उठाकर बदलाव लाने में हमारा साथ दें।]">Together, we can create a world where every woman feels empowered, heard, and supported. Join us in making a difference—one step at a time.</span></p>
+                <div class="d-flex align-items-center ">
+                    <a href="#" target="_blank"><iconify-icon class="social-icon-footer pe-4"
+                            icon="mdi:facebook"></iconify-icon></a>
+                    <a href="#" target="_blank"><iconify-icon class="social-icon-footer pe-4"
+                            icon="mdi:twitter"></iconify-icon></a>
+                    <a href="#" target="_blank"><iconify-icon class="social-icon-footer pe-4"
+                            icon="mdi:instagram"></iconify-icon></a>
+                    <a href="#" target="_blank"><iconify-icon class="social-icon-footer pe-4"
+                            icon="mdi:linkedin"></iconify-icon></a>
+                    <a href="#" target="_blank"><iconify-icon class="social-icon-footer pe-4"
+                            icon="mdi:youtube"></iconify-icon></a>
+                </div>
+
+            </div>
+
+            <div class="col-md-2 offset-md-1">
+                <h5 class="text-white text-capitalize fs-5 mt-3 mt-md-0 mb-3"><span class="lang-toggle" data-en="About us" data-hi="[हमारे बारे में]">About us</span></h5>
+                <ul class="navbar-nav flex-column">
+                    <li class="nav-item footer-list mb-3"><a href="#" class="nav-link text-uppercase p-0 "><span class="lang-toggle" data-en="About us" data-hi="[हमारे बारे में]">About us</span></a>
+                    </li>
+                    <li class="nav-item footer-list mb-3"><a href="#" class="nav-link text-uppercase p-0 "><span class="lang-toggle" data-en="WHo are we" data-hi="[हम कौन हैं]">WHo are we</span></a>
+                    </li>
+                    <li class="nav-item footer-list mb-3"><a href="#" class="nav-link text-uppercase p-0 "><span class="lang-toggle" data-en="Why choose us" data-hi="[हमें क्यों चुनें]">Why choose us</span></a>
+                    </li>
+                    <li class="nav-item footer-list mb-3"><a href="#" class="nav-link text-uppercase p-0 "><span class="lang-toggle" data-en="Our history" data-hi="[हमारा इतिहास]">Our history</span></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-2">
+                <h5 class="text-white text-capitalize fs-5 mt-3 mt-md-0 mb-3"><span class="lang-toggle" data-en="Quick Links" data-hi="[त्वरित लिंक]">Quick Links</span></h5>
+                <ul class="navbar-nav flex-column">
+                    <li class="nav-item footer-list mb-3"><a href="index.html" class="nav-link text-uppercase p-0 "><span class="lang-toggle" data-en="Home" data-hi="[मुखपृष्ठ]">Home</span></a>
+                    </li>
+                    <li class="nav-item footer-list mb-3"><a href="issues.html" class="nav-link text-uppercase p-0 "><span class="lang-toggle" data-en="Issues" data-hi="[मुद्दे]">Issues</span></a>
+                    </li>
+                    <li class="nav-item footer-list mb-3"><a href="therapy.html" class="nav-link text-uppercase p-0 "><span class="lang-toggle" data-en="Therapy" data-hi="[थेरेपी]">Therapy</span></a>
+                    </li>
+                    <li class="nav-item footer-list mb-3"><a href="fundraising.html" class="nav-link text-uppercase p-0 "><span class="lang-toggle" data-en="Fundraising" data-hi="[धन उगाही]">Fundraising</span></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-2 ">
+                <h5 class="text-white text-capitalize fs-5 mt-3 mt-md-0 mb-3"><span class="lang-toggle" data-en="Contact us" data-hi="[संपर्क करें]">Contact us</span></h5>
+                <ul class="navbar-nav flex-column">
+                    <li class="nav-item footer-list mb-3"><a href="#" class="nav-link text-uppercase p-0 "><span class="lang-toggle" data-en="Our location" data-hi="[हमारा स्थान]">Our location</span></a>
+                    </li>
+                    <li class="nav-item footer-list mb-3"><a href="https://contact-page-shashkth-stree.vercel.app/"
+                            class="nav-link text-uppercase p-0 "><span class="lang-toggle" data-en="Contact" data-hi="[संपर्क]">Contact</span></a>
+                    </li>
+                    <li class="nav-item footer-list mb-3"><a href="#"
+                            class="nav-link text-uppercase p-0 "><span class="lang-toggle" data-en="Address" data-hi="[पता]">Address</span></a>
+                    </li>
+                    <li class="nav-item footer-list mb-3"><a href="#"
+                            class="nav-link text-uppercase p-0 "><span class="lang-toggle" data-en="Facebook" data-hi="[फेसबुक]">Facebook</span></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-2 ">
+                <h5 class="text-white text-capitalize fs-5 mt-3 mt-md-0 mb-3"><span class="lang-toggle" data-en="More info" data-hi="[और जानकारी]">More info</span></h5>
+                <ul class="navbar-nav flex-column">
+                    <li class="nav-item footer-list mb-3"><a href="#"
+                            class="nav-link text-uppercase p-0 "><span class="lang-toggle" data-en="Policy" data-hi="[नीति]">Policy</span></a>
+                    </li>
+                    <li class="nav-item footer-list mb-3"><a href="#" class="nav-link text-uppercase p-0 "><span class="lang-toggle" data-en="Terms" data-hi="[शर्तें]">Terms</span></a>
+</li>
+                    <li class="nav-item footer-list mb-3"><a href="https://contact-page-shashkth-stree.vercel.app/"
+                            class="nav-link text-uppercase p-0 "><span class="lang-toggle" data-en="Contact" data-hi="[संपर्क]">Contact</span></a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="bottom-footer text-center">
+            <p><span class="lang-toggle" data-en="© 2025 Shashkth Stree | Founders : Sneha Yadav and Riya" data-hi="[© 2025 सशक्त स्त्री | संस्थापक: स्नेहा यादव और रिया]">© 2025 Shashkth Stree | Founders : Sneha Yadav and Riya</span></p>
+        </div>
+
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"></script>
+
+<script>
+    (function() {
+        // Try to find the language toggle checkbox on the main page.
+        // It might have different IDs on different pages.
+        const toggle = document.getElementById('lang-toggle-checkbox') || document.querySelector('.lang-toggle-switch input[type="checkbox"]');
+
+        if (!toggle) {
+            console.warn('Language toggle checkbox not found on the main page. Footer language may not switch.');
+            return;
+        }
+
+        const footer = document.getElementById('footer');
+        if (!footer) return;
+
+        const elements = footer.querySelectorAll('.lang-toggle');
+        
+        function updateFooterLanguage() {
+            const targetLang = toggle.checked ? 'hi' : 'en';
+            
+            elements.forEach(el => {
+                const text = el.getAttribute('data-' + targetLang);
+                if (text) {
+                    // Handle the [bracketed] text from index.html vs non-bracketed from others
+                    if (targetLang === 'hi' && text.startsWith('[') && text.endsWith(']')) {
+                        el.innerHTML = text.substring(1, text.length - 1);
+                    } else {
+                        el.innerHTML = text;
+                    }
+                }
+            });
+        }
+        
+        // Run once on load to set the initial language
+        updateFooterLanguage();
+        
+        // Add a listener to the main page's toggle
+        toggle.addEventListener('change', updateFooterLanguage);
+    })();
+</script>

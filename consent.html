@@ -6,26 +6,114 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>StressQuiz</title>
+    <title>Consent and Boundaries</title>
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/unicons.css">
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
     
-    <!-- MAIN STYLE -->
     <link rel="stylesheet" href="css/tooplate-style.css">
     
+    <style>
+      .breadcrumb-container {
+        padding-top: 20px; /* Add space above the breadcrumbs */
+        padding-bottom: 0;
+      }
+      .breadcrumb {
+        background-color: transparent; /* Make background transparent */
+        padding: 0;
+        margin-bottom: 0; /* No bottom margin */
+      }
+      .breadcrumb-item a {
+        color: #E5B8F4; /* Light purple color for links */
+        text-decoration: none;
+      }
+      .breadcrumb-item a:hover {
+        color: #fff; /* White on hover */
+      }
+      .breadcrumb-item.active {
+        color: #fff; /* White color for active page */
+      }
+      .breadcrumb-item + .breadcrumb-item::before {
+        color: #E5B8F4; /* Light purple for the separator */
+        content: "›"; /* Use '›' as separator */
+      }
+    </style>
 
-
+<style>
+/* Language Toggle Switch */
+.lang-toggle-nav {
+  display: flex;
+  align-items: center;
+  margin-left: 15px; /* Add some space from other nav items */
+}
+.lang-toggle-label {
+  margin: 0 5px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #E5B8F4; /* Light purple to match theme */
+  cursor: pointer;
+  user-select: none;
+}
+.lang-toggle-label:hover {
+  color: #fff;
+}
+.lang-toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+.lang-toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.lang-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 34px;
+}
+.lang-slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+input:checked + .lang-slider {
+  background-color: #810CA8;
+}
+input:checked + .lang-slider:before {
+  transform: translateX(26px);
+}
+/* Responsive adjustment for mobile */
+@media (max-width: 575.98px) {
+  .lang-toggle-nav {
+    margin-left: 0;
+    margin-top: 10px; /* Add space in collapsed menu */
+    justify-content: center; /* Center it in collapsed menu */
+  }
+}
+</style>
 
   </head>
   <body>
 
-    <!-- MENU -->
     <nav class="navbar navbar-expand-sm navbar-light">
         <div class="container" >
-            <a class="navbar-brand" href="index.html"style="color: #810CA8 !important;"><i class='uil uil-user'></i> Shashkth Stree</a>
+            <a class="navbar-brand" href="index.html"style="color: #810CA8 !important;"><i class='uil uil-user'></i> <span class="lang-toggle" data-en="Shashkth Stree" data-hi="सशक्त स्त्री">Shashkth Stree</span></a>
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -37,46 +125,62 @@
             <div class="collapse navbar-collapse" id="navbarNav" >
                 <ul class="navbar-nav mx-auto" >
                     <li class="nav-item" >
-                        <a href="index.html" class="nav-link" style="color: white !important;"><span data-hover="About">Home</span></a>
+                        <a href="index.html" class="nav-link" style="color: white !important;"><span data-hover="About"><span class="lang-toggle" data-en="Home" data-hi="मुखपृष्ठ">Home</span></span></a>
                     </li>
                     <li class="nav-item">
-                        <a href="issues.html" class="nav-link" style="color: white !important;"><span data-hover="Projects">Explore</span></a>
+                        <a href="issues.html" class="nav-link" style="color: white !important;"><span data-hover="Projects"><span class="lang-toggle" data-en="Explore" data-hi="अन्वेषण करें">Explore</span></span></a>
                     </li>
                     <li class="nav-item">
-                        <a href="#resume" class="nav-link" style="color: white !important;"><span data-hover="Resume">Contact</span></a>
+                        <a href="#resume" class="nav-link" style="color: white !important;"><span data-hover="Resume"><span class="lang-toggle" data-en="Contact" data-hi="संपर्क">Contact</span></span></a>
                     </li>
                     <li class="nav-item">
-                        <a href="therapy.html" class="nav-link" style="color: white !important;"><span data-hover="Contact">Therapy</span></a>
+                        <a href="therapy.html" class="nav-link" style="color: white !important;"><span data-hover="Contact"><span class="lang-toggle" data-en="Therapy" data-hi="थेरेपी">Therapy</span></span></a>
+                    </li>
+                </ul>
+                
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item lang-toggle-nav">
+                      <label for="lang-toggle-checkbox" class="lang-toggle-label">EN</label>
+                      <label class="lang-toggle-switch">
+                        <input type="checkbox" id="lang-toggle-checkbox">
+                        <span class="lang-slider"></span>
+                      </label>
+                      <label for="lang-toggle-checkbox" class="lang-toggle-label">HI</label>
                     </li>
                     <li class="nav-item">
                         <a href="resources.html" class="nav-link" style="color: white !important;"><span data-hover="Contact">Resources</span></a>
                     </li>
                 </ul>
-
                
             </div>
         </div>
     </nav>
 
-    <!-- ABOUT -->
-    <section class="about full-screen d-lg-flex justify-content-center align-items-center" id="about">
-        <div class="container">
+    <nav aria-label="breadcrumb" class="breadcrumb-container container">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html"><span class="lang-toggle" data-en="Home" data-hi="मुखपृष्ठ">Home</span></a></li>
+        <li class="breadcrumb-item"><a href="issues.html"><span class="lang-toggle" data-en="Issues" data-hi="मुद्दे">Issues</span></a></li>
+        <li class="breadcrumb-item active" aria-current="page"><span class="lang-toggle" data-en="Consent and Boundaries" data-hi="सहमति और सीमाएं">Consent and Boundaries</span></li>
+      </ol>
+    </nav>
+
+    <section class="about full-screen d-lg-flex justify-content-center align-items-center" id="about" style="padding-top: 4rem; padding-bottom: 4rem;"> <div class="container">
             <div class="row">
                 
                 <div class="col-lg-7 col-md-12 col-12 d-flex align-items-center">
                     <div class="about-text">
                         
                         <h1 class="animated animated-text" style="color: white !important;">
-                            <span class="mr-2">Understanding Consent and Boundaries in Relationships</span>
+                            <span class="mr-2"><span class="lang-toggle" data-en="Understanding Consent and Boundaries in Relationships" data-hi="रिश्तों में सहमति और सीमाओं को समझना">Understanding Consent and Boundaries in Relationships</span></span>
                                 <div class="animated-info">
                                   
                                 </div>
                         </h1>
 
-                        <p style="color: white !important;">Understanding and respecting consent and boundaries are essential for building trusting, healthy relationships. Consent is about giving permission and ensuring mutual agreement in all interactions, whether physical, emotional, or social. Boundaries, on the other hand, are personal limits that help protect your well-being and ensure that your needs are met with respect.</p>
+                        <p style="color: white !important;"><span class="lang-toggle" data-en="Understanding and respecting consent and boundaries are essential for building trusting, healthy relationships. Consent is about giving permission and ensuring mutual agreement in all interactions, whether physical, emotional, or social. Boundaries, on the other hand, are personal limits that help protect your well-being and ensure that your needs are met with respect." data-hi="भरोसेमंद, स्वस्थ रिश्ते बनाने के लिए सहमति और सीमाओं को समझना और उनका सम्मान करना आवश्यक है। सहमति अनुमति देने और सभी अंतःक्रियाओं में आपसी समझौते को सुनिश्चित करने के बारे में है, चाहे वह शारीरिक, भावनात्मक या सामाजिक हो। दूसरी ओर, सीमाएं व्यक्तिगत सीमाएं हैं जो आपकी भलाई की रक्षा करने में मदद करती हैं और यह सुनिश्चित करती हैं कि आपकी जरूरतों को सम्मान के साथ पूरा किया जाए।">Understanding and respecting consent and boundaries are essential for building trusting, healthy relationships. Consent is about giving permission and ensuring mutual agreement in all interactions, whether physical, emotional, or social. Boundaries, on the other hand, are personal limits that help protect your well-being and ensure that your needs are met with respect.</span></p>
                         
                         <div class="custom-btn-group mt-4">
-                          <a href="#" class="btn mr-lg-2 custom-btn" ><i class='uil uil-file-alt'></i> We Stand Together ❤️ </a>
+                          <a href="#" class="btn mr-lg-2 custom-btn" ><i class='uil uil-file-alt'></i> <span class="lang-toggle" data-en="We Stand Together ❤️" data-hi="हम एक साथ खड़े हैं ❤️">We Stand Together ❤️</span> </a>
                           
                         </div>
                     </div>
@@ -95,122 +199,106 @@
 
 
 
-    <!-- <div class="quiz-container">
-        <div class="quiz-box">
-            <a href="#quiz-section" class="quiz-button">Take the Quiz</a>
-        </div>
-    </div> -->
-    
-    
-
-
-
-
     <div class="container" style="color: white !important;">
-        <!-- Stress Level Grading Scale -->
-        
         <div class="quiz-box">
-            <a href="https://www.testportal.net/test.html?t=KvgVEw6Ya38H" class="quiz-button">Take the Quiz</a>
+            <a href="https://www.testportal.net/test.html?t=KvgVEw6Ya38H" class="quiz-button"><span class="lang-toggle" data-en="Take the Quiz" data-hi="प्रश्नोत्तरी लें">Take the Quiz</span></a>
         </div>
         
         <section class="grading-scale">
-            <h2 style="color: #C147E9 !important;">Understand Your Results</h2>
+            <h2 style="color: #C147E9 !important;"><span class="lang-toggle" data-en="Understand Your Results" data-hi="अपने परिणाम समझें">Understand Your Results</span></h2>
             <table class="grading-table">
                 <thead>
                     <tr>
-                        <th>Consent and Boundaries Level</th>
-                        <th>Points Range</th>
-                        <th>Grade</th>
+                        <th><span class="lang-toggle" data-en="Consent and Boundaries Level" data-hi="सहमति और सीमा स्तर">Consent and Boundaries Level</span></th>
+                        <th><span class="lang-toggle" data-en="Points Range" data-hi="अंक सीमा">Points Range</span></th>
+                        <th><span class="lang-toggle" data-en="Grade" data-hi="ग्रेड">Grade</span></th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr class="severe">
-                        <td>Severe Concerns</td>
-                        <td>23 – 28 Points</td>
-                        <td>🔴 Critical</td>
+                        <td><span class="lang-toggle" data-en="Severe Concerns" data-hi="गंभीर चिंताएं">Severe Concerns</span></td>
+                        <td><span class="lang-toggle" data-en="23 – 28 Points" data-hi="23 – 28 अंक">23 – 28 Points</span></td>
+                        <td><span class="lang-toggle" data-en="🔴 Critical" data-hi="🔴 गंभीर">🔴 Critical</span></td>
                     </tr>
                     <tr class="high">
-                        <td>High Tension</td>
-                        <td>17 – 22 Points</td>
-                        <td>🟠 High</td>
+                        <td><span class="lang-toggle" data-en="High Tension" data-hi="उच्च तनाव">High Tension</span></td>
+                        <td><span class="lang-toggle" data-en="17 – 22 Points" data-hi="17 – 22 अंक">17 – 22 Points</span></td>
+                        <td><span class="lang-toggle" data-en="🟠 High" data-hi="🟠 उच्च">🟠 High</span></td>
                     </tr>
                     <tr class="moderate">
-                        <td>Moderate Concerns</td>
-                        <td>11 – 16 Points</td>
-                        <td>🟡 Manageable</td>
+                        <td><span class="lang-toggle" data-en="Moderate Concerns" data-hi="मध्यम चिंताएं">Moderate Concerns</span></td>
+                        <td><span class="lang-toggle" data-en="11 – 16 Points" data-hi="11 – 16 अंक">11 – 16 Points</span></td>
+                        <td><span class="lang-toggle" data-en="🟡 Manageable" data-hi="🟡 प्रबंधनीय">🟡 Manageable</span></td>
                     </tr>
                     <tr class="low">
-                        <td>Strong Understanding</td>
-                        <td>7 – 10 Points</td>
-                        <td>🟢 Healthy</td>
+                        <td><span class="lang-toggle" data-en="Strong Understanding" data-hi="मजबूत समझ">Strong Understanding</span></td>
+                        <td><span class="lang-toggle" data-en="7 – 10 Points" data-hi="7 – 10 अंक">7 – 10 Points</span></td>
+                        <td><span class="lang-toggle" data-en="🟢 Healthy" data-hi="🟢 स्वस्थ">🟢 Healthy</span></td>
                     </tr>
                 </tbody>
             </table>
         </section>
         
-        <!-- Consent and Boundaries Level Sections -->
         <section class="stress-level severe">
-            <h2 style="color: #C147E9 !important;">Your Boundaries and Consent Practices Need Immediate Attention 🔴</h2>
-            <p style="color: #fff !important;">It seems there are serious concerns regarding boundaries and consent in your relationships. Not respecting boundaries can lead to harm, discomfort, and emotional distress. It’s essential to take immediate steps to address this.</p>
-            <h3 style="color: #C147E9 !important;">What You Can Do Right Now:</h3>
+            <h2 style="color: #C147E9 !important;"><span class="lang-toggle" data-en="Your Boundaries and Consent Practices Need Immediate Attention 🔴" data-hi="आपकी सीमाओं और सहमति प्रथाओं पर तत्काल ध्यान देने की आवश्यकता है 🔴">Your Boundaries and Consent Practices Need Immediate Attention 🔴</span></h2>
+            <p style="color: #fff !important;"><span class="lang-toggle" data-en="It seems there are serious concerns regarding boundaries and consent in your relationships. Not respecting boundaries can lead to harm, discomfort, and emotional distress. It’s essential to take immediate steps to address this." data-hi="ऐसा लगता है कि आपके रिश्तों में सीमाओं और सहमति के संबंध में गंभीर चिंताएं हैं। सीमाओं का सम्मान न करने से नुकसान, असुविधा और भावनात्मक संकट हो सकता है। इसे संबोधित करने के लिए तत्काल कदम उठाना आवश्यक है।">It seems there are serious concerns regarding boundaries and consent in your relationships. Not respecting boundaries can lead to harm, discomfort, and emotional distress. It’s essential to take immediate steps to address this.</span></p>
+            <h3 style="color: #C147E9 !important;"><span class="lang-toggle" data-en="What You Can Do Right Now:" data-hi="आप अभी क्या कर सकते हैं:">What You Can Do Right Now:</span></h3>
             <ul>
-                <li><span class="emoji">🚨</span> Seek Professional Help – A therapist or counselor can guide you through understanding and respecting consent in relationships.</li>
-                <li><span class="emoji">🛑</span> Reflect on Boundaries – Take time to consider your own boundaries and practice saying "no" when necessary.</li>
-                <li><span class="emoji">📖</span> Educate Yourself – Read about the importance of consent and respectful boundaries in relationships.</li>
-                <li><span class="emoji">🏞</span> Establish Clear Boundaries – Have open discussions with those around you about what is and isn’t acceptable.</li>
-                <li><span class="emoji">📅</span> Practice Self-Respect – Start by respecting your own feelings and needs, setting boundaries for yourself first.</li>
+                <li><span class="emoji">🚨</span> <span class="lang-toggle" data-en="Seek Professional Help – A therapist or counselor can guide you through understanding and respecting consent in relationships." data-hi="पेशेवर मदद लें - एक चिकित्सक या परामर्शदाता आपको रिश्तों में सहमति को समझने और सम्मान करने के माध्यम से मार्गदर्शन कर सकता है।">Seek Professional Help – A therapist or counselor can guide you through understanding and respecting consent in relationships.</span></li>
+                <li><span class="emoji">🛑</span> <span class="lang-toggle" data-en="Reflect on Boundaries – Take time to consider your own boundaries and practice saying 'no' when necessary." data-hi="सीमाओं पर चिंतन करें - अपनी सीमाओं पर विचार करने के लिए समय निकालें और आवश्यक होने पर 'नहीं' कहने का अभ्यास करें।">Reflect on Boundaries – Take time to consider your own boundaries and practice saying "no" when necessary.</span></li>
+                <li><span class="emoji">📖</span> <span class="lang-toggle" data-en="Educate Yourself – Read about the importance of consent and respectful boundaries in relationships." data-hi="खुद को शिक्षित करें - रिश्तों में सहमति और सम्मानजनक सीमाओं के महत्व के बारे में पढ़ें।">Educate Yourself – Read about the importance of consent and respectful boundaries in relationships.</span></li>
+                <li><span class="emoji">🏞</span> <span class="lang-toggle" data-en="Establish Clear Boundaries – Have open discussions with those around you about what is and isn’t acceptable." data-hi="स्पष्ट सीमाएं स्थापित करें - अपने आस-पास के लोगों के साथ इस बारे में खुली चर्चा करें कि क्या स्वीकार्य है और क्या नहीं।">Establish Clear Boundaries – Have open discussions with those around you about what is and isn’t acceptable.</span></li>
+                <li><span class="emoji">📅</span> <span class="lang-toggle" data-en="Practice Self-Respect – Start by respecting your own feelings and needs, setting boundaries for yourself first." data-hi="आत्म-सम्मान का अभ्यास करें - पहले अपने लिए सीमाएं निर्धारित करते हुए, अपनी भावनाओं और जरूरतों का सम्मान करके शुरू करें।">Practice Self-Respect – Start by respecting your own feelings and needs, setting boundaries for yourself first.</span></li>
             </ul>
         </section>
         
         <section class="stress-level high">
-            <h2 style="color: #C147E9 !important;">Your Boundaries and Consent are Under Stress 🟠</h2>
-            <p style="color: #fff !important;">You are facing challenges with consent and respecting boundaries. It’s important to address these concerns before they negatively affect your relationships.</p>
-            <h3 style="color: #C147E9 !important;">What You Can Do Right Now:</h3>
+            <h2 style="color: #C147E9 !important;"><span class="lang-toggle" data-en="Your Boundaries and Consent are Under Stress 🟠" data-hi="आपकी सीमाएं और सहमति तनाव में हैं 🟠">Your Boundaries and Consent are Under Stress 🟠</span></h2>
+            <p style="color: #fff !important;"><span class="lang-toggle" data-en="You are facing challenges with consent and respecting boundaries. It’s important to address these concerns before they negatively affect your relationships." data-hi="आप सहमति और सीमाओं का सम्मान करने के साथ चुनौतियों का सामना कर रहे हैं। इन चिंताओं को दूर करना महत्वपूर्ण है इससे पहले कि वे आपके रिश्तों को नकारात्मक रूप से प्रभावित करें।">You are facing challenges with consent and respecting boundaries. It’s important to address these concerns before they negatively affect your relationships.</span></p>
+            <h3 style="color: #C147E9 !important;"><span class="lang-toggle" data-en="What You Can Do Right Now:" data-hi="आप अभी क्या कर सकते हैं:">What You Can Do Right Now:</span></h3>
             <ul>
-                <li><span class="emoji">🔄</span> Open Communication – Have honest conversations about boundaries with your partner, friends, or family members.</li>
-                <li><span class="emoji">📱</span> Set Boundaries with Technology – Respect each other’s space and time, especially regarding phone calls or texts.</li>
-                <li><span class="emoji">🏃‍♂</span> Respect Emotional Boundaries – Understand when someone needs emotional space and avoid pushing them to share more than they are ready for.</li>
-                <li><span class="emoji">🌙</span> Practice Active Listening – When someone expresses a boundary, listen attentively and without judgment.</li>
-                <li><span class="emoji">💬</span> Seek Guidance – Consult with a therapist if you're struggling with boundaries or consent issues.</li>
+                <li><span class="emoji">🔄</span> <span class="lang-toggle" data-en="Open Communication – Have honest conversations about boundaries with your partner, friends, or family members." data-hi="खुला संचार - अपने साथी, दोस्तों या परिवार के सदस्यों के साथ सीमाओं के बारे में ईमानदार बातचीत करें।">Open Communication – Have honest conversations about boundaries with your partner, friends, or family members.</span></li>
+                <li><span class="emoji">📱</span> <span class="lang-toggle" data-en="Set Boundaries with Technology – Respect each other’s space and time, especially regarding phone calls or texts." data-hi="प्रौद्योगिकी के साथ सीमाएं निर्धारित करें - एक-दूसरे के स्थान और समय का सम्मान करें, खासकर फोन कॉल या टेक्स्ट के संबंध में।">Set Boundaries with Technology – Respect each other’s space and time, especially regarding phone calls or texts.</span></li>
+                <li><span class="emoji">🏃‍♂</span> <span class="lang-toggle" data-en="Respect Emotional Boundaries – Understand when someone needs emotional space and avoid pushing them to share more than they are ready for." data-hi="भावनात्मक सीमाओं का सम्मान करें - समझें कि किसी को भावनात्मक स्थान की आवश्यकता कब होती है और उन्हें तैयार होने से अधिक साझा करने के लिए मजबूर करने से बचें।">Respect Emotional Boundaries – Understand when someone needs emotional space and avoid pushing them to share more than they are ready for.</span></li>
+                <li><span class="emoji">🌙</span> <span class="lang-toggle" data-en="Practice Active Listening – When someone expresses a boundary, listen attentively and without judgment." data-hi="सक्रिय सुनने का अभ्यास करें - जब कोई सीमा व्यक्त करता है, तो ध्यान से और बिना निर्णय के सुनें।">Practice Active Listening – When someone expresses a boundary, listen attentively and without judgment.</span></li>
+                <li><span class="emoji">💬</span> <span class="lang-toggle" data-en="Seek Guidance – Consult with a therapist if you're struggling with boundaries or consent issues." data-hi="मार्गदर्शन लें - यदि आप सीमाओं या सहमति के मुद्दों से जूझ रहे हैं तो एक चिकित्सक से परामर्श करें।">Seek Guidance – Consult with a therapist if you're struggling with boundaries or consent issues.</span></li>
             </ul>
         </section>
         
         <section class="stress-level moderate">
-            <h2 style="color: #C147E9 !important;">Your Boundaries and Consent are Manageable 🟡</h2>
-            <p style="color: #fff !important;">You’re making progress in understanding consent and respecting boundaries, but there is still room for growth in your relationships.</p>
-            <h3 style="color: #C147E9 !important;">What You Can Do Right Now:</h3>
+            <h2 style="color: #C147E9 !important;"><span class="lang-toggle" data-en="Your Boundaries and Consent are Manageable 🟡" data-hi="आपकी सीमाएं और सहमति प्रबंधनीय हैं 🟡">Your Boundaries and Consent are Manageable 🟡</span></h2>
+            <p style="color: #fff !important;"><span class="lang-toggle" data-en="You’re making progress in understanding consent and respecting boundaries, but there is still room for growth in your relationships." data-hi="आप सहमति को समझने और सीमाओं का सम्मान करने में प्रगति कर रहे हैं, लेकिन आपके रिश्तों में अभी भी विकास की गुंजाइश है।">You’re making progress in understanding consent and respecting boundaries, but there is still room for growth in your relationships.</span></p>
+            <h3 style="color: #C147E9 !important;"><span class="lang-toggle" data-en="What You Can Do Right Now:" data-hi="आप अभी क्या कर सकते हैं:">What You Can Do Right Now:</span></h3>
             <ul>
-                <li><span class="emoji">☀</span> Continue Practicing Healthy Boundaries – Keep asserting your needs and respecting others’ boundaries.</li>
-                <li><span class="emoji">🍵</span> Communicate Regularly – Check in with your partner or friends about their needs and boundaries.</li>
-                <li><span class="emoji">📅</span> Set Time for Yourself – Respect your need for personal space and time away from others.</li>
-                <li><span class="emoji">😌</span> Practice Empathy – Understand that boundaries are essential for emotional safety in relationships.</li>
-                <li><span class="emoji">📖</span> Reinforce Respect – Show appreciation when someone expresses their boundaries, and be proactive in respecting them.</li>
+                <li><span class="emoji">☀</span> <span class="lang-toggle" data-en="Continue Practicing Healthy Boundaries – Keep asserting your needs and respecting others’ boundaries." data-hi="स्वस्थ सीमाओं का अभ्यास जारी रखें - अपनी जरूरतों पर जोर देना और दूसरों की सीमाओं का सम्मान करना जारी रखें।">Continue Practicing Healthy Boundaries – Keep asserting your needs and respecting others’ boundaries.</span></li>
+                <li><span class="emoji">🍵</span> <span class="lang-toggle" data-en="Communicate Regularly – Check in with your partner or friends about their needs and boundaries." data-hi="नियमित रूप से संवाद करें - अपने साथी या दोस्तों से उनकी जरूरतों और सीमाओं के बारे में जांचें।">Communicate Regularly – Check in with your partner or friends about their needs and boundaries.</span></li>
+                <li><span class="emoji">📅</span> <span class="lang-toggle" data-en="Set Time for Yourself – Respect your need for personal space and time away from others." data-hi="अपने लिए समय निर्धारित करें - दूसरों से दूर व्यक्तिगत स्थान और समय की अपनी आवश्यकता का सम्मान करें।">Set Time for Yourself – Respect your need for personal space and time away from others.</span></li>
+                <li><span class="emoji">😌</span> <span class="lang-toggle" data-en="Practice Empathy – Understand that boundaries are essential for emotional safety in relationships." data-hi="समानुभूति का अभ्यास करें - समझें कि रिश्तों में भावनात्मक सुरक्षा के लिए सीमाएं आवश्यक हैं।">Practice Empathy – Understand that boundaries are essential for emotional safety in relationships.</span></li>
+                <li><span class="emoji">📖</span> <span class="lang-toggle" data-en="Reinforce Respect – Show appreciation when someone expresses their boundaries, and be proactive in respecting them." data-hi="सम्मान को सुदृढ़ करें - जब कोई अपनी सीमाएं व्यक्त करता है, तो प्रशंसा दिखाएं, और उनका सम्मान करने में सक्रिय रहें।">Reinforce Respect – Show appreciation when someone expresses their boundaries, and be proactive in respecting them.</span></li>
             </ul>
         </section>
         
         <section class="stress-level low">
-            <h2 style="color: #C147E9 !important;">Your Boundaries and Consent are Strong 🟢</h2>
-            <p style="color: #fff !important;">You have a solid understanding of consent and boundaries. Continue maintaining healthy communication and respect for each other’s needs.</p>
-            <h3 style="color: #C147E9 !important;">What You Can Do Right Now:</h3>
+            <h2 style="color: #C147E9 !important;"><span class="lang-toggle" data-en="Your Boundaries and Consent are Strong 🟢" data-hi="आपकी सीमाएं और सहमति मजबूत हैं 🟢">Your Boundaries and Consent are Strong 🟢</span></h2>
+            <p style="color: #fff !important;"><span class="lang-toggle" data-en="You have a solid understanding of consent and boundaries. Continue maintaining healthy communication and respect for each other’s needs." data-hi="आपके पास सहमति और सीमाओं की ठोस समझ है। स्वस्थ संचार और एक-दूसरे की जरूरतों के लिए सम्मान बनाए रखना जारी रखें।">You have a solid understanding of consent and boundaries. Continue maintaining healthy communication and respect for each other’s needs.</span></p>
+            <h3 style="color: #C147E9 !important;"><span class="lang-toggle" data-en="What You Can Do Right Now:" data-hi="आप अभी क्या कर सकते हैं:">What You Can Do Right Now:</span></h3>
             <ul>
-                <li><span class="emoji">🧘‍♂</span> Continue Practicing Consent – Keep honoring your own and others' boundaries in all areas of life.</li>
-                <li><span class="emoji">💡</span> Lead by Example – Encourage others to set and respect healthy boundaries.</li>
-                <li><span class="emoji">📍</span> Check-in Regularly – Continue having open conversations about boundaries in your relationships.</li>
-                <li><span class="emoji">📊</span> Maintain Open Communication – Be proactive about discussing any changes in your boundaries or others’ needs.</li>
-                <li><span class="emoji">🌍</span> Advocate for Healthy Boundaries – Help others understand the importance of setting and respecting boundaries for healthier relationships.</li>
+                <li><span class="emoji">🧘‍♂</span> <span class="lang-toggle" data-en="Continue Practicing Consent – Keep honoring your own and others' boundaries in all areas of life." data-hi="सहमति का अभ्यास जारी रखें - जीवन के सभी क्षेत्रों में अपनी और दूसरों की सीमाओं का सम्मान करना जारी रखें।">Continue Practicing Consent – Keep honoring your own and others' boundaries in all areas of life.</span></li>
+                <li><span class="emoji">💡</span> <span class="lang-toggle" data-en="Lead by Example – Encourage others to set and respect healthy boundaries." data-hi="उदाहरण के द्वारा नेतृत्व करें - दूसरों को स्वस्थ सीमाएं निर्धारित करने और उनका सम्मान करने के लिए प्रोत्साहित करें।">Lead by Example – Encourage others to set and respect healthy boundaries.</span></li>
+                <li><span class="emoji">📍</span> <span class="lang-toggle" data-en="Check-in Regularly – Continue having open conversations about boundaries in your relationships." data-hi="नियमित रूप से जांचें - अपने रिश्तों में सीमाओं के बारे में खुली बातचीत करना जारी रखें।">Check-in Regularly – Continue having open conversations about boundaries in your relationships.</span></li>
+                <li><span class="emoji">📊</span> <span class="lang-toggle" data-en="Maintain Open Communication – Be proactive about discussing any changes in your boundaries or others’ needs." data-hi="खुला संचार बनाए रखें - अपनी सीमाओं या दूसरों की जरूरतों में किसी भी बदलाव पर चर्चा करने के बारे में सक्रिय रहें।">Maintain Open Communication – Be proactive about discussing any changes in your boundaries or others’ needs.</span></li>
+                <li><span class="emoji">🌍</span> <span class="lang-toggle" data-en="Advocate for Healthy Boundaries – Help others understand the importance of setting and respecting boundaries for healthier relationships." data-hi="स्वस्थ सीमाओं की वकालत करें - स्वस्थ रिश्तों के लिए सीमाएं निर्धारित करने और उनका सम्मान करने के महत्व को समझने में दूसरों की मदद करें।">Advocate for Healthy Boundaries – Help others understand the importance of setting and respecting boundaries for healthier relationships.</span></li>
             </ul>
         </section>
         
         
     </div>
-    <!-- FEATURES -->
-    <!-- FEATURES -->
     <section class="resume py-5 d-lg-flex justify-content-center align-items-center" id="resume">
       <div class="container">
           <div class="row">
 
               <div class="col-lg-6 col-12">
-                <h2 style="color: white;" class="mb-4">Legal Contacts</h2>
+                <h2 style="color: white;" class="mb-4"><span class="lang-toggle" data-en="Legal Contacts" data-hi="कानूनी संपर्क">Legal Contacts</span></h2>
 
                   <div class="timeline">
                       <div class="timeline-wrapper">
@@ -218,9 +306,9 @@
                                 <span style="font-size: 30px;">1</span>
                            </div>
                            <div class="timeline-info">
-                                <h3 style="color: white;"><span style="color: white;">Priya Sharma</span><small style="color: white;">Phone Number: +91-98765-43210
+                                <h3 style="color: white;"><span style="color: white;"><span class="lang-toggle" data-en="Priya Sharma" data-hi="प्रिया शर्मा">Priya Sharma</span></span><small style="color: white;"><span class="lang-toggle" data-en="Phone Number: +91-98765-43210" data-hi="फ़ोन नंबर: +91-98765-43210">Phone Number: +91-98765-43210</span>
                                 </small></h3>
-                                <p style="color: white;"> Licensed Counselor specializing in domestic violence trauma, offering confidential one-on-one and group therapy sessions.
+                                <p style="color: white;"> <span class="lang-toggle" data-en="Licensed Counselor specializing in domestic violence trauma, offering confidential one-on-one and group therapy sessions." data-hi="घरेलू हिंसा के आघात में विशेषज्ञता रखने वाली लाइसेंस प्राप्त परामर्शदाता, गोपनीय एक-पर-एक और समूह चिकित्सा सत्रों की पेशकश करती हैं।">Licensed Counselor specializing in domestic violence trauma, offering confidential one-on-one and group therapy sessions.</span>
                                   .</p>
                            </div>
                       </div>
@@ -230,10 +318,10 @@
                             <span style="font-size: 30px;">2</span>
                           </div>
                           <div class="timeline-info">
-                              <h3><span style="color: white;">Arjun Verma</span><small style="color: white;">Phone Number: +91-98765-43109
+                              <h3><span style="color: white;"><span class="lang-toggle" data-en="Arjun Verma" data-hi="अर्जुन वर्मा">Arjun Verma</span></span><small style="color: white;"><span class="lang-toggle" data-en="Phone Number: +91-98765-43109" data-hi="फ़ोन नंबर: +91-98765-43109">Phone Number: +91-98765-43109</span>
 
                               </small></h3>
-                              <p style="color: white;">Legal Advisor providing free consultations on filing complaints, obtaining restraining orders, and navigating legal processes
+                              <p style="color: white;"><span class="lang-toggle" data-en="Legal Advisor providing free consultations on filing complaints, obtaining restraining orders, and navigating legal processes" data-hi="शिकायतें दर्ज करने, निरोधक आदेश प्राप्त करने और कानूनी प्रक्रियाओं को नेविगेट करने पर मुफ्त परामर्श प्रदान करने वाले कानूनी सलाहकार">Legal Advisor providing free consultations on filing complaints, obtaining restraining orders, and navigating legal processes</span>
                                 .</p>
                           </div>
                       </div>
@@ -243,11 +331,11 @@
                             <span style="font-size: 30px;">3</span>
                           </div>
                           <div class="timeline-info">
-                              <h3><span style="color: white;">Kavita Nair<small style="color: white;">Phone Number: +91-98765-43098
+                              <h3><span style="color: white;"><span class="lang-toggle" data-en="Kavita Nair" data-hi="कविता नायर">Kavita Nair</span><small style="color: white;"><span class="lang-toggle" data-en="Phone Number: +91-98765-43098" data-hi="फ़ोन नंबर: +91-98765-43098">Phone Number: +91-98765-43098</span>
 
                               </small>
                               </h3>
-                              <p style="color: white;">Case Manager assisting survivors with housing, financial support, and rehabilitation programs.
+                              <p style="color: white;"><span class="lang-toggle" data-en="Case Manager assisting survivors with housing, financial support, and rehabilitation programs." data-hi="आवास, वित्तीय सहायता और पुनर्वास कार्यक्रमों के साथ उत्तरजीवियों की सहायता करने वाली केस मैनेजर।">Case Manager assisting survivors with housing, financial support, and rehabilitation programs.</span>
                               </p>
                           </div>
                       </div>
@@ -257,10 +345,10 @@
                             <span style="font-size: 30px;">4</span>
                           </div>
                           <div class="timeline-info">
-                              <h3><span style="color: white;">Rohan Gupta
-                                <small style="color: white;">Phone Number: +91-98765-42987
+                              <h3><span style="color: white;"><span class="lang-toggle" data-en="Rohan Gupta" data-hi="रोहन गुप्ता">Rohan Gupta</span>
+                                <small style="color: white;"><span class="lang-toggle" data-en="Phone Number: +91-98765-42987" data-hi="फ़ोन नंबर: +91-98765-42987">Phone Number: +91-98765-42987</span>
                               </small></h3>
-                              <p style="color: white;">24/7 Helpline Coordinator trained in crisis intervention and connecting individuals with emergency support services.
+                              <p style="color: white;"><span class="lang-toggle" data-en="24/7 Helpline Coordinator trained in crisis intervention and connecting individuals with emergency support services." data-hi="संकट हस्तक्षेप में प्रशिक्षित 24/7 हेल्पलाइन समन्वयक और व्यक्तियों को आपातकालीन सहायता सेवाओं से जोड़ना।">24/7 Helpline Coordinator trained in crisis intervention and connecting individuals with emergency support services.</span>
                               </p>
                           </div>
                       </div>
@@ -269,7 +357,7 @@
               </div>
 
               <div class="col-lg-6 col-12">
-                <h2 style="color: white;" class="mb-4 mobile-mt-2">Associated NGOs</h2>
+                <h2 style="color: white;" class="mb-4 mobile-mt-2"><span class="lang-toggle" data-en="Associated NGOs" data-hi="संबद्ध गैर सरकारी संगठन">Associated NGOs</span></h2>
 
                   <div class="timeline">
                       <div class="timeline-wrapper">
@@ -277,10 +365,10 @@
                             <span style="font-size: 30px;">1</span>
                            </div>
                            <div class="timeline-info">
-                                <h3 style="color: white;"><span>Sahaayata Foundation
-                                </span><small style="color: white; font-weight: lighter;">Helpline Number: +91-98111-12345
+                                <h3 style="color: white;"><span><span class="lang-toggle" data-en="Sahaayata Foundation" data-hi="सहायता फाउंडेशन">Sahaayata Foundation</span>
+                                </span><small style="color: white; font-weight: lighter;"><span class="lang-toggle" data-en="Helpline Number: +91-98111-12345" data-hi="हेल्पलाइन नंबर: +91-98111-12345">Helpline Number: +91-98111-12345</span>
                                 </small></h3>
-                                <p style="color: #E5B8F4;">A non-profit organization dedicated to supporting survivors of domestic violence through counseling, legal aid, and shelter services.</p>
+                                <p style="color: #E5B8F4;"><span class="lang-toggle" data-en="A non-profit organization dedicated to supporting survivors of domestic violence through counseling, legal aid, and shelter services." data-hi="परामर्श, कानूनी सहायता और आश्रय सेवाओं के माध्यम से घरेलू हिंसा से बचे लोगों का समर्थन करने के लिए समर्पित एक गैर-लाभकारी संगठन।">A non-profit organization dedicated to supporting survivors of domestic violence through counseling, legal aid, and shelter services.</span></p>
                            </div>
                       </div>
 
@@ -289,10 +377,10 @@
                             <span style="font-size: 30px;">2</span>
                           </div>
                           <div class="timeline-info">
-                              <h3><span style="color: white;">Ujjivan Foundation
-                              </span><small style="color: white ;font-weight: lighter;">Helpline Number: +91-98222-54321
+                              <h3><span style="color: white;"><span class="lang-toggle" data-en="Ujjivan Foundation" data-hi="उज्जीवन फाउंडेशन">Ujjivan Foundation</span>
+                              </span><small style="color: white ;font-weight: lighter;"><span class="lang-toggle" data-en="Helpline Number: +91-98222-54321" data-hi="हेल्पलाइन नंबर: +91-98222-54321">Helpline Number: +91-98222-54321</span>
                               </small></h3>
-                              <p style="color: #E5B8F4;"> Focused on empowering individuals affected by domestic violence, offering vocational training, therapy, and community-based support programs.
+                              <p style="color: #E5B8F4;"> <span class="lang-toggle" data-en="Focused on empowering individuals affected by domestic violence, offering vocational training, therapy, and community-based support programs." data-hi="घरेलू हिंसा से प्रभावित व्यक्तियों को सशक्त बनाने पर केंद्रित, व्यावसायिक प्रशिक्षण, चिकित्सा और समुदाय-आधारित सहायता कार्यक्रमों की पेशकश।">Focused on empowering individuals affected by domestic violence, offering vocational training, therapy, and community-based support programs.</span>
                                 .</p>
                           </div>
                       </div>
@@ -302,9 +390,9 @@
                             <span style="font-size: 30px;">3</span>
                           </div>
                           <div class="timeline-info">
-                              <h3><span style="color: white; font-weight: lighter;">Nayi Disha Welfare Society
-                              </span><small style="color: white;">Helpline Number: +91-98333-67890 </small></h3>
-                              <p style="color: #E5B8F4;"> Provides immediate assistance, emergency shelter, and awareness campaigns to prevent domestic violence and promote safe living environments.
+                              <h3><span style="color: white; font-weight: lighter;"><span class="lang-toggle" data-en="Nayi Disha Welfare Society" data-hi="नई दिशा वेलफेयर सोसाइटी">Nayi Disha Welfare Society</span>
+                              </span><small style="color: white;"><span class="lang-toggle" data-en="Helpline Number: +91-98333-67890" data-hi="हेल्पलाइन नंबर: +91-98333-67890">Helpline Number: +91-98333-67890</span> </small></h3>
+                              <p style="color: #E5B8F4;"> <span class="lang-toggle" data-en="Provides immediate assistance, emergency shelter, and awareness campaigns to prevent domestic violence and promote safe living environments." data-hi="घरेलू हिंसा को रोकने और सुरक्षित रहने के वातावरण को बढ़ावा देने के लिए तत्काल सहायता, आपातकालीन आश्रय और जागरूकता अभियान प्रदान करता है।">Provides immediate assistance, emergency shelter, and awareness campaigns to prevent domestic violence and promote safe living environments.</span>
                               </p>
                           </div>
                       </div>
@@ -318,6 +406,38 @@
 
 
    
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const toggle = document.getElementById('lang-toggle-checkbox');
+  const elements = document.querySelectorAll('.lang-toggle');
+  
+  const titles = {
+    en: "Consent and Boundaries",
+    hi: "सहमति और सीमाएं"
+  };
+  
+  function updateLanguage() {
+    const targetLang = toggle.checked ? 'hi' : 'en';
+    
+    document.title = titles[targetLang];
+    
+    elements.forEach(el => {
+      const text = el.getAttribute('data-' + targetLang);
+      if (text) {
+        el.innerHTML = text;
+      }
+    });
+  }
+  
+  toggle.addEventListener('change', updateLanguage);
+  
+  // Set initial state
+  updateLanguage();
+});
+</script>
+
+<div id="footer-placeholder"></div>
+<script src="js/embed_footer.js" defer></script>
 
   </body>
 </html>

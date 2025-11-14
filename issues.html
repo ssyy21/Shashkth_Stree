@@ -4,31 +4,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shashkth Stree</title>
+    <title>Shashkth Stree - Issues</title>
     
     
 
     
-    <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 
-    <!--Bootstrap ================================================== -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
 
-    <!-- Style Sheet ================================================== -->
     <link rel="stylesheet" type="text/css" href="style_issue.css">
-    <!-- Vendor CSS ================================================== -->
     <link rel="stylesheet" type="text/css" href="css/vendor.css">
 
 
-    <!-- Google Fonts ================================================== -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
+<style>
+/* Language Toggle Switch */
+.lang-toggle-container {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 25px;
+  padding: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  margin-left: 15px; /* Added margin for spacing in navbar */
+}
+.lang-toggle-label {
+  margin: 0 5px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  user-select: none;
+}
+.lang-toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+.lang-toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.lang-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 34px;
+}
+.lang-slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+input:checked + .lang-slider {
+  background-color: #E5B8F4;
+}
+input:checked + .lang-slider:before {
+  transform: translateX(26px);
+}
+</style>
 </head>
 
 <body>
@@ -49,37 +103,37 @@
         <div class="search-popup-container">
 
             <form role="search" method="get" class="form-group" action="index.html">
-                <input type="search" id="search-form" class="form-control border-0 border-bottom"
-                    placeholder="Type and press enter" value="" name="s">
+                <input type="search" id="search-form" class="form-control border-0 border-bottom lang-toggle-placeholder"
+                    placeholder="Type and press enter" value="" name="s" data-en="Type and press enter" data-hi="[टाइप करें और एंटर दबाएं]">
                 <button type="submit" class="search-submit border-0 position-absolute bg-white"
                     style="top: 15px;right: 15px;"><svg class="search" width="24" height="24">
                         <use xlink:href="#search"></use>
                     </svg></button>
             </form>
 
-            <h5 class="cat-list-title">Browse Categories</h5>
+            <h5 class="cat-list-title"><span class="lang-toggle" data-en="Browse Categories" data-hi="[श्रेणियां ब्राउज़ करें]">Browse Categories</span></h5>
 
             <ul class="cat-list">
                 <li class="cat-list-item">
-                    <a href="#" title="Travel">Travel</a>
+                    <a href="#" title="Travel"><span class="lang-toggle" data-en="Travel" data-hi="[यात्रा]">Travel</span></a>
                 </li>
                 <li class="cat-list-item">
-                    <a href="#" title="Relationships">Relationships</a>
+                    <a href="#" title="Relationships"><span class="lang-toggle" data-en="Relationships" data-hi="[रिश्ते]">Relationships</span></a>
                 </li>
                 <li class="cat-list-item">
-                    <a href="#" title="Skin Care">Skin Care</a>
+                    <a href="#" title="Skin Care"><span class="lang-toggle" data-en="Skin Care" data-hi="[त्वचा की देखभाल]">Skin Care</span></a>
                 </li>
                 <li class="cat-list-item">
-                    <a href="#" title="Health">Health</a>
+                    <a href="#" title="Health"><span class="lang-toggle" data-en="Health" data-hi="[स्वास्थ्य]">Health</span></a>
                 </li>
                 <li class="cat-list-item">
-                    <a href="#" title="Spa">Spa</a>
+                    <a href="#" title="Spa"><span class="lang-toggle" data-en="Spa" data-hi="[स्पा]">Spa</span></a>
                 </li>
                 <li class="cat-list-item">
-                    <a href="#" title="Meditation">Meditation</a>
+                    <a href="#" title="Meditation"><span class="lang-toggle" data-en="Meditation" data-hi="[ध्यान]">Meditation</span></a>
                 </li>
                 <li class="cat-list-item">
-                    <a href="#" title="Healing">Healing</a>
+                    <a href="#" title="Healing"><span class="lang-toggle" data-en="Healing" data-hi="[उपचार]">Healing</span></a>
                 </li>
             </ul>
 
@@ -96,7 +150,7 @@
             <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
                 aria-labelledby="offcanvasNavbarLabel">
                 <div class="offcanvas-header">
-                    <h5 class="offcanvas-title text-white" id="offcanvasNavbarLabel">Menu</h5>
+                    <h5 class="offcanvas-title text-white" id="offcanvasNavbarLabel"><span class="lang-toggle" data-en="Menu" data-hi="[मेन्यू]">Menu</span></h5>
                     <button type="button" class="btn-close btn-close-white text-reset" data-bs-dismiss="offcanvas"
                         aria-label="Close"></button>
                 </div>
@@ -105,24 +159,30 @@
                         class="navbar-nav align-items-center justify-content-end justify-content-xxl-center flex-grow-1 pe-3">
                         <li class="nav-item">
                             <a class="nav-link text-uppercase active mx-2 px-3 mb-2 mb-lg-0"
-                                aria-current="page" href="index.html">Home</a>
+                                aria-current="page" href="index.html"><span class="lang-toggle" data-en="Home" data-hi="[मुखपृष्ठ]">Home</span></a>
                         </li>
                      
                         <li class="nav-item">
-                            <a class="nav-link text-uppercase  mx-2 px-3 mb-2 mb-lg-0" href="therapy.html">Therapy</a>
+                            <a class="nav-link text-uppercase  mx-2 px-3 mb-2 mb-lg-0" href="therapy.html"><span class="lang-toggle" data-en="Therapy" data-hi="[थेरेपी]">Therapy</span></a>
                         </li>
                         
                         <li class="nav-item">
                             <a class="nav-link text-uppercase  mx-2 px-3 mb-2 mb-lg-0"
-                                href="https://contact-page-shashkth-stree.vercel.app/">Contact</a>
+                                href="https://contact-page-shashkth-stree.vercel.app/"><span class="lang-toggle" data-en="Contact" data-hi="[संपर्क]">Contact</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-uppercase  mx-2 px-3 mb-2 mb-lg-0" href="fundraising.html">Fundraising</a>
+                            <a class="nav-link text-uppercase  mx-2 px-3 mb-2 mb-lg-0" href="fundraising.html"><span class="lang-toggle" data-en="Fundraising" data-hi="[धन उगाही]">Fundraising</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-uppercase  mx-2 px-3 mb-2 mb-lg-0" href="resources.html">Resources</a>
+                          <div class="lang-toggle-container">
+                            <label for="lang-toggle-checkbox" class="lang-toggle-label">EN</label>
+                            <label class="lang-toggle-switch">
+                              <input type="checkbox" id="lang-toggle-checkbox">
+                              <span class="lang-slider"></span>
+                            </label>
+                            <label for="lang-toggle-checkbox" class="lang-toggle-label">HI</label>
+                          </div>
                         </li>
-                      
 
                     </ul>
 
@@ -137,7 +197,7 @@
                 <div class="col-md-10 offset-md-1">
                     <div class="text-center pt-5">
                         <p class="header-top text-white mb-4"></p>
-                        <h1 class="display-1 text-white mb-5">Educate and inspire, take her higher</h1>
+                        <h1 class="display-1 text-white mb-5"><span class="lang-toggle" data-en="Educate and inspire, take her higher" data-hi="[शिक्षित करें और प्रेरित करें, उसे ऊंचा उठाएं]">Educate and inspire, take her higher</span></h1>
                     </div>
                 </div>
             </div>
@@ -148,65 +208,59 @@
     <section id="posts" class="padding-medium bg-secondary" style="background-image:url(images/bg.jpg); background-repeat: no-repeat; background-size: cover; background-position: center; height: 150vh;">
         <div class="container">
             <div class="popular-stories">
-                <h2 class="display-2 text-primary text-capitalize mb-4 text-center" style="color: white !important;">Explore</h2>
+                <h2 class="display-2 text-primary text-capitalize mb-4 text-center" style="color: white !important;"><span class="lang-toggle" data-en="Explore" data-hi="[अन्वेषण करें]">Explore</span></h2>
                 <div class="row g-4">
-                    <!-- Card 1 -->
                     <div class="col-md-4">
                         <div class="card rounded-5 border-0" style="background-color: #E5B8F4 !important;">
                             <img src="images/pos1.jpg" class="img-fluid card-img-top" alt="posts">
                             <div class="card-body">
-                                <a href="Cyberbullying.html" class="text-uppercase text-primary fw-light">Cyber Bullying</a>
-                                <h5 class="card-title mt-2"><a href="Cyberbullying.html">Stay Safe, Stay Smart Online</a></h5>
+                                <a href="Cyberbullying.html" class="text-uppercase text-primary fw-light"><span class="lang-toggle" data-en="Cyber Bullying" data-hi="[साइबर बुलिंग]">Cyber Bullying</span></a>
+                                <h5 class="card-title mt-2"><a href="Cyberbullying.html"><span class="lang-toggle" data-en="Stay Safe, Stay Smart Online" data-hi="[सुरक्षित रहें, ऑनलाइन स्मार्ट रहें]">Stay Safe, Stay Smart Online</span></a></h5>
                             </div>
                         </div>
                     </div>
-                    <!-- Card 2 -->
                     <div class="col-md-4">
                         <div class="card rounded-5 border-0" style="background-color: #E5B8F4 !important;">
                             <img src="images/pos2.jpg" class="img-fluid card-img-top" alt="posts">
                             <div class="card-body">
-                                <a href="MentalAbuse.html" class="text-uppercase text-primary fw-light">Mental Abuse</a>
-                                <h5 class="card-title mt-2"><a href="MentalAbuse.html">Empower Yourself, Know the Signs</a></h5>
+                                <a href="MentalAbuse.html" class="text-uppercase text-primary fw-light"><span class="lang-toggle" data-en="Mental Abuse" data-hi="[मानसिक शोषण]">Mental Abuse</span></a>
+                                <h5 class="card-title mt-2"><a href="MentalAbuse.html"><span class="lang-toggle" data-en="Empower Yourself, Know the Signs" data-hi="[खुद को सशक्त बनाएं, संकेतों को जानें]">Empower Yourself, Know the Signs</span></a></h5>
                             </div>
                         </div>
                     </div>
-                    <!-- Card 3 -->
                     <div class="col-md-4">
                         <div class="card rounded-5 border-0" style="background-color: #E5B8F4 !important;">
                             <img src="images/pos3.jpg" class="img-fluid card-img-top" alt="posts">
                             <div class="card-body">
-                                <a href="WorkplaceHarrassment.html" class="text-uppercase text-primary fw-light">Workplace Harassment</a>
-                                <h5 class="card-title mt-2"><a href="WorkplaceHarrassment.html">Ensure respect</a></h5>
+                                <a href="WorkplaceHarrassment.html" class="text-uppercase text-primary fw-light"><span class="lang-toggle" data-en="Workplace Harassment" data-hi="[कार्यस्थल उत्पीड़न]">Workplace Harassment</span></a>
+                                <h5 class="card-title mt-2"><a href="WorkplaceHarrassment.html"><span class="lang-toggle" data-en="Ensure respect" data-hi="[सम्मान सुनिश्चित करें]">Ensure respect</span></a></h5>
                             </div>
                         </div>
                     </div>
-                    <!-- Card 4 -->
                     <div class="col-md-4">
                         <div class="card rounded-5 border-0" style="background-color: #E5B8F4 !important;">
                             <img src="images/pos5.jpg" class="img-fluid card-img-top" alt="posts">
                             <div class="card-body">
-                                <a href="Stress.html" class="text-uppercase text-primary fw-light">Mind & Body Balance</a>
-                                <h5 class="card-title mt-2"><a href="Stress.html">Ease your mind with stress-relief tips</a></h5>
+                                <a href="Stress.html" class="text-uppercase text-primary fw-light"><span class="lang-toggle" data-en="Mind & Body Balance" data-hi="[मन और शरीर का संतुलन]">Mind & Body Balance</span></a>
+                                <h5 class="card-title mt-2"><a href="Stress.html"><span class="lang-toggle" data-en="Ease your mind with stress-relief tips" data-hi="[तनाव-मुक्ति युक्तियों से अपने मन को शांत करें]">Ease your mind with stress-relief tips</span></a></h5>
                             </div>
                         </div>
                     </div>
-                    <!-- Card 5 -->
                     <div class="col-md-4">
                         <div class="card rounded-5 border-0" style="background-color: #E5B8F4 !important;">
                             <img src="images/pos7.jpg" class="img-fluid card-img-top" alt="posts">
                             <div class="card-body">
-                                <a href="consent.html" class="text-uppercase text-primary fw-light">Consent and Boundaries</a>
-                                <h5 class="card-title mt-2"><a href="consent.html">Know, follow, protect</a></h5>
+                                <a href="consent.html" class="text-uppercase text-primary fw-light"><span class="lang-toggle" data-en="Consent and Boundaries" data-hi="[सहमति और सीमाएं]">Consent and Boundaries</span></a>
+                                <h5 class="card-title mt-2"><a href="consent.html"><span class="lang-toggle" data-en="Know, follow, protect" data-hi="[जानें, पालन करें, रक्षा करें]">Know, follow, protect</span></a></h5>
                             </div>
                         </div>
                     </div>
-                    <!-- Card 6 -->
                     <div class="col-md-4">
                         <div class="card rounded-5 border-0" style="background-color: #E5B8F4 !important;">
                             <img src="images/pos8.jpg" class="img-fluid card-img-top" alt="posts">
                             <div class="card-body">
-                                <a href="coupleTherapy.html" class="text-uppercase text-primary fw-light">Couples Therapy</a>
-                                <h5 class="card-title mt-2"><a href="coupleTherapy.html">Reconnect & Strengthen Your Bond</a></h5>
+                                <a href="coupleTherapy.html" class="text-uppercase text-primary fw-light"><span class="lang-toggle" data-en="Couples Therapy" data-hi="[युगल चिकित्सा]">Couples Therapy</span></a>
+                                <h5 class="card-title mt-2"><a href="coupleTherapy.html"><span class="lang-toggle" data-en="Reconnect & Strengthen Your Bond" data-hi="[अपने बंधन को फिर से जोड़ें और मजबूत करें]">Reconnect & Strengthen Your Bond</span></a></h5>
                             </div>
                         </div>
                     </div>
@@ -220,21 +274,15 @@
 
     <section id="recent-videos" class="padding-medium" style="background-image:url(images/videobackg.jpg); background-repeat: no-repeat; background-size: cover; background-position: center;">
         <div class="container">
-         <h2 class="display-2 text-primary text-capitalize mb-5 text-center" style="color: white !important;">Inspiring Journeys</h2>
+         <h2 class="display-2 text-primary text-capitalize mb-5 text-center" style="color: white !important;"><span class="lang-toggle" data-en="Inspiring Journeys" data-hi="[प्रेरक यात्राएं]">Inspiring Journeys</span></h2>
          <div class="row flex-column">
             <div class="col-md-12">
-              <!-- product-large-slider -->
               <div class="swiper product-large-slider rounded-4">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
                     <div class="video-player text-center position-relative">
                         <img src="images/quote1.jpg" alt="product-large" class="img-fluid rounded-4 position-absolute top-0 start-0">
-                        <!-- <a type="button" data-bs-toggle="modal" data-src="https://www.youtube.com/embed/EdpoEmifW7M?si=fPYqa2UAGvcq8Shb" data-bs-target="#myModal" class="play-btn position-absolute top-0 bottom-0 start-0 end-0">
-                            <svg width="70" height="70">
-                                <use xlink:href="#play"></use>
-                            </svg>
-                        </a> -->
-                    </div>
+                        </div>
                   </div>
                   <div class="swiper-slide">
                     <div class="video-player text-center position-relative">
@@ -299,10 +347,8 @@
 
                 </div>
               </div>
-              <!-- / product-large-slider -->
-            </div>
+              </div>
             <div class="col-md-12 mt-3">
-              <!-- product-thumbnail-slider -->
               <div thumbsSlider="" class="swiper rounded-4 product-thumbnail-slider">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
@@ -328,89 +374,11 @@
                   </div>
                 </div>
               </div>
-              <!-- / product-thumbnail-slider -->
-            </div>
+              </div>
 
           </div>
         </div>
     </section>
-
-
-   <footer id="footer" class="text-light padding-medium" style="background-image:url(images/bg.jpg); background-repeat: no-repeat; background-size: cover; background-position: center;height: 85vh">
-        <div class="container"> 
-
-           
-
-            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-5 my-5 py-5 ">
-                <h4 class="text-white text-uppercase text-center mb-4">Emergency Contacts</h4>
-
-
-                
-
-                
-                 <div class="col-md-2 offset-md-1">
-                
-                    <h5 class="text-white text-capitalize fs-5 mt-3 mt-md-0 mb-3">Organisation</h5>
-                    <ul class="navbar-nav flex-column">
-                        <li class="nav-item footer-list mb-3"><a href="#" class="nav-link text-uppercase p-0 ">Women Helpline</a>
-                        </li>
-                        <li class="nav-item footer-list mb-3"><a href="#" class="nav-link text-uppercase p-0 ">ChildLine</a>
-                        </li>
-                        <li class="nav-item footer-list mb-3"><a href="#" class="nav-link text-uppercase p-0 ">National Commission for women</a>
-                        </li>
-                        <li class="nav-item footer-list mb-3"><a href="#" class="nav-link text-uppercase p-0 ">ERSS</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-md-2">
-                    <h5 class="text-white text-capitalize fs-5 mt-3 mt-md-0 mb-3">Contact Info</h5>
-                    <ul class="navbar-nav flex-column">
-                        <li class="nav-item footer-list mb-3"><a href="#" class="nav-link text-uppercase p-0 "> 181</a>
-                        </li>
-                        <li class="nav-item footer-list mb-3"><a href="#" class="nav-link text-uppercase p-0 ">1098</a>
-                        </li>
-                        <li class="nav-item footer-list mb-3"><a href="#" class="nav-link text-uppercase p-0 "> 7827-170-170</a>
-                        </li>
-                        <li class="nav-item footer-list mb-3"><a href="#" class="nav-link text-uppercase p-0 ">112</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-md-2 ">
-                    <h5 class="text-white text-capitalize fs-5 mt-3 mt-md-0 mb-3">E-mail ID</h5>
-                    <ul class="navbar-nav flex-column">
-                        <li class="nav-item footer-list mb-3"><a href="#" class="nav-link text-uppercase p-0 ">ncw@nic.in</a>
-                        </li>
-                        <li class="nav-item footer-list mb-3"><a href="#"
-                                class="nav-link text-uppercase p-0 ">email</a>
-                        </li>
-                        <li class="nav-item footer-list mb-3"><a href="#"
-                                class="nav-link text-uppercase p-0 ">ncw@nic.in</a>
-                        </li>
-                        <li class="nav-item footer-list mb-3"><a href="#"
-                                class="nav-link text-uppercase p-0 "></a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-md-2 ">
-                    <h5 class="text-white text-capitalize fs-5 mt-3 mt-md-0 mb-3">More info</h5>
-                    <ul class="navbar-nav flex-column">
-                        <li class="nav-item footer-list mb-3"><a href="#"
-                                class="nav-link text-uppercase p-0 ">Policy</a>
-                        </li>
-                        <li class="nav-item footer-list mb-3"><a href="#" class="nav-link text-uppercase p-0 ">Terms</a>
-                        </li>
-                        <li class="nav-item footer-list mb-3"><a href="#"
-                                class="nav-link text-uppercase p-0 ">Contact</a>
-                        </li>
-                    </ul>
-                </div>
-
-            </div>
-
-       
-        </div>
-    </footer> 
-
   
     <script src="js/jquery-1.11.0.min.js"></script>
     <script src="js/plugins.js"></script>
@@ -421,6 +389,55 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"></script>
 
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const toggle = document.getElementById('lang-toggle-checkbox');
+  const elements = document.querySelectorAll('.lang-toggle');
+  const placeholders = document.querySelectorAll('.lang-toggle-placeholder');
+  
+  const titles = {
+    en: "Shashkth Stree - Issues",
+    hi: "सशक्त स्त्री - मुद्दे"
+  };
+  
+  function updateLanguage() {
+    const targetLang = toggle.checked ? 'hi' : 'en';
+    
+    document.title = titles[targetLang];
+    
+    elements.forEach(el => {
+      const text = el.getAttribute('data-' + targetLang);
+      if (text) {
+        if (targetLang === 'hi' && text.startsWith('[') && text.endsWith(']')) {
+          el.innerHTML = text.substring(1, text.length - 1);
+        } else {
+          el.innerHTML = text;
+        }
+      }
+    });
+    
+    placeholders.forEach(el => {
+      const text = el.getAttribute('data-' + targetLang);
+      if (text) {
+        let newText = text;
+        if (targetLang === 'hi' && text.startsWith('[') && text.endsWith(']')) {
+          newText = text.substring(1, text.length - 1);
+        }
+        el.setAttribute('placeholder', newText);
+      }
+    });
+  }
+  
+  toggle.addEventListener('change', updateLanguage);
+  
+  // Set initial state
+  updateLanguage();
+});
+</script>
+
+<div id="footer-placeholder"></div>
+<script src="js/embed_footer.js" defer></script>
 
 </body>
 
