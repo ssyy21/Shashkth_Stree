@@ -314,6 +314,40 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
 });
+</script> -->
+
+
+<script>
+  // Load navbar.html dynamically
+  fetch('navbar.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('navbar-container').innerHTML = data;
+
+      // Highlight active nav link based on current page
+      const currentPage = window.location.pathname.split('/').pop();
+      const links = document.querySelectorAll('#navbar-container .nav-link');
+      links.forEach(link => {
+        if (link.getAttribute('href') === currentPage) {
+          link.classList.add('active');
+        }
+      });
+
+      // Show Donate button only on fundraising page
+      if (window.location.pathname.includes("fundraising.html")) {
+        document.getElementById("donate-btn").style.display = "block";
+      }
+    });
+
+  // Navbar scroll effect
+  window.addEventListener("scroll", function() {
+    const navbar = document.getElementById("navbar");
+    if (window.scrollY > 50) {
+      navbar.classList.add("scrolled");
+    } else {
+      navbar.classList.remove("scrolled");
+    }
+  });
 </script>
 
 

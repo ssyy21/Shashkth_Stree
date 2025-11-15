@@ -44,6 +44,8 @@ body {
     --heading-color: #333333;
     --accent-color: #FFB61D;
     --background-color: #2D033B;
+    margin: 0;
+  padding: 0;
 
 
 
@@ -858,4 +860,9 @@ button.filter-button:hover {
 /* Reduce padding for the bottom-footer text */
 .bottom-footer {
     padding: 3px 0;
+}
+
+.navbar-brand img {
+    height: 50px; /* adjust as needed */
+    width: 80px;
 }

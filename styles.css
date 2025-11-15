@@ -165,3 +165,8 @@ body {
 
 
 
+
+.navbar-brand img {
+    height: 50px; /* adjust as needed */
+    width: 80px;
+}

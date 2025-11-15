@@ -52,7 +52,9 @@ body {
   line-height: 1.5;
   color: #212529;
   text-align: left;
-  background-color: #fff; }
+  background-color: #fff;
+  
+}
 
 [tabindex="-1"]:focus:not(:focus-visible) {
   outline: 0 !important; }
@@ -3642,6 +3644,7 @@ input[type="button"].btn-block {
     text-decoration: none; }
 
 .navbar-nav {
+  
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3651,7 +3654,13 @@ input[type="button"].btn-block {
   flex-direction: column;
   padding-left: 0;
   margin-bottom: 0;
-  list-style: none; }
+  list-style: none; 
+  
+  justify-content: center;
+  align-items: center;
+  gap: 20px;   /* adjust the spacing here */
+
+}
   .navbar-nav .nav-link {
     padding-right: 0;
     padding-left: 0; }
@@ -10211,7 +10220,80 @@ textarea.form-control {
     stroke-dashoffset: -136px; } }
     
 
+<<<<<<< HEAD
     /* ================================
+=======
+
+    /* .navbar .nav-link {
+    color: #ffffff !important;
+  font-weight: 500;
+  padding: 8px 15px !important;
+  text-transform: uppercase;
+
+}
+
+.btn-donate {
+  background: #C147E9;
+  color: white;
+  border-radius: 6px;
+}
+
+.btn-donate:hover {
+  background: #a12cc6;
+}
+
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+    color: #C147E9 !important;  /* same purple hover color as index.html */
+/* }
+#navbar.scrolled {
+  background-color: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(6px);
+  padding: 10px 40px;
+} */ */
+
+
+/* style.css */
+/* #navbar {
+  transition: all 0.3s ease;
+  background-color: transparent;
+  padding: 6px 0;
+}
+
+#navbar.scrolled {
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(8px);
+}
+
+.logo-img {
+  height: 60px;
+  transition: all 0.3s ease;
+}
+
+.nav-link {
+  color: white;
+  font-weight: 500;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  border-radius: 4px;
+} */
+
+/* .nav-link:hover {
+  color: #ffb3c1;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav-link.active {
+  color: #fff;
+  background-color: #1ee979;
+} */
+
+
+
+
+
+/* ================================
+>>>>>>> f183f82 (Fixed navbar in fundraising.html)
    NAVBAR BASE
 ================================ */
 #navbar {

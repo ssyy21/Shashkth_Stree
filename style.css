@@ -663,7 +663,10 @@ iconify-icon.social-icon {
 }
 
 .navbar-nav .nav-link.active {
-  color: #C147E9 !important;
+  color: #C147E9 !important;}
+.navbar-brand img {
+    height: 50px; /* adjust as needed */
+    width: 80px;
 }
 
 
