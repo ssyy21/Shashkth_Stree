@@ -24,12 +24,6 @@ body {
     z-index: 1000;
 }
 
-.navbar-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 80%;
-}
 
 .heading{
     font-size: 40px;
@@ -77,13 +71,6 @@ body {
 
 
 
-.logo {
-    color: #C147E9;
-    font-size: 1.5em;
-    text-decoration: none;
-    font-weight: bold;
-    margin-right: auto;
-}
 
 .nav-links {
     list-style: none;
