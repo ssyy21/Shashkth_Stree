@@ -92,6 +92,24 @@ input:checked + .lang-slider:before {
     border-bottom: 1px solid rgba(255, 255, 255, 0.15); 
     transition: all 0.3s ease; 
 }
+
+.btn-with-hover{
+    background-color: #CA7EB7;
+    color: white;
+    font-family: cursive;
+    border-radius: 10px;
+    height: 50px;
+    width: 170px;
+    font-weight: bold;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    border: none;
+    cursor: pointer;
+}
+
+.btn-with-hover:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+}
+
 </style>
 
 </head>
@@ -165,12 +183,10 @@ input:checked + .lang-slider:before {
                         <h5 class="display-1 text-white mb-5"><span class="lang-toggle" data-en="STRONG AND FREE, AS WE’RE MEANT TO BE" data-hi="[मजबूत और स्वतंत्र, जैसा हमें होना चाहिए]">STRONG AND FREE, AS WE’RE MEANT TO BE</span></h5>
                         <br>
                         <br>
-                        <button style="background-color: #CA7EB7; color: white; font-family: cursive; 
-  border-radius: 10px; height: 50px; width: 170px; font-weight: bold; 
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2); border: none; cursor: pointer;"
-  onclick="window.location.href='issues.html'">
-  <span class="lang-toggle" data-en="Explore" data-hi="[अन्वेषण करें]">Explore</span>
-</button>
+                        <button class="btn-with-hover"
+                        onclick="window.location.href='issues.html'">
+                        <span class="lang-toggle" data-en="Explore" data-hi="[अन्वेषण करें]">Explore</span>
+                        </button>
 
                     </div>
                 </div>
