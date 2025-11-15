@@ -9,13 +9,13 @@ body {
 #navbar {
   background: transparent;
   transition: all 0.3s ease-in-out;
+  background-color: transparent;
+  transition: background-color 0.3s ease; /* smooth transition if changing on scroll */
+  backdrop-filter: blur(10px);
 }
 
 /* Scroll effect (optional if you already have it) */
-#navbar.scrolled {
-  background-color: rgba(0, 0, 0, 0.85);
-  backdrop-filter: blur(6px);
-}
+
 
 /* Make logo and all nav links white by default */
 #navbar .navbar-brand,
