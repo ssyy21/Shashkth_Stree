@@ -174,29 +174,20 @@ h6,
     line-height: normal;
     letter-spacing: 0.28125rem;
 }
-.header-top-2 {
-    text-transform: uppercase;
-    letter-spacing: 12px;
-}
+
 
 .heading-color {
     color: var(--accent-color);
 }
 
-.padding-large {
-    padding-top: 26.13rem;
-    padding-bottom: 14.06rem;
-}
+
 
 .padding-medium {
     padding-top: 9rem;
     padding-bottom: 9rem;
 }
 
-.padding-medium-2 {
-    padding-top: 9rem;
-    padding-bottom: 9rem;
-}
+
 
 @media only screen and (max-width: 768px) {
     .padding-large {
