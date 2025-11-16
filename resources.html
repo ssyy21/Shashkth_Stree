@@ -4,337 +4,305 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resources</title>
-    <style>
-        #main{
-            font-size: 60px;
-            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        }
-        
-        #grid{
-            color: rgb(59, 21, 21);
-            padding: 20px;
-            grid-column-gap: 20px;
-            grid-row-gap: 20px;
-            grid-template-columns: 200px 200px auto;
-            border: 5px solid black;
-            border-radius: 50px;
-        }
-        .grid-items{
-            background-color: #918695;
-            size: 200px;
-            border: 5px solid black;
-            border-radius: 50px;
-            padding: 20px;
-            font-size: 30px;
-            font-weight:bolder;
-            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            
-        }
-        h2{
-            color: rgb(201, 215, 124);
-            font-size: 40px;
-            text-align: center;
-            
-        }
-        h3{
-            color: rgb(95, 57, 57);
-            font-size: 30px;
-            text-align: center;
-            
-        }
-       .grid-items:hover {
-            transition: 50ms;
-            transform: translate(-10px) ; 
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
-            background-color:rgb(194, 170, 198);
-            
-        
-       }
-       .grid-items .hover-text {
-  display: none; }
 
-.grid-items:hover .original-text {
-  display: none; 
-}
-
-.grid-items:hover .hover-text {
-  display: inline; 
-}
-        
-        
-                            
-    </style>
-
-    <style>
-      .breadcrumb-container {
-        padding-top: 20px; 
-        padding-bottom: 0;
-        background-color: #fff; 
-      }
-      .breadcrumb {
-        background-color: transparent;
-        padding: 0;
-        margin-bottom: 0;
-      }
-      .breadcrumb-item a {
-        color: #810CA8; 
-        text-decoration: none;
-      }
-      .breadcrumb-item a:hover {
-        color: #C147E9; 
-      }
-      .breadcrumb-item.active {
-        color: #6c757d; 
-      }
-      .breadcrumb-item + .breadcrumb-item::before {
-        color: #810CA8; 
-        content: "›"; 
-      }
-      
-      .container {
-        width: 100%;
-        padding-right: 15px;
-        padding-left: 15px;
-        margin-right: auto;
-        margin-left: auto;
-      }
-      @media (min-width: 576px) {
-        .container {
-          max-width: 540px;
-        }
-      }
-      @media (min-width: 768px) {
-        .container {
-          max-width: 720px;
-        }
-      }
-      @media (min-width: 992px) {
-        .container {
-          max-width: 960px;
-        }
-      }
-      @media (min-width: 1200px) {
-        .container {
-          max-width: 1140px;
-        }
-      }
-    
-
-.lang-toggle-container {
-  position: fixed;
-  top: 20px;
-  right: 20px; 
-  z-index: 1001;
-  display: flex;
-  align-items: center;
-  background: #fff;
-  border-radius: 25px;
-  padding: 5px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-}
-.lang-toggle-label {
-  margin: 0 5px;
-  font-size: 14px;
-  font-weight: bold;
-  color: #333;
-  cursor: pointer;
-  user-select: none;
-}
-.lang-toggle-switch {
-  position: relative;
-  display: inline-block;
-  width: 50px;
-  height: 24px;
-}
-.lang-toggle-switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-.lang-slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  transition: .4s;
-  border-radius: 34px;
-}
-.lang-slider:before {
-  position: absolute;
-  content: "";
-  height: 16px;
-  width: 16px;
-  left: 4px;
-  bottom: 4px;
-  background-color: white;
-  transition: .4s;
-  border-radius: 50%;
-}
-input:checked + .lang-slider {
-  background-color: #810CA8;
-}
-input:checked + .lang-slider:before {
-  transform: translateX(26px);
-}
-
-#navbar {
-  background: transparent;
-  transition: all 0.3s ease-in-out;
-  background-color: transparent;
-  transition: background-color 0.3s ease; /* smooth transition if changing on scroll */
-  backdrop-filter: blur(10px);
-}
-#navbar .nav-link {
-  
-  font-size: 18px;
-}
-
-    </style>
-    
-   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
-        <link rel="stylesheet" type="text/css" href="style.css">
-        <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />-->
 
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+    <style>
+        body {
+            background: #CA7EB7;
+            font-family: 'Inter', sans-serif;
+            color: #333;
+            padding-bottom: 60px;
+        }
+
+        .articles .heading:first-of-type {
+            font-size: 42px;
+            font-weight: 700;
+            text-align: center;
+            margin-top: 40px;
+            color: #222;
+        }
+
+        .articles .lead {
+            color: #555;
+            font-size: 18px;
+        }
+
+        .articles h2 {
+            margin-top: 40px;
+            font-weight: 600;
+            color: #2c2f35 !important;
+            letter-spacing: 0.5px;
+        }
+
+        .article-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+            margin: 30px auto;
+            max-width: 1100px;
+        }
+
+        .resource-card {
+            padding: 22px;
+            border-radius: 18px;
+            background: rgba(255, 255, 255, 0.65);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.35);
+            box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+            transition: all 0.4s ease;
+            text-align: center;
+            animation: fadeUp 0.7s ease forwards;
+            opacity: 0;
+        }
+
+        .resource-card:hover {
+            transform: translateY(-8px) scale(1.03);
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+        }
+
+        .resource-card .hover-text {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.35s ease;
+        }
+
+        .resource-card:hover .hover-text {
+            display: block;
+            opacity: 1;
+        }
+
+        .resource-card:hover .original-text {
+            display: none;
+        }
+
+        .resource-card-title {
+            font-size: 21px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: #222;
+        }
+
+        .resource-card a {
+            color: #2a6df4;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .resource-card a:hover {
+            text-decoration: underline;
+        }
+
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(12px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
 </head>
-<body style="background-image: url(images/resourcebg.jpg) ;background-size: cover; background-repeat: no-repeat;background-attachment: fixed;">
 
+<body>
 
     <div id="navbar-container"></div>
-    
-     <br>
-     <br>
-      <h1 id="main">
-    <marquee behavior="slide" direction="up" scrollamount="10">
-      All the resources for your help
-    </marquee></h1>
 
-    <h2>Helpline</h2>
-    <h3>(Complaints)</h3>
-    <div id="grid">
-        <div class="grid-items">
-            <span class="original-text">For Life threatning situations/Helpline<br> </span><span class="hover-text">Call 988 <br><pre>    or</pre><br><a href="https://helpnow.talkspace.com/">Use these resources</a></span>
+    <div class="articles">
+
+        <h1 class="heading">Resources</h1>
+        <p class="lead text-center mb-5">Helplines, legal contacts, and associated NGOs for your support.</p>
+
+        <!-- Helpline Section -->
+        <h2 class="heading" style="font-size: 30px;">Helpline (Complaints)</h2>
+
+        <div class="article-container">
+            <div class="resource-card">
+                <div class="article-content">
+                    <span class="original-text">
+                        <div class="resource-card-title">For Life-Threatening Situations</div>
+                        (Hover to see details)
+                    </span>
+                    <span class="hover-text">
+                        <div class="resource-card-title">For Life-Threatening Situations</div>
+                        Call 988 or <a href="https://helpnow.talkspace.com/">Use these resources</a>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Legal Contacts Section -->
+        <h2 class="heading" style="font-size: 30px; margin-top: 40px;">Legal Contacts</h2>
+
+        <div class="article-container">
+
+            <div class="resource-card">
+                <div class="article-content">
+                    <span class="original-text">
+                        <div class="resource-card-title">Licensed Counselor</div>
+                        (Hover to see details)
+                    </span>
+                    <span class="hover-text">
+                        <div class="resource-card-title">Priya Sharma</div>
+                        Phone: +91-98765-43210<br>
+                        Licensed Counselor specializing in domestic violence trauma.
+                    </span>
+                </div>
+            </div>
+
+            <div class="resource-card">
+                <div class="article-content">
+                    <span class="original-text">
+                        <div class="resource-card-title">Legal Advice Counselor</div>
+                        (Hover to see details)
+                    </span>
+                    <span class="hover-text">
+                        <div class="resource-card-title">Arjun Verma</div>
+                        Phone: +91-98765-43109<br>
+                        Legal Advisor providing free consultations on filing complaints.
+                    </span>
+                </div>
+            </div>
+
+            <div class="resource-card">
+                <div class="article-content">
+                    <span class="original-text">
+                        <div class="resource-card-title">Case Manager</div>
+                        (Hover to see details)
+                    </span>
+                    <span class="hover-text">
+                        <div class="resource-card-title">Kavita Nair</div>
+                        Phone: +91-98765-43098<br>
+                        Assists with housing and financial support.
+                    </span>
+                </div>
+            </div>
+
+            <div class="resource-card">
+                <div class="article-content">
+                    <span class="original-text">
+                        <div class="resource-card-title">Helpline Coordinator</div>
+                        (Hover to see details)
+                    </span>
+                    <span class="hover-text">
+                        <div class="resource-card-title">Rohan Gupta</div>
+                        Phone: +91-98765-42987<br>
+                        24/7 Helpline Coordinator trained in crisis intervention.
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <!-- NGOs Section -->
+        <h2 class="heading" style="font-size: 30px; margin-top: 40px;">Associated NGOs (Healing)</h2>
+
+        <div class="article-container">
+
+            <div class="resource-card">
+                <div class="article-content">
+                    <span class="original-text">
+                        <div class="resource-card-title">Sahaayata Foundation</div>
+                        (Hover to see details)
+                    </span>
+                    <span class="hover-text">
+                        <div class="resource-card-title">Sahaayata Foundation</div>
+                        Helpline: +91-98111-12345<br>
+                        Supports survivors with counseling, legal aid, and shelter.
+                    </span>
+                </div>
+            </div>
+
+            <div class="resource-card">
+                <div class="article-content">
+                    <span class="original-text">
+                        <div class="resource-card-title">Ujjivan Foundation</div>
+                        (Hover to see details)
+                    </span>
+                    <span class="hover-text">
+                        <div class="resource-card-title">Ujjivan Foundation</div>
+                        Helpline: +91-98222-54321<br>
+                        Focused on empowerment, vocational training, and therapy.
+                    </span>
+                </div>
+            </div>
+
+            <div class="resource-card">
+                <div class="article-content">
+                    <span class="original-text">
+                        <div class="resource-card-title">Nayi Disha Welfare Society</div>
+                        (Hover to see details)
+                    </span>
+                    <span class="hover-text">
+                        <div class="resource-card-title">Nayi Disha Welfare Society</div>
+                        Helpline: +91-98333-67890<br>
+                        Provides immediate assistance and emergency shelter.
+                    </span>
+                </div>
+            </div>
+
         </div>
     </div>
-    <br>
-    <h2>Legal Contacts</h2>
-    <h3>(If you are seeking some advice/help)</h3>
-    <div id="grid">
-        <div class="grid-items"><span class="original-text">Licensed Counselor<br></span>
-  <span class="hover-text">Priya Sharma<br>Phone Number: +91-98765-43210<br>Licensed Counselor specializing in domestic violence trauma, offering confidential one-on-one and group therapy sessions. </span>
-            
-        </div>
-        <br>
-        <div class="grid-items"><span class="original-text">Legal Advise Counselor<br></span>
-  <span class="hover-text">Arjun Verma<br>Phone Number: +91-98765-43109<br>
-            Legal Advisor providing free consultations on filing complaints, obtaining restraining orders, and navigating legal processes .
-      </span>
-              </div>
-        <br>
-        <div class="grid-items"><span class="original-text">Case Manager<br></span>
-  <span class="hover-text">Kavita Nair<br>Phone Number: +91-98765-43098<br>
-            Case Manager assisting survivors with housing, financial support, and rehabilitation programs.</span> 
-            
-        </div>
-        <br>
-        <div class="grid-items"><span class="original-text">Helpline Coordinator<br></span>
-  <span class="hover-text">Rohan Gupta <br>Phone Number: +91-98765-42987<br>
-            24/7 Helpline Coordinator trained in crisis intervention and connecting individuals with emergency support services.
-</span>
-                    </div>
-    </div>
-        <br>
-    <h2>Associated NGOs</h2>
-    <h3>(Healing) </h3>
-    <br>
-    <div id="grid">
-        <div class="grid-items"><span class="original-text">Sahaayata Foundation <br></span>
-  <span class="hover-text">Helpline Number: +91-98111-12345<br>
-            A non-profit organization dedicated to supporting survivors of domestic violence through counseling, legal aid, and shelter services.</span>
-        </div>
 
-        <br>
-        <div class="grid-items"><span class="original-text">Ujjivan Foundation <br></span>
-  <span class="hover-text">Helpline Number: +91-98222-54321<br>
-            Focused on empowering individuals affected by domestic violence, offering vocational training, therapy, and community-based support programs. .</span>
-        </div>
-        <br>
-        <div class="grid-items"><span class="original-text">Nayi Disha Welfare Society <br></span>
-  <span class="hover-text">Helpline Number: +91-98333-67890<br>
-            Provides immediate assistance, emergency shelter, and awareness campaigns to prevent domestic violence and promote safe living environments.</span>
-        </div>
-    </div>
+    <div id="footer-container"></div>
 
-
-
+    <!-- Scripts -->
     <script>
-document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
 
-  // 1️⃣ Load navbar dynamically
-  fetch('navbar.html')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('navbar-container').innerHTML = data;
+            fetch('navbar.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('navbar-container').innerHTML = data;
 
-      // Highlight active nav link
-      const currentPage = window.location.pathname.split('/').pop();
-      const links = document.querySelectorAll('#navbar-container .nav-link');
-      links.forEach(link => {
-        if (link.getAttribute('href') === currentPage) {
-          link.classList.add('active');
-        }
-      });
+                    const currentPage = window.location.pathname.split('/').pop();
+                    const links = document.querySelectorAll('#navbar-container .nav-link');
 
-      // Scroll effect on navbar
-      const navbar = document.getElementById("navbar");
-      window.addEventListener("scroll", function() {
-        if (window.scrollY > 50) {
-          navbar.classList.add("scrolled");
-        } else {
-          navbar.classList.remove("scrolled");
-        }
-      });
+                    links.forEach(link => {
+                        if (link.getAttribute('href') === currentPage) {
+                            link.classList.add('active');
+                        }
+                    });
 
-      // Language toggle
-      const toggle = document.getElementById('lang-toggle-checkbox');
-      const elements = document.querySelectorAll('.lang-toggle');
-      const placeholders = document.querySelectorAll('.lang-toggle-placeholder');
+                    const navbar = document.getElementById("navbar");
+                    if (navbar) {
+                        window.addEventListener("scroll", function () {
+                            if (window.scrollY > 50) {
+                                navbar.classList.add("scrolled");
+                            } else {
+                                navbar.classList.remove("scrolled");
+                            }
+                        });
+                    }
 
-      function updateLanguage() {
-        const lang = toggle.checked ? 'hi' : 'en';
-        elements.forEach(el => {
-          const text = el.getAttribute('data-' + lang);
-          if (text) {
-            if (lang === 'hi' && text.startsWith('[') && text.endsWith(']')) {
-              el.innerHTML = text.substring(1, text.length - 1);
-            } else {
-              el.innerHTML = text;
-            }
-          }
+                    const toggle = document.getElementById('lang-toggle-checkbox');
+                    if (toggle) {
+                        const elements = document.querySelectorAll('.lang-toggle');
+                        const placeholders = document.querySelectorAll('.lang-toggle-placeholder');
+
+                        function updateLanguage() {
+                            const lang = toggle.checked ? 'hi' : 'en';
+                            elements.forEach(el => {
+                                const text = el.getAttribute('data-' + lang);
+                                if (text) {
+                                    el.innerHTML = text.replace(/^\[|\]$/g, '');
+                                }
+                            });
+                            placeholders.forEach(el => {
+                                let text = el.getAttribute('data-' + lang);
+                                if (text) {
+                                    el.setAttribute('placeholder', text.replace(/^\[|\]$/g, ''));
+                                }
+                            });
+                        }
+
+                        toggle.addEventListener('change', updateLanguage);
+                        updateLanguage();
+                    }
+                });
         });
-        placeholders.forEach(el => {
-          let text = el.getAttribute('data-' + lang);
-          if (text) {
-            if (lang === 'hi' && text.startsWith('[') && text.endsWith(']')) {
-              text = text.substring(1, text.length - 1);
-            }
-            el.setAttribute('placeholder', text);
-          }
-        });
-      }
-
-      toggle.addEventListener('change', updateLanguage);
-      updateLanguage();
-    });
-
-}); // ✅ Only one closing brace for DOMContentLoaded
-
     </script>
-</body>
 
+    <div id="footer-placeholder"></div>
+    <script src="js/embed_footer.js" defer></script>
+
+</body>
 </html>
