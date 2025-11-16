@@ -1,0 +1,191 @@
+/* Floating Help Button Component */
+
+/* Main floating button container */
+.floating-help-container {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 1000;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Main help button */
+.help-btn {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.help-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+}
+
+.help-btn:active {
+    transform: scale(0.95);
+}
+
+/* Help icon */
+.help-icon {
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+.help-btn.active .help-icon {
+    transform: rotate(45deg);
+}
+
+/* Help menu */
+.help-menu {
+    position: absolute;
+    bottom: 75px;
+    right: 0;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    padding: 12px;
+    min-width: 250px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px) scale(0.9);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.help-menu.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+}
+
+/* Menu items */
+.help-menu-item {
+    display: flex;
+    align-items: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    color: #333;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    margin-bottom: 6px;
+}
+
+.help-menu-item:last-child {
+    margin-bottom: 0;
+}
+
+.help-menu-item:hover {
+    background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
+    transform: translateX(-5px);
+}
+
+/* Menu item icons */
+.help-menu-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 12px;
+    font-size: 18px;
+    flex-shrink: 0;
+}
+
+/* Icon colors */
+.icon-emergency {
+    background: #fee2e2;
+    color: #dc2626;
+}
+
+.icon-report {
+    background: #fef3c7;
+    color: #d97706;
+}
+
+.icon-therapy {
+    background: #dbeafe;
+    color: #2563eb;
+}
+
+.icon-helpline {
+    background: #dcfce7;
+    color: #16a34a;
+}
+
+/* Menu item text */
+.help-menu-text {
+    flex: 1;
+}
+
+.help-menu-title {
+    font-weight: 600;
+    font-size: 14px;
+    color: #1f2937;
+    margin-bottom: 2px;
+}
+
+.help-menu-desc {
+    font-size: 11px;
+    color: #6b7280;
+}
+
+/* Pulse animation for attention */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+    }
+    50% {
+        box-shadow: 0 4px 25px rgba(102, 126, 234, 0.7);
+    }
+    100% {
+        box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+    }
+}
+
+.help-btn.pulse {
+    animation: pulse 2s infinite;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .floating-help-container {
+        bottom: 20px;
+        right: 20px;
+    }
+    
+    .help-btn {
+        width: 55px;
+        height: 55px;
+    }
+    
+    .help-icon {
+        font-size: 24px;
+    }
+    
+    .help-menu {
+        min-width: 220px;
+        right: -10px;
+    }
+    
+    .help-menu-item {
+        padding: 12px 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .help-menu {
+        right: -20px;
+        min-width: 200px;
+    }
+}
