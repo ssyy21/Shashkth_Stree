@@ -44,6 +44,8 @@ body {
     --heading-color: #333333;
     --accent-color: #FFB61D;
     --background-color: #2D033B;
+    margin: 0;
+  padding: 0;
 
 
 
@@ -544,7 +546,7 @@ iconify-icon.hamburger-menu {
 /*---- navigation section style start ----*/
 .nav-link {
     padding: var(--bs-nav-link-padding-y) var(--bs-nav-link-padding-x);
-    font-size: 0.9375rem;
+    font-size: 19px;
     font-weight: 600;
     letter-spacing: 0.075rem;
     color: var(--bs-light);
@@ -553,7 +555,7 @@ iconify-icon.hamburger-menu {
 .navbar-nav .nav-link.active,
 .navbar-nav .nav-link:hover,
 .navbar-nav .nav-link.show {
-    color: var(--bs-primary);
+    color: #C147E9;
 }
 
 iconify-icon.social-icon {
@@ -849,4 +851,17 @@ button.filter-button:hover {
 /* Reduce padding for the bottom-footer text */
 .bottom-footer {
     padding: 3px 0;
+}
+
+.navbar-brand img {
+    height: 50px; /* adjust as needed */
+    width: 80px;
+}
+
+#navbar {
+  background: transparent;
+  transition: all 0.3s ease-in-out;
+  background-color: transparent;
+  transition: background-color 0.3s ease; /* smooth transition if changing on scroll */
+  backdrop-filter: blur(10px);
 }

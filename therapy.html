@@ -4,8 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Therapy Articles</title>
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
+
+   
     
     <style>
       .breadcrumb-container {
@@ -60,8 +63,7 @@
           max-width: 1140px;
         }
       }
-    </style>
-<style>
+    
 
 .lang-toggle-container {
   position: fixed;
@@ -122,43 +124,18 @@ input:checked + .lang-slider {
 input:checked + .lang-slider:before {
   transform: translateX(26px);
 }
-</style>
-<!-- Floating Help Component -->
-<link rel="stylesheet" href="css/floating_help.css">
-<script src="js/floating_help.js" defer></script>
+
+    </style>
+
+
 </head>
 <body>
-<div class="lang-toggle-container">
-  <label for="lang-toggle-checkbox" class="lang-toggle-label">EN</label>
-  <label class="lang-toggle-switch">
-    <input type="checkbox" id="lang-toggle-checkbox">
-    <span class="lang-slider"></span>
-  </label>
-  <label for="lang-toggle-checkbox" class="lang-toggle-label">HI</label>
-</div>
 
-    <nav class="navbar">
-        <div class="container">
-            
-            <ul class="nav-links">
-                <li><a href="index.html"><span class="lang-toggle" data-en="Home" data-hi="[मुखपृष्ठ]">Home</span></a></li>
-                <li><a href="fundraising.html"><span class="lang-toggle" data-en="Fundraising" data-hi="[धन उगाही]">Fundraising</span></a></li>
-                <li><a href="issues.html"><span class="lang-toggle" data-en="Explore" data-hi="[अन्वेषण करें]">Explore</span>
-                </a></li>      
-                <li><a href="https://contact-page-shashkth-stree.vercel.app/"><span class="lang-toggle" data-en="Contact Us" data-hi="[संपर्क करें]">Contact Us</span></a></li>
-                  <li><a href="resources.html">Resources</a></li>
-
-                
-            </ul>
-        </div>
-    </nav>
     
-    <nav aria-label="breadcrumb" class="breadcrumb-container container">
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="index.html"><span class="lang-toggle" data-en="Home" data-hi="[मुखपृष्ठ]">Home</span></a></li>
-        <li class="breadcrumb-item active" aria-current="page"><span class="lang-toggle" data-en="Therapy" data-hi="[थेरेपी]">Therapy</span></li>
-      </ol>
-    </nav>
+
+    <div id="navbar-container"></div>
+
+
 
     <section class="articles">
         <h1 class="heading"><span class="lang-toggle" data-en="Therapy Articles" data-hi="[थेरेपी लेख]">Therapy Articles</span></h1>
@@ -240,99 +217,141 @@ input:checked + .lang-slider:before {
             </div>
     </section>
     
+
     <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        
-        const searchInput = document.getElementById('articleSearch');
-        const articleContainer = document.querySelector('.article-container');
-        const articles = articleContainer.querySelectorAll('.article-card');
-        const noResultsMessage = document.getElementById('noResults');
-
-        
-        searchInput.addEventListener('keyup', function() {
-            
-            const searchTerm = searchInput.value.toLowerCase().trim();
-            
-            let visibleCount = 0;
-
-            
-            articles.forEach(function(card) {
-                
-                const title = card.querySelector('h3').textContent.toLowerCase();
-                const paragraph = card.querySelector('p').textContent.toLowerCase();
-                const cardText = title + ' ' + paragraph;
-
-                
-                if (cardText.includes(searchTerm)) {
-                    
-                    card.style.display = ''; 
-                    visibleCount++;
-                } else {
-                    
-                    card.style.display = 'none';
-                }
-            });
-
-            
-            if (visibleCount > 0) {
-                noResultsMessage.style.display = 'none';
-            } else {
-                noResultsMessage.style.display = 'block';
-            }
-        });
-    });
-    </script>
-    
-<script>
 document.addEventListener('DOMContentLoaded', function() {
-  const toggle = document.getElementById('lang-toggle-checkbox');
-  const elements = document.querySelectorAll('.lang-toggle');
-  const placeholders = document.querySelectorAll('.lang-toggle-placeholder');
-  
-  const titles = {
-    en: "Therapy Articles",
-    hi: "थेरेपी लेख"
-  };
-  
-  function updateLanguage() {
-    const targetLang = toggle.checked ? 'hi' : 'en';
-    
-    document.title = titles[targetLang];
-    
-    elements.forEach(el => {
-      const text = el.getAttribute('data-' + targetLang);
-      if (text) {
-        
-        if (targetLang === 'hi' && text.startsWith('[') && text.endsWith(']')) {
-          el.innerHTML = text.substring(1, text.length - 1);
+
+  // 1️⃣ Load navbar dynamically
+  fetch('navbar.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('navbar-container').innerHTML = data;
+
+      // 2️⃣ Highlight active nav link
+      const currentPage = window.location.pathname.split('/').pop();
+      const links = document.querySelectorAll('#navbar-container .nav-link');
+      links.forEach(link => {
+        if (link.getAttribute('href') === currentPage) {
+          link.classList.add('active');
+        }
+      });
+
+      // 3️⃣ Scroll effect on navbar
+      const navbar = document.getElementById("navbar");
+      window.addEventListener("scroll", function() {
+        if (window.scrollY > 50) {
+          navbar.classList.add("scrolled");
         } else {
-          el.innerHTML = text;
+          navbar.classList.remove("scrolled");
         }
+      });
+
+      // 4️⃣ Language toggle for dynamically loaded navbar and page content
+      const toggle = document.getElementById('lang-toggle-checkbox');
+      const elements = document.querySelectorAll('.lang-toggle'); // all text
+      const placeholders = document.querySelectorAll('.lang-toggle-placeholder'); // input placeholders
+
+      function updateLanguage() {
+        const lang = toggle.checked ? 'hi' : 'en';
+
+        // Update text content
+        elements.forEach(el => {
+          const text = el.getAttribute('data-' + lang);
+          if (text) {
+            // remove brackets if present for Hindi
+            if (lang === 'hi' && text.startsWith('[') && text.endsWith(']')) {
+              el.innerHTML = text.substring(1, text.length - 1);
+            } else {
+              el.innerHTML = text;
+            }
+          }
+        });
+
+        // Update input placeholders
+        placeholders.forEach(el => {
+          let text = el.getAttribute('data-' + lang);
+          if (text) {
+            if (lang === 'hi' && text.startsWith('[') && text.endsWith(']')) {
+              text = text.substring(1, text.length - 1);
+            }
+            el.setAttribute('placeholder', text);
+          }
+        });
       }
+
+      toggle.addEventListener('change', updateLanguage);
+      updateLanguage(); // initial call
     });
-    
-    placeholders.forEach(el => {
-      const text = el.getAttribute('data-' + targetLang);
-      if (text) {
-        
-        let newText = text;
-        if (targetLang === 'hi' && text.startsWith('[') && text.endsWith(']')) {
-          newText = text.substring(1, text.length - 1);
+
+  // 5️⃣ Article search (works independently on page content)
+  const searchInput = document.getElementById('articleSearch');
+  const articleContainer = document.querySelector('.article-container');
+  const articles = articleContainer ? articleContainer.querySelectorAll('.article-card') : [];
+  const noResultsMessage = document.getElementById('noResults');
+
+  if (searchInput) {
+    searchInput.addEventListener('keyup', function() {
+      const searchTerm = searchInput.value.toLowerCase().trim();
+      let visibleCount = 0;
+
+      articles.forEach(function(card) {
+        const title = card.querySelector('h3').textContent.toLowerCase();
+        const paragraph = card.querySelector('p').textContent.toLowerCase();
+        const cardText = title + ' ' + paragraph;
+
+        if (cardText.includes(searchTerm)) {
+          card.style.display = ''; 
+          visibleCount++;
+        } else {
+          card.style.display = 'none';
         }
-        el.setAttribute('placeholder', newText);
+      });
+
+      if (noResultsMessage) {
+        noResultsMessage.style.display = visibleCount > 0 ? 'none' : 'block';
       }
     });
   }
-  
-  toggle.addEventListener('change', updateLanguage);
-  
-  
-  updateLanguage();
+
 });
+</script> -->
+
+
+<script>
+  // Load navbar.html dynamically
+  fetch('navbar.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('navbar-container').innerHTML = data;
+
+      // Highlight active nav link based on current page
+      const currentPage = window.location.pathname.split('/').pop();
+      const links = document.querySelectorAll('#navbar-container .nav-link');
+      links.forEach(link => {
+        if (link.getAttribute('href') === currentPage) {
+          link.classList.add('active');
+        }
+      });
+
+      // Show Donate button only on fundraising page
+      if (window.location.pathname.includes("fundraising.html")) {
+        document.getElementById("donate-btn").style.display = "block";
+      }
+    });
+
+  // Navbar scroll effect
+  window.addEventListener("scroll", function() {
+    const navbar = document.getElementById("navbar");
+    if (window.scrollY > 50) {
+      navbar.classList.add("scrolled");
+    } else {
+      navbar.classList.remove("scrolled");
+    }
+  });
 </script>
 
-<div id="footer-placeholder"></div>
-<script src="js/embed_footer.js" defer></script>
+
+
 
 </body>
 </html>

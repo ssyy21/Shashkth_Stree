@@ -21,7 +21,7 @@ body {
      background-color: #2D033B;
     --heading-color: #333333;
     --accent-color: #FFB61D;
-   
+   overflow-x: hidden;
 
 
 
@@ -633,6 +633,28 @@ iconify-icon.social-icon {
 .testimonial-nav.prev { left: 0; }
 .testimonial-nav.next { right: 0; }
 
+.logo-img {
+  width: 70px;
+  height: 60px;
+}
+
+.nav-link {
+  color: #ffffff !important;
+  font-weight: 500;
+  padding: 8px 15px !important;
+  text-transform: uppercase;
+}
+
+.nav-link:hover {
+  color: #C147E9 !important;
+}
+
+.navbar-nav .nav-link.active {
+  color: #C147E9 !important;}
+.navbar-brand img {
+    height: 50px; /* adjust as needed */
+    width: 80px;
+}
 
 
 

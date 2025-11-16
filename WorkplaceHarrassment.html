@@ -78,34 +78,56 @@
     <button id="backToTop">↑ Back to Top</button>
 
     <nav class="navbar navbar-expand-sm navbar-light">
-      <div class="container">
-        <a style="color: #C147E9;" class="navbar-brand" href="index.html"><span class="lang-toggle" data-en="Shashkth Stree" data-hi="सशक्त स्त्री">Shashkth Stree</span></a>
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+      <img class="logo-img" src="images/main-logo-light.png" alt="logo" style="width: 70px; height: 60px;">
+    </a>
+      
 
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+            <div style="background-color: #2D033B;" class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a style= "color: white;" href="index.html" #about class="nav-link"><span data-hover="About"><span class="lang-toggle" data-en="Home" data-hi="मुखपृष्ठ">Home</span></span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a style= "color: white;" href="fundraising.html" class="nav-link"><span data-hover="FundRaising"><span class="lang-toggle" data-en="FundRaising" data-hi="धन उगाही">FundRaising</span></span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a style= "color: white;" href="therapy.html" class="nav-link"><span data-hover="Therapy"><span class="lang-toggle" data-en="Therapy" data-hi="थेरेपी">Therapy</span></span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a style= "color: white;" href="issues.html" class="nav-link"><span data-hover="Explore"><span class="lang-toggle" data-en="Explore" data-hi="अन्वेषण करें">Explore</span></span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a style= "color: white;" href="resources.html" class="nav-link"><span data-hover="Resources"><span class="lang-toggle" data-en="Resources" data-hi="संसाधन">Resources</span></span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a style= "color: white;" href="#resume" class="nav-link"><span data-hover="Contact"><span class="lang-toggle" data-en="Contact" data-hi="संपर्क">Contact</span></span></a>
+                    </li>
+                    
+                    
+                </ul>
 
-        <div style="background-color: #2D033B;" class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav mx-auto">
-            <li class="nav-item">
-              <a style="color: white;" href="index.html" class="nav-link"><span data-hover="About"><span class="lang-toggle" data-en="Home" data-hi="मुखपृष्ठ">Home</span></span></a>
-            </li>
-            <li class="nav-item">
-              <a style="color: white;" href="issues.html" class="nav-link"><span data-hover="Explore"><span class="lang-toggle" data-en="Explore" data-hi="अन्वेषण करें">Explore</span></span></a>
-            </li>
-          </ul>
-
-          <!-- Language toggle on the right -->
-          <div class="lang-toggle-nav ml-auto">
-            <label class="lang-toggle-label" for="lang-toggle-checkbox">EN</label>
-            <label class="lang-toggle-switch" title="Toggle language">
-              <input id="lang-toggle-checkbox" type="checkbox" aria-label="Toggle language">
-              <span class="lang-slider"></span>
-            </label>
-            <label class="lang-toggle-label">HI</label>
-          </div>
+                <ul class="navbar-nav ml-lg-auto">
+                    <li class="nav-item lang-toggle-nav">
+                      <label for="lang-toggle-checkbox" class="lang-toggle-label">EN</label>
+                      <label class="lang-toggle-switch">
+                        <input type="checkbox" id="lang-toggle-checkbox">
+                        <span class="lang-slider"></span>
+                      </label>
+                      <label for="lang-toggle-checkbox" class="lang-toggle-label">HI</label>
+                    </li>
+                </ul>
+            </div>
         </div>
-      </div>
+    </nav>
+
+    <nav aria-label="breadcrumb" class="breadcrumb-container container">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html"><span class="lang-toggle" data-en="Home" data-hi="मुखपृष्ठ">Home</span></a></li>
+        <li class="breadcrumb-item"><a href="issues.html"><span class="lang-toggle" data-en="Issues" data-hi="मुद्दे">Issues</span></a></li>
+        <li class="breadcrumb-item active" aria-current="page"><span class="lang-toggle" data-en="Workplace Harrasment " data-hi="कार्यस्थल पर उत्पीड़न">Workplace Harrasment</span></li>
+      </ol>
     </nav>
 
     <section class="about full-screen d-lg-flex justify-content-center align-items-center" id="about" style="padding-top: 4rem; padding-bottom: 4rem;">
