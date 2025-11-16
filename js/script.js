@@ -24,6 +24,38 @@
       $('.search-popup').toggleClass('is-visible');
     });
 
+    // Navbar active link highlighting
+function setActiveNavLink() {
+    // Get current page path
+    const currentPath = window.location.pathname;
+    const currentPage = currentPath.split('/').pop() || 'index.html';
+    
+    // Get all nav links
+    const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+    
+    // Remove active class from all links
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+    });
+    
+    // Add active class to current page link
+    navLinks.forEach(link => {
+        const linkHref = link.getAttribute('href');
+        if (linkHref === currentPage || 
+            (currentPage === 'index.html' && linkHref === '/') ||
+            (currentPage === '' && linkHref === '/')) {
+            link.classList.add('active');
+        }
+    });
+}
+
+// Call the function when DOM is loaded
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', setActiveNavLink);
+} else {
+    setActiveNavLink();
+}
+
     $('.navbar-nav').on('click', '.btn-close-search', function (e) {
       $('.search-popup').toggleClass('is-visible');
     });
