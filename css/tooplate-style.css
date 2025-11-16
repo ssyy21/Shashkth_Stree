@@ -569,3 +569,92 @@ b, strong {
     vertical-align: top;
   }
 }
+
+/* FAQ Section */
+.faq-section {
+  background: linear-gradient(135deg, #E8C7FF, #FFC7E3); /* light purple → light pink */
+  padding: 60px 20px;
+}
+
+.faq-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* FAQ Card Style */
+.faq-item {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(140, 50, 170, 0.25); /* deep purple border */
+  border-radius: 16px;
+  margin-bottom: 18px;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  transition: all 0.4s ease;
+  box-shadow: 0 2px 12px rgba(140, 50, 170, 0.25); /* soft purple glow */
+}
+
+.faq-item:hover {
+  border-color: #D56ACB; /* medium pinkish-purple */
+  box-shadow: 0 0 18px rgba(213, 106, 203, 0.35);
+  transform: translateY(-3px);
+}
+
+/* Question Button */
+.faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  text-align: left;
+  padding: 20px 24px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #3D034D; /* deep plum */
+  cursor: pointer;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.faq-question:hover {
+  color: #D56ACB; /* pinkish-purple hover */
+}
+
+.faq-question::after {
+  content: '+';
+  position: absolute;
+  right: 24px;
+  font-size: 1.6rem;
+  transition: transform 0.3s ease;
+  color: #D56ACB;
+}
+
+.faq-item.active .faq-question::after {
+  transform: rotate(45deg);
+}
+
+/* Answer Section */
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  color: #4A064F; /* rich deep purple */
+  padding: 0 24px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  transition: max-height 0.4s ease, padding 0.4s ease;
+}
+
+.faq-item.active .faq-answer {
+  max-height: 220px;
+  padding: 0 24px 20px;
+}
+
+.faq-section h2:first-child {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #4A064F; /* deep purple */
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+    background: linear-gradient(90deg, #D56ACB, #7B3CA5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

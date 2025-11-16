@@ -342,6 +342,55 @@
       </div>
     </section>
 
+     <!-- FAQ Section -->
+  <section class="faq-section">
+    <div class="faq-container">
+        <h2>FAQs</h2>
+      <div class="faq-item">
+        <button class="faq-question">What is workplace harassment?</button>
+        <div class="faq-answer">
+          <p>Any repeated unwanted behavior—verbal, physical, or emotional—that creates a hostile or uncomfortable work environment.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">What are examples of workplace harassment?</button>
+        <div class="faq-answer">
+          <p>Insults, offensive jokes, discrimination, unwanted comments, threats, bullying, or inappropriate physical contact.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">What is sexual harassment at the workplace?</button>
+        <div class="faq-answer">
+          <p>Unwelcome sexual advances, comments, messages, or gestures that make someone feel unsafe or uncomfortable.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">Can harassment be non-physical?</button>
+        <div class="faq-answer">
+          <p>Yes — mocking, isolating someone, constant criticism, spreading rumors, or manipulating them emotionally is also harassment.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">What should I do if I experience harassment at work?</button>
+        <div class="faq-answer">
+          <p>Document incidents, tell someone you trust, report it to HR or the Internal Committee, and seek legal help if needed.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">Is workplace harassment illegal in India?</button>
+        <div class="faq-answer">
+          <p>Yes. Laws like the POSH Act (2013) protect individuals from sexual harassment at work.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
 
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/popper.min.js"></script>
@@ -383,6 +432,16 @@
         updateLanguage();
       });
     </script>
+
+    <script>
+  const faqs = document.querySelectorAll('.faq-item');
+
+faqs.forEach(faq => {
+  faq.querySelector('.faq-question').addEventListener('click', () => {
+    faq.classList.toggle('active');
+  });
+});
+</script>
 
     <div id="footer-placeholder"></div>
     <script src="js/embed_footer.js" defer></script>

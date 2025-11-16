@@ -409,6 +409,56 @@ input:checked + .lang-slider:before {
       </div>
   </section>
 
+  <!-- FAQ Section -->
+  <section class="faq-section">
+    <div class="faq-container">
+        <h2>FAQs</h2>
+      <div class="faq-item">
+        <button class="faq-question">What is couples therapy?</button>
+        <div class="faq-answer">
+          <p>Couples therapy helps partners improve communication, resolve conflicts, and understand each other better.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">Who should consider couples therapy?</button>
+        <div class="faq-answer">
+          <p>Any couple facing misunderstandings, frequent arguments, emotional distance, or struggling to express their needs.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">Is couples therapy only for couples with major problems?</button>
+        <div class="faq-answer">
+          <p>No — it’s also helpful for strengthening healthy relationships and improving communication.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">What happens during a therapy session?</button>
+        <div class="faq-answer">
+          <p>A therapist guides both partners to talk openly, understand each other’s feelings, and learn healthier relationship skills.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">Can couples therapy save a relationship?</button>
+        <div class="faq-answer">
+          <p>Yes, it can improve trust, reduce conflict, and rebuild emotional connection — but both partners must participate honestly.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">How long does couples therapy last?</button>
+        <div class="faq-answer">
+          <p>It varies. Some need a few sessions, while others benefit from longer support.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
 
    
 <script>
@@ -438,6 +488,16 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // Set initial state
   updateLanguage();
+});
+</script>
+
+<script>
+  const faqs = document.querySelectorAll('.faq-item');
+
+faqs.forEach(faq => {
+  faq.querySelector('.faq-question').addEventListener('click', () => {
+    faq.classList.toggle('active');
+  });
 });
 </script>
 

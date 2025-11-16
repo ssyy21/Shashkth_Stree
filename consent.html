@@ -415,6 +415,55 @@ input:checked + .lang-slider:before {
       </div>
   </section>
 
+  <!-- FAQ Section -->
+  <section class="faq-section">
+    <div class="faq-container">
+        <h2>FAQs</h2>
+      <div class="faq-item">
+        <button class="faq-question">What is consent?</button>
+        <div class="faq-answer">
+          <p>Consent is a clear, voluntary “yes” given freely without pressure, fear, or manipulation.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">Does silence mean consent?</button>
+        <div class="faq-answer">
+          <p>No. Silence, hesitation, or discomfort is not consent.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">Can consent be taken back?</button>
+        <div class="faq-answer">
+          <p>Yes. Anyone can change their mind at any time, and the other person must respect it.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">What are personal boundaries?</button>
+        <div class="faq-answer">
+          <p>Boundaries are the limits you set to protect your emotional, physical, and mental space.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">How do I communicate my boundaries?</button>
+        <div class="faq-answer">
+          <p>Use clear statements like “I’m not comfortable with this,” or “I need some space.”</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">What if someone doesn’t respect my boundaries?</button>
+        <div class="faq-answer">
+          <p>Stop the interaction, restate your limits firmly, and distance yourself if needed.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
 
    
 <script>
@@ -444,6 +493,16 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // Set initial state
   updateLanguage();
+});
+</script>
+
+<script>
+  const faqs = document.querySelectorAll('.faq-item');
+
+faqs.forEach(faq => {
+  faq.querySelector('.faq-question').addEventListener('click', () => {
+    faq.classList.toggle('active');
+  });
 });
 </script>
 
