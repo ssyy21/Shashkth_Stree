@@ -140,7 +140,9 @@ input:checked + .lang-slider:before {
         </div>
     </div>
 
-     <nav class="navbar fixed-top navbar-expand-lg container-fluid p-4">
+    <div id="navbar-container"></div>
+
+     <!-- <nav class="navbar fixed-top navbar-expand-lg container-fluid p-4">
         <div class="container-fluid">
             <a class="navbar-brand" href="index.html"><img src="images/main-logo-light.png" alt="logo"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
@@ -189,7 +191,7 @@ input:checked + .lang-slider:before {
                 </div>
             </div>
         </div>
-    </nav>
+    </nav> -->
 
     <section id="hero" class="d-flex align-items-center" style="background-image:url(images/banner_issues.jpg); background-repeat: no-repeat; background-size: cover; background-position: center; height: 100vh;">
         <div class="container">
@@ -389,6 +391,33 @@ input:checked + .lang-slider:before {
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"></script>
 
+<script>
+  // Load navbar.html dynamically
+  fetch('navbar.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('navbar-container').innerHTML = data;
+
+      // Highlight active nav link based on current page
+      const currentPage = window.location.pathname.split('/').pop();
+      const links = document.querySelectorAll('#navbar-container .nav-link');
+      links.forEach(link => {
+        if (link.getAttribute('href') === currentPage) {
+          link.classList.add('active');
+        }
+      });
+    });
+
+  // Navbar scroll effect
+  window.addEventListener("scroll", function() {
+  const navbar = document.getElementById("navbar");
+  if (window.scrollY > 50) {
+    navbar.classList.add("scrolled");
+  } else {
+    navbar.classList.remove("scrolled");
+  }
+});
+</script>
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {

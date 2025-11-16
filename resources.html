@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width" initial-scale="1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resources</title>
     <style>
         #main{
@@ -64,6 +64,135 @@
         
                             
     </style>
+
+    <style>
+      .breadcrumb-container {
+        padding-top: 20px; 
+        padding-bottom: 0;
+        background-color: #fff; 
+      }
+      .breadcrumb {
+        background-color: transparent;
+        padding: 0;
+        margin-bottom: 0;
+      }
+      .breadcrumb-item a {
+        color: #810CA8; 
+        text-decoration: none;
+      }
+      .breadcrumb-item a:hover {
+        color: #C147E9; 
+      }
+      .breadcrumb-item.active {
+        color: #6c757d; 
+      }
+      .breadcrumb-item + .breadcrumb-item::before {
+        color: #810CA8; 
+        content: "›"; 
+      }
+      
+      .container {
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+      }
+      @media (min-width: 576px) {
+        .container {
+          max-width: 540px;
+        }
+      }
+      @media (min-width: 768px) {
+        .container {
+          max-width: 720px;
+        }
+      }
+      @media (min-width: 992px) {
+        .container {
+          max-width: 960px;
+        }
+      }
+      @media (min-width: 1200px) {
+        .container {
+          max-width: 1140px;
+        }
+      }
+    
+
+.lang-toggle-container {
+  position: fixed;
+  top: 20px;
+  right: 20px; 
+  z-index: 1001;
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 25px;
+  padding: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+.lang-toggle-label {
+  margin: 0 5px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  user-select: none;
+}
+.lang-toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+.lang-toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.lang-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 34px;
+}
+.lang-slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+input:checked + .lang-slider {
+  background-color: #810CA8;
+}
+input:checked + .lang-slider:before {
+  transform: translateX(26px);
+}
+
+#navbar {
+  background: transparent;
+  transition: all 0.3s ease-in-out;
+  background-color: transparent;
+  transition: background-color 0.3s ease; /* smooth transition if changing on scroll */
+  backdrop-filter: blur(10px);
+}
+#navbar .nav-link {
+  
+  font-size: 18px;
+}
+
+    </style>
     
    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
@@ -74,55 +203,10 @@
 
 </head>
 <body style="background-image: url(images/resourcebg.jpg) ;background-size: cover; background-repeat: no-repeat;background-attachment: fixed;">
-    <nav   id="navbar"  class="navbar fixed-top navbar-expand-lg container-fluid py-1 " >
-        <div class="container-fluid">
-            <a  class="navbar-brand" href="index.html"><img class="logo-img" src="images/main-logo-light.png" alt="logo"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
-                aria-controls="offcanvasNavbar">
-                <iconify-icon icon="system-uicons:menu-hamburger" class="hamburger-menu"></iconify-icon>
-            </button>
-            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
-                aria-labelledby="offcanvasNavbarLabel">
-                <div class="offcanvas-header">
-                    <h5 class="offcanvas-title text-white" id="offcanvasNavbarLabel">Menu</h5>
-                    <button type="button" class="btn-close btn-close-white text-reset" data-bs-dismiss="offcanvas"
-                        aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body">
-                    <ul
-                        class="navbar-nav align-items-center justify-content-end justify-content-xxl-center flex-grow-1 pe-3">
-                        <li class="nav-item">
-                            <a class="nav-link text-uppercase active mx-2 px-3 mb-2 mb-lg-0"
-                                aria-current="page" href="index.html">Home</a>
-                        </li>
-                        
-                        <li class="nav-item">
-                            <a class="nav-link text-uppercase  mx-2 px-3 mb-2 mb-lg-0"
-                                href="fundraising.html">Fund Raising</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-uppercase  mx-2 px-3 mb-2 mb-lg-0" href="therapy.html">Therapy</a>
-                        </li>
-                        
-                        <li class="nav-item">
-                            <a class="nav-link text-uppercase  mx-2 px-3 mb-2 mb-lg-0" href="https://contact-page-shashkth-stree.vercel.app/">Contact Us</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-uppercase  mx-2 px-3 mb-2 mb-lg-0"
-                                href="issues.html">Issues</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-uppercase  mx-2 px-3 mb-2 mb-lg-0" href="#">Login/SignUp</a>
-                        </li>
-                       
 
-                    </ul>
 
-                    
-                </div>
-            </div>
-        </div>
-    </nav>
+    <div id="navbar-container"></div>
+    
      <br>
      <br>
       <h1 id="main">
@@ -185,6 +269,72 @@
             Provides immediate assistance, emergency shelter, and awareness campaigns to prevent domestic violence and promote safe living environments.</span>
         </div>
     </div>
+
+
+
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+
+  // 1️⃣ Load navbar dynamically
+  fetch('navbar.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('navbar-container').innerHTML = data;
+
+      // Highlight active nav link
+      const currentPage = window.location.pathname.split('/').pop();
+      const links = document.querySelectorAll('#navbar-container .nav-link');
+      links.forEach(link => {
+        if (link.getAttribute('href') === currentPage) {
+          link.classList.add('active');
+        }
+      });
+
+      // Scroll effect on navbar
+      const navbar = document.getElementById("navbar");
+      window.addEventListener("scroll", function() {
+        if (window.scrollY > 50) {
+          navbar.classList.add("scrolled");
+        } else {
+          navbar.classList.remove("scrolled");
+        }
+      });
+
+      // Language toggle
+      const toggle = document.getElementById('lang-toggle-checkbox');
+      const elements = document.querySelectorAll('.lang-toggle');
+      const placeholders = document.querySelectorAll('.lang-toggle-placeholder');
+
+      function updateLanguage() {
+        const lang = toggle.checked ? 'hi' : 'en';
+        elements.forEach(el => {
+          const text = el.getAttribute('data-' + lang);
+          if (text) {
+            if (lang === 'hi' && text.startsWith('[') && text.endsWith(']')) {
+              el.innerHTML = text.substring(1, text.length - 1);
+            } else {
+              el.innerHTML = text;
+            }
+          }
+        });
+        placeholders.forEach(el => {
+          let text = el.getAttribute('data-' + lang);
+          if (text) {
+            if (lang === 'hi' && text.startsWith('[') && text.endsWith(']')) {
+              text = text.substring(1, text.length - 1);
+            }
+            el.setAttribute('placeholder', text);
+          }
+        });
+      }
+
+      toggle.addEventListener('change', updateLanguage);
+      updateLanguage();
+    });
+
+}); // ✅ Only one closing brace for DOMContentLoaded
+
+    </script>
 </body>
 
 </html>
