@@ -8,147 +8,209 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
 
-    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/favicon_io/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="images/favicon/favicon_io/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon_io/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon_io/favicon-16x16.png">
-<link rel="manifest" href="images/favicon/favicon_io/site.webmanifest">
+<link rel="manifest" href="images/favicon/favicon_io/site.webmanifest">    
+<style>   
+.read-more {
+    transition: color 0.3s ease;
+}
+.read-more:hover {
+    color: #C147E9;
+}
 
-   
-    
-    <style>
-        /*hover transition*/
-        .read-more,.article-card{
-            transition: transform 0.3s ease;
-        }
-        .read-more:hover,.article-card:hover{
-            transform: scale(1.1);
-        }
-      .breadcrumb-container {
-        padding-top: 20px; 
-        padding-bottom: 0;
-        background-color: #fff; 
-      }
-      .breadcrumb {
-        background-color: transparent;
-        padding: 0;
-        margin-bottom: 0;
-      }
-      .breadcrumb-item a {
-        color: #810CA8; 
-        text-decoration: none;
-      }
-      .breadcrumb-item a:hover {
-        color: #C147E9; 
-      }
-      .breadcrumb-item.active {
-        color: #6c757d; 
-      }
-      .breadcrumb-item + .breadcrumb-item::before {
-        color: #810CA8; 
-        content: "›"; 
-      }
-      
-      .container {
-        width: 100%;
-        padding-right: 15px;
-        padding-left: 15px;
-        margin-right: auto;
-        margin-left: auto;
-      }
-      @media (min-width: 576px) {
-        .container {
-          max-width: 540px;
-        }
-      }
-      @media (min-width: 768px) {
-        .container {
-          max-width: 720px;
-        }
-      }
-      @media (min-width: 992px) {
-        .container {
-          max-width: 960px;
-        }
-      }
-      @media (min-width: 1200px) {
-        .container {
-          max-width: 1140px;
-        }
-      }
-    
+.breadcrumb-container {
+    padding-top: 20px;
+    padding-bottom: 0;
+    background-color: #fff;
+}
+.breadcrumb {
+    background-color: transparent;
+    padding: 0;
+    margin-bottom: 0;
+}
+.breadcrumb-item a {
+    color: #810CA8;
+    text-decoration: none;
+}
+.breadcrumb-item a:hover {
+    color: #C147E9;
+}
+.breadcrumb-item.active {
+    color: #6c757d;
+}
+.breadcrumb-item + .breadcrumb-item::before {
+    color: #810CA8;
+    content: "›";
+}
+
+.container {
+    width: 100%;
+    padding: 0 15px;
+    margin: auto;
+}
+@media (min-width: 576px) { .container { max-width: 540px; } }
+@media (min-width: 768px) { .container { max-width: 720px; } }
+@media (min-width: 992px) { .container { max-width: 960px; } }
+@media (min-width: 1200px) { .container { max-width: 1140px; } }
 
 .lang-toggle-container {
-  position: fixed;
-  top: 20px;
-  right: 20px; 
-  z-index: 1001;
-  display: flex;
-  align-items: center;
-  background: #fff;
-  border-radius: 25px;
-  padding: 5px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1001;
+
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border-radius: 25px;
+    padding: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 .lang-toggle-label {
-  margin: 0 5px;
-  font-size: 14px;
-  font-weight: bold;
-  color: #333;
-  cursor: pointer;
-  user-select: none;
+    margin: 0 5px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
 }
 .lang-toggle-switch {
-  position: relative;
-  display: inline-block;
-  width: 50px;
-  height: 24px;
+    position: relative;
+    width: 50px;
+    height: 24px;
 }
 .lang-toggle-switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
+    opacity: 0;
+    width: 0;
+    height: 0;
 }
 .lang-slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  transition: .4s;
-  border-radius: 34px;
+    position: absolute;
+    cursor: pointer;
+    inset: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
 }
 .lang-slider:before {
-  position: absolute;
-  content: "";
-  height: 16px;
-  width: 16px;
-  left: 4px;
-  bottom: 4px;
-  background-color: white;
-  transition: .4s;
-  border-radius: 50%;
+    content: "";
+    position: absolute;
+    height: 16px;
+    width: 16px;
+    left: 4px;
+    bottom: 4px;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: .4s;
 }
 input:checked + .lang-slider {
-  background-color: #810CA8;
+    background-color: #810CA8;
 }
 input:checked + .lang-slider:before {
-  transform: translateX(26px);
+    transform: translateX(26px);
 }
 
-    </style>
+.article-container {
+    max-width: 1250px;
+    margin: 40px auto;
+    padding: 0 20px;
 
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    gap: 35px;
+}
+
+.article-card {
+    background: #fff;
+    border-radius: 18px;
+    overflow: hidden;
+
+    box-shadow: 0 4px 15px rgba(0,0,0,0.10);
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.article-card:hover {
+    transform: translateY(-8px); 
+    box-shadow: 0 12px 28px rgba(0,0,0,0.15); 
+}
+
+.article-card .img {
+    width: 100%;
+    height: 210px;
+    overflow: hidden;
+}
+.article-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+.article-content {
+    padding: 20px 22px;
+    text-align: center;
+    flex-grow: 1;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.article-content h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: #111;
+    line-height: 1.3;
+}
+
+.article-content p {
+    font-size: 15px;
+    color: #555;
+    margin-top: 8px;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+
+    text-align: left; 
+    flex-grow: 1;    
+}
+
+.read-more {
+    margin-top: 20px;
+    text-align: center;
+
+    font-weight: 600;
+    color: #810CA8;
+    text-decoration: none;
+    font-size: 16px;
+
+    transition: color 0.3s ease;
+}
+.read-more:hover {
+    color: #C147E9;
+}
+
+@media (max-width: 768px) {
+    .article-container {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 25px;
+    }
+    
+    .article-card .img {
+        height: 180px;
+    }
+}
+</style>
 
 </head>
 <body>
 
-    
-
     <div id="navbar-container"></div>
-
-
-
     <section class="articles">
         <h1 class="heading"><span class="lang-toggle" data-en="Therapy Articles" data-hi="[थेरेपी लेख]">Therapy Articles</span></h1>
         
@@ -166,31 +228,34 @@ input:checked + .lang-slider:before {
                     <img class="img-div" src="images/img1.jpg" alt="Loneliness">
                 </div>
                 <div class="article-content">
-                    <h3><span class="lang-toggle" data-en="Healing-after-emotional-abuse" data-hi="[भावनात्मक-दुर्व्यवहार-के-बाद-उपचार]">Healing-after-emotional-abuse</span></h3>
+                    <h3><span class="lang-toggle" data-en="Healing-after-emotional-abuse" data-hi="[भावनात्मक-दुर्व्यv-हार-के-बाद-उपचार]">Healing-after-emotional-abuse</span></h3>
                     <p><span class="lang-toggle" data-en="Emotional abuse is when someone uses words or actions to control, manipulate, or hurt you. It can leave you feeling powerless and unworthy. Recognizing it early is key to healing...." data-hi="[भावनात्मक दुर्व्यवहार तब होता है जब कोई आपको नियंत्रित करने, हेरफेर करने या चोट पहुँचाने के लिए शब्दों या कार्यों का उपयोग करता है। यह आपको शक्तिहीन और अयोग्य महसूस करा सकता है। इसे जल्दी पहचानना उपचार की कुंजी है....]">Emotional abuse is when someone uses words or actions to control, manipulate, or hurt you. It can leave you feeling powerless and unworthy. Recognizing it early is key to healing....</span></p>
                     <a href="https://www.talkspace.com/blog/healing-after-emotional-abuse/" class="read-more"><span class="lang-toggle" data-en="Read More" data-hi="[और पढ़ें]">Read More</span></a>
+                    <button class="save-btn" data-article-id="healing-emotional-abuse">♡ Save</button>
                 </div>
             </div>
     
             <div class="article-card">
                 <div class="img">
-                    <img src="images/img2.png" alt="Resilience">
+                    <img src="images/img2.jpg" alt="Resilience">
                 </div>
                 <div class="article-content">
                     <h3><span class="lang-toggle" data-en="Healing from Cyberbullying" data-hi="[साइबरबुलिंग से उबरना]">Healing from Cyberbullying</span></h3>
                     <p><span class="lang-toggle" data-en="Cyberbullying involves using technology to harass, threaten, or manipulate someone. It can affect self-esteem and emotional well-being. Taking action and seeking help is crucial to stopping it...." data-hi="[साइबरबुलिंग में किसी को परेशान करने, धमकाने या हेरफेर करने के लिए तकनीक का उपयोग करना शामिल है। यह आत्म-सम्मान और भावनात्मक कल्याण को प्रभावित कर सकता है। इसे रोकने के लिए कार्रवाई करना और मदद मांगना महत्वपूर्ण है....]">Cyberbullying involves using technology to harass, threaten, or manipulate someone. It can affect self-esteem and emotional well-being. Taking action and seeking help is crucial to stopping it....</span></p>
                     <a href="https://www.verywellhealth.com/cyberbullying-effects-and-what-to-do-5220584" class="read-more"><span class="lang-toggle" data-en="Read More" data-hi="[और पढ़ें]">Read More</span></a>
+                    <button class="save-btn" data-article-id="healing-cyberbullying">♡ Save</button>
                 </div>
             </div>
 
             <div class="article-card">
                 <div class="img">
-                    <img src="images/img3.jpeg" alt="Resilience">
+                    <img src="images/img3.jpg" alt="Resilience">
                 </div>
                 <div class="article-content">
                     <h3><span class="lang-toggle" data-en="Understanding Consent and Boundaries" data-hi="[सहमति और सीमाओं को समझना]">Understanding Consent and Boundaries</span></h3>
                     <p><span class="lang-toggle" data-en="Consent is about giving permission freely and clearly. Boundaries ensure respect in relationships, helping people feel safe and valued. Healthy communication is key to maintaining them...." data-hi="[सहमति स्वतंत्र रूप से और स्पष्ट रूप से अनुमति देने के बारे में है। सीमाएं रिश्तों में सम्मान सुनिश्चित करती हैं, जिससे लोगों को सुरक्षित और मूल्यवान महसूस करने में मदद मिलती है। स्वस्थ संचार उन्हें बनाए रखने की कुंजी है....]">Consent is about giving permission freely and clearly. Boundaries ensure respect in relationships, helping people feel safe and valued. Healthy communication is key to maintaining them....</span></p>
                     <a href="https://www.euroschoolindia.com/blogs/respect-and-consent-understanding-personal-boundaries/" class="read-more"><span class="lang-toggle" data-en="Read More" data-hi="[और पढ़ें]">Read More</span></a>
+                    <button class="save-btn" data-article-id="understanding-consent-boundaries">♡ Save</button>
                 </div>
             </div>
             <div class="article-card">
@@ -201,6 +266,7 @@ input:checked + .lang-slider:before {
                     <h3><span class="lang-toggle" data-en="Getting Over Workplace Harassment" data-hi="[कार्यस्थल उत्पीड़न से उबरना]">Getting Over Workplace Harassment</span></h3>
                     <p><span class="lang-toggle" data-en="Workplace harassment includes unwelcome behavior that creates a hostile or intimidating environment. Recognizing it and reporting it are important steps in ensuring a respectful workplace...." data-hi="[कार्यस्थल उत्पीड़न में अवांछित व्यवहार शामिल है जो एक शत्रुपूर्ण या डराने वाला वातावरण बनाता है। इसे पहचानना और इसकी रिपोर्ट करना एक सम्मानजनक कार्यस्थल सुनिश्चित करने में महत्वपूर्ण कदम हैं....]">Workplace harassment includes unwelcome behavior that creates a hostile or intimidating environment. Recognizing it and reporting it are important steps in ensuring a respectful workplace....</span></p>
                     <a href="https://www.tammydunnett.com/conquerconflict/recovering-from-workplace-bullying--ee00a" class="read-more"><span class="lang-toggle" data-en="Read More" data-hi="[और पढ़ें]">Read More</span></a>
+                    <button class="save-btn" data-article-id="workplace-harassment">♡ Save</button>
                 </div>
             </div>
             <div class="article-card">
@@ -212,17 +278,19 @@ input:checked + .lang-slider:before {
                     </h3>
                     <p><span class="lang-toggle" data-en="Chronic stress can take a toll on both your mind and body, leading to health issues like anxiety, fatigue, or heart disease. Managing stress through relaxation and support is vital for overall well-being...." data-hi="[पुराना तनाव आपके दिमाग और शरीर दोनों पर भारी पड़ सकता है, जिससे चिंता, थकान या हृदय रोग जैसी स्वास्थ्य समस्याएं हो सकती हैं। विश्राम और समर्थन के माध्यम से तनाव का प्रबंधन समग्र कल्याण के लिए महत्वपूर्ण है....]">Chronic stress can take a toll on both your mind and body, leading to health issues like anxiety, fatigue, or heart disease. Managing stress through relaxation and support is vital for overall well-being....</span></p>
                     <a href="https://www.psychologytoday.com/us/blog/click-here-happiness/202105/stress-relief-101-science-based-guide?msockid=2ad9108bdb8867970b9105d2da7a665d" class="read-more"><span class="lang-toggle" data-en="Read More" data-hi="[और पढ़ें]">Read More</span></a>
+                    <button class="save-btn" data-article-id="managing-stress">♡ Save</button>
                 </div>
             </div>
             <div class="article-card">
                 <div class="img">
-                    <img src="images/img6.png" alt="Resilience">
+                    <img src="images/img6.jpg" alt="Resilience">
                 </div>
                 <div class="article-content">
                     <h3><span class="lang-toggle" data-en="Healing Through Couples Therapy" data-hi="[कपल्स थेरेपी के माध्यम से उपचार]">Healing Through Couples Therapy</span>
                     </h3>
                     <p><span class="lang-toggle" data-en="Couples therapy helps partners navigate conflicts and improve communication. It provides a safe space for both individuals to express concerns and work together toward a healthier relationship..." data-hi="[कपल्स थेरेपी भागीदारों को संघर्षों को नेविगेट करने और संचार में सुधार करने में मदद करती है। यह दोनों व्यक्तियों को चिंताओं को व्यक्त करने और एक स्वस्थ रिश्ते की दिशा में एक साथ काम करने के लिए एक सुरक्षित स्थान प्रदान करता है...]" >Couples therapy helps partners navigate conflicts and improve communication. It provides a safe space for both individuals to express concerns and work together toward a healthier relationship...</span></p>
                     <a href="https://www.everydayhealth.com/emotional-health/couples-therapy/guide/" class="read-more"><span class="lang-toggle" data-en="Read More" data-hi="[और पढ़ें]">Read More</span></a>
+                    <button class="save-btn" data-article-id="couples-therapy">♡ Save</button>
                 </div>
             </div>
     
@@ -250,13 +318,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
       // 3️⃣ Scroll effect on navbar
       const navbar = document.getElementById("navbar");
-      window.addEventListener("scroll", function() {
-        if (window.scrollY > 50) {
-          navbar.classList.add("scrolled");
-        } else {
-          navbar.classList.remove("scrolled");
-        }
-      });
+      if (navbar) { // Check if navbar exists before adding listener
+        window.addEventListener("scroll", function() {
+          if (window.scrollY > 50) {
+            navbar.classList.add("scrolled");
+          } else {
+            navbar.classList.remove("scrolled");
+          }
+        });
+      }
 
       // 4️⃣ Language toggle for dynamically loaded navbar and page content
       const toggle = document.getElementById('lang-toggle-checkbox');
@@ -264,6 +334,9 @@ document.addEventListener('DOMContentLoaded', function() {
       const placeholders = document.querySelectorAll('.lang-toggle-placeholder'); // input placeholders
 
       function updateLanguage() {
+        // Check if toggle exists
+        if (!toggle) return; 
+        
         const lang = toggle.checked ? 'hi' : 'en';
 
         // Update text content
@@ -291,7 +364,9 @@ document.addEventListener('DOMContentLoaded', function() {
         });
       }
 
-      toggle.addEventListener('change', updateLanguage);
+      if (toggle) {
+        toggle.addEventListener('change', updateLanguage);
+      }
       updateLanguage(); // initial call
     });
 
@@ -312,7 +387,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const cardText = title + ' ' + paragraph;
 
         if (cardText.includes(searchTerm)) {
-          card.style.display = ''; 
+          card.style.display = '';
           visibleCount++;
         } else {
           card.style.display = 'none';
@@ -325,45 +400,85 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-});
-</script> -->
+  // 6️⃣ Save articles functionality
+  function getSavedArticles() {
+    const saved = localStorage.getItem('savedArticles');
+    return saved ? JSON.parse(saved) : [];
+  }
 
+  function saveArticle(articleId, title, description, imageSrc, link) {
+    const savedArticles = getSavedArticles();
+    const articleData = {
+      id: articleId,
+      title: title,
+      description: description,
+      imageSrc: imageSrc,
+      link: link,
+      savedAt: new Date().toISOString()
+    };
 
-<script>
-  // Load navbar.html dynamically
-  fetch('navbar.html')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('navbar-container').innerHTML = data;
+    // Check if already saved
+    const existingIndex = savedArticles.findIndex(article => article.id === articleId);
+    if (existingIndex === -1) {
+      savedArticles.push(articleData);
+      localStorage.setItem('savedArticles', JSON.stringify(savedArticles));
+      return true; // Successfully saved
+    }
+    return false; // Already saved
+  }
 
-      // Highlight active nav link based on current page
-      const currentPage = window.location.pathname.split('/').pop();
-      const links = document.querySelectorAll('#navbar-container .nav-link');
-      links.forEach(link => {
-        if (link.getAttribute('href') === currentPage) {
-          link.classList.add('active');
+  function removeSavedArticle(articleId) {
+    const savedArticles = getSavedArticles();
+    const filteredArticles = savedArticles.filter(article => article.id !== articleId);
+    localStorage.setItem('savedArticles', JSON.stringify(filteredArticles));
+  }
+
+  function isArticleSaved(articleId) {
+    const savedArticles = getSavedArticles();
+    return savedArticles.some(article => article.id === articleId);
+  }
+
+  // Initialize save buttons
+  function initializeSaveButtons() {
+    const saveButtons = document.querySelectorAll('.save-btn');
+
+    saveButtons.forEach(button => {
+      const articleId = button.getAttribute('data-article-id');
+      const articleCard = button.closest('.article-card');
+      const title = articleCard.querySelector('h3').textContent.trim();
+      const description = articleCard.querySelector('p').textContent.trim();
+      const imageSrc = articleCard.querySelector('img').src;
+      const link = articleCard.querySelector('.read-more').href;
+
+      // Check if already saved and update button state
+      if (isArticleSaved(articleId)) {
+        button.classList.add('saved');
+        button.textContent = '♥ Saved';
+      }
+
+      button.addEventListener('click', function() {
+        if (isArticleSaved(articleId)) {
+          // Remove from saved
+          removeSavedArticle(articleId);
+          button.classList.remove('saved');
+          button.textContent = '♡ Save';
+        } else {
+          // Save article
+          saveArticle(articleId, title, description, imageSrc, link);
+          button.classList.add('saved');
+          button.textContent = '♥ Saved';
         }
       });
-
-      // Show Donate button only on fundraising page
-      if (window.location.pathname.includes("fundraising.html")) {
-        document.getElementById("donate-btn").style.display = "block";
-      }
     });
+  }
 
-  // Navbar scroll effect
-  window.addEventListener("scroll", function() {
-    const navbar = document.getElementById("navbar");
-    if (window.scrollY > 50) {
-      navbar.classList.add("scrolled");
-    } else {
-      navbar.classList.remove("scrolled");
-    }
-  });
+  // Initialize save buttons after DOM is loaded
+  initializeSaveButtons();
+
+});
 </script>
-
-
-
+<div id="footer-placeholder"></div>
+<script src="js/embed_footer.js" defer></script>
 
 </body>
 </html>
