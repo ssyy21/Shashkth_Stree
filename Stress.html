@@ -417,6 +417,55 @@ input:checked + .lang-slider:before {
       </div>
   </section>
 
+    <!-- FAQ Section -->
+  <section class="faq-section">
+    <div class="faq-container">
+        <h2>FAQs</h2>
+      <div class="faq-item">
+        <button class="faq-question">What is mind–body balance?</button>
+        <div class="faq-answer">
+          <p>It’s the harmony between your mental and physical well-being that helps you feel calm, focused, and healthy.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">How does stress affect the mind and body?</button>
+        <div class="faq-answer">
+          <p>Stress can cause anxiety, headaches, fatigue, body tension, and trouble sleeping.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">What are common signs of stress?</button>
+        <div class="faq-answer">
+          <p>Irritability, overthinking, muscle pain, low energy, difficulty concentrating, and disturbed sleep.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">How can I reduce daily stress quickly?</button>
+        <div class="faq-answer">
+          <p>Take deep breaths, stretch, drink water, take a short walk, or pause and practice grounding.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">What long-term habits improve mind–body balance?</button>
+        <div class="faq-answer">
+          <p>Regular exercise, mindful breathing, good sleep, balanced diet, and maintaining emotional boundaries.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">Can overthinking cause physical symptoms?</button>
+        <div class="faq-answer">
+          <p>Yes — overthinking can lead to tension, digestive issues, headaches, and fatigue.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
 
    
     <script src="js/jquery-3.3.1.min.js"></script>
@@ -455,6 +504,16 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // Set initial state
   updateLanguage();
+});
+</script>
+
+<script>
+  const faqs = document.querySelectorAll('.faq-item');
+
+faqs.forEach(faq => {
+  faq.querySelector('.faq-question').addEventListener('click', () => {
+    faq.classList.toggle('active');
+  });
 });
 </script>
 

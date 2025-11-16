@@ -428,6 +428,56 @@ input:checked + .lang-slider:before {
         </div>
     </section>
 
+      <!-- FAQ Section -->
+  <section class="faq-section">
+    <div class="faq-container">
+        <h2>FAQs</h2>
+      <div class="faq-item">
+        <button class="faq-question">What is cyberbullying?</button>
+        <div class="faq-answer">
+          <p>Cyberbullying is online harassment — like sending hurtful messages, spreading rumors, or posting embarrassing content.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">How is cyberbullying different from traditional bullying?</button>
+        <div class="faq-answer">
+          <p>It happens online, can reach many people fast, and can follow someone 24/7.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">How can I protect myself online?</button>
+        <div class="faq-answer">
+          <p>Keep accounts private, use strong passwords, share less personal info, and block unsafe users.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">What are signs someone is being cyberbullied?</button>
+        <div class="faq-answer">
+          <p>They may become anxious, avoid social media, withdraw from others, or seem upset after using their phone.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">What should I do if I’m being cyberbullied?</button>
+        <div class="faq-answer">
+          <p>Don’t reply, save evidence, block the person, report the content, and tell someone you trust.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">How can parents help prevent cyberbullying?</button>
+        <div class="faq-answer">
+          <p>Talk openly, teach safe online habits, check privacy settings, and encourage children to speak up.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
@@ -464,6 +514,16 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // Set initial state
   updateLanguage();
+});
+</script>
+
+<script>
+  const faqs = document.querySelectorAll('.faq-item');
+
+faqs.forEach(faq => {
+  faq.querySelector('.faq-question').addEventListener('click', () => {
+    faq.classList.toggle('active');
+  });
 });
 </script>
 

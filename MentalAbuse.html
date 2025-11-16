@@ -467,6 +467,55 @@ input:checked + .lang-slider:before {
         </div>
     </section>
 
+    <!-- FAQ Section -->
+  <section class="faq-section">
+    <div class="faq-container">
+        <h2>FAQs</h2>
+      <div class="faq-item">
+        <button class="faq-question">What is mental abuse?</button>
+        <div class="faq-answer">
+          <p>Mental or emotional abuse is when someone hurts another person through manipulation, threats, humiliation, or constant criticism.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">How is mental abuse different from physical abuse?</button>
+        <div class="faq-answer">
+          <p>It doesn’t leave visible marks, but it deeply affects a person’s thoughts, confidence, and emotional health.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">What are signs of mental abuse?</button>
+        <div class="faq-answer">
+          <p>Feeling scared, constantly blamed, controlled, insulted, isolated from friends, or made to feel “not good enough.”</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">Can mental abuse happen in relationships or friendships?</button>
+        <div class="faq-answer">
+          <p>Yes — it can happen with partners, family, friends, coworkers, or even online.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">What should I do if I think I’m being mentally abused?</button>
+        <div class="faq-answer">
+          <p>Reach out to someone you trust, set boundaries, document incidents, and seek professional help if needed.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">Is mental abuse harmful?</button>
+        <div class="faq-answer">
+          <p>Yes — it can lead to anxiety, depression, low self-esteem, trauma, and long-term emotional stress.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
@@ -503,6 +552,18 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // Set initial state
   updateLanguage();
+});
+</script>
+
+</script>
+
+<script>
+  const faqs = document.querySelectorAll('.faq-item');
+
+faqs.forEach(faq => {
+  faq.querySelector('.faq-question').addEventListener('click', () => {
+    faq.classList.toggle('active');
+  });
 });
 </script>
 
