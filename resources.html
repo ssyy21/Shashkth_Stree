@@ -5,100 +5,114 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resources</title>
 
+    <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/favicon_io/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon_io/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon_io/favicon-16x16.png">
-<link rel="manifest" href="images/favicon/favicon_io/site.webmanifest">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="images/favicon/favicon_io/site.webmanifest">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
     <style>
+        /* ----------------------------------------------
+              GLOBAL PAGE STYLING
+        ---------------------------------------------- */
         body {
-            background: #CA7EB7;
+            background: linear-gradient(135deg, #ca7eb7, #e3a2d6);
             font-family: 'Inter', sans-serif;
-            color: #333;
-            padding-bottom: 60px;
+            color: #222;
+            margin: 0;
+            padding: 0 0 80px;
         }
 
-        .articles .heading:first-of-type {
-            font-size: 42px;
+        h1.heading {
+            font-size: 44px;
             font-weight: 700;
             text-align: center;
             margin-top: 40px;
-            color: #222;
+            color: #1a1a1a;
         }
 
-        .articles .lead {
-            color: #555;
+        p.lead {
+            text-align: center;
             font-size: 18px;
+            color: #333;
+            margin-bottom: 35px;
         }
 
-        .articles h2 {
-            margin-top: 40px;
+        h2.section-title {
+            text-align: center;
+            font-size: 30px;
             font-weight: 600;
-            color: #2c2f35 !important;
-            letter-spacing: 0.5px;
+            margin: 50px 0 20px;
         }
 
+        /* ----------------------------------------------
+              CARD GRID
+        ---------------------------------------------- */
         .article-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 25px;
-            margin: 30px auto;
-            max-width: 1100px;
+            gap: 28px;
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
         }
 
+        /* ----------------------------------------------
+              RESOURCE CARDS (Glassmorphism)
+        ---------------------------------------------- */
         .resource-card {
-            padding: 22px;
+            background: rgba(255, 255, 255, 0.55);
+            backdrop-filter: blur(14px);
+            padding: 25px;
             border-radius: 18px;
-            background: rgba(255, 255, 255, 0.65);
-            backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.35);
-            box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-            transition: all 0.4s ease;
+            box-shadow: 0 10px 24px rgba(0,0,0,0.12);
             text-align: center;
-            animation: fadeUp 0.7s ease forwards;
+            transition: 0.35s ease;
+            position: relative;
+            overflow: hidden;
+            animation: fadeUp 0.8s ease forwards;
             opacity: 0;
         }
 
         .resource-card:hover {
-            transform: translateY(-8px) scale(1.03);
-            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
-        }
-
-        .resource-card .hover-text {
-            display: none;
-            opacity: 0;
-            transition: opacity 0.35s ease;
-        }
-
-        .resource-card:hover .hover-text {
-            display: block;
-            opacity: 1;
-        }
-
-        .resource-card:hover .original-text {
-            display: none;
+            transform: translateY(-10px);
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2);
+            background: rgba(255, 255, 255, 0.7);
         }
 
         .resource-card-title {
-            font-size: 21px;
+            font-size: 22px;
             font-weight: 700;
-            margin-bottom: 8px;
-            color: #222;
+            margin-bottom: 10px;
         }
 
+        /* ----------------------------------------------
+              HOVER REVEAL EFFECT
+        ---------------------------------------------- */
+        .hover-text { display: none; }
+        .resource-card:hover .hover-text { display: block; }
+        .resource-card:hover .original-text { display: none; }
+
         .resource-card a {
-            color: #2a6df4;
+            color: #1a4ec3;
             font-weight: 600;
             text-decoration: none;
         }
 
-        .resource-card a:hover {
-            text-decoration: underline;
-        }
+        .resource-card a:hover { text-decoration: underline; }
 
+        /* ----------------------------------------------
+              ANIMATION
+        ---------------------------------------------- */
         @keyframes fadeUp {
-            from { opacity: 0; transform: translateY(12px); }
+            from { opacity: 0; transform: translateY(15px); }
             to { opacity: 1; transform: translateY(0); }
         }
+
     </style>
     
     <!-- Chatbot Component -->
@@ -110,201 +124,134 @@
 
     <div id="navbar-container"></div>
 
-    <div class="articles">
+    <h1 class="heading">Resources</h1>
+    <p class="lead">Helplines, legal contacts, and associated NGOs for your support.</p><!-----------changes center align  ----------------------------------->
 
-        <h1 class="heading">Resources</h1>
-        <p class="lead text-center mb-5">Helplines, legal contacts, and associated NGOs for your support.</p>
+    <!-- ----------------------------------------------
+         SECTION 1: HELPLINE
+    ---------------------------------------------- -->
+    <h2 class="section-title">Helpline (Complaints)</h2>
 
-        <!-- Helpline Section -->
-        <h2 class="heading" style="font-size: 30px;">Helpline (Complaints)</h2>
+    <div class="article-container">
+        <div class="resource-card">
+            <span class="original-text">
+                <div class="resource-card-title">For Life-Threatening Situations</div>
+                (Hover to see details)
+            </span>
 
-        <div class="article-container">
-            <div class="resource-card">
-                <div class="article-content">
-                    <span class="original-text">
-                        <div class="resource-card-title">For Life-Threatening Situations</div>
-                        (Hover to see details)
-                    </span>
-                    <span class="hover-text">
-                        <div class="resource-card-title">For Life-Threatening Situations</div>
-                        Call 988 or <a href="https://helpnow.talkspace.com/">Use these resources</a>
-                    </span>
-                </div>
-            </div>
-        </div>
-
-        <!-- Legal Contacts Section -->
-        <h2 class="heading" style="font-size: 30px; margin-top: 40px;">Legal Contacts</h2>
-
-        <div class="article-container">
-
-            <div class="resource-card">
-                <div class="article-content">
-                    <span class="original-text">
-                        <div class="resource-card-title">Licensed Counselor</div>
-                        (Hover to see details)
-                    </span>
-                    <span class="hover-text">
-                        <div class="resource-card-title">Priya Sharma</div>
-                        Phone: +91-98765-43210<br>
-                        Licensed Counselor specializing in domestic violence trauma.
-                    </span>
-                </div>
-            </div>
-
-            <div class="resource-card">
-                <div class="article-content">
-                    <span class="original-text">
-                        <div class="resource-card-title">Legal Advice Counselor</div>
-                        (Hover to see details)
-                    </span>
-                    <span class="hover-text">
-                        <div class="resource-card-title">Arjun Verma</div>
-                        Phone: +91-98765-43109<br>
-                        Legal Advisor providing free consultations on filing complaints.
-                    </span>
-                </div>
-            </div>
-
-            <div class="resource-card">
-                <div class="article-content">
-                    <span class="original-text">
-                        <div class="resource-card-title">Case Manager</div>
-                        (Hover to see details)
-                    </span>
-                    <span class="hover-text">
-                        <div class="resource-card-title">Kavita Nair</div>
-                        Phone: +91-98765-43098<br>
-                        Assists with housing and financial support.
-                    </span>
-                </div>
-            </div>
-
-            <div class="resource-card">
-                <div class="article-content">
-                    <span class="original-text">
-                        <div class="resource-card-title">Helpline Coordinator</div>
-                        (Hover to see details)
-                    </span>
-                    <span class="hover-text">
-                        <div class="resource-card-title">Rohan Gupta</div>
-                        Phone: +91-98765-42987<br>
-                        24/7 Helpline Coordinator trained in crisis intervention.
-                    </span>
-                </div>
-            </div>
-        </div>
-
-        <!-- NGOs Section -->
-        <h2 class="heading" style="font-size: 30px; margin-top: 40px;">Associated NGOs (Healing)</h2>
-
-        <div class="article-container">
-
-            <div class="resource-card">
-                <div class="article-content">
-                    <span class="original-text">
-                        <div class="resource-card-title">Sahaayata Foundation</div>
-                        (Hover to see details)
-                    </span>
-                    <span class="hover-text">
-                        <div class="resource-card-title">Sahaayata Foundation</div>
-                        Helpline: +91-98111-12345<br>
-                        Supports survivors with counseling, legal aid, and shelter.
-                    </span>
-                </div>
-            </div>
-
-            <div class="resource-card">
-                <div class="article-content">
-                    <span class="original-text">
-                        <div class="resource-card-title">Ujjivan Foundation</div>
-                        (Hover to see details)
-                    </span>
-                    <span class="hover-text">
-                        <div class="resource-card-title">Ujjivan Foundation</div>
-                        Helpline: +91-98222-54321<br>
-                        Focused on empowerment, vocational training, and therapy.
-                    </span>
-                </div>
-            </div>
-
-            <div class="resource-card">
-                <div class="article-content">
-                    <span class="original-text">
-                        <div class="resource-card-title">Nayi Disha Welfare Society</div>
-                        (Hover to see details)
-                    </span>
-                    <span class="hover-text">
-                        <div class="resource-card-title">Nayi Disha Welfare Society</div>
-                        Helpline: +91-98333-67890<br>
-                        Provides immediate assistance and emergency shelter.
-                    </span>
-                </div>
-            </div>
-
+            <span class="hover-text">
+                <div class="resource-card-title">Emergency Support</div><!-------------changes add emergenecy ----------------------------------->
+                Call **112** (India emergency number)<br>
+                Suicide Helpline: **988**<br>
+                <a href="https://helpnow.talkspace.com/">View Online Resources</a>
+            </span>
         </div>
     </div>
 
+    <!-- ----------------------------------------------
+         SECTION 2: LEGAL CONTACTS
+    ---------------------------------------------- -->
+    <h2 class="section-title">Legal Contacts</h2><!--adjust all div in line -->
+
+    <div class="article-container">
+
+        <div class="resource-card">
+            <span class="original-text">
+                <div class="resource-card-title">Licensed Counselor</div>
+                (Hover to see details)
+            </span>
+            <span class="hover-text">
+                <div class="resource-card-title">Priya Sharma</div>
+                📞 +91-98765-43210<br>
+                Specialist in domestic violence trauma support.
+            </span>
+        </div>
+
+        <div class="resource-card">
+            <span class="original-text">
+                <div class="resource-card-title">Legal Advice Counselor</div>
+                (Hover to see details)
+            </span>
+            <span class="hover-text">
+                <div class="resource-card-title">Arjun Verma</div>
+                📞 +91-98765-43109<br>
+                Free consultation for FIR and complaint support.
+            </span>
+        </div>
+
+        <div class="resource-card">
+            <span class="original-text">
+                <div class="resource-card-title">Case Manager</div>
+                (Hover to see details)
+            </span>
+            <span class="hover-text">
+                <div class="resource-card-title">Kavita Nair</div>
+                📞 +91-98765-43098<br>
+                Provides assistance for shelter and financial relief.
+            </span>
+        </div>
+
+        <div class="resource-card">
+            <span class="original-text">
+                <div class="resource-card-title">Helpline Coordinator</div>
+                (Hover to see details)
+            </span>
+            <span class="hover-text">
+                <div class="resource-card-title">Rohan Gupta</div>
+                📞 +91-98765-42987<br>
+                24/7 crisis response & emergency guidance.
+            </span>
+        </div>
+
+    </div>
+
+    <!-- ----------------------------------------------
+         SECTION 3: NGOs
+    ---------------------------------------------- -->
+    <h2 class="section-title">Associated NGOs (Healing)</h2>
+
+    <div class="article-container">
+
+        <div class="resource-card">
+            <span class="original-text">
+                <div class="resource-card-title">Sahaayata Foundation</div>
+                (Hover to see details)
+            </span>
+            <span class="hover-text">
+                <div class="resource-card-title">Sahaayata Foundation</div>
+                📞 +91-98111-12345<br>
+                Counseling, legal aid & shelter for survivors.
+            </span>
+        </div>
+
+        <div class="resource-card">
+            <span class="original-text">
+                <div class="resource-card-title">Ujjivan Foundation</div>
+                (Hover to see details)
+            </span>
+            <span class="hover-text">
+                <div class="resource-card-title">Ujjivan Foundation</div>
+                📞 +91-98222-54321<br>
+                Empowerment, therapy & vocational training.
+            </span>
+        </div>
+
+        <div class="resource-card">
+            <span class="original-text">
+                <div class="resource-card-title">Nayi Disha Welfare Society</div>
+                (Hover to see details)
+            </span>
+            <span class="hover-text">
+                <div class="resource-card-title">Nayi Disha Welfare Society</div>
+                📞 +91-98333-67890<br>
+                Immediate rescue & emergency shelter support.
+            </span>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
     <div id="footer-container"></div>
-
-    <!-- Scripts -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-
-            fetch('navbar.html')
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('navbar-container').innerHTML = data;
-
-                    const currentPage = window.location.pathname.split('/').pop();
-                    const links = document.querySelectorAll('#navbar-container .nav-link');
-
-                    links.forEach(link => {
-                        if (link.getAttribute('href') === currentPage) {
-                            link.classList.add('active');
-                        }
-                    });
-
-                    const navbar = document.getElementById("navbar");
-                    if (navbar) {
-                        window.addEventListener("scroll", function () {
-                            if (window.scrollY > 50) {
-                                navbar.classList.add("scrolled");
-                            } else {
-                                navbar.classList.remove("scrolled");
-                            }
-                        });
-                    }
-
-                    const toggle = document.getElementById('lang-toggle-checkbox');
-                    if (toggle) {
-                        const elements = document.querySelectorAll('.lang-toggle');
-                        const placeholders = document.querySelectorAll('.lang-toggle-placeholder');
-
-                        function updateLanguage() {
-                            const lang = toggle.checked ? 'hi' : 'en';
-                            elements.forEach(el => {
-                                const text = el.getAttribute('data-' + lang);
-                                if (text) {
-                                    el.innerHTML = text.replace(/^\[|\]$/g, '');
-                                }
-                            });
-                            placeholders.forEach(el => {
-                                let text = el.getAttribute('data-' + lang);
-                                if (text) {
-                                    el.setAttribute('placeholder', text.replace(/^\[|\]$/g, ''));
-                                }
-                            });
-                        }
-
-                        toggle.addEventListener('change', updateLanguage);
-                        updateLanguage();
-                    }
-                });
-        });
-    </script>
-
-    <div id="footer-placeholder"></div>
     <script src="js/embed_footer.js" defer></script>
 
 </body>

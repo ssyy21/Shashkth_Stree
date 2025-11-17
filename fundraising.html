@@ -42,7 +42,8 @@
   padding-left: 15px; /* Add some space from other nav items */
 }
 .lang-toggle-label {
-  margin: 0 5px;
+  margin: 5 10px;
+  margin-right: 10px ;
   font-size: 14px;
   font-weight: bold;
   color: rgba(255, 255, 255, 0.7); /* Match navbar link color */
@@ -91,6 +92,17 @@ input:checked + .lang-slider {
 input:checked + .lang-slider:before {
   transform: translateX(26px);
 }
+.fund-allocation {
+    max-width: 350px;   /* Reduce size */
+    margin: 0 auto;
+}
+.fund-allocation h2 {
+    text-align: center;     /* centers the heading */
+    white-space: nowrap;    /* forces it to stay on one line */
+    width: 100%;
+}
+
+
 
 /* Responsive adjustment for mobile */
 @media (max-width: 991.98px) {
@@ -117,6 +129,9 @@ input:checked + .lang-slider:before {
     <!-- Chatbot Component -->
     <link rel="stylesheet" href="css/chatbot.css">
     <script src="js/chatbot.js" defer></script>
+	
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 </head>
 <body>
 
@@ -228,6 +243,11 @@ input:checked + .lang-slider:before {
 			</div>
 		</div>
 	</section>
+
+    <section class="fund-allocation">
+        <h2>Fund Allocation Overview</h2>
+        <canvas id="fundPieChart"></canvas>
+    </section>
 
 	<section class="ftco-appointment ftco-section ftco-no-pt ftco-no-pb img" style="background-color:#2D033B !important; background-image:none !important;">
 		<div class="overlay"></div>
@@ -599,5 +619,39 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 });
 </script>
+
+<script>
+const ctx = document.getElementById('fundPieChart');
+
+new Chart(ctx, {
+    type: 'pie',
+    data: {
+        labels: ['Education', 'Healthcare', 'Women Safety', 'Counseling', 'Admin Costs'],
+        datasets: [{
+            data: [30, 25, 20, 15, 10],   // adjust as needed
+            backgroundColor: [
+                '#4e73df',
+                '#1cc88a',
+                '#36b9cc',
+                '#f6c23e',
+                '#e74a3b'
+            ],
+            hoverOffset: 15
+        }]
+    },
+    options: {
+        responsive: true,
+        plugins: {
+            tooltip: {
+                enabled: true            // <-- tooltips enabled
+            },
+            legend: {
+                position: 'bottom'
+            }
+        }
+    }
+});
+</script>
+
 	</body>
 	</html>

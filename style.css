@@ -66,6 +66,118 @@ body {
 
 }
 
+/* sideBar */
+/* Sidebar Base */
+.sidebar {
+  width: 250px;
+  background: #f5f5f5;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 81px;
+  padding-top: 60px;
+  border-right: 1px solid #ddd;
+  transition: transform 0.3s ease;
+  z-index: 1000;
+}
+
+/* Hidden by default on mobile */
+.sidebar.closed {
+  transform: translateX(-260px);
+}
+
+/* Overlay for mobile */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  display: none;
+  z-index: 900;
+}
+
+.overlay.show {
+  display: block;
+}
+
+/* Sidebar Title */
+.sidebar-title {
+  margin: 0 20px 15px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Sidebar Menu */
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-menu a {
+  display: block;
+  padding: 12px 20px;
+  text-decoration: none;
+  color: #333;
+  border-left: 4px solid transparent;
+  transition: 0.2s ease;
+}
+
+.sidebar-menu a:hover {
+  background: #e8e8e8;
+}
+
+/* Active highlight */
+.sidebar-menu a.active {
+  background: #dfe9ff;
+  border-left: 4px solid #3f51b5;
+  color: #3f51b5;
+  font-weight: bold;
+}
+
+/* Page Content */
+.page-content {
+  margin-left: 250px;
+  padding: 20px;
+  transition: margin-left 0.3s ease;
+}
+
+.sidebar.closed ~ .page-content {
+  margin-left: 0;
+}
+
+/* Mobile View */
+.sidebar-toggle { 
+    margin: 12px 0;
+  position: fixed;
+  top: 81px;
+  left: 15px;
+  z-index: 2000;        /* Highest layer */
+  font-size: 30px;      /* Bigger icon */
+  padding: 8px 12px;
+  background: #3f51b5;  /* Visible color */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+
+@media (max-width: 800px) {
+  .sidebar {
+    transform: translateX(2px);
+  }
+
+  .sidebar-toggle {
+    display: block;
+  }
+
+  .page-content {
+    margin-left: 0;
+  }
+}
 
 
 
@@ -699,4 +811,142 @@ iconify-icon.social-icon {
         height: 120px;
         margin-bottom: 5px;
     }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes typewriter {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    0%, 100% {
+        border-color: transparent;
+    }
+    50% {
+        border-color: #CA7EB7;
+    }
+}
+
+@keyframes pulseGlow {
+    0%, 100% {
+        box-shadow: 0 0 10px rgba(202, 126, 183, 0.4);
+        transform: scale(1);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(202, 126, 183, 0.8);
+        transform: scale(1.02);
+    }
+}
+
+#hero .header-top {
+    animation: fadeInUp 1s ease-out 0.2s both;
+}
+
+#hero h5.display-1 {
+    position: relative;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.typewriter-text {
+    display: inline-block;
+    overflow: hidden;
+    border-right: 3px solid #CA7EB7;
+    white-space: nowrap;
+    animation: 
+        typewriter 3s steps(40) 0.5s both,
+        blink 0.75s step-end infinite;
+}
+
+.hero-heading-fade {
+    animation: fadeInUp 1.2s ease-out 0.5s both;
+}
+
+#hero button {
+    animation: fadeInUp 1s ease-out 1.5s both, pulseGlow 2s ease-in-out 2.5s infinite;
+}
+
+/* Responsive adjustments */
+@media only screen and (max-width: 768px) {
+    .typewriter-text {
+        border-right: 2px solid #CA7EB7;
+        animation: 
+            typewriter 2.5s steps(30) 0.5s both,
+            blink 0.75s step-end infinite;
+    }
+    
+    #hero h5.display-1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media only screen and (max-width: 620px) {
+    .typewriter-text {
+        white-space: normal;
+        border-right: none;
+        animation: fadeInUp 1s ease-out 0.5s both;
+    }
+    
+    #hero h5.display-1 {
+        font-size: 2rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    .typewriter-text {
+        border-right: none;
+        animation: none;
+        overflow: visible;
+        white-space: normal;
+    }
+}
+
+/* Fadein */
+#hero {
+    animation: fadeIn 0.8s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+#hero .text-center > *:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+#hero .text-center > *:nth-child(2) {
+    animation-delay: 0.7s;
+}
+
+#hero .text-center > *:nth-child(3) {
+    animation-delay: 1.5s;
 }
