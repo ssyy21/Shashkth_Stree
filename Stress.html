@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
     
     <link rel="stylesheet" href="css/tooplate-style.css">
+    <link rel="stylesheet" href="css/warning-modals.css">
 
     <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/favicon_io/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon_io/favicon-32x32.png">
@@ -259,56 +260,36 @@ input:checked + .lang-slider:before {
         <section class="stress-level severe">
             <h2 style="color: #C147E9 !important;"><span class="lang-toggle" data-en="Your Stress Level is Critical 🔴" data-hi="आपका तनाव स्तर गंभीर है 🔴">Your Stress Level is Critical 🔴</span></h2>
             <p style="color: #fff !important;"><span class="lang-toggle" data-en="Your stress is at a dangerously high level, affecting your mental and physical health. Ignoring it may lead to burnout, anxiety, or even depression. It's important to take immediate action." data-hi="आपका तनाव खतरनाक रूप से उच्च स्तर पर है, जो आपके मानसिक और शारीरिक स्वास्थ्य को प्रभावित कर रहा है। इसे अनदेखा करने से बर्नआउट, चिंता या अवसाद भी हो सकता है। तत्काल कार्रवाई करना महत्वपूर्ण है।">Your stress is at a dangerously high level, affecting your mental and physical health. Ignoring it may lead to burnout, anxiety, or even depression. It's important to take immediate action.</span></p>
-            <h3 style="color: #C147E9 !important;"><span class="lang-toggle" data-en="What You Can Do Right Now:" data-hi="आप अभी क्या कर सकते हैं:">What You Can Do Right Now:</span></h3>
-            <ul>
-                <li><span class="emoji">🚨</span> <span class="lang-toggle" data-en="Seek Professional Help – Therapy or counseling can provide the support you need." data-hi="पेशेवर मदद लें - थेरेपी या परामर्श आपको आवश्यक सहायता प्रदान कर सकता है।">Seek Professional Help – Therapy or counseling can provide the support you need.</span></li>
-                <li><span class="emoji">🛑</span> <span class="lang-toggle" data-en="Pause & Prioritize – Take a break from overwhelming responsibilities." data-hi="रुकें और प्राथमिकता दें - भारी जिम्मेदारियों से एक ब्रेक लें।">Pause & Prioritize – Take a break from overwhelming responsibilities.</span></li>
-                <li><span class="emoji">📖</span> <span class="lang-toggle" data-en="Journal Your Feelings – Writing down your thoughts can help clear your mind." data-hi="अपनी भावनाओं को जर्नल करें - अपने विचारों को लिखने से आपका दिमाग साफ हो सकता है।">Journal Your Feelings – Writing down your thoughts can help clear your mind.</span></li>
-                <li><span class="emoji">🏞</span> <span class="lang-toggle" data-en="Step Outside – Fresh air and a change of environment can be refreshing." data-hi="बाहर कदम रखें - ताजी हवा और वातावरण में बदलाव स्फूर्तिदायक हो सकता है।">Step Outside – Fresh air and a change of environment can be refreshing.</span></li>
-                <li><span class="emoji">📅</span> <span class="lang-toggle" data-en="Set Small Goals – Break tasks into tiny, manageable steps to avoid feeling overwhelmed." data-hi="छोटे लक्ष्य निर्धारित करें - अभिभूत महसूस करने से बचने के लिए कार्यों को छोटे, प्रबंधनीय चरणों में तोड़ दें।">Set Small Goals – Break tasks into tiny, manageable steps to avoid feeling overwhelmed.</span></li>
-            </ul>
+            <button class="read-more-btn" onclick="warningModalHandler.openModal('severeStressModal')">
+              <span class="lang-toggle" data-en="Read More" data-hi="और पढ़ें">Read More</span>
+            </button>
            
         </section>
 
         <section class="stress-level high">
             <h2 style="color: #C147E9 !important;"><span class="lang-toggle" data-en="Your Stress Level is High 🟠" data-hi="आपका तनाव स्तर उच्च है 🟠">Your Stress Level is High 🟠</span></h2>
             <p style="color: #fff !important;"><span class="lang-toggle" data-en="You’re under a lot of pressure, and it's beginning to affect your daily life. It’s crucial to manage stress before it escalates." data-hi="आप बहुत अधिक दबाव में हैं, और यह आपके दैनिक जीवन को प्रभावित करने लगा है। तनाव के बढ़ने से पहले उसे प्रबंधित करना महत्वपूर्ण है।">You’re under a lot of pressure, and it's beginning to affect your daily life. It’s crucial to manage stress before it escalates.</span></p>
-            <h3 style="color: #C147E9 !important;"><span class="lang-toggle" data-en="What You Can Do Right Now:" data-hi="आप अभी क्या कर सकते हैं:">What You Can Do Right Now:</span></h3>
-            <ul>
-                <li><span class="emoji">🔄</span> <span class="lang-toggle" data-en="Practice Time Management – Use a to-do list or planner to organize tasks." data-hi="समय प्रबंधन का अभ्यास करें - कार्यों को व्यवस्थित करने के लिए टू-डू सूची या योजनाकार का उपयोग करें।">Practice Time Management – Use a to-do list or planner to organize tasks.</span></li>
-                <li><span class="emoji">📱</span> <span class="lang-toggle" data-en="Reduce Digital Overload – Limit screen time, especially before bed." data-hi="डिजिटल ओवरलोड कम करें - स्क्रीन समय सीमित करें, खासकर बिस्तर से पहले।">Reduce Digital Overload – Limit screen time, especially before bed.</span></li>
-                <li><span class="emoji">🏃‍♂</span> <span class="lang-toggle" data-en="Move Your Body – A 15-minute walk, stretching, or light workout can release tension." data-hi="अपने शरीर को हिलाएं - 15 मिनट की सैर, स्ट्रेचिंग, या हल्का वर्कआउट तनाव मुक्त कर सकता है।">Move Your Body – A 15-minute walk, stretching, or light workout can release tension.</span></li>
-                <li><span class="emoji">🌙</span> <span class="lang-toggle" data-en="Fix Your Sleep Schedule – Poor sleep increases stress levels. Aim for 7-8 hours." data-hi="अपनी नींद का समय निर्धारित करें - खराब नींद तनाव का स्तर बढ़ाती है। 7-8 घंटे का लक्ष्य रखें।">Fix Your Sleep Schedule – Poor sleep increases stress levels. Aim for 7-8 hours.</span></li>
-                <li><span class="emoji">💬</span> <span class="lang-toggle" data-en="Talk to Someone – A trusted friend, family member, or professional can help." data-hi="किसी से बात करें - एक विश्वसनीय दोस्त, परिवार का सदस्य, या पेशेवर मदद कर सकता है।">Talk to Someone – A trusted friend, family member, or professional can help.</span></li>
-            </ul>
+            <button class="read-more-btn" onclick="warningModalHandler.openModal('highStressModal')">
+              <span class="lang-toggle" data-en="Read More" data-hi="और पढ़ें">Read More</span>
+            </button>
             
         </section>
 
         <section class="stress-level moderate">
             <h2 style="color: #C147E9 !important;"><span class="lang-toggle" data-en="Your Stress Level is Manageable 🟡" data-hi="आपका तनाव स्तर प्रबंधनीय है 🟡">Your Stress Level is Manageable 🟡</span></h2>
             <p style="color: #fff !important;"><span class="lang-toggle" data-en="You experience stress, but it’s not overwhelming yet. However, small daily changes can prevent it from escalating." data-hi="आप तनाव का अनुभव करते हैं, लेकिन यह अभी तक भारी नहीं है। हालांकि, छोटे दैनिक परिवर्तन इसे बढ़ने से रोक सकते हैं।">You experience stress, but it’s not overwhelming yet. However, small daily changes can prevent it from escalating.</span></p>
-            <h3 style="color: #C147E9 !important;"><span class="lang-toggle" data-en="What You Can Do Right Now:" data-hi="आप अभी क्या कर सकते हैं:">What You Can Do Right Now:</span></h3>
-            <ul>
-                <li><span class="emoji">☀</span> <span class="lang-toggle" data-en="Create a Morning Routine – Start your day with a positive habit like stretching or reading." data-hi="सुबह की दिनचर्या बनाएं - अपने दिन की शुरुआत स्ट्रेचिंग या पढ़ने जैसी सकारात्मक आदत से करें।">Create a Morning Routine – Start your day with a positive habit like stretching or reading.</span></li>
-                <li><span class="emoji">🍵</span> <span class="lang-toggle" data-en="Stay Hydrated & Eat Well – Avoid too much caffeine and processed foods." data-hi="हाइड्रेटेड रहें और अच्छा खाएं - बहुत अधिक कैफीन और प्रसंस्कृत खाद्य पदार्थों से बचें।">Stay Hydrated & Eat Well – Avoid too much caffeine and processed foods.</span></li>
-                <li><span class="emoji">📅</span> <span class="lang-toggle" data-en="Schedule Breaks – Short 5-minute breaks improve focus and reduce stress." data-hi="ब्रेक शेड्यूल करें - छोटे 5 मिनट के ब्रेक फोकस में सुधार करते हैं और तनाव कम करते हैं।">Schedule Breaks – Short 5-minute breaks improve focus and reduce stress.</span></li>
-                <li><span class="emoji">😌</span> <span class="lang-toggle" data-en="Practice Gratitude – Write down 3 things you’re grateful for daily." data-hi="आभार का अभ्यास करें - प्रतिदिन 3 चीजें लिखें जिनके लिए आप आभारी हैं।">Practice Gratitude – Write down 3 things you’re grateful for daily.</span></li>
-                <li><span class="emoji">📖</span> <span class="lang-toggle" data-en="Engage in a Hobby – Drawing, reading, or gardening can be great stress relievers." data-hi="एक शौक में व्यस्त रहें - ड्राइंग, पढ़ना, या बागवानी महान तनाव निवारक हो सकते हैं।">Engage in a Hobby – Drawing, reading, or gardening can be great stress relievers.</span></li>
-            </ul>
+            <button class="read-more-btn" onclick="warningModalHandler.openModal('moderateStressModal')">
+              <span class="lang-toggle" data-en="Read More" data-hi="और पढ़ें">Read More</span>
+            </button>
             
         </section>
 
         <section class="stress-level low">
             <h2 style="color: #C147E9 !important;"><span class="lang-toggle" data-en="Your Stress Level is Under Control 🟢" data-hi="आपका तनाव स्तर नियंत्रण में है 🟢">Your Stress Level is Under Control 🟢</span></h2>
             <p style="color: #fff !important;"><span class="lang-toggle" data-en="You’ve built good habits that keep your stress in check. Keep maintaining a balanced lifestyle." data-hi="आपने अच्छी आदतें बनाई हैं जो आपके तनाव को नियंत्रण में रखती हैं। संतुलित जीवन शैली बनाए रखें।">You’ve built good habits that keep your stress in check. Keep maintaining a balanced lifestyle.</span></p>
-            <h3 style="color: #C147E9 !important;"><span class="lang-toggle" data-en="What You Can Do Right Now:" data-hi="आप अभी क्या कर सकते हैं:">What You Can Do Right Now:</span></h3>
-            <ul>
-                <li><span class="emoji">🧘‍♂</span> <span class="lang-toggle" data-en="Continue Self-Care – Maintain healthy habits like meditation and exercise." data-hi="आत्म-देखभाल जारी रखें - ध्यान और व्यायाम जैसी स्वस्थ आदतों को बनाए रखें।">Continue Self-Care – Maintain healthy habits like meditation and exercise.</span></li>
-                <li><span class="emoji">💡</span> <span class="lang-toggle" data-en="Challenge Yourself – Learn a new skill or take up a creative project." data-hi="खुद को चुनौती दें - एक नया कौशल सीखें या एक रचनात्मक परियोजना लें।">Challenge Yourself – Learn a new skill or take up a creative project.</span></li>
-                <li><span class="emoji">📍</span> <span class="lang-toggle" data-en="Socialize & Connect – Spend time with family and friends for emotional support." data-hi="सामाजिक बनें और जुड़ें - भावनात्मक समर्थन के लिए परिवार और दोस्तों के साथ समय बिताएं।">Socialize & Connect – Spend time with family and friends for emotional support.</span></li>
-                <li><span class="emoji">📊</span> <span class="lang-toggle" data-en="Track Your Stress Levels – Self-check regularly to ensure balance." data-hi="अपने तनाव के स्तर को ट्रैक करें - संतुलन सुनिश्चित करने के लिए नियमित रूप से आत्म-जांच करें।">Track Your Stress Levels – Self-check regularly to ensure balance.</span></li>
-                <li><span class="emoji">🌍</span> <span class="lang-toggle" data-en="Give Back – Volunteering or helping others can bring joy and purpose." data-hi="वापस दें - स्वेच्छा से या दूसरों की मदद करने से खुशी और उद्देश्य मिल सकता है।">Give Back – Volunteering or helping others can bring joy and purpose.</span></li>
-            </ul>
+            <button class="read-more-btn" onclick="warningModalHandler.openModal('lowStressModal')">
+              <span class="lang-toggle" data-en="Read More" data-hi="और पढ़ें">Read More</span>
+            </button>
         </section>
     </div>
     <section class="resume py-5 d-lg-flex justify-content-center align-items-center" id="resume">
@@ -525,5 +506,96 @@ faqs.forEach(faq => {
 <div id="footer-placeholder"></div>
 <script src="js/embed_footer.js" defer></script>
 
-  </body>
+  
+<!-- Warning Modals for Stress Management -->
+<div id="severeStressModal" class="warning-modal modal-severe">
+  <div class="modal-content-wrapper" tabindex="-1">
+    <div class="modal-header-custom">
+      <h2><span class="lang-toggle" data-en="Your Stress Level is Critical 🔴" data-hi="आपका तनाव स्तर गंभीर है 🔴">Your Stress Level is Critical 🔴</span></h2>
+      <button class="modal-close-btn" onclick="warningModalHandler.closeModal(document.getElementById('severeStressModal'))" aria-label="Close modal">
+        &times;
+      </button>
+    </div>
+    <div class="modal-body-custom">
+      <p><span class="lang-toggle" data-en="Your stress is at a dangerously high level, affecting your mental and physical health. Ignoring it may lead to burnout, anxiety, or even depression. It's important to take immediate action." data-hi="आपका तनाव खतरनाक रूप से उच्च स्तर पर है, जो आपके मानसिक और शारीरिक स्वास्थ्य को प्रभावित कर रहा है। इसे अनदेखा करने से बर्नआउट, चिंता या अवसाद भी हो सकता है। तत्काल कार्रवाई करना महत्वपूर्ण है।">Your stress is at a dangerously high level, affecting your mental and physical health. Ignoring it may lead to burnout, anxiety, or even depression. It's important to take immediate action.</span></p>
+      <h3><span class="lang-toggle" data-en="What You Can Do Right Now:" data-hi="आप अभी क्या कर सकते हैं:">What You Can Do Right Now:</span></h3>
+      <ul>
+        <li><span class="emoji">🚨</span> <span class="lang-toggle" data-en="Seek Professional Help – Therapy or counseling can provide the support you need." data-hi="पेशेवर मदद लें - थेरेपी या परामर्श आपको आवश्यक सहायता प्रदान कर सकता है।">Seek Professional Help – Therapy or counseling can provide the support you need.</span></li>
+        <li><span class="emoji">🛑</span> <span class="lang-toggle" data-en="Pause & Prioritize – Take a break from overwhelming responsibilities." data-hi="रुकें और प्राथमिकता दें - भारी जिम्मेदारियों से एक ब्रेक लें।">Pause & Prioritize – Take a break from overwhelming responsibilities.</span></li>
+        <li><span class="emoji">📖</span> <span class="lang-toggle" data-en="Journal Your Feelings – Writing down your thoughts can help clear your mind." data-hi="अपनी भावनाओं को जर्नल करें - अपने विचारों को लिखने से आपका दिमाग साफ हो सकता है।">Journal Your Feelings – Writing down your thoughts can help clear your mind.</span></li>
+        <li><span class="emoji">🏞</span> <span class="lang-toggle" data-en="Step Outside – Fresh air and a change of environment can be refreshing." data-hi="बाहर कदम रखें - ताजी हवा और वातावरण में बदलाव स्फूर्तिदायक हो सकता है।">Step Outside – Fresh air and a change of environment can be refreshing.</span></li>
+        <li><span class="emoji">📅</span> <span class="lang-toggle" data-en="Set Small Goals – Break tasks into tiny, manageable steps to avoid feeling overwhelmed." data-hi="छोटे लक्ष्य निर्धारित करें - अभिभूत महसूस करने से बचने के लिए कार्यों को छोटे, प्रबंधनीय चरणों में तोड़ दें।">Set Small Goals – Break tasks into tiny, manageable steps to avoid feeling overwhelmed.</span></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div id="highStressModal" class="warning-modal modal-high">
+  <div class="modal-content-wrapper" tabindex="-1">
+    <div class="modal-header-custom">
+      <h2><span class="lang-toggle" data-en="Your Stress Level is High 🟠" data-hi="आपका तनाव स्तर उच्च है 🟠">Your Stress Level is High 🟠</span></h2>
+      <button class="modal-close-btn" onclick="warningModalHandler.closeModal(document.getElementById('highStressModal'))" aria-label="Close modal">
+        &times;
+      </button>
+    </div>
+    <div class="modal-body-custom">
+      <p><span class="lang-toggle" data-en="You're under a lot of pressure, and it's beginning to affect your daily life. It's crucial to manage stress before it escalates." data-hi="आप बहुत अधिक दबाव में हैं, और यह आपके दैनिक जीवन को प्रभावित करने लगा है। तनाव के बढ़ने से पहले उसे प्रबंधित करना महत्वपूर्ण है।">You're under a lot of pressure, and it's beginning to affect your daily life. It's crucial to manage stress before it escalates.</span></p>
+      <h3><span class="lang-toggle" data-en="What You Can Do Right Now:" data-hi="आप अभी क्या कर सकते हैं:">What You Can Do Right Now:</span></h3>
+      <ul>
+        <li><span class="emoji">🔄</span> <span class="lang-toggle" data-en="Practice Time Management – Use a to-do list or planner to organize tasks." data-hi="समय प्रबंधन का अभ्यास करें - कार्यों को व्यवस्थित करने के लिए टू-डू सूची या योजनाकार का उपयोग करें।">Practice Time Management – Use a to-do list or planner to organize tasks.</span></li>
+        <li><span class="emoji">📱</span> <span class="lang-toggle" data-en="Reduce Digital Overload – Limit screen time, especially before bed." data-hi="डिजिटल ओवरलोड कम करें - स्क्रीन समय सीमित करें, खासकर बिस्तर से पहले।">Reduce Digital Overload – Limit screen time, especially before bed.</span></li>
+        <li><span class="emoji">🏃‍♂</span> <span class="lang-toggle" data-en="Move Your Body – A 15-minute walk, stretching, or light workout can release tension." data-hi="अपने शरीर को हिलाएं - 15 मिनट की सैर, स्ट्रेचिंग, या हल्का वर्कआउट तनाव मुक्त कर सकता है।">Move Your Body – A 15-minute walk, stretching, or light workout can release tension.</span></li>
+        <li><span class="emoji">🌙</span> <span class="lang-toggle" data-en="Fix Your Sleep Schedule – Poor sleep increases stress levels. Aim for 7-8 hours." data-hi="अपनी नींद का समय निर्धारित करें - खराब नींद तनाव का स्तर बढ़ाती है। 7-8 घंटे का लक्ष्य रखें।">Fix Your Sleep Schedule – Poor sleep increases stress levels. Aim for 7-8 hours.</span></li>
+        <li><span class="emoji">💬</span> <span class="lang-toggle" data-en="Talk to Someone – A trusted friend, family member, or professional can help." data-hi="किसी से बात करें - एक विश्वसनीय दोस्त, परिवार का सदस्य, या पेशेवर मदद कर सकता है।">Talk to Someone – A trusted friend, family member, or professional can help.</span></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div id="moderateStressModal" class="warning-modal modal-moderate">
+  <div class="modal-content-wrapper" tabindex="-1">
+    <div class="modal-header-custom">
+      <h2><span class="lang-toggle" data-en="Your Stress Level is Manageable 🟡" data-hi="आपका तनाव स्तर प्रबंधनीय है 🟡">Your Stress Level is Manageable 🟡</span></h2>
+      <button class="modal-close-btn" onclick="warningModalHandler.closeModal(document.getElementById('moderateStressModal'))" aria-label="Close modal">
+        &times;
+      </button>
+    </div>
+    <div class="modal-body-custom">
+      <p><span class="lang-toggle" data-en="You experience stress, but it's not overwhelming yet. However, small daily changes can prevent it from escalating." data-hi="आप तनाव का अनुभव करते हैं, लेकिन यह अभी तक भारी नहीं है। हालांकि, छोटे दैनिक परिवर्तन इसे बढ़ने से रोक सकते हैं।">You experience stress, but it's not overwhelming yet. However, small daily changes can prevent it from escalating.</span></p>
+      <h3><span class="lang-toggle" data-en="What You Can Do Right Now:" data-hi="आप अभी क्या कर सकते हैं:">What You Can Do Right Now:</span></h3>
+      <ul>
+        <li><span class="emoji">☀</span> <span class="lang-toggle" data-en="Create a Morning Routine – Start your day with a positive habit like stretching or reading." data-hi="सुबह की दिनचर्या बनाएं - अपने दिन की शुरुआत स्ट्रेचिंग या पढ़ने जैसी सकारात्मक आदत से करें।">Create a Morning Routine – Start your day with a positive habit like stretching or reading.</span></li>
+        <li><span class="emoji">🍵</span> <span class="lang-toggle" data-en="Stay Hydrated & Eat Well – Avoid too much caffeine and processed foods." data-hi="हाइड्रेटेड रहें और अच्छा खाएं - बहुत अधिक कैफीन और प्रसंस्कृत खाद्य पदार्थों से बचें।">Stay Hydrated & Eat Well – Avoid too much caffeine and processed foods.</span></li>
+        <li><span class="emoji">📅</span> <span class="lang-toggle" data-en="Schedule Breaks – Short 5-minute breaks improve focus and reduce stress." data-hi="ब्रेक शेड्यूल करें - छोटे 5 मिनट के ब्रेक फोकस में सुधार करते हैं और तनाव कम करते हैं।">Schedule Breaks – Short 5-minute breaks improve focus and reduce stress.</span></li>
+        <li><span class="emoji">😌</span> <span class="lang-toggle" data-en="Practice Gratitude – Write down 3 things you're grateful for daily." data-hi="आभार का अभ्यास करें - प्रतिदिन 3 चीजें लिखें जिनके लिए आप आभारी हैं।">Practice Gratitude – Write down 3 things you're grateful for daily.</span></li>
+        <li><span class="emoji">📖</span> <span class="lang-toggle" data-en="Engage in a Hobby – Drawing, reading, or gardening can be great stress relievers." data-hi="एक शौक में व्यस्त रहें - ड्राइंग, पढ़ना, या बागवानी महान तनाव निवारक हो सकते हैं।">Engage in a Hobby – Drawing, reading, or gardening can be great stress relievers.</span></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div id="lowStressModal" class="warning-modal modal-low">
+  <div class="modal-content-wrapper" tabindex="-1">
+    <div class="modal-header-custom">
+      <h2><span class="lang-toggle" data-en="Your Stress Level is Under Control 🟢" data-hi="आपका तनाव स्तर नियंत्रण में है 🟢">Your Stress Level is Under Control 🟢</span></h2>
+      <button class="modal-close-btn" onclick="warningModalHandler.closeModal(document.getElementById('lowStressModal'))" aria-label="Close modal">
+        &times;
+      </button>
+    </div>
+    <div class="modal-body-custom">
+      <p><span class="lang-toggle" data-en="You've built good habits that keep your stress in check. Keep maintaining a balanced lifestyle." data-hi="आपने अच्छी आदतें बनाई हैं जो आपके तनाव को नियंत्रण में रखती हैं। संतुलित जीवन शैली बनाए रखें।">You've built good habits that keep your stress in check. Keep maintaining a balanced lifestyle.</span></p>
+      <h3><span class="lang-toggle" data-en="What You Can Do Right Now:" data-hi="आप अभी क्या कर सकते हैं:">What You Can Do Right Now:</span></h3>
+      <ul>
+        <li><span class="emoji">🧘‍♂</span> <span class="lang-toggle" data-en="Continue Self-Care – Maintain healthy habits like meditation and exercise." data-hi="आत्म-देखभाल जारी रखें - ध्यान और व्यायाम जैसी स्वस्थ आदतों को बनाए रखें।">Continue Self-Care – Maintain healthy habits like meditation and exercise.</span></li>
+        <li><span class="emoji">💡</span> <span class="lang-toggle" data-en="Challenge Yourself – Learn a new skill or take up a creative project." data-hi="खुद को चुनौती दें - एक नया कौशल सीखें या एक रचनात्मक परियोजना लें।">Challenge Yourself – Learn a new skill or take up a creative project.</span></li>
+        <li><span class="emoji">📍</span> <span class="lang-toggle" data-en="Socialize & Connect – Spend time with family and friends for emotional support." data-hi="सामाजिक बनें और जुड़ें - भावनात्मक समर्थन के लिए परिवार और दोस्तों के साथ समय बिताएं।">Socialize & Connect – Spend time with family and friends for emotional support.</span></li>
+        <li><span class="emoji">📊</span> <span class="lang-toggle" data-en="Track Your Stress Levels – Self-check regularly to ensure balance." data-hi="अपने तनाव के स्तर को ट्रैक करें - संतुलन सुनिश्चित करने के लिए नियमित रूप से आत्म-जांच करें।">Track Your Stress Levels – Self-check regularly to ensure balance.</span></li>
+        <li><span class="emoji">🌍</span> <span class="lang-toggle" data-en="Give Back – Volunteering or helping others can bring joy and purpose." data-hi="वापस दें - स्वेच्छा से या दूसरों की मदद करने से खुशी और उद्देश्य मिल सकता है।">Give Back – Volunteering or helping others can bring joy and purpose.</span></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+  <script src="js/warning-modals.js"></script>
+</body>
 </html>

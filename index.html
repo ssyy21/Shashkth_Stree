@@ -230,12 +230,13 @@ body.dark-mode h4 {
 <!-- Floating Help Component -->
 <link rel="stylesheet" href="css/floating_help.css">
 <script src="js/floating_help.js" defer></script>
+
+<!-- Chatbot Component -->
+<link rel="stylesheet" href="css/chatbot.css">
+<script src="js/chatbot.js" defer></script>
 </head>
 
-<body>
-
-
-    
+<body>  
 
 <div id="navbar-container"></div>
 
@@ -298,32 +299,84 @@ body.dark-mode h4 {
             </div>
         </div>
     </nav> -->
+    <div id="navbar-container"></div> 
+ <!-- Overlay -->
+  <div id="overlay" class="overlay" onclick="closeSidebar()"></div>
+   
+  <div class="sidebar-section">
+      <!-- Sidebar Toggle Button -->
+      <button class="sidebar-toggle" onclick="toggleSidebar()">☰</button>
+    
+      <!-- Sidebar -->
+      <aside class="sidebar" id="sidebar">
+        <h2 class="sidebar-title">Awareness Issues</h2>
+        <ul class="sidebar-menu">
+          <li><a href="./Cyberbullying.html">Cyberbullying</a></li>
+          <li><a href="./mental-abuse.html">Mental Abuse</a></li>
+          <li><a href="./workplace-harrassment.html">Workplace Harassment</a></li>
+          <li><a href="DomesticViolence.html">Domestic Violence</a></li>
+          <li><a href="ChildAbuse.html">Child Abuse</a></li>
+          <li><a href="Bullying.html">Bullying</a></li>
+        </ul>
+      </aside>
+  </div>
 
 
     <div id="navbar-container"></div>
-    <section id="hero" class="d-flex align-items-center" style="background-image:url(images/banner1-img.jpg); background-repeat: no-repeat; background-size: cover; background-position: center; height: 100vh;">
-        <button id="themeToggle" class="theme-btn">🌙 Dark Mode</button>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-10 offset-md-1">
-                    <div class="text-center pt-5">
-                        <p class="header-top text-white mb-4"><span class="lang-toggle" data-en="With knowledge in sight, we claim our right." data-hi="[ज्ञान की दृष्टि से, हम अपने अधिकार का दावा करते हैं।]">With knowledge in sight, we claim our right.</span></p>
-                        <h5 class="display-1 text-white mb-5"><span class="lang-toggle" data-en="STRONG AND FREE, AS WE’RE MEANT TO BE" data-hi="[मजबूत और स्वतंत्र, जैसा हमें होना चाहिए]">STRONG AND FREE, AS WE’RE MEANT TO BE</span></h5>
-                        <br>
-                        <br>
-                        <button style="background-color: #CA7EB7; color: white; font-family: cursive; 
-  border-radius: 10px; height: 50px; width: 170px; font-weight: bold; 
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2); border: none; cursor: pointer;"
-  onclick="window.location.href='issues.html'">
-  <span class="lang-toggle" data-en="Explore" data-hi="[अन्वेषण करें]">Explore</span>
-</button>
+<section id="hero" class="d-flex align-items-center" 
+    style="background-image:url(images/banner1-img.jpg); background-repeat: no-repeat; background-size: cover; background-position: center; height: 100vh;">
 
+    <!-- Dark/Light Toggle Button -->
+    <button id="themeToggle" class="theme-btn">🌙 Dark Mode</button>
 
-                    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 offset-md-1">
+                <div class="text-center pt-5">
+
+                    <!-- Top Heading -->
+                    <p class="header-top text-white mb-4">
+                        <span class="lang-toggle"
+                              data-en="With knowledge in sight, we claim our right."
+                              data-hi="[ज्ञान की दृष्टि से, हम अपने अधिकार का दावा करते हैं।]">
+                            With knowledge in sight, we claim our right.
+                        </span>
+                    </p>
+
+                    <!-- Main Banner Text (typewriter version kept from main) -->
+                    <h5 class="display-1 text-white mb-5">
+                        <span class="typewriter-text">
+                            <span class="lang-toggle"
+                                  data-en="STRONG AND FREE, AS WE'RE MEANT TO BE"
+                                  data-hi="[मजबूत और स्वतंत्र, जैसा हमें होना चाहिए]">
+                                STRONG AND FREE, <br/> AS WE'RE MEANT TO BE
+                            </span>
+                        </span>
+                    </h5>
+
+                    <br><br>
+
+                    <!-- Explore Button -->
+                    <button style="background-color: #CA7EB7; color: white; font-family: cursive;
+                                   border-radius: 10px; height: 50px; width: 170px; font-weight: bold;
+                                   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2); border: none; cursor: pointer;"
+                            onclick="window.location.href='issues.html'">
+                        <span class="lang-toggle" data-en="Explore" data-hi="[अन्वेषण करें]">
+                            Explore
+                        </span>
+                    </button>
+
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
     <section class="event-calendar">
         <br>
@@ -922,6 +975,41 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 </script>
+
+<!-- aside bar script -->
+ <script> 
+function toggleSidebar() {
+  const sidebar = document.getElementById("sidebar");
+  const overlay = document.getElementById("overlay");
+  console.log('sidebar');
+  
+
+  // Toggle open/close
+  sidebar.classList.toggle("closed");
+
+  // Show overlay when open (mobile)
+  if (!sidebar.classList.contains("closed")) {
+    overlay.classList.add("show");
+  } else {
+    overlay.classList.remove("show");
+  }
+}
+
+function closeSidebar() {
+  document.getElementById("sidebar").classList.add("closed");
+  document.getElementById("overlay").classList.remove("show");
+}
+
+// Highlight active link
+const currentPage = window.location.pathname.split("/").pop();
+document.querySelectorAll(".sidebar-menu a").forEach(link => {
+  if (link.getAttribute("href") === currentPage) {
+    link.classList.add("active");
+  }
+}); 
+
+</script>
+
 
 <div id="footer-placeholder"></div>
 <script src="js/embed_footer.js" defer></script>

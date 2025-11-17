@@ -15,6 +15,7 @@
 
     <link rel="stylesheet" href="Issuesstyle.css">
     <link rel="stylesheet" href="css/tooplate-style.css">
+    <link rel="stylesheet" href="css/warning-modals.css">
 
     <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/favicon_io/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon_io/favicon-32x32.png">
@@ -296,54 +297,33 @@ input:checked + .lang-slider:before {
   <section class="stress-level severe">
     <h2 style="color: #810CA8;"><span class="lang-toggle" data-en="Immediate Attention Required: Signs of Mental Abuse and Protection Measures🔴" data-hi="तत्काल ध्यान देने की आवश्यकता: मानसिक शोषण के संकेत और सुरक्षा उपाय🔴">Immediate Attention Required: Signs of Mental Abuse and Protection Measures🔴</span></h2>
     <p style="color: white;"><span class="lang-toggle" data-en="You are showing signs of significant mental abuse, which can seriously impact your emotional and mental health. Immediate action is needed." data-hi="आप महत्वपूर्ण मानसिक शोषण के संकेत दिखा रहे हैं, जो आपके भावनात्मक और मानसिक स्वास्थ्य पर गंभीर प्रभाव डाल सकता है। तत्काल कार्रवाई की आवश्यकता है।">You are showing signs of significant mental abuse, which can seriously impact your emotional and mental health. Immediate action is needed.</span></p>
-    <h3 style="color: white;"><span class="lang-toggle" data-en="What You Can Do Right Now:" data-hi="आप अभी क्या कर सकते हैं:">What You Can Do Right Now:</span></h3>
-    <ul>
-      <li><span class="emoji">🚨</span> <span class="lang-toggle" data-en="Seek Support – Reach out to trusted friends, family, or a professional." data-hi="समर्थन लें - विश्वसनीय मित्रों, परिवार या किसी पेशेवर से संपर्क करें।">Seek Support – Reach out to trusted friends, family, or a professional.</span></li>
-      <li><span class="emoji">🛑</span> <span class="lang-toggle" data-en="Set Boundaries – Protect your emotional well-being by distancing yourself." data-hi="सीमाएं निर्धारित करें - खुद को दूर करके अपनी भावनात्मक भलाई की रक्षा करें।">Set Boundaries – Protect your emotional well-being by distancing yourself.</span></li>
-      <li><span class="emoji">📞</span> <span class="lang-toggle" data-en="Contact a Helpline – Get confidential advice from a support service." data-hi="हेल्पलाइन से संपर्क करें - किसी सहायता सेवा से गोपनीय सलाह लें।">Contact a Helpline – Get confidential advice from a support service.</span></li>
-      <li><span class="emoji">📖</span> <span class="lang-toggle" data-en="Journal – Write down your feelings to process your emotions." data-hi="जर्नल - अपनी भावनाओं को संसाधित करने के लिए अपनी भावनाओं को लिखें।">Journal – Write down your feelings to process your emotions.</span></li>
-      <li><span class="emoji">🏞</span> <span class="lang-toggle" data-en="Take Breaks – Create space for yourself to regain balance." data-hi="ब्रेक लें - संतुलन हासिल करने के लिए अपने लिए जगह बनाएं।">Take Breaks – Create space for yourself to regain balance.</span></li>
-      <li><span class="emoji">📅</span> <span class="lang-toggle" data-en="Plan for Safety – Have a plan in place in case the situation worsens." data-hi="सुरक्षा के लिए योजना बनाएं - स्थिति बिगड़ने की स्थिति में एक योजना तैयार रखें।">Plan for Safety – Have a plan in place in case the situation worsens.</span></li>
-    </ul>
+    <button class="read-more-btn" onclick="warningModalHandler.openModal('severeMentalAbuseModal')">
+      <span class="lang-toggle" data-en="Read More" data-hi="और पढ़ें">Read More</span>
+    </button>
   </section>
 
   <section class="stress-level high">
     <h2 style="color: #810CA8;"><span class="lang-toggle" data-en="Warning Signs of Emotional Manipulation 🟠" data-hi="भावनात्मक हेरफेर के चेतावनी संकेत 🟠">Warning Signs of Emotional Manipulation 🟠</span></h2>
     <p style="color: white;"><span class="lang-toggle" data-en="You are experiencing signs of emotional manipulation that could escalate if not addressed. It’s important to take action now to protect your emotional well-being." data-hi="आप भावनात्मक हेरफेर के संकेतों का सामना कर रहे हैं, जिन्हें यदि संबोधित नहीं किया गया तो वे बढ़ सकते हैं। अपनी भावनात्मक भलाई की रक्षा के लिए अभी कार्रवाई करना महत्वपूर्ण है।">You are experiencing signs of emotional manipulation that could escalate if not addressed. It’s important to take action now to protect your emotional well-being.</span></p>
-    <h3 style="color: white;"><span class="lang-toggle" data-en="What You Can Do Right Now:" data-hi="आप अभी क्या कर सकते हैं:">What You Can Do Right Now:</span></h3>
-    <ul>
-      <li><span class="emoji">🚨</span> <span class="lang-toggle" data-en="Talk to Someone You Trust – Open up to a friend or family member who can offer support." data-hi="किसी ऐसे व्यक्ति से बात करें जिस पर आप भरोसा करते हैं - किसी मित्र या परिवार के सदस्य से बात करें जो समर्थन दे सकता है।">Talk to Someone You Trust – Open up to a friend or family member who can offer support.</span></li>
-      <li><span class="emoji">🛑</span> <span class="lang-toggle" data-en="Set Clear Boundaries – Stand firm in protecting your emotions and needs." data-hi="स्पष्ट सीमाएं निर्धारित करें - अपनी भावनाओं और जरूरतों की रक्षा करने में दृढ़ रहें।">Set Clear Boundaries – Stand firm in protecting your emotions and needs.</span></li>
-      <li><span class="emoji">📞</span> <span class="lang-toggle" data-en="Seek Professional Help – A therapist or counselor can guide you through healing and empowerment." data-hi="पेशेवर मदद लें - एक चिकित्सक या परामर्शदाता आपको उपचार और सशक्तिकरण के माध्यम से मार्गदर्शन कर सकता है।">Seek Professional Help – A therapist or counselor can guide you through healing and empowerment.</span></li>
-      <li><span class="emoji">📖</span> <span class="lang-toggle" data-en="Reflect on Your Feelings – Write down instances of manipulation to gain clarity." data-hi="अपनी भावनाओं पर चिंतन करें - स्पष्टता प्राप्त करने के लिए हेरफेर के उदाहरण लिखें।">Reflect on Your Feelings – Write down instances of manipulation to gain clarity.</span></li>
-      <li><span class="emoji">🏞</span> <span class="lang-toggle" data-en="Create Emotional Distance – Spend time away from the person causing harm to reset your emotional balance." data-hi="भावनात्मक दूरी बनाएं - अपने भावनात्मक संतुलन को रीसेट करने के लिए नुकसान पहुंचाने वाले व्यक्ति से दूर समय बिताएं।">Create Emotional Distance – Spend time away from the person causing harm to reset your emotional balance.</span></li>
-      <li><span class="emoji">📅</span> <span class="lang-toggle" data-en="Focus on Self-Care – Engage in activities that nurture your mind and body to restore confidence and strength." data-hi="आत्म-देखभाल पर ध्यान दें - आत्मविश्वास और ताकत बहाल करने के लिए अपने दिमाग और शरीर को पोषित करने वाली गतिविधियों में संलग्न हों।">Focus on Self-Care – Engage in activities that nurture your mind and body to restore confidence and strength.</span></li>
-    </ul>
+    <button class="read-more-btn" onclick="warningModalHandler.openModal('emotionalManipulationModal')">
+      <span class="lang-toggle" data-en="Read More" data-hi="और पढ़ें">Read More</span>
+    </button>
   </section>
 
   <section class="stress-level moderate">
     <h2 style="color: #810CA8;"><span class="lang-toggle" data-en="Mild Concerns 🟡" data-hi="हल्की चिंताएं 🟡">Mild Concerns 🟡</span></h2>
     <p style="color: white;"><span class="lang-toggle" data-en="You may be experiencing mild signs of emotional manipulation. While not overwhelming, it’s important to address these behaviors before they escalate." data-hi="आप भावनात्मक हेरफेर के हल्के संकेतों का अनुभव कर रहे होंगे। हालांकि यह भारी नहीं है, लेकिन इन व्यवहारों को बढ़ने से पहले संबोधित करना महत्वपूर्ण है।">You may be experiencing mild signs of emotional manipulation. While not overwhelming, it’s important to address these behaviors before they escalate.</span></p>
-    <h3 style="color: white;"><span class="lang-toggle" data-en="What You Can Do Right Now:" data-hi="आप अभी क्या कर सकते हैं:">What You Can Do Right Now:</span></h3>
-    <ul>
-      <li><span class="emoji">🚨</span> <span class="lang-toggle" data-en="Talk to Someone You Trust – Share your concerns with a friend or family member." data-hi="किसी ऐसे व्यक्ति से बात करें जिस पर आप भरोसा करते हैं - अपनी चिंताओं को किसी मित्र या परिवार के सदस्य के साथ साझा करें।">Talk to Someone You Trust – Share your concerns with a friend or family member.</span></li>
-      <li><span class="emoji">🛑</span> <span class="lang-toggle" data-en="Set Healthy Boundaries – Protect your emotional space." data-hi="स्वस्थ सीमाएं निर्धारित करें - अपने भावनात्मक स्थान की रक्षा करें।">Set Healthy Boundaries – Protect your emotional space.</span></li>
-      <li><span class="emoji">📞</span> <span class="lang-toggle" data-en="Consider Therapy – A counselor can help you navigate your emotions." data-hi="थेरेपी पर विचार करें - एक परामर्शदाता आपकी भावनाओं को नेविगेट करने में आपकी सहायता कर सकता है।">Consider Therapy – A counselor can help you navigate your emotions.</span></li>
-      <li><span class="emoji">📖</span> <span class="lang-toggle" data-en="Journal Your Feelings – Reflect on your experiences to gain clarity." data-hi="अपनी भावनाओं को जर्नल करें - स्पष्टता प्राप्त करने के लिए अपने अनुभवों पर चिंतन करें।">Journal Your Feelings – Reflect on your experiences to gain clarity.</span></li>
-      <li><span class="emoji">🏞</span> <span class="lang-toggle" data-en="Take Time for Yourself – Engage in self-care to boost your well-being." data-hi="अपने लिए समय निकालें - अपनी भलाई को बढ़ावा देने के लिए आत्म-देखभाल में संलग्न हों।">Take Time for Yourself – Engage in self-care to boost your well-being.</span></li>
-    </ul>
+    <button class="read-more-btn" onclick="warningModalHandler.openModal('mildConcernsModal')">
+      <span class="lang-toggle" data-en="Read More" data-hi="और पढ़ें">Read More</span>
+    </button>
   </section>
 
   <section class="stress-level low">
     <h2 style="color: #810CA8;"><span class="lang-toggle" data-en="Healthy Relationship 🟢" data-hi="स्वस्थ संबंध 🟢">Healthy Relationship 🟢</span></h2>
     <p style="color: white;"><span class="lang-toggle" data-en="You’re in a healthy, supportive environment where mutual respect and care are present. Keep nurturing this positive dynamic." data-hi="आप एक स्वस्थ, सहायक वातावरण में हैं जहाँ आपसी सम्मान और देखभाल मौजूद है। इस सकारात्मक गतिशीलता का पोषण करते रहें।">You’re in a healthy, supportive environment where mutual respect and care are present. Keep nurturing this positive dynamic.</span></p>
-    <h3 style="color: white;"><span class="lang-toggle" data-en="What You Can Do Right Now:" data-hi="आप अभी क्या कर सकते हैं:">What You Can Do Right Now:</span></h3>
-    <ul>
-      <li><span class="emoji">🧘‍♀</span> <span class="lang-toggle" data-en="Maintain Boundaries – Continue protecting your emotional well-being." data-hi="सीमाएं बनाए रखें - अपनी भावनात्मक भलाई की रक्षा करना जारी रखें।">Maintain Boundaries – Continue protecting your emotional well-being.</span></li>
-      <li><span class="emoji">💬</span> <span class="lang-toggle" data-en="Communicate Openly – Keep discussing your feelings to strengthen trust." data-hi="खुलकर संवाद करें - विश्वास मजबूत करने के लिए अपनी भावनाओं पर चर्चा करते रहें।">Communicate Openly – Keep discussing your feelings to strengthen trust.</span></li>
-      <li><span class="emoji">👥</span> <span class="lang-toggle" data-en="Support Each Other – Be there for each other emotionally." data-hi="एक दूसरे का समर्थन करें - भावनात्मक रूप से एक दूसरे के लिए वहां रहें।">Support Each Other – Be there for each other emotionally.</span></li>
-      <li><span class="emoji">📅</span> <span class="lang-toggle" data-en="Practice Self-Care – Take time for yourself to maintain balance." data-hi="आत्म-देखभाल का अभ्यास करें - संतुलन बनाए रखने के लिए अपने लिए समय निकालें।">Practice Self-Care – Take time for yourself to maintain balance.</span></li>
-    </ul>
+    <button class="read-more-btn" onclick="warningModalHandler.openModal('healthyRelationshipModal')">
+      <span class="lang-toggle" data-en="Read More" data-hi="और पढ़ें">Read More</span>
+    </button>
   </section>
 
 </section>
@@ -574,6 +554,98 @@ faqs.forEach(faq => {
 
 <div id="footer-placeholder"></div>
 <script src="js/embed_footer.js" defer></script>
+<script src="js/warning-modals.js"></script>
+
+  
+<!-- Warning Modals for Mental Abuse -->
+<div id="severeMentalAbuseModal" class="warning-modal modal-severe">
+  <div class="modal-content-wrapper" tabindex="-1">
+    <div class="modal-header-custom">
+      <h2><span class="lang-toggle" data-en="Immediate Attention Required 🔴" data-hi="तत्काल ध्यान आवश्यक 🔴">Immediate Attention Required 🔴</span></h2>
+      <button class="modal-close-btn" onclick="warningModalHandler.closeModal(document.getElementById('severeMentalAbuseModal'))" aria-label="Close modal">
+        &times;
+      </button>
+    </div>
+    <div class="modal-body-custom">
+      <p><span class="lang-toggle" data-en="You are showing signs of significant mental abuse, which can seriously impact your emotional and mental health. Immediate action is needed." data-hi="आप महत्वपूर्ण मानसिक शोषण के संकेत दिखा रहे हैं, जो आपके भावनात्मक और मानसिक स्वास्थ्य पर गंभीर प्रभाव डाल सकता है। तत्काल कार्रवाई की आवश्यकता है।">You are showing signs of significant mental abuse, which can seriously impact your emotional and mental health. Immediate action is needed.</span></p>
+      <h3><span class="lang-toggle" data-en="What You Can Do Right Now:" data-hi="आप अभी क्या कर सकते हैं:">What You Can Do Right Now:</span></h3>
+      <ul>
+        <li><span class="emoji">🚨</span> <span class="lang-toggle" data-en="Seek Support – Reach out to trusted friends, family, or a professional." data-hi="समर्थन लें - विश्वसनीय मित्रों, परिवार या किसी पेशेवर से संपर्क करें।">Seek Support – Reach out to trusted friends, family, or a professional.</span></li>
+        <li><span class="emoji">🛑</span> <span class="lang-toggle" data-en="Set Boundaries – Protect your emotional well-being by distancing yourself." data-hi="सीमाएं निर्धारित करें - खुद को दूर करके अपनी भावनात्मक भलाई की रक्षा करें।">Set Boundaries – Protect your emotional well-being by distancing yourself.</span></li>
+        <li><span class="emoji">📞</span> <span class="lang-toggle" data-en="Contact a Helpline – Get confidential advice from a support service." data-hi="हेल्पलाइन से संपर्क करें - किसी सहायता सेवा से गोपनीय सलाह लें।">Contact a Helpline – Get confidential advice from a support service.</span></li>
+        <li><span class="emoji">📖</span> <span class="lang-toggle" data-en="Journal – Write down your feelings to process your emotions." data-hi="जर्नल - अपनी भावनाओं को संसाधित करने के लिए अपनी भावनाओं को लिखें।">Journal – Write down your feelings to process your emotions.</span></li>
+        <li><span class="emoji">🏞</span> <span class="lang-toggle" data-en="Take Breaks – Create space for yourself to regain balance." data-hi="ब्रेक लें - संतुलन हासिल करने के लिए अपने लिए जगह बनाएं।">Take Breaks – Create space for yourself to regain balance.</span></li>
+        <li><span class="emoji">📅</span> <span class="lang-toggle" data-en="Plan for Safety – Have a plan in place in case the situation worsens." data-hi="सुरक्षा के लिए योजना बनाएं - स्थिति बिगड़ने की स्थिति में एक योजना तैयार रखें।">Plan for Safety – Have a plan in place in case the situation worsens.</span></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div id="emotionalManipulationModal" class="warning-modal modal-high">
+  <div class="modal-content-wrapper" tabindex="-1">
+    <div class="modal-header-custom">
+      <h2><span class="lang-toggle" data-en="Warning Signs of Emotional Manipulation 🟠" data-hi="भावनात्मक हेरफेर के चेतावनी संकेत 🟠">Warning Signs of Emotional Manipulation 🟠</span></h2>
+      <button class="modal-close-btn" onclick="warningModalHandler.closeModal(document.getElementById('emotionalManipulationModal'))" aria-label="Close modal">
+        &times;
+      </button>
+    </div>
+    <div class="modal-body-custom">
+      <p><span class="lang-toggle" data-en="You are experiencing signs of emotional manipulation that could escalate if not addressed. It's important to take action now to protect your emotional well-being." data-hi="आप भावनात्मक हेरफेर के संकेतों का सामना कर रहे हैं, जिन्हें यदि संबोधित नहीं किया गया तो वे बढ़ सकते हैं। अपनी भावनात्मक भलाई की रक्षा के लिए अभी कार्रवाई करना महत्वपूर्ण है।">You are experiencing signs of emotional manipulation that could escalate if not addressed. It's important to take action now to protect your emotional well-being.</span></p>
+      <h3><span class="lang-toggle" data-en="What You Can Do Right Now:" data-hi="आप अभी क्या कर सकते हैं:">What You Can Do Right Now:</span></h3>
+      <ul>
+        <li><span class="emoji">🚨</span> <span class="lang-toggle" data-en="Talk to Someone You Trust – Open up to a friend or family member who can offer support." data-hi="किसी ऐसे व्यक्ति से बात करें जिस पर आप भरोसा करते हैं - किसी मित्र या परिवार के सदस्य से बात करें जो समर्थन दे सकता है।">Talk to Someone You Trust – Open up to a friend or family member who can offer support.</span></li>
+        <li><span class="emoji">🛑</span> <span class="lang-toggle" data-en="Set Clear Boundaries – Stand firm in protecting your emotions and needs." data-hi="स्पष्ट सीमाएं निर्धारित करें - अपनी भावनाओं और जरूरतों की रक्षा करने में दृढ़ रहें।">Set Clear Boundaries – Stand firm in protecting your emotions and needs.</span></li>
+        <li><span class="emoji">📞</span> <span class="lang-toggle" data-en="Seek Professional Help – A therapist or counselor can guide you through healing and empowerment." data-hi="पेशेवर मदद लें - एक चिकित्सक या परामर्शदाता आपको उपचार और सशक्तिकरण के माध्यम से मार्गदर्शन कर सकता है।">Seek Professional Help – A therapist or counselor can guide you through healing and empowerment.</span></li>
+        <li><span class="emoji">📖</span> <span class="lang-toggle" data-en="Reflect on Your Feelings – Write down instances of manipulation to gain clarity." data-hi="अपनी भावनाओं पर चिंतन करें - स्पष्टता प्राप्त करने के लिए हेरफेर के उदाहरण लिखें।">Reflect on Your Feelings – Write down instances of manipulation to gain clarity.</span></li>
+        <li><span class="emoji">🏞</span> <span class="lang-toggle" data-en="Create Emotional Distance – Spend time away from the person causing harm to reset your emotional balance." data-hi="भावनात्मक दूरी बनाएं - अपने भावनात्मक संतुलन को रीसेट करने के लिए नुकसान पहुंचाने वाले व्यक्ति से दूर समय बिताएं।">Create Emotional Distance – Spend time away from the person causing harm to reset your emotional balance.</span></li>
+        <li><span class="emoji">📅</span> <span class="lang-toggle" data-en="Focus on Self-Care – Engage in activities that nurture your mind and body to restore confidence and strength." data-hi="आत्म-देखभाल पर ध्यान दें - आत्मविश्वास और ताकत बहाल करने के लिए अपने दिमाग और शरीर को पोषित करने वाली गतिविधियों में संलग्न हों।">Focus on Self-Care – Engage in activities that nurture your mind and body to restore confidence and strength.</span></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div id="mildConcernsModal" class="warning-modal modal-moderate">
+  <div class="modal-content-wrapper" tabindex="-1">
+    <div class="modal-header-custom">
+      <h2><span class="lang-toggle" data-en="Mild Concerns 🟡" data-hi="हल्की चिंताएं 🟡">Mild Concerns 🟡</span></h2>
+      <button class="modal-close-btn" onclick="warningModalHandler.closeModal(document.getElementById('mildConcernsModal'))" aria-label="Close modal">
+        &times;
+      </button>
+    </div>
+    <div class="modal-body-custom">
+      <p><span class="lang-toggle" data-en="You may be experiencing mild signs of emotional manipulation. While not overwhelming, it's important to address these behaviors before they escalate." data-hi="आप भावनात्मक हेरफेर के हल्के संकेतों का अनुभव कर रहे होंगे। हालांकि यह भारी नहीं है, लेकिन इन व्यवहारों को बढ़ने से पहले संबोधित करना महत्वपूर्ण है।">You may be experiencing mild signs of emotional manipulation. While not overwhelming, it's important to address these behaviors before they escalate.</span></p>
+      <h3><span class="lang-toggle" data-en="What You Can Do Right Now:" data-hi="आप अभी क्या कर सकते हैं:">What You Can Do Right Now:</span></h3>
+      <ul>
+        <li><span class="emoji">🚨</span> <span class="lang-toggle" data-en="Talk to Someone You Trust – Share your concerns with a friend or family member." data-hi="किसी ऐसे व्यक्ति से बात करें जिस पर आप भरोसा करते हैं - अपनी चिंताओं को किसी मित्र या परिवार के सदस्य के साथ साझा करें।">Talk to Someone You Trust – Share your concerns with a friend or family member.</span></li>
+        <li><span class="emoji">🛑</span> <span class="lang-toggle" data-en="Set Healthy Boundaries – Protect your emotional space." data-hi="स्वस्थ सीमाएं निर्धारित करें - अपने भावनात्मक स्थान की रक्षा करें।">Set Healthy Boundaries – Protect your emotional space.</span></li>
+        <li><span class="emoji">📞</span> <span class="lang-toggle" data-en="Consider Therapy – A counselor can help you navigate your emotions." data-hi="थेरेपी पर विचार करें - एक परामर्शदाता आपकी भावनाओं को नेविगेट करने में आपकी सहायता कर सकता है।">Consider Therapy – A counselor can help you navigate your emotions.</span></li>
+        <li><span class="emoji">📖</span> <span class="lang-toggle" data-en="Journal Your Feelings – Reflect on your experiences to gain clarity." data-hi="अपनी भावनाओं को जर्नल करें - स्पष्टता प्राप्त करने के लिए अपने अनुभवों पर चिंतन करें।">Journal Your Feelings – Reflect on your experiences to gain clarity.</span></li>
+        <li><span class="emoji">🏞</span> <span class="lang-toggle" data-en="Take Time for Yourself – Engage in self-care to boost your well-being." data-hi="अपने लिए समय निकालें - अपनी भलाई को बढ़ावा देने के लिए आत्म-देखभाल में संलग्न हों।">Take Time for Yourself – Engage in self-care to boost your well-being.</span></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div id="healthyRelationshipModal" class="warning-modal modal-low">
+  <div class="modal-content-wrapper" tabindex="-1">
+    <div class="modal-header-custom">
+      <h2><span class="lang-toggle" data-en="Healthy Relationship 🟢" data-hi="स्वस्थ संबंध 🟢">Healthy Relationship 🟢</span></h2>
+      <button class="modal-close-btn" onclick="warningModalHandler.closeModal(document.getElementById('healthyRelationshipModal'))" aria-label="Close modal">
+        &times;
+      </button>
+    </div>
+    <div class="modal-body-custom">
+      <p><span class="lang-toggle" data-en="You're in a healthy, supportive environment where mutual respect and care are present. Keep nurturing this positive dynamic." data-hi="आप एक स्वस्थ, सहायक वातावरण में हैं जहाँ आपसी सम्मान और देखभाल मौजूद है। इस सकारात्मक गतिशीलता का पोषण करते रहें।">You're in a healthy, supportive environment where mutual respect and care are present. Keep nurturing this positive dynamic.</span></p>
+      <h3><span class="lang-toggle" data-en="What You Can Do Right Now:" data-hi="आप अभी क्या कर सकते हैं:">What You Can Do Right Now:</span></h3>
+      <ul>
+        <li><span class="emoji">🧘‍♀</span> <span class="lang-toggle" data-en="Maintain Boundaries – Continue protecting your emotional well-being." data-hi="सीमाएं बनाए रखें - अपनी भावनात्मक भलाई की रक्षा करना जारी रखें।">Maintain Boundaries – Continue protecting your emotional well-being.</span></li>
+        <li><span class="emoji">💬</span> <span class="lang-toggle" data-en="Communicate Openly – Keep discussing your feelings to strengthen trust." data-hi="खुलकर संवाद करें - विश्वास मजबूत करने के लिए अपनी भावनाओं पर चर्चा करते रहें।">Communicate Openly – Keep discussing your feelings to strengthen trust.</span></li>
+        <li><span class="emoji">👥</span> <span class="lang-toggle" data-en="Support Each Other – Be there for each other emotionally." data-hi="एक दूसरे का समर्थन करें - भावनात्मक रूप से एक दूसरे के लिए वहां रहें।">Support Each Other – Be there for each other emotionally.</span></li>
+        <li><span class="emoji">📅</span> <span class="lang-toggle" data-en="Practice Self-Care – Take time for yourself to maintain balance." data-hi="आत्म-देखभाल का अभ्यास करें - संतुलन बनाए रखने के लिए अपने लिए समय निकालें।">Practice Self-Care – Take time for yourself to maintain balance.</span></li>
+      </ul>
+    </div>
+  </div>
+</div>
 
   </body>
 </html>

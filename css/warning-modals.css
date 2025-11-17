@@ -1,0 +1,262 @@
+/* Warning Section Modals - Custom Styling */
+/* Created to provide a cleaner UI for warning and risk sections */
+
+.warning-modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+    animation: fadeIn 0.3s ease-out;
+}
+
+.warning-modal.show {
+    display: block;
+}
+
+.modal-content-wrapper {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    margin: 3% auto;
+    padding: 0;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 800px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    animation: slideDown 0.4s ease-out;
+    position: relative;
+    overflow: hidden;
+}
+
+.modal-header-custom {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 25px 30px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-header-custom h2 {
+    color: #fff;
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.modal-close-btn {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: #fff;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    line-height: 1;
+}
+
+.modal-close-btn:hover,
+.modal-close-btn:focus {
+    background: rgba(255, 255, 255, 0.3);
+    transform: rotate(90deg);
+}
+
+.modal-body-custom {
+    padding: 30px;
+    color: #fff;
+    max-height: 60vh;
+    overflow-y: auto;
+}
+
+.modal-body-custom::-webkit-scrollbar {
+    width: 8px;
+}
+
+.modal-body-custom::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+.modal-body-custom::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+}
+
+.modal-body-custom::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.modal-body-custom p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.modal-body-custom h3 {
+    color: #fff;
+    font-size: 1.4rem;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.modal-body-custom ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.modal-body-custom ul li {
+    padding: 12px 0;
+    padding-left: 35px;
+    position: relative;
+    font-size: 1rem;
+    line-height: 1.6;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.modal-body-custom ul li:last-child {
+    border-bottom: none;
+}
+
+.modal-body-custom ul li .emoji {
+    position: absolute;
+    left: 0;
+    top: 12px;
+    font-size: 1.3rem;
+}
+
+/* Read More Button Styling */
+.read-more-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 25px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.read-more-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+    color: #fff;
+    text-decoration: none;
+}
+
+.read-more-btn:active {
+    transform: translateY(0);
+}
+
+/* Severity-based color themes */
+.modal-severe .modal-content-wrapper {
+    background: linear-gradient(135deg, #fc5c7d 0%, #6a0572 100%);
+}
+
+.modal-high .modal-content-wrapper {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.modal-moderate .modal-content-wrapper {
+    background: linear-gradient(135deg, #ffd89b 0%, #19547b 100%);
+}
+
+.modal-low .modal-content-wrapper {
+    background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+}
+
+.modal-low .modal-body-custom p,
+.modal-low .modal-body-custom h3,
+.modal-low .modal-header-custom h2 {
+    color: #333;
+}
+
+.modal-low .modal-close-btn {
+    color: #333;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .modal-content-wrapper {
+        width: 95%;
+        margin: 10% auto;
+    }
+    
+    .modal-header-custom {
+        padding: 20px;
+    }
+    
+    .modal-header-custom h2 {
+        font-size: 1.4rem;
+    }
+    
+    .modal-body-custom {
+        padding: 20px;
+        max-height: 70vh;
+    }
+    
+    .modal-body-custom p {
+        font-size: 0.95rem;
+    }
+    
+    .modal-body-custom h3 {
+        font-size: 1.2rem;
+    }
+}
+
+/* Accessibility */
+.modal-content-wrapper:focus {
+    outline: 3px solid rgba(255, 255, 255, 0.5);
+    outline-offset: 2px;
+}
+
+/* Prevent body scroll when modal is open */
+body.modal-open {
+    overflow: hidden;
+}

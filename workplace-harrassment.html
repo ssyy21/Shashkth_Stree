@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="Issuesstyle.css">
     <link rel="stylesheet" href="css/tooplate-style.css">
     <link rel="stylesheet" href="back_top_button.css">
+    <link rel="stylesheet" href="css/warning-modals.css">
 
     <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/favicon_io/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon_io/favicon-32x32.png">
@@ -222,50 +223,33 @@
       <section class="stress-level severe mb-4">
         <h2 style="color: #810CA8;"><span class="lang-toggle" data-en="Urgent Action Needed: Workplace Harassment Detected 🔴" data-hi="तत्काल कार्रवाई की आवश्यकता: कार्यस्थल उत्पीड़न का पता चला 🔴">Urgent Action Needed: Workplace Harassment Detected 🔴</span></h2>
         <p style="color: white;"><span class="lang-toggle" data-en="You are experiencing severe workplace harassment, which can negatively impact your mental health and professional growth. Immediate action is necessary." data-hi="आप गंभीर कार्यस्थल उत्पीड़न का सामना कर रहे हैं, जो आपके मानसिक स्वास्थ्य और पेशेवर विकास पर नकारात्मक प्रभाव डाल सकता है। तत्काल कार्रवाई आवश्यक है।">You are experiencing severe workplace harassment, which can negatively impact your mental health and professional growth. Immediate action is necessary.</span></p>
-        <h3 style="color: white;"><span class="lang-toggle" data-en="What You Can Do Right Now:" data-hi="आप अभी क्या कर सकते हैं:">What You Can Do Right Now:</span></h3>
-        <ul>
-          <li>🚨 <span class="lang-toggle" data-en="Report the Issue – Contact HR or a legal advisor to document and report the harassment." data-hi="मुद्दे की रिपोर्ट करें - उत्पीड़न का दस्तावेजीकरण और रिपोर्ट करने के लिए मानव संसाधन या कानूनी सलाहकार से संपर्क करें।">Report the Issue – Contact HR or a legal advisor to document and report the harassment.</span></li>
-          <li>🛑 <span class="lang-toggle" data-en="Set Boundaries – Clearly communicate that certain behaviors are unacceptable." data-hi="सीमाएं निर्धारित करें - स्पष्ट रूप से बताएं कि कुछ व्यवहार अस्वीकार्य हैं।">Set Boundaries – Clearly communicate that certain behaviors are unacceptable.</span></li>
-          <li>📞 <span class="lang-toggle" data-en="Seek Legal Help – Know your rights and consult a lawyer if needed." data-hi="कानूनी सहायता लें - अपने अधिकारों को जानें और यदि आवश्यक हो तो वकील से परामर्श करें।">Seek Legal Help – Know your rights and consult a lawyer if needed.</span></li>
-          <li>📖 <span class="lang-toggle" data-en="Keep Records – Maintain a log of incidents, emails, or messages as evidence." data-hi="रिकॉर्ड रखें - सबूत के तौर पर घटनाओं, ईमेल या संदेशों का लॉग बनाए रखें।">Keep Records – Maintain a log of incidents, emails, or messages as evidence.</span></li>
-          <li>🏞 <span class="lang-toggle" data-en="Prioritize Self-Care – Engage in stress-relieving activities to protect your mental well-being." data-hi="आत्म-देखभाल को प्राथमिकता दें - अपने मानसिक कल्याण की रक्षा के लिए तनाव-मुक्ति गतिविधियों में संलग्न हों।">Prioritize Self-Care – Engage in stress-relieving activities to protect your mental well-being.</span></li>
-        </ul>
+        <button class="read-more-btn" onclick="warningModalHandler.openModal('severeHarassmentModal')">
+          <span class="lang-toggle" data-en="Read More" data-hi="और पढ़ें">Read More</span>
+        </button>
       </section>
 
       <section class="stress-level high mb-4">
         <h2 style="color: #810CA8;"><span class="lang-toggle" data-en="Workplace Harassment Warning Signs 🟠" data-hi="कार्यस्थल उत्पीड़न चेतावनी संकेत 🟠">Workplace Harassment Warning Signs 🟠</span></h2>
         <p style="color: white;"><span class="lang-toggle" data-en="You are facing concerning behaviors at work that could indicate harassment. Addressing these early is crucial to ensuring a safe and respectful workplace." data-hi="आप काम पर चिंताजनक व्यवहारों का सामना कर रहे हैं जो उत्पीड़न का संकेत हो सकते हैं। एक सुरक्षित और सम्मानजनक कार्यस्थल सुनिश्चित करने के लिए इन्हें जल्दी संबोधित करना महत्वपूर्ण है।">You are facing concerning behaviors at work that could indicate harassment. Addressing these early is crucial to ensuring a safe and respectful workplace.</span></p>
-        <h3 style="color: white;"><span class="lang-toggle" data-en="What You Can Do Right Now:" data-hi="आप अभी क्या कर सकते हैं:">What You Can Do Right Now:</span></h3>
-        <ul>
-          <li>🔄 <span class="lang-toggle" data-en="Document Incidents – Keep a record of any inappropriate actions or comments." data-hi="घटनाओं का दस्तावेजीकरण करें - किसी भी अनुचित कार्रवाई या टिप्पणी का रिकॉर्ड रखें।">Document Incidents – Keep a record of any inappropriate actions or comments.</span></li>
-          <li>📢 <span class="lang-toggle" data-en="Speak Up – If safe, address the behavior with the individual involved." data-hi="बोलें - यदि सुरक्षित हो, तो संबंधित व्यक्ति के साथ व्यवहार को संबोधित करें।">Speak Up – If safe, address the behavior with the individual involved.</span></li>
-        </ul>
+        <button class="read-more-btn" onclick="warningModalHandler.openModal('warningHarassmentModal')">
+          <span class="lang-toggle" data-en="Read More" data-hi="और पढ़ें">Read More</span>
+        </button>
       </section>
 
       <section class="stress-level moderate mb-4">
         <h2 style="color: #810CA8;"><span class="lang-toggle" data-en="Be Aware: Potential Workplace Issues 🟡" data-hi="जागरूक रहें: संभावित कार्यस्थल मुद्दे 🟡">Be Aware: Potential Workplace Issues 🟡</span></h2>
         <p style="color: white;"><span class="lang-toggle" data-en="Some behaviors at work may be uncomfortable but do not necessarily qualify as harassment. However, staying informed and setting clear boundaries is essential." data-hi="काम पर कुछ व्यवहार असहज हो सकते हैं लेकिन जरूरी नहीं कि वे उत्पीड़न की श्रेणी में आएं। हालांकि, सूचित रहना और स्पष्ट सीमाएं निर्धारित करना आवश्यक है।">Some behaviors at work may be uncomfortable but do not necessarily qualify as harassment. However, staying informed and setting clear boundaries is essential.</span></p>
-        <h3 style="color: white;"><span class="lang-toggle" data-en="What You Can Do Right Now:" data-hi="आप अभी क्या कर सकते हैं:">What You Can Do Right Now:</span></h3>
-        <ul>
-          <li>☀ <span class="lang-toggle" data-en="Set Clear Boundaries – Politely but firmly communicate personal limits." data-hi="स्पष्ट सीमाएं निर्धारित करें - विनम्रता से लेकिन दृढ़ता से व्यक्तिगत सीमाओं को संप्रेषित करें।">Set Clear Boundaries – Politely but firmly communicate personal limits.</span></li>
-          <li>📝 <span class="lang-toggle" data-en="Monitor the Situation – Keep an eye on recurring behavior and how it affects you." data-hi="स्थिति की निगरानी करें - आवर्ती व्यवहार और यह आपको कैसे प्रभावित करता है, इस पर नज़र रखें।">Monitor the Situation – Keep an eye on recurring behavior and how it affects you.</span></li>
-          <li>🗣 <span class="lang-toggle" data-en="Address Issues Early – Speak up if something makes you uncomfortable." data-hi="मुद्दों को जल्दी संबोधित करें - यदि कुछ आपको असहज करता है तो बोलें।">Address Issues Early – Speak up if something makes you uncomfortable.</span></li>
-          <li>📖 <span class="lang-toggle" data-en="Know Company Policies – Understand what protections exist in your workplace." data-hi="कंपनी की नीतियों को जानें - समझें कि आपके कार्यस्थल में क्या सुरक्षा मौजूद है।">Know Company Policies – Understand what protections exist in your workplace.</span></li>
-          <li>😌 <span class="lang-toggle" data-en="Maintain Professionalism – Focus on your work while safeguarding your well-being." data-hi="व्यावसायिकता बनाए रखें - अपने कल्याण की रक्षा करते हुए अपने काम पर ध्यान केंद्रित करें।">Maintain Professionalism – Focus on your work while safeguarding your well-being.</span></li>
-        </ul>
+        <button class="read-more-btn" onclick="warningModalHandler.openModal('moderateHarassmentModal')">
+          <span class="lang-toggle" data-en="Read More" data-hi="और पढ़ें">Read More</span>
+        </button>
       </section>
 
       <section class="stress-level low mb-4">
         <h2 style="color: #810CA8;"><span class="lang-toggle" data-en="Healthy Workplace Environment 🟢" data-hi="स्वस्थ कार्यस्थल वातावरण 🟢">Healthy Workplace Environment 🟢</span></h2>
         <p style="color: white;"><span class="lang-toggle" data-en="You are in a positive and respectful workplace where harassment is not a concern. Continue fostering a supportive work culture." data-hi="आप एक सकारात्मक और सम्मानजनक कार्यस्थल पर हैं जहाँ उत्पीड़न कोई चिंता का विषय नहीं है। एक सहायक कार्य संस्कृति को बढ़ावा देना जारी रखें।">You are in a positive and respectful workplace where harassment is not a concern. Continue fostering a supportive work culture.</span></p>
-        <h3 style="color: white;"><span class="lang-toggle" data-en="What You Can Do Right Now:" data-hi="आप अभी क्या कर सकते हैं:">What You Can Do Right Now:</span></h3>
-        <ul>
-          <li>🧘‍♂️ <span class="lang-toggle" data-en="Promote Respect – Encourage a culture of professionalism and mutual respect." data-hi="सम्मान को बढ़ावा दें - व्यावसायिकता और आपसी सम्मान की संस्कृति को प्रोत्साहित करें।">Promote Respect – Encourage a culture of professionalism and mutual respect.</span></li>
-          <li>💡 <span class="lang-toggle" data-en="Stay Informed – Keep up with workplace policies and ethical guidelines." data-hi="सूचित रहें - कार्यस्थल की नीतियों और नैतिक दिशानिर्देशों के साथ बने रहें।">Stay Informed – Keep up with workplace policies and ethical guidelines.</span></li>
-          <li>📍 <span class="lang-toggle" data-en="Support Colleagues – Help others feel safe and respected in the workplace." data-hi="सहकर्मियों का समर्थन करें - कार्यस्थल में दूसरों को सुरक्षित और सम्मानित महसूस करने में मदद करें।">Support Colleagues – Help others feel safe and respected in the workplace.</span></li>
-          <li>📢 <span class="lang-toggle" data-en="Be an Advocate – Speak out against any inappropriate workplace behaviors." data-hi="एक पैरोकार बनें - किसी भी अनुचित कार्यस्थल व्यवहार के खिलाफ बोलें।">Be an Advocate – Speak out against any inappropriate workplace behaviors.</span></li>
-          <li>🌍 <span class="lang-toggle" data-en="Foster Inclusivity – Encourage diversity and fairness within your team." data-hi="समावेशिता को बढ़ावा दें - अपनी टीम के भीतर विविधता और निष्पक्षता को प्रोत्साहित करें।">Foster Inclusivity – Encourage diversity and fairness within your team.</span></li>
-        </ul>
+        <button class="read-more-btn" onclick="warningModalHandler.openModal('healthyWorkplaceModal')">
+          <span class="lang-toggle" data-en="Read More" data-hi="और पढ़ें">Read More</span>
+        </button>
       </section>
 
     </section>
@@ -451,5 +435,93 @@ faqs.forEach(faq => {
     <div id="footer-placeholder"></div>
     <script src="js/embed_footer.js" defer></script>
 
-  </body>
+  
+<!-- Warning Modals for Workplace Harassment -->
+<div id="severeHarassmentModal" class="warning-modal modal-severe">
+  <div class="modal-content-wrapper" tabindex="-1">
+    <div class="modal-header-custom">
+      <h2><span class="lang-toggle" data-en="Urgent Action Needed: Workplace Harassment Detected 🔴" data-hi="तत्काल कार्रवाई की आवश्यकता: कार्यस्थल उत्पीड़न का पता चला 🔴">Urgent Action Needed: Workplace Harassment Detected 🔴</span></h2>
+      <button class="modal-close-btn" onclick="warningModalHandler.closeModal(document.getElementById('severeHarassmentModal'))" aria-label="Close modal">
+        &times;
+      </button>
+    </div>
+    <div class="modal-body-custom">
+      <p><span class="lang-toggle" data-en="You are experiencing severe workplace harassment, which can negatively impact your mental health and professional growth. Immediate action is necessary." data-hi="आप गंभीर कार्यस्थल उत्पीड़न का सामना कर रहे हैं, जो आपके मानसिक स्वास्थ्य और पेशेवर विकास पर नकारात्मक प्रभाव डाल सकता है। तत्काल कार्रवाई आवश्यक है।">You are experiencing severe workplace harassment, which can negatively impact your mental health and professional growth. Immediate action is necessary.</span></p>
+      <h3><span class="lang-toggle" data-en="What You Can Do Right Now:" data-hi="आप अभी क्या कर सकते हैं:">What You Can Do Right Now:</span></h3>
+      <ul>
+        <li>🚨 <span class="lang-toggle" data-en="Report the Issue – Contact HR or a legal advisor to document and report the harassment." data-hi="मुद्दे की रिपोर्ट करें - उत्पीड़न का दस्तावेजीकरण और रिपोर्ट करने के लिए मानव संसाधन या कानूनी सलाहकार से संपर्क करें।">Report the Issue – Contact HR or a legal advisor to document and report the harassment.</span></li>
+        <li>🛑 <span class="lang-toggle" data-en="Set Boundaries – Clearly communicate that certain behaviors are unacceptable." data-hi="सीमाएं निर्धारित करें - स्पष्ट रूप से बताएं कि कुछ व्यवहार अस्वीकार्य हैं।">Set Boundaries – Clearly communicate that certain behaviors are unacceptable.</span></li>
+        <li>📞 <span class="lang-toggle" data-en="Seek Legal Help – Know your rights and consult a lawyer if needed." data-hi="कानूनी सहायता लें - अपने अधिकारों को जानें और यदि आवश्यक हो तो वकील से परामर्श करें।">Seek Legal Help – Know your rights and consult a lawyer if needed.</span></li>
+        <li>📖 <span class="lang-toggle" data-en="Keep Records – Maintain a log of incidents, emails, or messages as evidence." data-hi="रिकॉर्ड रखें - सबूत के तौर पर घटनाओं, ईमेल या संदेशों का लॉग बनाए रखें।">Keep Records – Maintain a log of incidents, emails, or messages as evidence.</span></li>
+        <li>🏞 <span class="lang-toggle" data-en="Prioritize Self-Care – Engage in stress-relieving activities to protect your mental well-being." data-hi="आत्म-देखभाल को प्राथमिकता दें - अपने मानसिक कल्याण की रक्षा के लिए तनाव-मुक्ति गतिविधियों में संलग्न हों।">Prioritize Self-Care – Engage in stress-relieving activities to protect your mental well-being.</span></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div id="warningHarassmentModal" class="warning-modal modal-high">
+  <div class="modal-content-wrapper" tabindex="-1">
+    <div class="modal-header-custom">
+      <h2><span class="lang-toggle" data-en="Workplace Harassment Warning Signs 🟠" data-hi="कार्यस्थल उत्पीड़न चेतावनी संकेत 🟠">Workplace Harassment Warning Signs 🟠</span></h2>
+      <button class="modal-close-btn" onclick="warningModalHandler.closeModal(document.getElementById('warningHarassmentModal'))" aria-label="Close modal">
+        &times;
+      </button>
+    </div>
+    <div class="modal-body-custom">
+      <p><span class="lang-toggle" data-en="You are facing concerning behaviors at work that could indicate harassment. Addressing these early is crucial to ensuring a safe and respectful workplace." data-hi="आप काम पर चिंताजनक व्यवहारों का सामना कर रहे हैं जो उत्पीड़न का संकेत हो सकते हैं। एक सुरक्षित और सम्मानजनक कार्यस्थल सुनिश्चित करने के लिए इन्हें जल्दी संबोधित करना महत्वपूर्ण है।">You are facing concerning behaviors at work that could indicate harassment. Addressing these early is crucial to ensuring a safe and respectful workplace.</span></p>
+      <h3><span class="lang-toggle" data-en="What You Can Do Right Now:" data-hi="आप अभी क्या कर सकते हैं:">What You Can Do Right Now:</span></h3>
+      <ul>
+        <li>🔄 <span class="lang-toggle" data-en="Document Incidents – Keep a record of any inappropriate actions or comments." data-hi="घटनाओं का दस्तावेजीकरण करें - किसी भी अनुचित कार्रवाई या टिप्पणी का रिकॉर्ड रखें।">Document Incidents – Keep a record of any inappropriate actions or comments.</span></li>
+        <li>📢 <span class="lang-toggle" data-en="Speak Up – If safe, address the behavior with the individual involved." data-hi="बोलें - यदि सुरक्षित हो, तो संबंधित व्यक्ति के साथ व्यवहार को संबोधित करें।">Speak Up – If safe, address the behavior with the individual involved.</span></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div id="moderateHarassmentModal" class="warning-modal modal-moderate">
+  <div class="modal-content-wrapper" tabindex="-1">
+    <div class="modal-header-custom">
+      <h2><span class="lang-toggle" data-en="Be Aware: Potential Workplace Issues 🟡" data-hi="जागरूक रहें: संभावित कार्यस्थल मुद्दे 🟡">Be Aware: Potential Workplace Issues 🟡</span></h2>
+      <button class="modal-close-btn" onclick="warningModalHandler.closeModal(document.getElementById('moderateHarassmentModal'))" aria-label="Close modal">
+        &times;
+      </button>
+    </div>
+    <div class="modal-body-custom">
+      <p><span class="lang-toggle" data-en="Some behaviors at work may be uncomfortable but do not necessarily qualify as harassment. However, staying informed and setting clear boundaries is essential." data-hi="काम पर कुछ व्यवहार असहज हो सकते हैं लेकिन जरूरी नहीं कि वे उत्पीड़न की श्रेणी में आएं। हालांकि, सूचित रहना और स्पष्ट सीमाएं निर्धारित करना आवश्यक है।">Some behaviors at work may be uncomfortable but do not necessarily qualify as harassment. However, staying informed and setting clear boundaries is essential.</span></p>
+      <h3><span class="lang-toggle" data-en="What You Can Do Right Now:" data-hi="आप अभी क्या कर सकते हैं:">What You Can Do Right Now:</span></h3>
+      <ul>
+        <li>☀ <span class="lang-toggle" data-en="Set Clear Boundaries – Politely but firmly communicate personal limits." data-hi="स्पष्ट सीमाएं निर्धारित करें - विनम्रता से लेकिन दृढ़ता से व्यक्तिगत सीमाओं को संप्रेषित करें।">Set Clear Boundaries – Politely but firmly communicate personal limits.</span></li>
+        <li>📝 <span class="lang-toggle" data-en="Monitor the Situation – Keep an eye on recurring behavior and how it affects you." data-hi="स्थिति की निगरानी करें - आवर्ती व्यवहार और यह आपको कैसे प्रभावित करता है, इस पर नज़र रखें।">Monitor the Situation – Keep an eye on recurring behavior and how it affects you.</span></li>
+        <li>🗣 <span class="lang-toggle" data-en="Address Issues Early – Speak up if something makes you uncomfortable." data-hi="मुद्दों को जल्दी संबोधित करें - यदि कुछ आपको असहज करता है तो बोलें।">Address Issues Early – Speak up if something makes you uncomfortable.</span></li>
+        <li>📖 <span class="lang-toggle" data-en="Know Company Policies – Understand what protections exist in your workplace." data-hi="कंपनी की नीतियों को जानें - समझें कि आपके कार्यस्थल में क्या सुरक्षा मौजूद है।">Know Company Policies – Understand what protections exist in your workplace.</span></li>
+        <li>😌 <span class="lang-toggle" data-en="Maintain Professionalism – Focus on your work while safeguarding your well-being." data-hi="व्यावसायिकता बनाए रखें - अपने कल्याण की रक्षा करते हुए अपने काम पर ध्यान केंद्रित करें।">Maintain Professionalism – Focus on your work while safeguarding your well-being.</span></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div id="healthyWorkplaceModal" class="warning-modal modal-low">
+  <div class="modal-content-wrapper" tabindex="-1">
+    <div class="modal-header-custom">
+      <h2><span class="lang-toggle" data-en="Healthy Workplace Environment 🟢" data-hi="स्वस्थ कार्यस्थल वातावरण 🟢">Healthy Workplace Environment 🟢</span></h2>
+      <button class="modal-close-btn" onclick="warningModalHandler.closeModal(document.getElementById('healthyWorkplaceModal'))" aria-label="Close modal">
+        &times;
+      </button>
+    </div>
+    <div class="modal-body-custom">
+      <p><span class="lang-toggle" data-en="You are in a positive and respectful workplace where harassment is not a concern. Continue fostering a supportive work culture." data-hi="आप एक सकारात्मक और सम्मानजनक कार्यस्थल पर हैं जहाँ उत्पीड़न कोई चिंता का विषय नहीं है। एक सहायक कार्य संस्कृति को बढ़ावा देना जारी रखें।">You are in a positive and respectful workplace where harassment is not a concern. Continue fostering a supportive work culture.</span></p>
+      <h3><span class="lang-toggle" data-en="What You Can Do Right Now:" data-hi="आप अभी क्या कर सकते हैं:">What You Can Do Right Now:</span></h3>
+      <ul>
+        <li>🧘‍♂️ <span class="lang-toggle" data-en="Promote Respect – Encourage a culture of professionalism and mutual respect." data-hi="सम्मान को बढ़ावा दें - व्यावसायिकता और आपसी सम्मान की संस्कृति को प्रोत्साहित करें।">Promote Respect – Encourage a culture of professionalism and mutual respect.</span></li>
+        <li>💡 <span class="lang-toggle" data-en="Stay Informed – Keep up with workplace policies and ethical guidelines." data-hi="सूचित रहें - कार्यस्थल की नीतियों और नैतिक दिशानिर्देशों के साथ बने रहें।">Stay Informed – Keep up with workplace policies and ethical guidelines.</span></li>
+        <li>📍 <span class="lang-toggle" data-en="Support Colleagues – Help others feel safe and respected in the workplace." data-hi="सहकर्मियों का समर्थन करें - कार्यस्थल में दूसरों को सुरक्षित और सम्मानित महसूस करने में मदद करें।">Support Colleagues – Help others feel safe and respected in the workplace.</span></li>
+        <li>📢 <span class="lang-toggle" data-en="Be an Advocate – Speak out against any inappropriate workplace behaviors." data-hi="एक पैरोकार बनें - किसी भी अनुचित कार्यस्थल व्यवहार के खिलाफ बोलें।">Be an Advocate – Speak out against any inappropriate workplace behaviors.</span></li>
+        <li>🌍 <span class="lang-toggle" data-en="Foster Inclusivity – Encourage diversity and fairness within your team." data-hi="समावेशिता को बढ़ावा दें - अपनी टीम के भीतर विविधता और निष्पक्षता को प्रोत्साहित करें।">Foster Inclusivity – Encourage diversity and fairness within your team.</span></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+  <script src="js/warning-modals.js"></script>
+</body>
 </html>

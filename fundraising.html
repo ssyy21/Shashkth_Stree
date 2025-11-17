@@ -42,7 +42,8 @@
   padding-left: 15px; /* Add some space from other nav items */
 }
 .lang-toggle-label {
-  margin: 0 5px;
+  margin: 5 10px;
+  margin-right: 10px ;
   font-size: 14px;
   font-weight: bold;
   color: rgba(255, 255, 255, 0.7); /* Match navbar link color */
@@ -102,6 +103,7 @@ input:checked + .lang-slider:before {
 }
 
 
+
 /* Responsive adjustment for mobile */
 @media (max-width: 991.98px) {
   .lang-toggle-nav {
@@ -123,6 +125,10 @@ input:checked + .lang-slider:before {
     <!-- Floating Help Component -->
     <link rel="stylesheet" href="css/floating_help.css">
     <script src="js/floating_help.js" defer></script>
+    
+    <!-- Chatbot Component -->
+    <link rel="stylesheet" href="css/chatbot.css">
+    <script src="js/chatbot.js" defer></script>
 	
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
@@ -343,8 +349,18 @@ input:checked + .lang-slider:before {
 							<h2><a href="#"><span class="lang-toggle" id="head1" data-en="Pad Distribution for Women" data-hi="महिलाओं के लिए पैड वितरण">Pad Distribution for Women</span></a></h2>
 							<p><span class="lang-toggle" data-en="Providing free sanitary pads to ensure menstrual hygiene and dignity." data-hi="मासिक धर्म स्वच्छता और सम्मान सुनिश्चित करने के लिए मुफ्त सैनिटरी पैड प्रदान करना।">Providing free sanitary pads to ensure menstrual hygiene and dignity.</span></p>
 							<div class="goal mb-4">
-								<p><span class="lang-toggle" data-en="<span>Rs.3,800</span> to go" data-hi="<span>रु. 3,800</span> शेष"><span>Rs.3,800</span> to go</span></p>
-								
+								<div class="d-flex justify-content-between mb-2">
+									<span class="font-weight-bold"><span class="lang-toggle" data-en="Goal:" data-hi="लक्ष्य:">Goal:</span> <span>Rs.10,000</span></span>
+									<span class="font-weight-bold"><span class="lang-toggle" data-en="Raised:" data-hi="जुटाया:">Raised:</span> <span>Rs.6,200</span></span>
+								</div>
+								<div class="progress" style="height: 25px; border-radius: 10px;">
+									<div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" 
+										 style="width: 62%; background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);" 
+										 aria-valuenow="62" aria-valuemin="0" aria-valuemax="100">
+										<span class="font-weight-bold">62%</span>
+									</div>
+								</div>
+								<p class="mt-2 mb-0"><small><span class="lang-toggle" data-en="<span>Rs.3,800</span> to go" data-hi="<span>रु. 3,800</span> शेष"><span>Rs.3,800</span> to go</span></small></p>
 							</div>
 							<p><a href="#" class="btn btn-light w-100"><span class="lang-toggle" data-en="Donate Now" data-hi="अभी दान करें">Donate Now</span></a></p>
 						</div>
@@ -357,8 +373,18 @@ input:checked + .lang-slider:before {
 							<h2><a href="#"><span class="lang-toggle" id="head1" data-en="Education for Underprivileged Girls" data-hi="वंचित लड़कियों के लिए शिक्षा">Education for Underprivileged Girls</span></a></h2>
 							<p><span class="lang-toggle" data-en="Supporting girls with access to schools, books, and scholarships." data-hi="लड़कियों को स्कूल, किताबें और छात्रवृत्ति तक पहुंच प्रदान करना।">Supporting girls with access to schools, books, and scholarships.</span></p>
 							<div class="goal mb-4">
-								<p><span class="lang-toggle" data-en="<span>Rs.3,800</span> to go" data-hi="<span>रु. 3,800</span> शेष"><span>Rs.3,800</span> to go</span></p>
-								
+								<div class="d-flex justify-content-between mb-2">
+									<span class="font-weight-bold"><span class="lang-toggle" data-en="Goal:" data-hi="लक्ष्य:">Goal:</span> <span>Rs.15,000</span></span>
+									<span class="font-weight-bold"><span class="lang-toggle" data-en="Raised:" data-hi="जुटाया:">Raised:</span> <span>Rs.11,700</span></span>
+								</div>
+								<div class="progress" style="height: 25px; border-radius: 10px;">
+									<div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" 
+										 style="width: 78%; background: linear-gradient(90deg, #f093fb 0%, #f5576c 100%);" 
+										 aria-valuenow="78" aria-valuemin="0" aria-valuemax="100">
+										<span class="font-weight-bold">78%</span>
+									</div>
+								</div>
+								<p class="mt-2 mb-0"><small><span class="lang-toggle" data-en="<span>Rs.3,300</span> to go" data-hi="<span>रु. 3,300</span> शेष"><span>Rs.3,300</span> to go</span></small></p>
 							</div>
 							<p><a href="#" class="btn btn-light w-100"><span class="lang-toggle" data-en="Donate Now" data-hi="अभी दान करें">Donate Now</span></a></p>
 						</div>
@@ -371,8 +397,18 @@ input:checked + .lang-slider:before {
 							<h2><a href="#"><span class="lang-toggle" id="head1" data-en="Safe Shelter for Women & Kids" data-hi="महिलाओं और बच्चों के लिए सुरक्षित आश्रय">Safe Shelter for Women & Kids</span></a></h2>
 							<p><span class="lang-toggle" data-en="Offering protection and housing for survivors of abuse and homelessness" data-hi="दुर्व्यवहार और बेघरता से बचे लोगों के लिए सुरक्षा और आवास की पेशकश।">Offering protection and housing for survivors of abuse and homelessness</span></p>
 							<div class="goal mb-4">
-								<p><span class="lang-toggle" data-en="<span>RS.3,800</span> to go" data-hi="<span>रु. 3,800</span> शेष"><span>RS.3,800</span> to go</span></p>
-							
+								<div class="d-flex justify-content-between mb-2">
+									<span class="font-weight-bold"><span class="lang-toggle" data-en="Goal:" data-hi="लक्ष्य:">Goal:</span> <span>Rs.20,000</span></span>
+									<span class="font-weight-bold"><span class="lang-toggle" data-en="Raised:" data-hi="जुटाया:">Raised:</span> <span>Rs.8,500</span></span>
+								</div>
+								<div class="progress" style="height: 25px; border-radius: 10px;">
+									<div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" 
+										 style="width: 42%; background: linear-gradient(90deg, #4facfe 0%, #00f2fe 100%);" 
+										 aria-valuenow="42" aria-valuemin="0" aria-valuemax="100">
+										<span class="font-weight-bold">42%</span>
+									</div>
+								</div>
+								<p class="mt-2 mb-0"><small><span class="lang-toggle" data-en="<span>Rs.11,500</span> to go" data-hi="<span>रु. 11,500</span> शेष"><span>Rs.11,500</span> to go</span></small></p>
 							</div>
 							<p><a href="#" class="btn btn-light w-100"><span class="lang-toggle" data-en="Donate Now" data-hi="अभी दान करें">Donate Now</span></a></p>
 						</div>
@@ -385,8 +421,18 @@ input:checked + .lang-slider:before {
 							<h2><a href="#"><span class="lang-toggle" id="head1" data-en="Meals & Nutrition for Children" data-hi="बच्चों के लिए भोजन और पोषण">Meals & Nutrition for Children</span></a></h2>
 							<p><span class="lang-toggle" data-en="Ensuring vulnerable children receive healthy meals and essential nutrients." data-hi="यह सुनिश्चित करना कि कमजोर बच्चों को स्वस्थ भोजन और आवश्यक पोषक तत्व मिलें।"> Ensuring vulnerable children receive healthy meals and essential nutrients.</span></p>
 							<div class="goal mb-4">
-								<p><span class="lang-toggle" data-en="<span>Rs.3,800</span> to go" data-hi="<span>रु. 3,800</span> शेष"><span>Rs.3,800</span> to go</span></p>
-								
+								<div class="d-flex justify-content-between mb-2">
+									<span class="font-weight-bold"><span class="lang-toggle" data-en="Goal:" data-hi="लक्ष्य:">Goal:</span> <span>Rs.12,000</span></span>
+									<span class="font-weight-bold"><span class="lang-toggle" data-en="Raised:" data-hi="जुटाया:">Raised:</span> <span>Rs.10,800</span></span>
+								</div>
+								<div class="progress" style="height: 25px; border-radius: 10px;">
+									<div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" 
+										 style="width: 90%; background: linear-gradient(90deg, #a8edea 0%, #fed6e3 100%);" 
+										 aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+										<span class="font-weight-bold">90%</span>
+									</div>
+								</div>
+								<p class="mt-2 mb-0"><small><span class="lang-toggle" data-en="<span>Rs.1,200</span> to go" data-hi="<span>रु. 1,200</span> शेष"><span>Rs.1,200</span> to go</span></small></p>
 							</div>
 							<p><a href="#" class="btn btn-light w-100"><span class="lang-toggle" data-en="Donate Now" data-hi="अभी दान करें">Donate Now</span></a></p>
 						</div>
