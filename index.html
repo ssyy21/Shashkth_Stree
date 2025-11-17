@@ -119,10 +119,7 @@ input:checked + .lang-slider:before {
 <script src="js/floating_help.js" defer></script>
 </head>
 
-<body>
-
-
-    
+<body>  
 
 <div id="navbar-container"></div>
 
@@ -185,9 +182,28 @@ input:checked + .lang-slider:before {
             </div>
         </div>
     </nav> -->
+    <div id="navbar-container"></div> 
+ <!-- Overlay -->
+  <div id="overlay" class="overlay" onclick="closeSidebar()"></div>
+   
+  <div class="sidebar-section">
+      <!-- Sidebar Toggle Button -->
+      <button class="sidebar-toggle" onclick="toggleSidebar()">☰</button>
+    
+      <!-- Sidebar -->
+      <aside class="sidebar" id="sidebar">
+        <h2 class="sidebar-title">Awareness Issues</h2>
+        <ul class="sidebar-menu">
+          <li><a href="./Cyberbullying.html">Cyberbullying</a></li>
+          <li><a href="./mental-abuse.html">Mental Abuse</a></li>
+          <li><a href="./workplace-harrassment.html">Workplace Harassment</a></li>
+          <li><a href="DomesticViolence.html">Domestic Violence</a></li>
+          <li><a href="ChildAbuse.html">Child Abuse</a></li>
+          <li><a href="Bullying.html">Bullying</a></li>
+        </ul>
+      </aside>
+  </div>
 
-
-    <div id="navbar-container"></div>
 
     <section id="hero" class="d-flex align-items-center" style="background-image:url(images/banner1-img.jpg); background-repeat: no-repeat; background-size: cover; background-position: center; height: 100vh;">
         <div class="container">
@@ -802,6 +818,41 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 </script>
+
+<!-- aside bar script -->
+ <script> 
+function toggleSidebar() {
+  const sidebar = document.getElementById("sidebar");
+  const overlay = document.getElementById("overlay");
+  console.log('sidebar');
+  
+
+  // Toggle open/close
+  sidebar.classList.toggle("closed");
+
+  // Show overlay when open (mobile)
+  if (!sidebar.classList.contains("closed")) {
+    overlay.classList.add("show");
+  } else {
+    overlay.classList.remove("show");
+  }
+}
+
+function closeSidebar() {
+  document.getElementById("sidebar").classList.add("closed");
+  document.getElementById("overlay").classList.remove("show");
+}
+
+// Highlight active link
+const currentPage = window.location.pathname.split("/").pop();
+document.querySelectorAll(".sidebar-menu a").forEach(link => {
+  if (link.getAttribute("href") === currentPage) {
+    link.classList.add("active");
+  }
+}); 
+
+</script>
+
 
 <div id="footer-placeholder"></div>
 <script src="js/embed_footer.js" defer></script>
